@@ -42,6 +42,7 @@ export class Generator {
             if (e) {
                 console.error(e);
             } else {
+                //response.Br = "\n";
                 let result = swig.render(this.apiTemplate, {locals: response});
                 let exportPath = path.join('apis', response['name'], response['version'] + '.d.ts');
 
@@ -65,7 +66,11 @@ export class Generator {
     }
 
     static initialize(): void {
-        swig.setDefaults({loader: swig.loaders.fs(path.join(__dirname, '..', 'templates'))});
+        swig.setDefaults({
+            autoescape: false,
+            locals: { br: '\n' },
+            loader: swig.loaders.fs(path.join(__dirname, '..', 'templates'))
+        });
         swig.setFilter('indent', (input: string, number: number) => {
             let prefix = ' '.repeat(number || 4);
 
