@@ -35,40 +35,45 @@ export class Generator {
         this.transporter = new Transporter();
     }
 
-    generateApi(discoveryUrl: string): void {
-        this.transporter.request({
-            uri: discoveryUrl
-        }, (e, response) => {
-            if (e) {
-                console.error(e);
-            } else {
-                //response.Br = "\n";
-                let result = swig.render(this.apiTemplate, {locals: response});
-                let exportPath = path.join('apis', response['name'], response['version'] + '.d.ts');
+    generateAllApis(): Promise<void> {
 
-                mkdirp(path.dirname(exportPath), function(e) {
-                    if (e) {
-                        console.error(e);
 
-                        return;
-                    }
+        return null;
+    }
 
-                    fs.writeFile(exportPath, result, function(e) {
+    generateApi(discoveryUrl: string): Promise<void> {
+        return new Promise<void>((resolve, reject) => {
+            this.transporter.request({
+                uri: discoveryUrl
+            }, (e, response) => {
+                if (e) {
+                    reject(e);
+                } else {
+                    let result = swig.render(this.apiTemplate, {locals: response});
+                    let exportPath = path.join('apis', response['name'], response['version'] + '.d.ts');
+
+                    mkdirp(path.dirname(exportPath), function(e) {
                         if (e) {
-                            console.error(e);
+                            reject(e);
+                        } else {
+                            fs.writeFile(exportPath, result, function(e) {
+                                if (e) {
+                                    reject(e);
+                                } else {
+                                    resolve();
+                                }
+                            });
                         }
-
-                        return;
                     });
-                });
-            }
+                }
+            });
         });
     }
 
     static initialize(): void {
         swig.setDefaults({
             autoescape: false,
-            locals: { br: '\n' },
+            locals: {br: '\n'},
             loader: swig.loaders.fs(path.join(__dirname, '..', 'templates'))
         });
         swig.setFilter('indent', (input: string, number: number) => {
