@@ -6,7 +6,7 @@ import {Request, RequestCallback} from 'request';
 export interface {{ Name }} {
     new(options: any): {{Name}};
 
-    {%- if methods -%}
+    {% if methods -%}
         {%- for name, method in methods -%}
             {%- filter indent -%}
             {%- include "./method-partial.d.ts.swig" with method -%}

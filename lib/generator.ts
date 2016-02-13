@@ -67,7 +67,7 @@ export class Generator {
     static initialize(): void {
         swig.setDefaults({loader: swig.loaders.fs(path.join(__dirname, '..', 'templates'))});
         swig.setFilter('indent', (input: string, number: number) => {
-            let prefix = ' '.repeat(number || 0);
+            let prefix = ' '.repeat(number || 4);
 
             return input.replace(/^/gm, prefix);
         })

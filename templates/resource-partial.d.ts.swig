@@ -1,5 +1,5 @@
 {{ name }}: {
-    {%- if resource.methods -%}
+    {% if resource.methods -%}
         {%- for name, method in methods -%}
             {%- filter indent -%}
             {%- include "./method-partial.d.ts.swig" with method -%}
