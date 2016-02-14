@@ -1,7 +1,6 @@
 'use strict';
 
-import {Generator} from "../lib/generator";
+import {TsDefGenerator} from "../lib/ts-def-generator";
 
-let generator: Generator = new Generator();
-//generator.generateApi('https://www.googleapis.com/discovery/v1/apis/drive/v3/rest').then(() => console.log('Done'));
-generator.generateAllApis().then(() => console.log('Done')).catch((e) => console.error(e));
+let generator = new TsDefGenerator();
+generator.generate().then(() => console.log('Done')).catch((e) => console.error(e));
