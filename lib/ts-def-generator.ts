@@ -49,7 +49,16 @@ export class TsDefGenerator {
         return this.getApis(this.discoveryUrl).then(apis => {
             let tsDef = swig.render(this.template, {
                 locals: {
-                    apis: apis
+                    apis: apis,
+                    index: apis.reduce((index, api) => {
+                        if (!(api.name in index)) {
+                            index[api.name] = [];
+                        }
+
+                        index[api.name].push(api.version);
+
+                        return index;
+                    }, {})
                 }
             });
 
