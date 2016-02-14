@@ -15,7 +15,7 @@ export interface {{ Name }} {
         {%- if not loop.last -%}{{ br }}{%- endif -%}
     {%- endfor -%}
 {%- endif -%}
-
+{%- methods && resources -%}{{ br }}{%- endif -%}
 {%- if resources -%}
     {%- for name, resource in resources -%}
         {%- filter indent -%}

@@ -36,13 +36,33 @@ export class Generator {
     }
 
     generateAllApis(): Promise<void> {
+        return new Promise<void>((resolve, reject) => {
+            this.transporter.request({
+                uri: this.discoveryUrl
+            }, (e, response) => {
+                if (e) {
+                    reject(e);
+                } else {
+                    let apis = response['items'];
 
+                    Promise.all(apis.map(api => {
+                        return this.generateApi(api['discoveryRestUrl'])
+                    })).then(() => {
+                        resolve()
+                    }).catch((e) => {
+                        reject(e);
+                    });
+                }
+            });
+        });
 
         return null;
     }
 
     generateApi(discoveryUrl: string): Promise<void> {
         return new Promise<void>((resolve, reject) => {
+            console.log('Generating definition for [%s]', discoveryUrl);
+
             this.transporter.request({
                 uri: discoveryUrl
             }, (e, response) => {

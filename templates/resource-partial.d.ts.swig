@@ -7,7 +7,7 @@
         {%- if not loop.last -%}{{ br }}{%- endif -%}
     {%- endfor -%}
 {%- endif -%}
-
+{%- if resource.methods && resource.resources -%}{{ br }}{%- endif -%}
 {%- if resource.resources -%}
     {%- for name, resource in resources -%}
         {%- filter indent -%}
