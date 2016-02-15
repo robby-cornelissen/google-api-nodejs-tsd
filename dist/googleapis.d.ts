@@ -148,9 +148,7 @@ declare module "googleapis" {
         webmasters(version: string): any;        webmasters(version: 'v3'): google.WebmastersV3;
         youtube(version: string): any;        youtube(version: 'v3'): google.YoutubeV3;
         youtubeAnalytics(version: string): any;        youtubeAnalytics(version: 'v1'): google.YoutubeanalyticsV1;
-        youtubeAnalytics(version: 'v1beta1'): google.YoutubeanalyticsV1beta1;
-
-    }
+        youtubeAnalytics(version: 'v1beta1'): google.YoutubeanalyticsV1beta1;}
 
     module google {
         export interface AdexchangebuyerV1_2 {
