@@ -1,8 +1,8 @@
 'use strict';
 
-import {TsDefGenerator} from "../lib/ts-def-generator";
+import {Generator} from "../lib/generator";
 
-let generator = new TsDefGenerator();
+let generator = new Generator();
 generator.generate().then(() => console.log('Done')).catch((e) => console.error(e));
 
 //import * as google from "googleapis";

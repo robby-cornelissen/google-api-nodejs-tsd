@@ -1,1 +1,0 @@
-{{ name }}(version: '{{version}}'): google.{{[name, version]|toInterfaceName}};
