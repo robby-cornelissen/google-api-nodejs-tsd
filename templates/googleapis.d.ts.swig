@@ -9,7 +9,7 @@ declare module "googleapis" {
             {%- for name, versions in index -%}
                 {%- filter indent(8) -%}
                     {%- include "./partials/binding.d.ts.swig" with versions -%}
-                {%- endfilter -%}{%- if not loop.last -%}{{ br }}{%- endif -%}
+                {%- endfilter -%}{%- if not loop.last -%}{{ br }}{{ br }}{%- endif -%}
             {%- endfor -%}
         {%- endif %}
     }
@@ -19,7 +19,7 @@ declare module "googleapis" {
             {%- for api in apis -%}
                 {%- filter indent(8) -%}
                     {%- include "./partials/api.d.ts.swig" with api -%}
-                {%- endfilter -%}{%- if not loop.last -%}{{ br }}{%- endif -%}
+                {%- endfilter -%}{%- if not loop.last -%}{{ br }}{{ br }}{%- endif -%}
             {%- endfor -%}
         {%- endif %}
     }
