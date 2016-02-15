@@ -3,6 +3,7 @@ declare module "googleapis" {
 
     interface GoogleApis {
         new(options?: any): GoogleApis;
+
         options(options?: any): void;
 
         {%- if index -%}{{ br }}{{ br }}
