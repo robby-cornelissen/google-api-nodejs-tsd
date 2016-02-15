@@ -88,9 +88,9 @@ export class Generator {
                     let summary = format('Error retrieving data from [%s]: %s', url, detail);
 
                     return reject(new Error(summary));
-                } else {
-                    return resolve(JSON.parse(body))
                 }
+
+                return resolve(JSON.parse(body))
             });
         });
     }
@@ -109,7 +109,7 @@ export class Generator {
                         return reject(e);
                     }
 
-                    resolve();
+                    return resolve();
                 });
             });
         });
