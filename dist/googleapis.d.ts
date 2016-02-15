@@ -4,53 +4,81 @@ declare module "googleapis" {
     interface GoogleApis {
         new(options?: any): GoogleApis;
         options(options?: any): void;
-        adexchangebuyer(version: string): any;        adexchangebuyer(version: 'v1.2'): google.AdexchangebuyerV1_2;
+
+        adexchangebuyer(version: string): any;
+        adexchangebuyer(version: 'v1.2'): google.AdexchangebuyerV1_2;
         adexchangebuyer(version: 'v1.3'): google.AdexchangebuyerV1_3;
         adexchangebuyer(version: 'v1.4'): google.AdexchangebuyerV1_4;
-        adexchangeseller(version: string): any;        adexchangeseller(version: 'v1'): google.AdexchangesellerV1;
+        adexchangeseller(version: string): any;
+        adexchangeseller(version: 'v1'): google.AdexchangesellerV1;
         adexchangeseller(version: 'v1.1'): google.AdexchangesellerV1_1;
         adexchangeseller(version: 'v2.0'): google.AdexchangesellerV2_0;
-        admin(version: string): any;        admin(version: 'datatransfer_v1'): google.AdminDatatransfer_v1;
+        admin(version: string): any;
+        admin(version: 'datatransfer_v1'): google.AdminDatatransfer_v1;
         admin(version: 'directory_v1'): google.AdminDirectory_v1;
         admin(version: 'reports_v1'): google.AdminReports_v1;
-        adsense(version: string): any;        adsense(version: 'v1.2'): google.AdsenseV1_2;
+        adsense(version: string): any;
+        adsense(version: 'v1.2'): google.AdsenseV1_2;
         adsense(version: 'v1.3'): google.AdsenseV1_3;
         adsense(version: 'v1.4'): google.AdsenseV1_4;
-        adsensehost(version: string): any;        adsensehost(version: 'v4.1'): google.AdsensehostV4_1;
-        analytics(version: string): any;        analytics(version: 'v2.4'): google.AnalyticsV2_4;
+        adsensehost(version: string): any;
+        adsensehost(version: 'v4.1'): google.AdsensehostV4_1;
+        analytics(version: string): any;
+        analytics(version: 'v2.4'): google.AnalyticsV2_4;
         analytics(version: 'v3'): google.AnalyticsV3;
-        androidenterprise(version: string): any;        androidenterprise(version: 'v1'): google.AndroidenterpriseV1;
-        androidpublisher(version: string): any;        androidpublisher(version: 'v1'): google.AndroidpublisherV1;
+        androidenterprise(version: string): any;
+        androidenterprise(version: 'v1'): google.AndroidenterpriseV1;
+        androidpublisher(version: string): any;
+        androidpublisher(version: 'v1'): google.AndroidpublisherV1;
         androidpublisher(version: 'v1.1'): google.AndroidpublisherV1_1;
         androidpublisher(version: 'v2'): google.AndroidpublisherV2;
-        appsactivity(version: string): any;        appsactivity(version: 'v1'): google.AppsactivityV1;
-        appstate(version: string): any;        appstate(version: 'v1'): google.AppstateV1;
-        autoscaler(version: string): any;        autoscaler(version: 'v1beta2'): google.AutoscalerV1beta2;
-        bigquery(version: string): any;        bigquery(version: 'v2'): google.BigqueryV2;
-        blogger(version: string): any;        blogger(version: 'v2'): google.BloggerV2;
+        appsactivity(version: string): any;
+        appsactivity(version: 'v1'): google.AppsactivityV1;
+        appstate(version: string): any;
+        appstate(version: 'v1'): google.AppstateV1;
+        autoscaler(version: string): any;
+        autoscaler(version: 'v1beta2'): google.AutoscalerV1beta2;
+        bigquery(version: string): any;
+        bigquery(version: 'v2'): google.BigqueryV2;
+        blogger(version: string): any;
+        blogger(version: 'v2'): google.BloggerV2;
         blogger(version: 'v3'): google.BloggerV3;
-        books(version: string): any;        books(version: 'v1'): google.BooksV1;
-        calendar(version: string): any;        calendar(version: 'v3'): google.CalendarV3;
-        civicinfo(version: string): any;        civicinfo(version: 'v2'): google.CivicinfoV2;
-        cloudbuild(version: string): any;        cloudbuild(version: 'v1'): google.CloudbuildV1;
-        cloudlatencytest(version: string): any;        cloudlatencytest(version: 'v2'): google.CloudlatencytestV2;
-        cloudmonitoring(version: string): any;        cloudmonitoring(version: 'v2beta2'): google.CloudmonitoringV2beta2;
-        clouduseraccounts(version: string): any;        clouduseraccounts(version: 'alpha'): google.ClouduseraccountsAlpha;
+        books(version: string): any;
+        books(version: 'v1'): google.BooksV1;
+        calendar(version: string): any;
+        calendar(version: 'v3'): google.CalendarV3;
+        civicinfo(version: string): any;
+        civicinfo(version: 'v2'): google.CivicinfoV2;
+        cloudbuild(version: string): any;
+        cloudbuild(version: 'v1'): google.CloudbuildV1;
+        cloudlatencytest(version: string): any;
+        cloudlatencytest(version: 'v2'): google.CloudlatencytestV2;
+        cloudmonitoring(version: string): any;
+        cloudmonitoring(version: 'v2beta2'): google.CloudmonitoringV2beta2;
+        clouduseraccounts(version: string): any;
+        clouduseraccounts(version: 'alpha'): google.ClouduseraccountsAlpha;
         clouduseraccounts(version: 'beta'): google.ClouduseraccountsBeta;
         clouduseraccounts(version: 'vm_alpha'): google.ClouduseraccountsVm_alpha;
         clouduseraccounts(version: 'vm_beta'): google.ClouduseraccountsVm_beta;
-        compute(version: string): any;        compute(version: 'beta'): google.ComputeBeta;
+        compute(version: string): any;
+        compute(version: 'beta'): google.ComputeBeta;
         compute(version: 'v1'): google.ComputeV1;
-        content(version: string): any;        content(version: 'v2sandbox'): google.ContentV2sandbox;
+        content(version: string): any;
+        content(version: 'v2sandbox'): google.ContentV2sandbox;
         content(version: 'v2'): google.ContentV2;
-        coordinate(version: string): any;        coordinate(version: 'v1'): google.CoordinateV1;
-        customsearch(version: string): any;        customsearch(version: 'v1'): google.CustomsearchV1;
-        datastore(version: string): any;        datastore(version: 'v1beta1'): google.DatastoreV1beta1;
+        coordinate(version: string): any;
+        coordinate(version: 'v1'): google.CoordinateV1;
+        customsearch(version: string): any;
+        customsearch(version: 'v1'): google.CustomsearchV1;
+        datastore(version: string): any;
+        datastore(version: 'v1beta1'): google.DatastoreV1beta1;
         datastore(version: 'v1beta2'): google.DatastoreV1beta2;
-        deploymentmanager(version: string): any;        deploymentmanager(version: 'v2'): google.DeploymentmanagerV2;
+        deploymentmanager(version: string): any;
+        deploymentmanager(version: 'v2'): google.DeploymentmanagerV2;
         deploymentmanager(version: 'v2beta1'): google.DeploymentmanagerV2beta1;
         deploymentmanager(version: 'v2beta2'): google.DeploymentmanagerV2beta2;
-        dfareporting(version: string): any;        dfareporting(version: 'v1'): google.DfareportingV1;
+        dfareporting(version: string): any;
+        dfareporting(version: 'v1'): google.DfareportingV1;
         dfareporting(version: 'v1.1'): google.DfareportingV1_1;
         dfareporting(version: 'v1.2'): google.DfareportingV1_2;
         dfareporting(version: 'v1.3'): google.DfareportingV1_3;
@@ -59,100 +87,167 @@ declare module "googleapis" {
         dfareporting(version: 'v2.2'): google.DfareportingV2_2;
         dfareporting(version: 'v2.3'): google.DfareportingV2_3;
         dfareporting(version: 'v2.4'): google.DfareportingV2_4;
-        discovery(version: string): any;        discovery(version: 'v1'): google.DiscoveryV1;
-        dns(version: string): any;        dns(version: 'v1'): google.DnsV1;
-        doubleclickbidmanager(version: string): any;        doubleclickbidmanager(version: 'v1'): google.DoubleclickbidmanagerV1;
-        doubleclicksearch(version: string): any;        doubleclicksearch(version: 'v2'): google.DoubleclicksearchV2;
-        drive(version: string): any;        drive(version: 'v1'): google.DriveV1;
+        discovery(version: string): any;
+        discovery(version: 'v1'): google.DiscoveryV1;
+        dns(version: string): any;
+        dns(version: 'v1'): google.DnsV1;
+        doubleclickbidmanager(version: string): any;
+        doubleclickbidmanager(version: 'v1'): google.DoubleclickbidmanagerV1;
+        doubleclicksearch(version: string): any;
+        doubleclicksearch(version: 'v2'): google.DoubleclicksearchV2;
+        drive(version: string): any;
+        drive(version: 'v1'): google.DriveV1;
         drive(version: 'v2'): google.DriveV2;
         drive(version: 'v3'): google.DriveV3;
-        fitness(version: string): any;        fitness(version: 'v1'): google.FitnessV1;
-        freebase(version: string): any;        freebase(version: 'v1'): google.FreebaseV1;
-        fusiontables(version: string): any;        fusiontables(version: 'v1'): google.FusiontablesV1;
+        fitness(version: string): any;
+        fitness(version: 'v1'): google.FitnessV1;
+        freebase(version: string): any;
+        freebase(version: 'v1'): google.FreebaseV1;
+        fusiontables(version: string): any;
+        fusiontables(version: 'v1'): google.FusiontablesV1;
         fusiontables(version: 'v2'): google.FusiontablesV2;
-        games(version: string): any;        games(version: 'v1'): google.GamesV1;
-        gamesConfiguration(version: string): any;        gamesConfiguration(version: 'v1configuration'): google.GamesconfigurationV1configuration;
-        gamesManagement(version: string): any;        gamesManagement(version: 'v1management'): google.GamesmanagementV1management;
-        gan(version: string): any;        gan(version: 'v1beta1'): google.GanV1beta1;
-        genomics(version: string): any;        genomics(version: 'v1beta2'): google.GenomicsV1beta2;
+        games(version: string): any;
+        games(version: 'v1'): google.GamesV1;
+        gamesConfiguration(version: string): any;
+        gamesConfiguration(version: 'v1configuration'): google.GamesConfigurationV1configuration;
+        gamesManagement(version: string): any;
+        gamesManagement(version: 'v1management'): google.GamesManagementV1management;
+        gan(version: string): any;
+        gan(version: 'v1beta1'): google.GanV1beta1;
+        genomics(version: string): any;
+        genomics(version: 'v1beta2'): google.GenomicsV1beta2;
         genomics(version: 'v1alpha2'): google.GenomicsV1alpha2;
         genomics(version: 'v1'): google.GenomicsV1;
-        gmail(version: string): any;        gmail(version: 'v1'): google.GmailV1;
-        groupsmigration(version: string): any;        groupsmigration(version: 'v1'): google.GroupsmigrationV1;
-        groupssettings(version: string): any;        groupssettings(version: 'v1'): google.GroupssettingsV1;
-        appengine(version: string): any;        appengine(version: 'v1beta4'): google.AppengineV1beta4;
+        gmail(version: string): any;
+        gmail(version: 'v1'): google.GmailV1;
+        groupsmigration(version: string): any;
+        groupsmigration(version: 'v1'): google.GroupsmigrationV1;
+        groupssettings(version: string): any;
+        groupssettings(version: 'v1'): google.GroupssettingsV1;
+        appengine(version: string): any;
+        appengine(version: 'v1beta4'): google.AppengineV1beta4;
         appengine(version: 'v1beta5'): google.AppengineV1beta5;
-        classroom(version: string): any;        classroom(version: 'v1'): google.ClassroomV1;
-        cloudbilling(version: string): any;        cloudbilling(version: 'v1'): google.CloudbillingV1;
-        clouddebugger(version: string): any;        clouddebugger(version: 'v2'): google.ClouddebuggerV2;
-        cloudresourcemanager(version: string): any;        cloudresourcemanager(version: 'v1beta1'): google.CloudresourcemanagerV1beta1;
-        cloudtrace(version: string): any;        cloudtrace(version: 'v1'): google.CloudtraceV1;
-        container(version: string): any;        container(version: 'v1'): google.ContainerV1;
-        dataflow(version: string): any;        dataflow(version: 'v1b3'): google.DataflowV1b3;
-        dataproc(version: string): any;        dataproc(version: 'v1alpha1'): google.DataprocV1alpha1;
+        classroom(version: string): any;
+        classroom(version: 'v1'): google.ClassroomV1;
+        cloudbilling(version: string): any;
+        cloudbilling(version: 'v1'): google.CloudbillingV1;
+        clouddebugger(version: string): any;
+        clouddebugger(version: 'v2'): google.ClouddebuggerV2;
+        cloudresourcemanager(version: string): any;
+        cloudresourcemanager(version: 'v1beta1'): google.CloudresourcemanagerV1beta1;
+        cloudtrace(version: string): any;
+        cloudtrace(version: 'v1'): google.CloudtraceV1;
+        container(version: string): any;
+        container(version: 'v1'): google.ContainerV1;
+        dataflow(version: string): any;
+        dataflow(version: 'v1b3'): google.DataflowV1b3;
+        dataproc(version: string): any;
+        dataproc(version: 'v1alpha1'): google.DataprocV1alpha1;
         dataproc(version: 'v1'): google.DataprocV1;
         dataproc(version: 'v1beta1'): google.DataprocV1beta1;
-        iam(version: string): any;        iam(version: 'v1alpha1'): google.IamV1alpha1;
+        iam(version: string): any;
+        iam(version: 'v1alpha1'): google.IamV1alpha1;
         iam(version: 'v1'): google.IamV1;
-        kgsearch(version: string): any;        kgsearch(version: 'v1'): google.KgsearchV1;
-        logging(version: string): any;        logging(version: 'v2beta1'): google.LoggingV2beta1;
-        partners(version: string): any;        partners(version: 'v2'): google.PartnersV2;
-        people(version: string): any;        people(version: 'v1'): google.PeopleV1;
-        playmoviespartner(version: string): any;        playmoviespartner(version: 'v1'): google.PlaymoviespartnerV1;
-        proximitybeacon(version: string): any;        proximitybeacon(version: 'v1beta1'): google.ProximitybeaconV1beta1;
-        pubsub(version: string): any;        pubsub(version: 'v1beta1a'): google.PubsubV1beta1a;
+        kgsearch(version: string): any;
+        kgsearch(version: 'v1'): google.KgsearchV1;
+        logging(version: string): any;
+        logging(version: 'v2beta1'): google.LoggingV2beta1;
+        partners(version: string): any;
+        partners(version: 'v2'): google.PartnersV2;
+        people(version: string): any;
+        people(version: 'v1'): google.PeopleV1;
+        playmoviespartner(version: string): any;
+        playmoviespartner(version: 'v1'): google.PlaymoviespartnerV1;
+        proximitybeacon(version: string): any;
+        proximitybeacon(version: 'v1beta1'): google.ProximitybeaconV1beta1;
+        pubsub(version: string): any;
+        pubsub(version: 'v1beta1a'): google.PubsubV1beta1a;
         pubsub(version: 'v1'): google.PubsubV1;
         pubsub(version: 'v1beta2'): google.PubsubV1beta2;
-        script(version: string): any;        script(version: 'v1'): google.ScriptV1;
-        storagetransfer(version: string): any;        storagetransfer(version: 'v1'): google.StoragetransferV1;
-        youtubereporting(version: string): any;        youtubereporting(version: 'v1'): google.YoutubereportingV1;
-        identitytoolkit(version: string): any;        identitytoolkit(version: 'v3'): google.IdentitytoolkitV3;
-        licensing(version: string): any;        licensing(version: 'v1'): google.LicensingV1;
-        manager(version: string): any;        manager(version: 'v1beta2'): google.ManagerV1beta2;
-        mirror(version: string): any;        mirror(version: 'v1'): google.MirrorV1;
-        oauth2(version: string): any;        oauth2(version: 'v1'): google.Oauth2V1;
+        script(version: string): any;
+        script(version: 'v1'): google.ScriptV1;
+        storagetransfer(version: string): any;
+        storagetransfer(version: 'v1'): google.StoragetransferV1;
+        youtubereporting(version: string): any;
+        youtubereporting(version: 'v1'): google.YoutubereportingV1;
+        identitytoolkit(version: string): any;
+        identitytoolkit(version: 'v3'): google.IdentitytoolkitV3;
+        licensing(version: string): any;
+        licensing(version: 'v1'): google.LicensingV1;
+        manager(version: string): any;
+        manager(version: 'v1beta2'): google.ManagerV1beta2;
+        mirror(version: string): any;
+        mirror(version: 'v1'): google.MirrorV1;
+        oauth2(version: string): any;
+        oauth2(version: 'v1'): google.Oauth2V1;
         oauth2(version: 'v2'): google.Oauth2V2;
-        pagespeedonline(version: string): any;        pagespeedonline(version: 'v1'): google.PagespeedonlineV1;
+        pagespeedonline(version: string): any;
+        pagespeedonline(version: 'v1'): google.PagespeedonlineV1;
         pagespeedonline(version: 'v2'): google.PagespeedonlineV2;
-        plus(version: string): any;        plus(version: 'v1'): google.PlusV1;
-        plusDomains(version: string): any;        plusDomains(version: 'v1'): google.PlusdomainsV1;
-        prediction(version: string): any;        prediction(version: 'v1.2'): google.PredictionV1_2;
+        plus(version: string): any;
+        plus(version: 'v1'): google.PlusV1;
+        plusDomains(version: string): any;
+        plusDomains(version: 'v1'): google.PlusDomainsV1;
+        prediction(version: string): any;
+        prediction(version: 'v1.2'): google.PredictionV1_2;
         prediction(version: 'v1.3'): google.PredictionV1_3;
         prediction(version: 'v1.4'): google.PredictionV1_4;
         prediction(version: 'v1.5'): google.PredictionV1_5;
         prediction(version: 'v1.6'): google.PredictionV1_6;
-        qpxExpress(version: string): any;        qpxExpress(version: 'v1'): google.QpxexpressV1;
-        replicapool(version: string): any;        replicapool(version: 'v1beta1'): google.ReplicapoolV1beta1;
+        qpxExpress(version: string): any;
+        qpxExpress(version: 'v1'): google.QpxExpressV1;
+        replicapool(version: string): any;
+        replicapool(version: 'v1beta1'): google.ReplicapoolV1beta1;
         replicapool(version: 'v1beta2'): google.ReplicapoolV1beta2;
-        replicapoolupdater(version: string): any;        replicapoolupdater(version: 'v1beta1'): google.ReplicapoolupdaterV1beta1;
-        reseller(version: string): any;        reseller(version: 'v1sandbox'): google.ResellerV1sandbox;
+        replicapoolupdater(version: string): any;
+        replicapoolupdater(version: 'v1beta1'): google.ReplicapoolupdaterV1beta1;
+        reseller(version: string): any;
+        reseller(version: 'v1sandbox'): google.ResellerV1sandbox;
         reseller(version: 'v1'): google.ResellerV1;
-        resourceviews(version: string): any;        resourceviews(version: 'v1beta1'): google.ResourceviewsV1beta1;
+        resourceviews(version: string): any;
+        resourceviews(version: 'v1beta1'): google.ResourceviewsV1beta1;
         resourceviews(version: 'v1beta2'): google.ResourceviewsV1beta2;
-        serviceregistry(version: string): any;        serviceregistry(version: 'alpha'): google.ServiceregistryAlpha;
-        siteVerification(version: string): any;        siteVerification(version: 'v1'): google.SiteverificationV1;
-        spectrum(version: string): any;        spectrum(version: 'v1explorer'): google.SpectrumV1explorer;
-        sqladmin(version: string): any;        sqladmin(version: 'v1beta3'): google.SqladminV1beta3;
+        serviceregistry(version: string): any;
+        serviceregistry(version: 'alpha'): google.ServiceregistryAlpha;
+        siteVerification(version: string): any;
+        siteVerification(version: 'v1'): google.SiteVerificationV1;
+        spectrum(version: string): any;
+        spectrum(version: 'v1explorer'): google.SpectrumV1explorer;
+        sqladmin(version: string): any;
+        sqladmin(version: 'v1beta3'): google.SqladminV1beta3;
         sqladmin(version: 'v1beta4'): google.SqladminV1beta4;
-        storage(version: string): any;        storage(version: 'v1'): google.StorageV1;
+        storage(version: string): any;
+        storage(version: 'v1'): google.StorageV1;
         storage(version: 'v1beta1'): google.StorageV1beta1;
         storage(version: 'v1beta2'): google.StorageV1beta2;
-        tagmanager(version: string): any;        tagmanager(version: 'v1'): google.TagmanagerV1;
-        taskqueue(version: string): any;        taskqueue(version: 'v1beta1'): google.TaskqueueV1beta1;
+        tagmanager(version: string): any;
+        tagmanager(version: 'v1'): google.TagmanagerV1;
+        taskqueue(version: string): any;
+        taskqueue(version: 'v1beta1'): google.TaskqueueV1beta1;
         taskqueue(version: 'v1beta2'): google.TaskqueueV1beta2;
-        tasks(version: string): any;        tasks(version: 'v1'): google.TasksV1;
-        translate(version: string): any;        translate(version: 'v2'): google.TranslateV2;
-        urlshortener(version: string): any;        urlshortener(version: 'v1'): google.UrlshortenerV1;
-        vision(version: string): any;        vision(version: 'v1'): google.VisionV1;
-        webfonts(version: string): any;        webfonts(version: 'v1'): google.WebfontsV1;
-        webmasters(version: string): any;        webmasters(version: 'v3'): google.WebmastersV3;
-        youtube(version: string): any;        youtube(version: 'v3'): google.YoutubeV3;
-        youtubeAnalytics(version: string): any;        youtubeAnalytics(version: 'v1'): google.YoutubeanalyticsV1;
-        youtubeAnalytics(version: 'v1beta1'): google.YoutubeanalyticsV1beta1;}
+        tasks(version: string): any;
+        tasks(version: 'v1'): google.TasksV1;
+        translate(version: string): any;
+        translate(version: 'v2'): google.TranslateV2;
+        urlshortener(version: string): any;
+        urlshortener(version: 'v1'): google.UrlshortenerV1;
+        vision(version: string): any;
+        vision(version: 'v1'): google.VisionV1;
+        webfonts(version: string): any;
+        webfonts(version: 'v1'): google.WebfontsV1;
+        webmasters(version: string): any;
+        webmasters(version: 'v3'): google.WebmastersV3;
+        youtube(version: string): any;
+        youtube(version: 'v3'): google.YoutubeV3;
+        youtubeAnalytics(version: string): any;
+        youtubeAnalytics(version: 'v1'): google.YoutubeAnalyticsV1;
+        youtubeAnalytics(version: 'v1beta1'): google.YoutubeAnalyticsV1beta1;
+    }
 
     module google {
         export interface AdexchangebuyerV1_2 {
             new(options?: any): AdexchangebuyerV1_2;
+        
             accounts: {
                 get: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
@@ -165,9 +260,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface AdexchangebuyerV1_3 {
             new(options?: any): AdexchangebuyerV1_3;
+        
             accounts: {
                 get: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
@@ -204,9 +299,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface AdexchangebuyerV1_4 {
             new(options?: any): AdexchangebuyerV1_4;
+        
             accounts: {
                 get: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
@@ -262,9 +357,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface AdexchangesellerV1 {
             new(options?: any): AdexchangesellerV1;
+        
             adclients: {
                 list: (params: any, callback: RequestCallback) => Request;
             };
@@ -293,9 +388,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface AdexchangesellerV1_1 {
             new(options?: any): AdexchangesellerV1_1;
+        
             accounts: {
                 get: (params: any, callback: RequestCallback) => Request;
             };
@@ -342,9 +437,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface AdexchangesellerV2_0 {
             new(options?: any): AdexchangesellerV2_0;
+        
             accounts: {
                 get: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
@@ -382,9 +477,9 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface AdminDatatransfer_v1 {
             new(options?: any): AdminDatatransfer_v1;
+        
             applications: {
                 get: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
@@ -395,9 +490,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface AdminDirectory_v1 {
             new(options?: any): AdminDirectory_v1;
+        
             asps: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -540,9 +635,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface AdminReports_v1 {
             new(options?: any): AdminReports_v1;
+        
             activities: {
                 list: (params: any, callback: RequestCallback) => Request;
                 watch: (params: any, callback: RequestCallback) => Request;
@@ -557,9 +652,9 @@ declare module "googleapis" {
                 get: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface AdsenseV1_2 {
             new(options?: any): AdsenseV1_2;
+        
             accounts: {
                 get: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
@@ -627,9 +722,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface AdsenseV1_3 {
             new(options?: any): AdsenseV1_3;
+        
             accounts: {
                 get: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
@@ -713,9 +808,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface AdsenseV1_4 {
             new(options?: any): AdsenseV1_4;
+        
             accounts: {
                 get: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
@@ -807,9 +902,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface AdsensehostV4_1 {
             new(options?: any): AdsensehostV4_1;
+        
             accounts: {
                 get: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
@@ -855,9 +950,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface AnalyticsV2_4 {
             new(options?: any): AnalyticsV2_4;
+        
             data: {
                 get: (params: any, callback: RequestCallback) => Request;
             };
@@ -879,9 +974,9 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface AnalyticsV3 {
             new(options?: any): AnalyticsV3;
+        
             data: {
                 ga: {
                     get: (params: any, callback: RequestCallback) => Request;
@@ -1014,9 +1109,9 @@ declare module "googleapis" {
                 createAccountTicket: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface AndroidenterpriseV1 {
             new(options?: any): AndroidenterpriseV1;
+        
             collections: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -1107,17 +1202,17 @@ declare module "googleapis" {
                 setAvailableProductSet: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface AndroidpublisherV1 {
             new(options?: any): AndroidpublisherV1;
+        
             purchases: {
                 cancel: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface AndroidpublisherV1_1 {
             new(options?: any): AndroidpublisherV1_1;
+        
             inapppurchases: {
                 get: (params: any, callback: RequestCallback) => Request;
             };
@@ -1126,9 +1221,9 @@ declare module "googleapis" {
                 get: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface AndroidpublisherV2 {
             new(options?: any): AndroidpublisherV2;
+        
             edits: {
                 commit: (params: any, callback: RequestCallback) => Request;
                 delete: (params: any, callback: RequestCallback) => Request;
@@ -1210,16 +1305,16 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface AppsactivityV1 {
             new(options?: any): AppsactivityV1;
+        
             activities: {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface AppstateV1 {
             new(options?: any): AppstateV1;
+        
             states: {
                 clear: (params: any, callback: RequestCallback) => Request;
                 delete: (params: any, callback: RequestCallback) => Request;
@@ -1228,9 +1323,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface AutoscalerV1beta2 {
             new(options?: any): AutoscalerV1beta2;
+        
             autoscalers: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -1248,9 +1343,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface BigqueryV2 {
             new(options?: any): BigqueryV2;
+        
             datasets: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -1283,9 +1378,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface BloggerV2 {
             new(options?: any): BloggerV2;
+        
             blogs: {
                 get: (params: any, callback: RequestCallback) => Request;
             };
@@ -1308,9 +1403,9 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface BloggerV3 {
             new(options?: any): BloggerV3;
+        
             blogUserInfos: {
                 get: (params: any, callback: RequestCallback) => Request;
             };
@@ -1361,9 +1456,9 @@ declare module "googleapis" {
                 get: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface BooksV1 {
             new(options?: any): BooksV1;
+        
             bookshelves: {
                 get: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
@@ -1461,9 +1556,9 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface CalendarV3 {
             new(options?: any): CalendarV3;
+        
             acl: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -1518,9 +1613,9 @@ declare module "googleapis" {
                 watch: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface CivicinfoV2 {
             new(options?: any): CivicinfoV2;
+        
             divisions: {
                 search: (params: any, callback: RequestCallback) => Request;
             };
@@ -1533,9 +1628,9 @@ declare module "googleapis" {
                 representativeInfoByDivision: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface CloudbuildV1 {
             new(options?: any): CloudbuildV1;
+        
             projects: {
                 builds: {
                     get: (params: any, callback: RequestCallback) => Request;
@@ -1549,17 +1644,17 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface CloudlatencytestV2 {
             new(options?: any): CloudlatencytestV2;
+        
             statscollection: {
                 updateaggregatedstats: (params: any, callback: RequestCallback) => Request;
                 updatestats: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface CloudmonitoringV2beta2 {
             new(options?: any): CloudmonitoringV2beta2;
+        
             metricDescriptors: {
                 create: (params: any, callback: RequestCallback) => Request;
                 delete: (params: any, callback: RequestCallback) => Request;
@@ -1573,9 +1668,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface ClouduseraccountsAlpha {
             new(options?: any): ClouduseraccountsAlpha;
+        
             globalAccountsOperations: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -1608,9 +1703,9 @@ declare module "googleapis" {
                 testIamPermissions: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface ClouduseraccountsBeta {
             new(options?: any): ClouduseraccountsBeta;
+        
             globalAccountsOperations: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -1637,9 +1732,9 @@ declare module "googleapis" {
                 removePublicKey: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface ClouduseraccountsVm_alpha {
             new(options?: any): ClouduseraccountsVm_alpha;
+        
             globalAccountsOperations: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -1672,9 +1767,9 @@ declare module "googleapis" {
                 testIamPermissions: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface ClouduseraccountsVm_beta {
             new(options?: any): ClouduseraccountsVm_beta;
+        
             globalAccountsOperations: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -1701,9 +1796,9 @@ declare module "googleapis" {
                 removePublicKey: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface ComputeBeta {
             new(options?: any): ComputeBeta;
+        
             addresses: {
                 aggregatedList: (params: any, callback: RequestCallback) => Request;
                 delete: (params: any, callback: RequestCallback) => Request;
@@ -1985,9 +2080,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface ComputeV1 {
             new(options?: any): ComputeV1;
+        
             addresses: {
                 aggregatedList: (params: any, callback: RequestCallback) => Request;
                 delete: (params: any, callback: RequestCallback) => Request;
@@ -2257,9 +2352,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface ContentV2sandbox {
             new(options?: any): ContentV2sandbox;
+        
             orders: {
                 acknowledge: (params: any, callback: RequestCallback) => Request;
                 advancetestorder: (params: any, callback: RequestCallback) => Request;
@@ -2278,9 +2373,9 @@ declare module "googleapis" {
                 updateshipment: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface ContentV2 {
             new(options?: any): ContentV2;
+        
             accounts: {
                 authinfo: (params: any, callback: RequestCallback) => Request;
                 custombatch: (params: any, callback: RequestCallback) => Request;
@@ -2358,9 +2453,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface CoordinateV1 {
             new(options?: any): CoordinateV1;
+        
             customFieldDef: {
                 list: (params: any, callback: RequestCallback) => Request;
             };
@@ -2386,16 +2481,16 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface CustomsearchV1 {
             new(options?: any): CustomsearchV1;
+        
             cse: {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DatastoreV1beta1 {
             new(options?: any): DatastoreV1beta1;
+        
             datasets: {
                 allocateIds: (params: any, callback: RequestCallback) => Request;
                 beginTransaction: (params: any, callback: RequestCallback) => Request;
@@ -2406,9 +2501,9 @@ declare module "googleapis" {
                 runQuery: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DatastoreV1beta2 {
             new(options?: any): DatastoreV1beta2;
+        
             datasets: {
                 allocateIds: (params: any, callback: RequestCallback) => Request;
                 beginTransaction: (params: any, callback: RequestCallback) => Request;
@@ -2418,9 +2513,9 @@ declare module "googleapis" {
                 runQuery: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DeploymentmanagerV2 {
             new(options?: any): DeploymentmanagerV2;
+        
             deployments: {
                 cancelPreview: (params: any, callback: RequestCallback) => Request;
                 delete: (params: any, callback: RequestCallback) => Request;
@@ -2447,9 +2542,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DeploymentmanagerV2beta1 {
             new(options?: any): DeploymentmanagerV2beta1;
+        
             deployments: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -2472,9 +2567,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DeploymentmanagerV2beta2 {
             new(options?: any): DeploymentmanagerV2beta2;
+        
             deployments: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -2499,9 +2594,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DfareportingV1 {
             new(options?: any): DfareportingV1;
+        
             dimensionValues: {
                 query: (params: any, callback: RequestCallback) => Request;
             };
@@ -2526,9 +2621,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DfareportingV1_1 {
             new(options?: any): DfareportingV1_1;
+        
             dimensionValues: {
                 query: (params: any, callback: RequestCallback) => Request;
             };
@@ -2553,9 +2648,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DfareportingV1_2 {
             new(options?: any): DfareportingV1_2;
+        
             dimensionValues: {
                 query: (params: any, callback: RequestCallback) => Request;
             };
@@ -2581,9 +2676,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DfareportingV1_3 {
             new(options?: any): DfareportingV1_3;
+        
             dimensionValues: {
                 query: (params: any, callback: RequestCallback) => Request;
             };
@@ -2612,9 +2707,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DfareportingV2_0 {
             new(options?: any): DfareportingV2_0;
+        
             accountActiveAdSummaries: {
                 get: (params: any, callback: RequestCallback) => Request;
             };
@@ -2883,9 +2978,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DfareportingV2_1 {
             new(options?: any): DfareportingV2_1;
+        
             accountActiveAdSummaries: {
                 get: (params: any, callback: RequestCallback) => Request;
             };
@@ -3194,9 +3289,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DfareportingV2_2 {
             new(options?: any): DfareportingV2_2;
+        
             accountActiveAdSummaries: {
                 get: (params: any, callback: RequestCallback) => Request;
             };
@@ -3505,9 +3600,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DfareportingV2_3 {
             new(options?: any): DfareportingV2_3;
+        
             accountActiveAdSummaries: {
                 get: (params: any, callback: RequestCallback) => Request;
             };
@@ -3815,9 +3910,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DfareportingV2_4 {
             new(options?: any): DfareportingV2_4;
+        
             accountActiveAdSummaries: {
                 get: (params: any, callback: RequestCallback) => Request;
             };
@@ -4125,17 +4220,17 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DiscoveryV1 {
             new(options?: any): DiscoveryV1;
+        
             apis: {
                 getRest: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DnsV1 {
             new(options?: any): DnsV1;
+        
             changes: {
                 create: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -4154,9 +4249,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DoubleclickbidmanagerV1 {
             new(options?: any): DoubleclickbidmanagerV1;
+        
             lineitems: {
                 downloadlineitems: (params: any, callback: RequestCallback) => Request;
                 uploadlineitems: (params: any, callback: RequestCallback) => Request;
@@ -4175,9 +4270,9 @@ declare module "googleapis" {
                 notifyproposalchange: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DoubleclicksearchV2 {
             new(options?: any): DoubleclicksearchV2;
+        
             conversion: {
                 get: (params: any, callback: RequestCallback) => Request;
                 insert: (params: any, callback: RequestCallback) => Request;
@@ -4195,9 +4290,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DriveV1 {
             new(options?: any): DriveV1;
+        
             files: {
                 get: (params: any, callback: RequestCallback) => Request;
                 insert: (params: any, callback: RequestCallback) => Request;
@@ -4205,9 +4300,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DriveV2 {
             new(options?: any): DriveV2;
+        
             about: {
                 get: (params: any, callback: RequestCallback) => Request;
             };
@@ -4296,9 +4391,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DriveV3 {
             new(options?: any): DriveV3;
+        
             about: {
                 get: (params: any, callback: RequestCallback) => Request;
             };
@@ -4350,9 +4445,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface FitnessV1 {
             new(options?: any): FitnessV1;
+        
             users: {
                 dataSources: {
                     create: (params: any, callback: RequestCallback) => Request;
@@ -4377,15 +4472,15 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface FreebaseV1 {
             new(options?: any): FreebaseV1;
+        
             reconcile: (params: any, callback: RequestCallback) => Request;
             search: (params: any, callback: RequestCallback) => Request;
         }
-        
         export interface FusiontablesV1 {
             new(options?: any): FusiontablesV1;
+        
             column: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -4431,9 +4526,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface FusiontablesV2 {
             new(options?: any): FusiontablesV2;
+        
             column: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -4480,9 +4575,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface GamesV1 {
             new(options?: any): GamesV1;
+        
             achievementDefinitions: {
                 list: (params: any, callback: RequestCallback) => Request;
             };
@@ -4567,9 +4662,9 @@ declare module "googleapis" {
                 takeTurn: (params: any, callback: RequestCallback) => Request;
             };
         }
+        export interface GamesConfigurationV1configuration {
+            new(options?: any): GamesConfigurationV1configuration;
         
-        export interface GamesconfigurationV1configuration {
-            new(options?: any): GamesconfigurationV1configuration;
             achievementConfigurations: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -4590,9 +4685,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
+        export interface GamesManagementV1management {
+            new(options?: any): GamesManagementV1management;
         
-        export interface GamesmanagementV1management {
-            new(options?: any): GamesmanagementV1management;
             achievements: {
                 reset: (params: any, callback: RequestCallback) => Request;
                 resetAll: (params: any, callback: RequestCallback) => Request;
@@ -4637,9 +4732,9 @@ declare module "googleapis" {
                 resetForAllPlayers: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface GanV1beta1 {
             new(options?: any): GanV1beta1;
+        
             advertisers: {
                 get: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
@@ -4663,9 +4758,9 @@ declare module "googleapis" {
                 get: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface GenomicsV1beta2 {
             new(options?: any): GenomicsV1beta2;
+        
             annotationSets: {
                 create: (params: any, callback: RequestCallback) => Request;
                 delete: (params: any, callback: RequestCallback) => Request;
@@ -4755,9 +4850,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface GmailV1 {
             new(options?: any): GmailV1;
+        
             users: {
                 getProfile: (params: any, callback: RequestCallback) => Request;
                 stop: (params: any, callback: RequestCallback) => Request;
@@ -4805,25 +4900,25 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface GroupsmigrationV1 {
             new(options?: any): GroupsmigrationV1;
+        
             archive: {
                 insert: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface GroupssettingsV1 {
             new(options?: any): GroupssettingsV1;
+        
             groups: {
                 get: (params: any, callback: RequestCallback) => Request;
                 patch: (params: any, callback: RequestCallback) => Request;
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface AppengineV1beta4 {
             new(options?: any): AppengineV1beta4;
+        
             apps: {
                 get: (params: any, callback: RequestCallback) => Request;
                 modules: {
@@ -4844,9 +4939,9 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface AppengineV1beta5 {
             new(options?: any): AppengineV1beta5;
+        
             apps: {
                 get: (params: any, callback: RequestCallback) => Request;
                 operations: {
@@ -4867,9 +4962,9 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface ClassroomV1 {
             new(options?: any): ClassroomV1;
+        
             courses: {
                 create: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -4906,9 +5001,9 @@ declare module "googleapis" {
                 get: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface CloudbillingV1 {
             new(options?: any): CloudbillingV1;
+        
             billingAccounts: {
                 get: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
@@ -4921,9 +5016,9 @@ declare module "googleapis" {
                 updateBillingInfo: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface ClouddebuggerV2 {
             new(options?: any): ClouddebuggerV2;
+        
             controller: {
                 debuggees: {
                     register: (params: any, callback: RequestCallback) => Request;
@@ -4945,9 +5040,9 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface CloudresourcemanagerV1beta1 {
             new(options?: any): CloudresourcemanagerV1beta1;
+        
             projects: {
                 create: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
@@ -4968,9 +5063,9 @@ declare module "googleapis" {
                 testIamPermissions: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface CloudtraceV1 {
             new(options?: any): CloudtraceV1;
+        
             projects: {
                 patchTraces: (params: any, callback: RequestCallback) => Request;
                 traces: {
@@ -4979,9 +5074,9 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface ContainerV1 {
             new(options?: any): ContainerV1;
+        
             projects: {
                 zones: {
                     getServerconfig: (params: any, callback: RequestCallback) => Request;
@@ -4999,9 +5094,9 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface DataflowV1b3 {
             new(options?: any): DataflowV1b3;
+        
             projects: {
                 workerMessages: (params: any, callback: RequestCallback) => Request;
                 jobs: {
@@ -5020,9 +5115,9 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface DataprocV1alpha1 {
             new(options?: any): DataprocV1alpha1;
+        
             projects: {
                 clusters: {
                     create: (params: any, callback: RequestCallback) => Request;
@@ -5056,17 +5151,17 @@ declare module "googleapis" {
                 delete: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DataprocV1 {
             new(options?: any): DataprocV1;
+        
             media: {
                 upload: (params: any, callback: RequestCallback) => Request;
                 download: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface DataprocV1beta1 {
             new(options?: any): DataprocV1beta1;
+        
             projects: {
                 clusters: {
                     create: (params: any, callback: RequestCallback) => Request;
@@ -5091,9 +5186,9 @@ declare module "googleapis" {
                 delete: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface GenomicsV1alpha2 {
             new(options?: any): GenomicsV1alpha2;
+        
             operations: {
                 get: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
@@ -5107,9 +5202,9 @@ declare module "googleapis" {
                 delete: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface GenomicsV1 {
             new(options?: any): GenomicsV1;
+        
             datasets: {
                 list: (params: any, callback: RequestCallback) => Request;
                 create: (params: any, callback: RequestCallback) => Request;
@@ -5177,12 +5272,12 @@ declare module "googleapis" {
                 get: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface IamV1alpha1 {
-            new(options?: any): IamV1alpha1;}
-        
+            new(options?: any): IamV1alpha1;
+        }
         export interface IamV1 {
             new(options?: any): IamV1;
+        
             projects: {
                 serviceAccounts: {
                     list: (params: any, callback: RequestCallback) => Request;
@@ -5203,16 +5298,16 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface KgsearchV1 {
             new(options?: any): KgsearchV1;
+        
             entities: {
                 search: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface LoggingV2beta1 {
             new(options?: any): LoggingV2beta1;
+        
             projects: {
                 logs: {
                     delete: (params: any, callback: RequestCallback) => Request;
@@ -5240,9 +5335,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface PartnersV2 {
             new(options?: any): PartnersV2;
+        
             userEvents: {
                 log: (params: any, callback: RequestCallback) => Request;
             };
@@ -5260,9 +5355,9 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface PeopleV1 {
             new(options?: any): PeopleV1;
+        
             people: {
                 get: (params: any, callback: RequestCallback) => Request;
                 getBatchGet: (params: any, callback: RequestCallback) => Request;
@@ -5271,9 +5366,9 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface PlaymoviespartnerV1 {
             new(options?: any): PlaymoviespartnerV1;
+        
             accounts: {
                 avails: {
                     list: (params: any, callback: RequestCallback) => Request;
@@ -5294,9 +5389,9 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface ProximitybeaconV1beta1 {
             new(options?: any): ProximitybeaconV1beta1;
+        
             beacons: {
                 register: (params: any, callback: RequestCallback) => Request;
                 decommission: (params: any, callback: RequestCallback) => Request;
@@ -5322,9 +5417,9 @@ declare module "googleapis" {
                 getforobserved: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface PubsubV1beta1a {
             new(options?: any): PubsubV1beta1a;
+        
             topics: {
                 create: (params: any, callback: RequestCallback) => Request;
                 publish: (params: any, callback: RequestCallback) => Request;
@@ -5345,9 +5440,9 @@ declare module "googleapis" {
                 acknowledge: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface PubsubV1 {
             new(options?: any): PubsubV1;
+        
             projects: {
                 topics: {
                     setIamPolicy: (params: any, callback: RequestCallback) => Request;
@@ -5377,9 +5472,9 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface PubsubV1beta2 {
             new(options?: any): PubsubV1beta2;
+        
             projects: {
                 topics: {
                     setIamPolicy: (params: any, callback: RequestCallback) => Request;
@@ -5409,16 +5504,16 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface ScriptV1 {
             new(options?: any): ScriptV1;
+        
             scripts: {
                 run: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface StoragetransferV1 {
             new(options?: any): StoragetransferV1;
+        
             googleServiceAccounts: {
                 get: (params: any, callback: RequestCallback) => Request;
             };
@@ -5440,9 +5535,9 @@ declare module "googleapis" {
                 delete: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface YoutubereportingV1 {
             new(options?: any): YoutubereportingV1;
+        
             media: {
                 download: (params: any, callback: RequestCallback) => Request;
             };
@@ -5460,9 +5555,9 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface IdentitytoolkitV3 {
             new(options?: any): IdentitytoolkitV3;
+        
             relyingparty: {
                 createAuthUri: (params: any, callback: RequestCallback) => Request;
                 deleteAccount: (params: any, callback: RequestCallback) => Request;
@@ -5481,9 +5576,9 @@ declare module "googleapis" {
                 verifyPassword: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface LicensingV1 {
             new(options?: any): LicensingV1;
+        
             licenseAssignments: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -5494,9 +5589,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface ManagerV1beta2 {
             new(options?: any): ManagerV1beta2;
+        
             deployments: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -5510,9 +5605,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface MirrorV1 {
             new(options?: any): MirrorV1;
+        
             accounts: {
                 insert: (params: any, callback: RequestCallback) => Request;
             };
@@ -5552,9 +5647,9 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface Oauth2V1 {
             new(options?: any): Oauth2V1;
+        
             getCertForOpenIdConnect: (params: any, callback: RequestCallback) => Request;
             getCertForOpenIdConnectRaw: (params: any, callback: RequestCallback) => Request;
             getRobotJwk: (params: any, callback: RequestCallback) => Request;
@@ -5570,9 +5665,9 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface Oauth2V2 {
             new(options?: any): Oauth2V2;
+        
             getCertForOpenIdConnect: (params: any, callback: RequestCallback) => Request;
             tokeninfo: (params: any, callback: RequestCallback) => Request;
             userinfo: {
@@ -5584,23 +5679,23 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface PagespeedonlineV1 {
             new(options?: any): PagespeedonlineV1;
+        
             pagespeedapi: {
                 runpagespeed: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface PagespeedonlineV2 {
             new(options?: any): PagespeedonlineV2;
+        
             pagespeedapi: {
                 runpagespeed: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface PlusV1 {
             new(options?: any): PlusV1;
+        
             activities: {
                 get: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
@@ -5617,9 +5712,9 @@ declare module "googleapis" {
                 search: (params: any, callback: RequestCallback) => Request;
             };
         }
+        export interface PlusDomainsV1 {
+            new(options?: any): PlusDomainsV1;
         
-        export interface PlusdomainsV1 {
-            new(options?: any): PlusdomainsV1;
             activities: {
                 get: (params: any, callback: RequestCallback) => Request;
                 insert: (params: any, callback: RequestCallback) => Request;
@@ -5653,9 +5748,9 @@ declare module "googleapis" {
                 listByCircle: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface PredictionV1_2 {
             new(options?: any): PredictionV1_2;
+        
             predict: (params: any, callback: RequestCallback) => Request;
             hostedmodels: {
                 predict: (params: any, callback: RequestCallback) => Request;
@@ -5667,9 +5762,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface PredictionV1_3 {
             new(options?: any): PredictionV1_3;
+        
             hostedmodels: {
                 predict: (params: any, callback: RequestCallback) => Request;
             };
@@ -5681,9 +5776,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface PredictionV1_4 {
             new(options?: any): PredictionV1_4;
+        
             hostedmodels: {
                 predict: (params: any, callback: RequestCallback) => Request;
             };
@@ -5695,9 +5790,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface PredictionV1_5 {
             new(options?: any): PredictionV1_5;
+        
             hostedmodels: {
                 predict: (params: any, callback: RequestCallback) => Request;
             };
@@ -5711,9 +5806,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface PredictionV1_6 {
             new(options?: any): PredictionV1_6;
+        
             hostedmodels: {
                 predict: (params: any, callback: RequestCallback) => Request;
             };
@@ -5727,16 +5822,16 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
+        export interface QpxExpressV1 {
+            new(options?: any): QpxExpressV1;
         
-        export interface QpxexpressV1 {
-            new(options?: any): QpxexpressV1;
             trips: {
                 search: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface ReplicapoolV1beta1 {
             new(options?: any): ReplicapoolV1beta1;
+        
             pools: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -5752,9 +5847,9 @@ declare module "googleapis" {
                 restart: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface ReplicapoolV1beta2 {
             new(options?: any): ReplicapoolV1beta2;
+        
             instanceGroupManagers: {
                 abandonInstances: (params: any, callback: RequestCallback) => Request;
                 delete: (params: any, callback: RequestCallback) => Request;
@@ -5772,9 +5867,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface ReplicapoolupdaterV1beta1 {
             new(options?: any): ReplicapoolupdaterV1beta1;
+        
             rollingUpdates: {
                 cancel: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -5790,9 +5885,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface ResellerV1sandbox {
             new(options?: any): ResellerV1sandbox;
+        
             customers: {
                 get: (params: any, callback: RequestCallback) => Request;
                 insert: (params: any, callback: RequestCallback) => Request;
@@ -5812,9 +5907,9 @@ declare module "googleapis" {
                 suspend: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface ResellerV1 {
             new(options?: any): ResellerV1;
+        
             customers: {
                 get: (params: any, callback: RequestCallback) => Request;
                 insert: (params: any, callback: RequestCallback) => Request;
@@ -5834,9 +5929,9 @@ declare module "googleapis" {
                 suspend: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface ResourceviewsV1beta1 {
             new(options?: any): ResourceviewsV1beta1;
+        
             regionViews: {
                 addresources: (params: any, callback: RequestCallback) => Request;
                 delete: (params: any, callback: RequestCallback) => Request;
@@ -5856,9 +5951,9 @@ declare module "googleapis" {
                 removeresources: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface ResourceviewsV1beta2 {
             new(options?: any): ResourceviewsV1beta2;
+        
             zoneOperations: {
                 get: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
@@ -5875,9 +5970,9 @@ declare module "googleapis" {
                 setService: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface ServiceregistryAlpha {
             new(options?: any): ServiceregistryAlpha;
+        
             endpoints: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -5891,9 +5986,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
+        export interface SiteVerificationV1 {
+            new(options?: any): SiteVerificationV1;
         
-        export interface SiteverificationV1 {
-            new(options?: any): SiteverificationV1;
             webResource: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -5904,9 +5999,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface SpectrumV1explorer {
             new(options?: any): SpectrumV1explorer;
+        
             paws: {
                 getSpectrum: (params: any, callback: RequestCallback) => Request;
                 getSpectrumBatch: (params: any, callback: RequestCallback) => Request;
@@ -5916,9 +6011,9 @@ declare module "googleapis" {
                 verifyDevice: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface SqladminV1beta3 {
             new(options?: any): SqladminV1beta3;
+        
             backupRuns: {
                 get: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
@@ -5956,9 +6051,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface SqladminV1beta4 {
             new(options?: any): SqladminV1beta4;
+        
             backupRuns: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -6014,9 +6109,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface StorageV1 {
             new(options?: any): StorageV1;
+        
             bucketAccessControls: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -6065,9 +6160,9 @@ declare module "googleapis" {
                 watchAll: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface StorageV1beta1 {
             new(options?: any): StorageV1beta1;
+        
             bucketAccessControls: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -6101,9 +6196,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface StorageV1beta2 {
             new(options?: any): StorageV1beta2;
+        
             bucketAccessControls: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -6151,9 +6246,9 @@ declare module "googleapis" {
                 watchAll: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface TagmanagerV1 {
             new(options?: any): TagmanagerV1;
+        
             accounts: {
                 get: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
@@ -6229,9 +6324,9 @@ declare module "googleapis" {
                 };
             };
         }
-        
         export interface TaskqueueV1beta1 {
             new(options?: any): TaskqueueV1beta1;
+        
             taskqueues: {
                 get: (params: any, callback: RequestCallback) => Request;
             };
@@ -6242,9 +6337,9 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface TaskqueueV1beta2 {
             new(options?: any): TaskqueueV1beta2;
+        
             taskqueues: {
                 get: (params: any, callback: RequestCallback) => Request;
             };
@@ -6258,9 +6353,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface TasksV1 {
             new(options?: any): TasksV1;
+        
             tasklists: {
                 delete: (params: any, callback: RequestCallback) => Request;
                 get: (params: any, callback: RequestCallback) => Request;
@@ -6280,9 +6375,9 @@ declare module "googleapis" {
                 update: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface TranslateV2 {
             new(options?: any): TranslateV2;
+        
             detections: {
                 list: (params: any, callback: RequestCallback) => Request;
             };
@@ -6293,32 +6388,32 @@ declare module "googleapis" {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface UrlshortenerV1 {
             new(options?: any): UrlshortenerV1;
+        
             url: {
                 get: (params: any, callback: RequestCallback) => Request;
                 insert: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface VisionV1 {
             new(options?: any): VisionV1;
+        
             images: {
                 annotate: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface WebfontsV1 {
             new(options?: any): WebfontsV1;
+        
             webfonts: {
                 list: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface WebmastersV3 {
             new(options?: any): WebmastersV3;
+        
             searchanalytics: {
                 query: (params: any, callback: RequestCallback) => Request;
             };
@@ -6343,9 +6438,9 @@ declare module "googleapis" {
                 markAsFixed: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
         export interface YoutubeV3 {
             new(options?: any): YoutubeV3;
+        
             activities: {
                 insert: (params: any, callback: RequestCallback) => Request;
                 list: (params: any, callback: RequestCallback) => Request;
@@ -6470,9 +6565,9 @@ declare module "googleapis" {
                 unset: (params: any, callback: RequestCallback) => Request;
             };
         }
+        export interface YoutubeAnalyticsV1 {
+            new(options?: any): YoutubeAnalyticsV1;
         
-        export interface YoutubeanalyticsV1 {
-            new(options?: any): YoutubeanalyticsV1;
             batchReportDefinitions: {
                 list: (params: any, callback: RequestCallback) => Request;
             };
@@ -6494,9 +6589,9 @@ declare module "googleapis" {
                 query: (params: any, callback: RequestCallback) => Request;
             };
         }
+        export interface YoutubeAnalyticsV1beta1 {
+            new(options?: any): YoutubeAnalyticsV1beta1;
         
-        export interface YoutubeanalyticsV1beta1 {
-            new(options?: any): YoutubeanalyticsV1beta1;
             batchReportDefinitions: {
                 list: (params: any, callback: RequestCallback) => Request;
             };
@@ -6518,8 +6613,7 @@ declare module "googleapis" {
                 query: (params: any, callback: RequestCallback) => Request;
             };
         }
-        
-}
+    }
 
     var google: GoogleApis;
 

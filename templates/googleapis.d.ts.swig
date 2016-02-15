@@ -5,33 +5,23 @@ declare module "googleapis" {
         new(options?: any): GoogleApis;
         options(options?: any): void;
 
-        {%- for name, versions in index -%}
-            {{ br }}
-            {%- filter indent(8) -%}{{ name }}(version: string): any;{%- endfilter -%}
-            {%- if versions -%}
-                {%- for version in versions -%}
-                    {%- set Name = name|capitalize -%}
-                    {%- set Version = version|replace('\.', '_')|capitalize -%}
-                    {%- set Interface = [Name, Version]|join('') -%}
-
-                    {%- filter indent(8) -%}{{ name }}(version: '{{version}}'): google.{{Interface}};{%- endfilter -%}
-                    {%- if not loop.last -%}{{ br }}{%- endif -%}
-                {%- endfor -%}
-            {%- endif -%}
-        {%- endfor -%}
+        {%- if index -%}{{ br }}{{ br }}
+            {%- for name, versions in index -%}
+                {%- filter indent(8) -%}
+                    {%- include "./partials/binding.d.ts.swig" with versions -%}
+                {%- endfilter -%}{%- if not loop.last -%}{{ br }}{%- endif -%}
+            {%- endfor -%}
+        {%- endif %}
     }
 
     module google {
-        {%- if apis -%}
-            {{ br }}
+        {%- if apis -%}{{ br }}
             {%- for api in apis -%}
                 {%- filter indent(8) -%}
-                    {%- include "./api-partial.d.ts.swig" with api -%}
-                {%- endfilter -%}
-                {%- if not loop.last -%}{{ br }}{%- endif -%}
+                    {%- include "./partials/api.d.ts.swig" with api -%}
+                {%- endfilter -%}{%- if not loop.last -%}{{ br }}{%- endif -%}
             {%- endfor -%}
-            {{ br }}
-        {%- endif -%}
+        {%- endif %}
     }
 
     var google: GoogleApis;
