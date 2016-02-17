@@ -7,7 +7,9 @@ generator.generate().then(() => console.log('Done')).catch((e) => console.error(
 
 //import * as google from "googleapis";
 //
-//google.discovery('v1').apis.list({}, (e, d) => {
+//let r = google.discovery('v1').apis.list({}, (e, d) => {
 //    console.log(e);
 //    console.log(d);
 //});
+//
+//console.log(r);

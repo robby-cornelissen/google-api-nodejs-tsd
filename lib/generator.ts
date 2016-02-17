@@ -21,8 +21,8 @@ interface Options {
 export class Generator {
     private static DEFAULT_OPTIONS: Options = {
         discoveryUrl: 'https://www.googleapis.com/discovery/v1/apis/',
-        baseTemplatePath: './templates/base.d.ts.swig',
-        apiTemplatePath: './templates/base.d.ts.swig',
+        baseTemplatePath: './templates/apis.d.ts.swig',
+        apiTemplatePath: './templates/api.d.ts.swig',
         exportPath: 'dist'
     };
 
@@ -41,22 +41,12 @@ export class Generator {
     }
 
     generate(): Promise<any> {
-        return this.get(this.discoveryUrl).then(data => {
-            return {
-                items: data['items'],
-                index: data['items'].reduce((index, item) => {
-                    index[item.name] = index[item.name] || [];
-                    index[item.name].push(item.version);
-
-                    return index;
-                }, {})
-            };
-        }).then((data) => {
+        return this.get(this.discoveryUrl).then((data) => {
             let baseName = MODULE;
             let basePath = path.join(this.exportPath, baseName, baseName + '.d.ts');
 
-            let renderBase = this.render(this.baseTemplate, data.index, basePath);
-            let renderApis = data.items.map((item) => this.get(item['discoveryRestUrl']).then(api => {
+            let renderBase = this.render(this.baseTemplate, {}, basePath);
+            let renderApis = data['items'].filter(item => item.name === 'discovery').map((item) => this.get(item['discoveryRestUrl']).then(api => {
                 let apiName = MODULE + '.' + api['name'] + '.' + api['version'];
                 let apiPath = path.join(this.exportPath, apiName, apiName + '.d.ts');
 
@@ -118,7 +108,10 @@ export class Generator {
     static initialize(): void {
         swig.setDefaults({
             autoescape: false,
-            locals: {br: '\n'},
+            locals: {
+                module: MODULE,
+                br: '\n'
+            },
             loader: swig.loaders.fs(path.join(__dirname, '..', 'templates'))
         });
         swig.setFilter('indent', (input: string, number: number) => {
@@ -126,7 +119,7 @@ export class Generator {
 
             return input.replace(/^/gm, prefix);
         });
-        swig.setFilter('toInterfaceName', (input: [string, string]) => {
+        swig.setFilter('toNamespace', (input: [string, string]) => {
             let capitalize = (input: string) => input.charAt(0).toUpperCase() + input.slice(1);
 
             let name = capitalize(input[0]);
