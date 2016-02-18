@@ -1,1 +1,0 @@
-{{ name }}: (params: any, callback: Callback) => Request;

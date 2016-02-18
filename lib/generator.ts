@@ -119,14 +119,6 @@ export class Generator {
 
             return input.replace(/^/gm, prefix);
         });
-        swig.setFilter('toNamespace', (input: [string, string]) => {
-            let capitalize = (input: string) => input.charAt(0).toUpperCase() + input.slice(1);
-
-            let name = capitalize(input[0]);
-            let version = capitalize(input[1].replace('\.', '_'));
-
-            return name + version;
-        });
     }
 }
 
