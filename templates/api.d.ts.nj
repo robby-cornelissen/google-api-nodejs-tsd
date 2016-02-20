@@ -1,0 +1,38 @@
+{%- import './api-macros.d.ts.nj' as macros -%}
+/// <reference path="../{{ module }}/{{ module }}.d.ts" />
+declare module google {
+    export interface GoogleApis {
+        {{ name }}(version: string): any;
+        {{ name }}(version: '{{ version }}'): {{ name }}.{{ version | replace('\.', '_') }}.{{ name | capitalize }};
+    }
+
+    namespace {{ name }} {
+        namespace {{ version | replace('\.', '_') }} {
+            export interface {{ name | capitalize }} {
+                new(options: any): {{ name | capitalize }};
+
+                {%- if methods or resources -%}{{ br }}{%- endif -%}
+                {%- if methods -%}
+                    {{ br }}
+                    {%- for name, method in methods -%}
+                        {{ macros.method_(name, method) | indent(16, true) }}
+                    {%- endfor -%}
+                {%- endif -%}
+                {%- if resources -%}
+                    {{ br }}
+                    {%- for name, resource in resources -%}
+                        {{ macros.resource_(name, resource) | indent(16, true) }}
+                    {%- endfor -%}
+                {%- endif %}
+            }
+
+            {%- if schemas -%}
+                {{ br }}{{ br }}
+                {%- for name, schema in schemas -%}
+                    {{ macros.schema_(name, schema) | indent(12, true) }}
+                    {%- if not loop.last -%}{{ br }}{%- endif -%}
+                {%- endfor -%}
+            {%- endif %}
+        }
+    }
+}

@@ -5,7 +5,13 @@ declare module "nunjucks" {
 
     export function compile(string: string, environment?: any, path?: string): any;
 
-    export function configure(path?: string, options?: {
+    export function configure(path?: string, options?: Options): any;
+
+    export function configure(options?: Options): any;
+
+    export function installJinjaCompat(): void;
+
+    interface Options {
         autoescape?: boolean;
         throwOnUndefined?: boolean;
         trimBlocks?: boolean;
@@ -25,7 +31,5 @@ declare module "nunjucks" {
             commentStart?: string;
             commentEnd?: string;
         }
-    });
-
-    export function installJinjaCompat(): void;
+    }
 }

@@ -1,11 +1,12 @@
+import {Request} from "request";
 'use strict';
 
 import * as fs from 'fs';
 import * as path from 'path';
 import * as mkdirp from 'mkdirp';
 import * as req from 'request';
-import * as swig from 'swig';
 import {format} from 'util';
+import {Renderer, NunjucksRenderer} from "./renderer";
 
 const MODULE: string = 'googleapis';
 const PACKAGE: any = require(path.join(MODULE, 'package.json'));
@@ -16,20 +17,26 @@ interface Options {
     baseTemplatePath?: string;
     apiTemplatePath?: string;
     exportPath?: string;
+    renderer?: Renderer;
 }
 
 export class Generator {
     private static DEFAULT_OPTIONS: Options = {
         discoveryUrl: 'https://www.googleapis.com/discovery/v1/apis/',
-        baseTemplatePath: './templates/apis.d.ts.swig',
-        apiTemplatePath: './templates/api.d.ts.swig',
-        exportPath: 'dist'
+        baseTemplatePath: './templates/apis.d.ts.nj',
+        apiTemplatePath: './templates/api.d.ts.nj',
+        exportPath: 'dist',
+        renderer: new NunjucksRenderer('./templates', {
+            module: MODULE,
+            br: '\n'
+        })
     };
 
     private discoveryUrl: string;
     private baseTemplate: string;
     private apiTemplate: string;
     private exportPath: string;
+    private renderer: Renderer;
 
     constructor(options?: Options) {
         let opts = Object.assign({}, Generator.DEFAULT_OPTIONS, options);
@@ -38,6 +45,7 @@ export class Generator {
         this.baseTemplate = fs.readFileSync(opts.baseTemplatePath, {encoding: 'utf8'});
         this.apiTemplate = fs.readFileSync(opts.apiTemplatePath, {encoding: 'utf8'});
         this.exportPath = opts.exportPath;
+        this.renderer = opts.renderer;
     }
 
     generate(): Promise<any> {
@@ -86,15 +94,13 @@ export class Generator {
     }
 
     render(template, data, exportPath): Promise<void> {
-        return new Promise<void>((resolve, reject) => {
-            let content = swig.render(template, {locals: data});
-
+        return this.renderer.render(template, data).then(result => new Promise<void>((resolve, reject) => {
             mkdirp(path.dirname(exportPath), function(e) {
                 if (e) {
                     return reject(e);
                 }
 
-                fs.writeFile(exportPath, content, function(e) {
+                fs.writeFile(exportPath, result, function(e) {
                     if (e) {
                         return reject(e);
                     }
@@ -102,26 +108,6 @@ export class Generator {
                     return resolve();
                 });
             });
-        });
+        }));
     }
-
-    static initialize(): void {
-        swig.setDefaults({
-            autoescape: false,
-            locals: {
-                module: MODULE,
-                br: '\n'
-            },
-            loader: swig.loaders.fs(path.join(__dirname, '..', 'templates'))
-        });
-        swig.setFilter('indent', (input: string, number: number) => {
-            let prefix = ' '.repeat(number || 4);
-
-            return input.replace(/^/gm, prefix);
-        });
-    }
-}
-
-export module Generator {
-    Generator.initialize();
 }

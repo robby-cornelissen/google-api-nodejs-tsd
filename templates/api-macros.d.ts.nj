@@ -1,0 +1,63 @@
+{%- macro method_(name, method) -%}
+{{ name }}: (params: any, callback: Callback) => Request;
+{%- endmacro -%}
+
+{%- macro resource_(name, resource) -%}
+{{ name }}: {
+    {%- if resource.methods -%}
+        {{ br }}
+        {%- for name, method in resource.methods -%}
+            {{ method_(name, method) | indent(4, true) }}
+        {%- endfor -%}
+    {%- endif -%}
+    {%- if resource.resources -%}
+        {{ br }}
+        {%- for name, resource in resource.resources -%}
+            {{ resource_(name, resource) | indent(4, true) }}
+        {%- endfor -%}
+    {%- endif -%}
+};
+{%- endmacro -%}
+
+{%- macro schema_(name, schema) -%}
+{%- if schema.type == 'object' -%}
+interface {{ name }} {
+    {%- if schema.properties -%}
+        {{ br }}
+        {%- for name, property in schema.properties -%}
+            {{ schemaProperty_(name, property) | indent(4, true) }}
+        {%- endfor -%}
+    {%- endif -%}
+}
+{%- endif -%}
+{%- endmacro -%}
+
+{%- macro schemaProperty_(name, property) -%}
+{{ name }}: {{ schemaType_(property) }};
+{%- endmacro -%}
+
+{%- macro schemaType_(description) -%}
+{%- if description.type == 'null' -%}
+void
+{%- elif description.type == 'string' -%}
+string
+{%- elif description.type == 'boolean' -%}
+boolean
+{%- elif description.type == 'number' -%}
+number
+{%- elif description.type == 'integer' -%}
+number
+{%- elif description.type == 'object' -%}
+{{ schemaObject_(description) }}
+{%- elif description.type == 'array' -%}
+{%- if description.items -%}{{ schemaType_(description.items) }}{%- else -%}any{%- endif -%}[]
+{%- elif element.$ref -%}
+{{ element.$ref }}
+{%- else -%}
+any
+{%- endif -%}
+{%- endmacro -%}
+
+{%- macro schemaObject_(description) -%}
+{}
+{%- endmacro -%}
