@@ -60,4 +60,6 @@ any
         {%- endfor -%}
     {%- endif -%}
 }
+{%- if description.additionalProperties -%}
+{%- endif -%}
 {%- endmacro -%}

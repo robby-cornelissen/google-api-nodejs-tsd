@@ -21,9 +21,7 @@ export class NunjucksRenderer extends Renderer {
         super(globals);
 
         this.env = nunjucks.configure(path, {
-            autoescape: false,
-            trimblocks: true,
-            lstripblocks: true
+            autoescape: false
         });
 
         for (let name in globals) {
