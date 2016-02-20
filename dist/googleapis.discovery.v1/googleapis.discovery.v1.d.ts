@@ -1,6 +1,7 @@
 /// <reference path="../googleapis/googleapis.d.ts" />
 declare module google {
     export interface GoogleApis {
+        discovery(options: any): any;
         discovery(version: string): any;
         discovery(version: 'v1'): discovery.v1.Discovery;
     }

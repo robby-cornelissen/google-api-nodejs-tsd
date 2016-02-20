@@ -1,6 +1,8 @@
 'use strict';
 
 import * as google from "googleapis";
+import Discovery = google.discovery.v1.Discovery;
+import DirectoryList = google.discovery.v1.DirectoryList;
 
 // simple
 google.discovery('v1').apis.list({
@@ -13,10 +15,7 @@ google.discovery('v1').apis.list({
     }
 });
 
-// verbose
-import Discovery = google.discovery.v1.Discovery;
-import DirectoryList = google.discovery.v1.DirectoryList;
-
+// typed
 let discovery: Discovery = google.discovery('v1');
 
 discovery.apis.list({
