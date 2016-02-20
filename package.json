@@ -6,9 +6,11 @@
     "start": "node ./bin/run.js"
   },
   "dependencies": {
-    "mkdirp": "~0.5.1",
-    "typescript": "~1.7.5",
-    "google-auth-library": "~0.9.7",
-    "googleapis": "~2.1.7"
+    "google-auth-library": "^0.9.7",
+    "googleapis": "~2.1.7",
+    "mkdirp": "^0.5.1",
+    "nunjucks": "^2.3.0",
+    "request": "^2.69.0",
+    "typescript": "^1.7.5"
   }
 }

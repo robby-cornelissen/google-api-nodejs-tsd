@@ -1,4 +1,4 @@
-// Compiled using typings@0.6.7
+// Compiled using typings@0.6.8
 // Source: https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/90c7b5653c973cbc8c568ba33c8a04fb478525ee/request/request.d.ts
 // Type definitions for request
 // Project: https://github.com/mikeal/request

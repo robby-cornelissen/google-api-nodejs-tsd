@@ -1,5 +1,5 @@
-// Compiled using typings@0.6.6
-// Source: https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/aee0039a2d6686ec78352125010ebb38a7a7d743/node/node.d.ts
+// Compiled using typings@0.6.8
+// Source: https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/263705d313346e093d95cb62cef6fed848e46978/node/node.d.ts
 // Type definitions for Node.js v4.x
 // Project: http://nodejs.org/
 // Definitions by: Microsoft TypeScript <http://typescriptlang.org>, DefinitelyTyped <https://github.com/borisyankov/DefinitelyTyped>
@@ -218,6 +218,7 @@ declare module NodeJS {
         stderr: WritableStream;
         stdin: ReadableStream;
         argv: string[];
+        execArgv: string[];
         execPath: string;
         abort(): void;
         chdir(directory: string): void;
@@ -503,7 +504,7 @@ declare module "http" {
         statusCode: number;
         statusMessage: string;
         headersSent: boolean;
-        setHeader(name: string, value: string): void;
+        setHeader(name: string, value: string | string[]): void;
         sendDate: boolean;
         getHeader(name: string): string;
         removeHeader(name: string): void;
@@ -918,6 +919,7 @@ declare module "child_process" {
         stdin:  stream.Writable;
         stdout: stream.Readable;
         stderr: stream.Readable;
+        stdio: (stream.Readable|stream.Writable)[];
         pid: number;
         kill(signal?: string): void;
         send(message: any, sendHandle?: any): void;
@@ -1761,6 +1763,17 @@ declare module "crypto" {
     export function randomBytes(size: number, callback: (err: Error, buf: Buffer) =>void ): void;
     export function pseudoRandomBytes(size: number): Buffer;
     export function pseudoRandomBytes(size: number, callback: (err: Error, buf: Buffer) =>void ): void;
+    export interface RsaPublicKey {
+        key: string;
+        padding?: any;
+    }
+    export interface RsaPrivateKey {
+        key: string;
+        passphrase?: string,
+        padding?: any;
+    }
+    export function publicEncrypt(public_key: string|RsaPublicKey, buffer: Buffer): Buffer
+    export function privateDecrypt(private_key: string|RsaPrivateKey, buffer: Buffer): Buffer
 }
 
 declare module "stream" {
