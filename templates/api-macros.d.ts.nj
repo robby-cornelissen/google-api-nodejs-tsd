@@ -1,5 +1,5 @@
 {%- macro method_(name, method) -%}
-{{ name }}: (params: any, callback: {{ callback_(method) }}) => Request;
+{{ name }}: (parameters: {{ parameters_(method) }}, callback: {{ callback_(method) }}) => Request;
 {%- endmacro -%}
 
 {%- macro resource_(name, resource) -%}
@@ -19,11 +19,24 @@
 };
 {%- endmacro -%}
 
+{%- macro parameters_(method) -%}
+{%- if method.parameters -%}
+{
+    {%- for name, parameter in method.parameters -%}
+        {{ name }}{%- if not parameter.required -%}?{%- endif -%}: {{ schemaType_(parameter) }}
+        {%- if not loop.last -%}, {% endif -%}
+    {%- endfor -%}
+}
+{%- else -%}
+any
+{%- endif -%}
+{%- endmacro -%}
+
 {%- macro callback_(method) -%}
 {%- if method.response -%}
-(e: any, body: {{ schemaType_(method.response) }}, response: any) => void
+(error: any, body: {{ schemaType_(method.response) }}, response: any) => void
 {%- else -%}
-(e: any, body: any, response: any) => void
+(error: any, body: any, response: any) => void
 {%- endif -%}
 {%- endmacro -%}
 
