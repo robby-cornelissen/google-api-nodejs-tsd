@@ -42,9 +42,9 @@ any
 
 {%- macro schema_(name, schema) -%}
 {%- if schema.type == 'object' -%}
-interface {{ name }} {{ schemaObject_(schema) }}
+export interface {{ name }} {{ schemaObject_(schema) }}
 {%- else -%}
-type {{ name }} = {{ schemaType_(schema) }};
+export type {{ name }} = {{ schemaType_(schema) }};
 {%- endif -%}
 {%- endmacro -%}
 

@@ -42,38 +42,38 @@ declare module google {
 
             }
 
-            interface SetIamPolicyRequest {
+            export interface SetIamPolicyRequest {
                 'policy': Policy;
             }
 
-            interface Policy {
+            export interface Policy {
                 'version': number;
                 'bindings': Binding[];
                 'etag': string;
             }
 
-            interface Binding {
+            export interface Binding {
                 'role': string;
                 'members': string[];
             }
 
-            interface TestIamPermissionsRequest {
+            export interface TestIamPermissionsRequest {
                 'permissions': string[];
             }
 
-            interface TestIamPermissionsResponse {
+            export interface TestIamPermissionsResponse {
                 'permissions': string[];
             }
 
-            interface Topic {
+            export interface Topic {
                 'name': string;
             }
 
-            interface PublishRequest {
+            export interface PublishRequest {
                 'messages': PubsubMessage[];
             }
 
-            interface PubsubMessage {
+            export interface PubsubMessage {
                 'data': string;
                 'attributes': {
                     [name: string]: string
@@ -82,66 +82,66 @@ declare module google {
                 'publishTime': string;
             }
 
-            interface PublishResponse {
+            export interface PublishResponse {
                 'messageIds': string[];
             }
 
-            interface ListTopicsResponse {
+            export interface ListTopicsResponse {
                 'topics': Topic[];
                 'nextPageToken': string;
             }
 
-            interface ListTopicSubscriptionsResponse {
+            export interface ListTopicSubscriptionsResponse {
                 'subscriptions': string[];
                 'nextPageToken': string;
             }
 
-            interface Empty {}
+            export interface Empty {}
 
-            interface Subscription {
+            export interface Subscription {
                 'name': string;
                 'topic': string;
                 'pushConfig': PushConfig;
                 'ackDeadlineSeconds': number;
             }
 
-            interface PushConfig {
+            export interface PushConfig {
                 'pushEndpoint': string;
                 'attributes': {
                     [name: string]: string
                 };
             }
 
-            interface ListSubscriptionsResponse {
+            export interface ListSubscriptionsResponse {
                 'subscriptions': Subscription[];
                 'nextPageToken': string;
             }
 
-            interface ModifyAckDeadlineRequest {
+            export interface ModifyAckDeadlineRequest {
                 'ackId': string;
                 'ackIds': string[];
                 'ackDeadlineSeconds': number;
             }
 
-            interface AcknowledgeRequest {
+            export interface AcknowledgeRequest {
                 'ackIds': string[];
             }
 
-            interface PullRequest {
+            export interface PullRequest {
                 'returnImmediately': boolean;
                 'maxMessages': number;
             }
 
-            interface PullResponse {
+            export interface PullResponse {
                 'receivedMessages': ReceivedMessage[];
             }
 
-            interface ReceivedMessage {
+            export interface ReceivedMessage {
                 'ackId': string;
                 'message': PubsubMessage;
             }
 
-            interface ModifyPushConfigRequest {
+            export interface ModifyPushConfigRequest {
                 'pushConfig': PushConfig;
             }
 

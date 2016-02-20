@@ -16,7 +16,7 @@ declare module google {
 
             }
 
-            interface Groups {
+            export interface Groups {
                 'kind': string;
                 'responseCode': string;
             }

@@ -30,7 +30,7 @@ declare module google {
 
             }
 
-            interface Change {
+            export interface Change {
                 'additions': ResourceRecordSet[];
                 'deletions': ResourceRecordSet[];
                 'id': string;
@@ -39,13 +39,13 @@ declare module google {
                 'status': string;
             }
 
-            interface ChangesListResponse {
+            export interface ChangesListResponse {
                 'changes': Change[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface ManagedZone {
+            export interface ManagedZone {
                 'creationTime': string;
                 'description': string;
                 'dnsName': string;
@@ -56,20 +56,20 @@ declare module google {
                 'nameServers': string[];
             }
 
-            interface ManagedZonesListResponse {
+            export interface ManagedZonesListResponse {
                 'kind': string;
                 'managedZones': ManagedZone[];
                 'nextPageToken': string;
             }
 
-            interface Project {
+            export interface Project {
                 'id': string;
                 'kind': string;
                 'number': string;
                 'quota': Quota;
             }
 
-            interface Quota {
+            export interface Quota {
                 'kind': string;
                 'managedZones': number;
                 'resourceRecordsPerRrset': number;
@@ -79,7 +79,7 @@ declare module google {
                 'totalRrdataSizePerChange': number;
             }
 
-            interface ResourceRecordSet {
+            export interface ResourceRecordSet {
                 'kind': string;
                 'name': string;
                 'rrdatas': string[];
@@ -87,7 +87,7 @@ declare module google {
                 'type': string;
             }
 
-            interface ResourceRecordSetsListResponse {
+            export interface ResourceRecordSetsListResponse {
                 'kind': string;
                 'nextPageToken': string;
                 'rrsets': ResourceRecordSet[];

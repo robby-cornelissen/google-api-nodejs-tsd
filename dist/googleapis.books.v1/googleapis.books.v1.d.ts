@@ -114,7 +114,7 @@ declare module google {
 
             }
 
-            interface Annotation {
+            export interface Annotation {
                 'afterSelectedText': string;
                 'beforeSelectedText': string;
                 'clientVersionRanges': {
@@ -150,7 +150,7 @@ declare module google {
                 'volumeId': string;
             }
 
-            interface Annotationdata {
+            export interface Annotationdata {
                 'annotationType': string;
                 'data': any;
                 'encoded_data': string;
@@ -162,14 +162,14 @@ declare module google {
                 'volumeId': string;
             }
 
-            interface Annotations {
+            export interface Annotations {
                 'items': Annotation[];
                 'kind': string;
                 'nextPageToken': string;
                 'totalItems': number;
             }
 
-            interface AnnotationsSummary {
+            export interface AnnotationsSummary {
                 'kind': string;
                 'layers': {
                     'allowedCharacterCount': number;
@@ -180,32 +180,32 @@ declare module google {
                 }[];
             }
 
-            interface Annotationsdata {
+            export interface Annotationsdata {
                 'items': Annotationdata[];
                 'kind': string;
                 'nextPageToken': string;
                 'totalItems': number;
             }
 
-            interface BooksAnnotationsRange {
+            export interface BooksAnnotationsRange {
                 'endOffset': string;
                 'endPosition': string;
                 'startOffset': string;
                 'startPosition': string;
             }
 
-            interface BooksCloudloadingResource {
+            export interface BooksCloudloadingResource {
                 'author': string;
                 'processingState': string;
                 'title': string;
                 'volumeId': string;
             }
 
-            interface BooksVolumesRecommendedRateResponse {
+            export interface BooksVolumesRecommendedRateResponse {
                 'consistency_token': string;
             }
 
-            interface Bookshelf {
+            export interface Bookshelf {
                 'access': string;
                 'created': string;
                 'description': string;
@@ -218,12 +218,12 @@ declare module google {
                 'volumesLastUpdated': string;
             }
 
-            interface Bookshelves {
+            export interface Bookshelves {
                 'items': Bookshelf[];
                 'kind': string;
             }
 
-            interface Category {
+            export interface Category {
                 'items': {
                     'badgeUrl': string;
                     'categoryId': string;
@@ -232,7 +232,7 @@ declare module google {
                 'kind': string;
             }
 
-            interface ConcurrentAccessRestriction {
+            export interface ConcurrentAccessRestriction {
                 'deviceAllowed': boolean;
                 'kind': string;
                 'maxConcurrentDevices': number;
@@ -246,7 +246,7 @@ declare module google {
                 'volumeId': string;
             }
 
-            interface Dictlayerdata {
+            export interface Dictlayerdata {
                 'common': {
                     'title': string;
                 };
@@ -310,7 +310,7 @@ declare module google {
                 'kind': string;
             }
 
-            interface Discoveryclusters {
+            export interface Discoveryclusters {
                 'clusters': {
                     'banner_with_content_container': {
                         'fillColorArgb': string;
@@ -330,7 +330,7 @@ declare module google {
                 'totalClusters': number;
             }
 
-            interface DownloadAccessRestriction {
+            export interface DownloadAccessRestriction {
                 'deviceAllowed': boolean;
                 'downloadsAcquired': number;
                 'justAcquired': boolean;
@@ -345,12 +345,12 @@ declare module google {
                 'volumeId': string;
             }
 
-            interface DownloadAccesses {
+            export interface DownloadAccesses {
                 'downloadAccessList': DownloadAccessRestriction[];
                 'kind': string;
             }
 
-            interface Geolayerdata {
+            export interface Geolayerdata {
                 'common': {
                     'lang': string;
                     'previewImageUrl': string;
@@ -383,13 +383,13 @@ declare module google {
                 'kind': string;
             }
 
-            interface Layersummaries {
+            export interface Layersummaries {
                 'items': Layersummary[];
                 'kind': string;
                 'totalItems': number;
             }
 
-            interface Layersummary {
+            export interface Layersummary {
                 'annotationCount': number;
                 'annotationTypes': string[];
                 'annotationsDataLink': string;
@@ -405,7 +405,7 @@ declare module google {
                 'volumeId': string;
             }
 
-            interface Metadata {
+            export interface Metadata {
                 'items': {
                     'download_url': string;
                     'encrypted_key': string;
@@ -416,7 +416,7 @@ declare module google {
                 'kind': string;
             }
 
-            interface Notification {
+            export interface Notification {
                 'body': string;
                 'dont_show_notification': boolean;
                 'iconUrl': string;
@@ -428,7 +428,7 @@ declare module google {
                 'title': string;
             }
 
-            interface Offers {
+            export interface Offers {
                 'items': {
                     'artUrl': string;
                     'gservicesKey': string;
@@ -445,7 +445,7 @@ declare module google {
                 'kind': string;
             }
 
-            interface ReadingPosition {
+            export interface ReadingPosition {
                 'epubCfiPosition': string;
                 'gbImagePosition': string;
                 'gbTextPosition': string;
@@ -455,13 +455,13 @@ declare module google {
                 'volumeId': string;
             }
 
-            interface RequestAccess {
+            export interface RequestAccess {
                 'concurrentAccess': ConcurrentAccessRestriction;
                 'downloadAccess': DownloadAccessRestriction;
                 'kind': string;
             }
 
-            interface Review {
+            export interface Review {
                 'author': {
                     'displayName': string;
                 };
@@ -480,7 +480,7 @@ declare module google {
                 'volumeId': string;
             }
 
-            interface Series {
+            export interface Series {
                 'kind': string;
                 'series': {
                     'bannerImageUrl': string;
@@ -491,13 +491,13 @@ declare module google {
                 }[];
             }
 
-            interface Seriesmembership {
+            export interface Seriesmembership {
                 'kind': string;
                 'member': Volume[];
                 'nextPageToken': string;
             }
 
-            interface Usersettings {
+            export interface Usersettings {
                 'kind': string;
                 'notesExport': {
                     'folderName': string;
@@ -510,7 +510,7 @@ declare module google {
                 };
             }
 
-            interface Volume {
+            export interface Volume {
                 'accessInfo': {
                     'accessViewStatus': string;
                     'country': string;
@@ -654,13 +654,13 @@ declare module google {
                 };
             }
 
-            interface Volume2 {
+            export interface Volume2 {
                 'items': Volume[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Volumeannotation {
+            export interface Volumeannotation {
                 'annotationDataId': string;
                 'annotationDataLink': string;
                 'annotationType': string;
@@ -682,7 +682,7 @@ declare module google {
                 'volumeId': string;
             }
 
-            interface Volumeannotations {
+            export interface Volumeannotations {
                 'items': Volumeannotation[];
                 'kind': string;
                 'nextPageToken': string;
@@ -690,13 +690,13 @@ declare module google {
                 'version': string;
             }
 
-            interface Volumes {
+            export interface Volumes {
                 'items': Volume[];
                 'kind': string;
                 'totalItems': number;
             }
 
-            interface Volumeseriesinfo {
+            export interface Volumeseriesinfo {
                 'bookDisplayNumber': string;
                 'kind': string;
                 'shortSeriesBookTitle': string;

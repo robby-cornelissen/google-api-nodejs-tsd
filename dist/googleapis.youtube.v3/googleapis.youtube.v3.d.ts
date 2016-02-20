@@ -136,12 +136,12 @@ declare module google {
 
             }
 
-            interface AccessPolicy {
+            export interface AccessPolicy {
                 'allowed': boolean;
                 'exception': string[];
             }
 
-            interface Activity {
+            export interface Activity {
                 'contentDetails': ActivityContentDetails;
                 'etag': string;
                 'id': string;
@@ -149,7 +149,7 @@ declare module google {
                 'snippet': ActivitySnippet;
             }
 
-            interface ActivityContentDetails {
+            export interface ActivityContentDetails {
                 'bulletin': ActivityContentDetailsBulletin;
                 'channelItem': ActivityContentDetailsChannelItem;
                 'comment': ActivityContentDetailsComment;
@@ -163,33 +163,33 @@ declare module google {
                 'upload': ActivityContentDetailsUpload;
             }
 
-            interface ActivityContentDetailsBulletin {
+            export interface ActivityContentDetailsBulletin {
                 'resourceId': ResourceId;
             }
 
-            interface ActivityContentDetailsChannelItem {
+            export interface ActivityContentDetailsChannelItem {
                 'resourceId': ResourceId;
             }
 
-            interface ActivityContentDetailsComment {
+            export interface ActivityContentDetailsComment {
                 'resourceId': ResourceId;
             }
 
-            interface ActivityContentDetailsFavorite {
+            export interface ActivityContentDetailsFavorite {
                 'resourceId': ResourceId;
             }
 
-            interface ActivityContentDetailsLike {
+            export interface ActivityContentDetailsLike {
                 'resourceId': ResourceId;
             }
 
-            interface ActivityContentDetailsPlaylistItem {
+            export interface ActivityContentDetailsPlaylistItem {
                 'playlistId': string;
                 'playlistItemId': string;
                 'resourceId': ResourceId;
             }
 
-            interface ActivityContentDetailsPromotedItem {
+            export interface ActivityContentDetailsPromotedItem {
                 'adTag': string;
                 'clickTrackingUrl': string;
                 'creativeViewUrl': string;
@@ -202,13 +202,13 @@ declare module google {
                 'videoId': string;
             }
 
-            interface ActivityContentDetailsRecommendation {
+            export interface ActivityContentDetailsRecommendation {
                 'reason': string;
                 'resourceId': ResourceId;
                 'seedResourceId': ResourceId;
             }
 
-            interface ActivityContentDetailsSocial {
+            export interface ActivityContentDetailsSocial {
                 'author': string;
                 'imageUrl': string;
                 'referenceUrl': string;
@@ -216,15 +216,15 @@ declare module google {
                 'type': string;
             }
 
-            interface ActivityContentDetailsSubscription {
+            export interface ActivityContentDetailsSubscription {
                 'resourceId': ResourceId;
             }
 
-            interface ActivityContentDetailsUpload {
+            export interface ActivityContentDetailsUpload {
                 'videoId': string;
             }
 
-            interface ActivityListResponse {
+            export interface ActivityListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': Activity[];
@@ -236,7 +236,7 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface ActivitySnippet {
+            export interface ActivitySnippet {
                 'channelId': string;
                 'channelTitle': string;
                 'description': string;
@@ -247,14 +247,14 @@ declare module google {
                 'type': string;
             }
 
-            interface Caption {
+            export interface Caption {
                 'etag': string;
                 'id': string;
                 'kind': string;
                 'snippet': CaptionSnippet;
             }
 
-            interface CaptionListResponse {
+            export interface CaptionListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': Caption[];
@@ -262,7 +262,7 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface CaptionSnippet {
+            export interface CaptionSnippet {
                 'audioTrackType': string;
                 'failureReason': string;
                 'isAutoSynced': boolean;
@@ -278,13 +278,13 @@ declare module google {
                 'videoId': string;
             }
 
-            interface CdnSettings {
+            export interface CdnSettings {
                 'format': string;
                 'ingestionInfo': IngestionInfo;
                 'ingestionType': string;
             }
 
-            interface Channel {
+            export interface Channel {
                 'auditDetails': ChannelAuditDetails;
                 'brandingSettings': ChannelBrandingSettings;
                 'contentDetails': ChannelContentDetails;
@@ -303,27 +303,27 @@ declare module google {
                 'topicDetails': ChannelTopicDetails;
             }
 
-            interface ChannelAuditDetails {
+            export interface ChannelAuditDetails {
                 'communityGuidelinesGoodStanding': boolean;
                 'contentIdClaimsGoodStanding': boolean;
                 'copyrightStrikesGoodStanding': boolean;
                 'overallGoodStanding': boolean;
             }
 
-            interface ChannelBannerResource {
+            export interface ChannelBannerResource {
                 'etag': string;
                 'kind': string;
                 'url': string;
             }
 
-            interface ChannelBrandingSettings {
+            export interface ChannelBrandingSettings {
                 'channel': ChannelSettings;
                 'hints': PropertyValue[];
                 'image': ImageSettings;
                 'watch': WatchSettings;
             }
 
-            interface ChannelContentDetails {
+            export interface ChannelContentDetails {
                 'googlePlusUserId': string;
                 'relatedPlaylists': {
                     'favorites': string;
@@ -334,21 +334,21 @@ declare module google {
                 };
             }
 
-            interface ChannelContentOwnerDetails {
+            export interface ChannelContentOwnerDetails {
                 'contentOwner': string;
                 'timeLinked': string;
             }
 
-            interface ChannelConversionPing {
+            export interface ChannelConversionPing {
                 'context': string;
                 'conversionUrl': string;
             }
 
-            interface ChannelConversionPings {
+            export interface ChannelConversionPings {
                 'pings': ChannelConversionPing[];
             }
 
-            interface ChannelListResponse {
+            export interface ChannelListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': Channel[];
@@ -360,19 +360,19 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface ChannelLocalization {
+            export interface ChannelLocalization {
                 'description': string;
                 'title': string;
             }
 
-            interface ChannelProfileDetails {
+            export interface ChannelProfileDetails {
                 'channelId': string;
                 'channelUrl': string;
                 'displayName': string;
                 'profileImageUrl': string;
             }
 
-            interface ChannelSection {
+            export interface ChannelSection {
                 'contentDetails': ChannelSectionContentDetails;
                 'etag': string;
                 'id': string;
@@ -384,12 +384,12 @@ declare module google {
                 'targeting': ChannelSectionTargeting;
             }
 
-            interface ChannelSectionContentDetails {
+            export interface ChannelSectionContentDetails {
                 'channels': string[];
                 'playlists': string[];
             }
 
-            interface ChannelSectionListResponse {
+            export interface ChannelSectionListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': ChannelSection[];
@@ -397,11 +397,11 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface ChannelSectionLocalization {
+            export interface ChannelSectionLocalization {
                 'title': string;
             }
 
-            interface ChannelSectionSnippet {
+            export interface ChannelSectionSnippet {
                 'channelId': string;
                 'defaultLanguage': string;
                 'localized': ChannelSectionLocalization;
@@ -411,13 +411,13 @@ declare module google {
                 'type': string;
             }
 
-            interface ChannelSectionTargeting {
+            export interface ChannelSectionTargeting {
                 'countries': string[];
                 'languages': string[];
                 'regions': string[];
             }
 
-            interface ChannelSettings {
+            export interface ChannelSettings {
                 'country': string;
                 'defaultLanguage': string;
                 'defaultTab': string;
@@ -434,7 +434,7 @@ declare module google {
                 'unsubscribedTrailer': string;
             }
 
-            interface ChannelSnippet {
+            export interface ChannelSnippet {
                 'country': string;
                 'defaultLanguage': string;
                 'description': string;
@@ -444,7 +444,7 @@ declare module google {
                 'title': string;
             }
 
-            interface ChannelStatistics {
+            export interface ChannelStatistics {
                 'commentCount': string;
                 'hiddenSubscriberCount': boolean;
                 'subscriberCount': string;
@@ -452,24 +452,24 @@ declare module google {
                 'viewCount': string;
             }
 
-            interface ChannelStatus {
+            export interface ChannelStatus {
                 'isLinked': boolean;
                 'longUploadsStatus': string;
                 'privacyStatus': string;
             }
 
-            interface ChannelTopicDetails {
+            export interface ChannelTopicDetails {
                 'topicIds': string[];
             }
 
-            interface Comment {
+            export interface Comment {
                 'etag': string;
                 'id': string;
                 'kind': string;
                 'snippet': CommentSnippet;
             }
 
-            interface CommentListResponse {
+            export interface CommentListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': Comment[];
@@ -480,7 +480,7 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface CommentSnippet {
+            export interface CommentSnippet {
                 'authorChannelId': any;
                 'authorChannelUrl': string;
                 'authorDisplayName': string;
@@ -499,7 +499,7 @@ declare module google {
                 'viewerRating': string;
             }
 
-            interface CommentThread {
+            export interface CommentThread {
                 'etag': string;
                 'id': string;
                 'kind': string;
@@ -507,7 +507,7 @@ declare module google {
                 'snippet': CommentThreadSnippet;
             }
 
-            interface CommentThreadListResponse {
+            export interface CommentThreadListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': CommentThread[];
@@ -518,11 +518,11 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface CommentThreadReplies {
+            export interface CommentThreadReplies {
                 'comments': Comment[];
             }
 
-            interface CommentThreadSnippet {
+            export interface CommentThreadSnippet {
                 'canReply': boolean;
                 'channelId': string;
                 'isPublic': boolean;
@@ -531,7 +531,7 @@ declare module google {
                 'videoId': string;
             }
 
-            interface ContentRating {
+            export interface ContentRating {
                 'acbRating': string;
                 'agcomRating': string;
                 'anatelRating': string;
@@ -600,14 +600,14 @@ declare module google {
                 'ytRating': string;
             }
 
-            interface FanFundingEvent {
+            export interface FanFundingEvent {
                 'etag': string;
                 'id': string;
                 'kind': string;
                 'snippet': FanFundingEventSnippet;
             }
 
-            interface FanFundingEventListResponse {
+            export interface FanFundingEventListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': FanFundingEvent[];
@@ -618,7 +618,7 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface FanFundingEventSnippet {
+            export interface FanFundingEventSnippet {
                 'amountMicros': string;
                 'channelId': string;
                 'commentText': string;
@@ -628,20 +628,20 @@ declare module google {
                 'supporterDetails': ChannelProfileDetails;
             }
 
-            interface GeoPoint {
+            export interface GeoPoint {
                 'altitude': number;
                 'latitude': number;
                 'longitude': number;
             }
 
-            interface GuideCategory {
+            export interface GuideCategory {
                 'etag': string;
                 'id': string;
                 'kind': string;
                 'snippet': GuideCategorySnippet;
             }
 
-            interface GuideCategoryListResponse {
+            export interface GuideCategoryListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': GuideCategory[];
@@ -653,19 +653,19 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface GuideCategorySnippet {
+            export interface GuideCategorySnippet {
                 'channelId': string;
                 'title': string;
             }
 
-            interface I18nLanguage {
+            export interface I18nLanguage {
                 'etag': string;
                 'id': string;
                 'kind': string;
                 'snippet': I18nLanguageSnippet;
             }
 
-            interface I18nLanguageListResponse {
+            export interface I18nLanguageListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': I18nLanguage[];
@@ -673,19 +673,19 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface I18nLanguageSnippet {
+            export interface I18nLanguageSnippet {
                 'hl': string;
                 'name': string;
             }
 
-            interface I18nRegion {
+            export interface I18nRegion {
                 'etag': string;
                 'id': string;
                 'kind': string;
                 'snippet': I18nRegionSnippet;
             }
 
-            interface I18nRegionListResponse {
+            export interface I18nRegionListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': I18nRegion[];
@@ -693,12 +693,12 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface I18nRegionSnippet {
+            export interface I18nRegionSnippet {
                 'gl': string;
                 'name': string;
             }
 
-            interface ImageSettings {
+            export interface ImageSettings {
                 'backgroundImageUrl': LocalizedProperty;
                 'bannerExternalUrl': string;
                 'bannerImageUrl': string;
@@ -723,13 +723,13 @@ declare module google {
                 'watchIconImageUrl': string;
             }
 
-            interface IngestionInfo {
+            export interface IngestionInfo {
                 'backupIngestionAddress': string;
                 'ingestionAddress': string;
                 'streamName': string;
             }
 
-            interface InvideoBranding {
+            export interface InvideoBranding {
                 'imageBytes': string;
                 'imageUrl': string;
                 'position': InvideoPosition;
@@ -737,29 +737,29 @@ declare module google {
                 'timing': InvideoTiming;
             }
 
-            interface InvideoPosition {
+            export interface InvideoPosition {
                 'cornerPosition': string;
                 'type': string;
             }
 
-            interface InvideoPromotion {
+            export interface InvideoPromotion {
                 'defaultTiming': InvideoTiming;
                 'items': PromotedItem[];
                 'position': InvideoPosition;
                 'useSmartTiming': boolean;
             }
 
-            interface InvideoTiming {
+            export interface InvideoTiming {
                 'durationMs': string;
                 'offsetMs': string;
                 'type': string;
             }
 
-            interface LanguageTag {
+            export interface LanguageTag {
                 'value': string;
             }
 
-            interface LiveBroadcast {
+            export interface LiveBroadcast {
                 'contentDetails': LiveBroadcastContentDetails;
                 'etag': string;
                 'id': string;
@@ -770,7 +770,7 @@ declare module google {
                 'topicDetails': LiveBroadcastTopicDetails;
             }
 
-            interface LiveBroadcastContentDetails {
+            export interface LiveBroadcastContentDetails {
                 'boundStreamId': string;
                 'closedCaptionsType': string;
                 'enableClosedCaptions': boolean;
@@ -783,7 +783,7 @@ declare module google {
                 'startWithSlate': boolean;
             }
 
-            interface LiveBroadcastListResponse {
+            export interface LiveBroadcastListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': LiveBroadcast[];
@@ -795,7 +795,7 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface LiveBroadcastSnippet {
+            export interface LiveBroadcastSnippet {
                 'actualEndTime': string;
                 'actualStartTime': string;
                 'channelId': string;
@@ -809,55 +809,55 @@ declare module google {
                 'title': string;
             }
 
-            interface LiveBroadcastStatistics {
+            export interface LiveBroadcastStatistics {
                 'concurrentViewers': string;
                 'totalChatCount': string;
             }
 
-            interface LiveBroadcastStatus {
+            export interface LiveBroadcastStatus {
                 'lifeCycleStatus': string;
                 'liveBroadcastPriority': string;
                 'privacyStatus': string;
                 'recordingStatus': string;
             }
 
-            interface LiveBroadcastTopic {
+            export interface LiveBroadcastTopic {
                 'snippet': LiveBroadcastTopicSnippet;
                 'type': string;
                 'unmatched': boolean;
             }
 
-            interface LiveBroadcastTopicDetails {
+            export interface LiveBroadcastTopicDetails {
                 'topics': LiveBroadcastTopic[];
             }
 
-            interface LiveBroadcastTopicSnippet {
+            export interface LiveBroadcastTopicSnippet {
                 'name': string;
                 'releaseDate': string;
             }
 
-            interface LiveChatBan {
+            export interface LiveChatBan {
                 'etag': string;
                 'id': string;
                 'kind': string;
                 'snippet': LiveChatBanSnippet;
             }
 
-            interface LiveChatBanSnippet {
+            export interface LiveChatBanSnippet {
                 'banDurationSeconds': string;
                 'bannedUserDetails': ChannelProfileDetails;
                 'liveChatId': string;
                 'type': string;
             }
 
-            interface LiveChatFanFundingEventDetails {
+            export interface LiveChatFanFundingEventDetails {
                 'amountDisplayString': string;
                 'amountMicros': string;
                 'currency': string;
                 'userComment': string;
             }
 
-            interface LiveChatMessage {
+            export interface LiveChatMessage {
                 'authorDetails': LiveChatMessageAuthorDetails;
                 'etag': string;
                 'id': string;
@@ -865,7 +865,7 @@ declare module google {
                 'snippet': LiveChatMessageSnippet;
             }
 
-            interface LiveChatMessageAuthorDetails {
+            export interface LiveChatMessageAuthorDetails {
                 'channelId': string;
                 'channelUrl': string;
                 'displayName': string;
@@ -876,7 +876,7 @@ declare module google {
                 'profileImageUrl': string;
             }
 
-            interface LiveChatMessageListResponse {
+            export interface LiveChatMessageListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': LiveChatMessage[];
@@ -889,7 +889,7 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface LiveChatMessageSnippet {
+            export interface LiveChatMessageSnippet {
                 'authorChannelId': string;
                 'displayMessage': string;
                 'fanFundingEventDetails': LiveChatFanFundingEventDetails;
@@ -900,14 +900,14 @@ declare module google {
                 'type': string;
             }
 
-            interface LiveChatModerator {
+            export interface LiveChatModerator {
                 'etag': string;
                 'id': string;
                 'kind': string;
                 'snippet': LiveChatModeratorSnippet;
             }
 
-            interface LiveChatModeratorListResponse {
+            export interface LiveChatModeratorListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': LiveChatModerator[];
@@ -919,16 +919,16 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface LiveChatModeratorSnippet {
+            export interface LiveChatModeratorSnippet {
                 'liveChatId': string;
                 'moderatorDetails': ChannelProfileDetails;
             }
 
-            interface LiveChatTextMessageDetails {
+            export interface LiveChatTextMessageDetails {
                 'messageText': string;
             }
 
-            interface LiveStream {
+            export interface LiveStream {
                 'cdn': CdnSettings;
                 'contentDetails': LiveStreamContentDetails;
                 'etag': string;
@@ -938,25 +938,25 @@ declare module google {
                 'status': LiveStreamStatus;
             }
 
-            interface LiveStreamConfigurationIssue {
+            export interface LiveStreamConfigurationIssue {
                 'description': string;
                 'reason': string;
                 'severity': string;
                 'type': string;
             }
 
-            interface LiveStreamContentDetails {
+            export interface LiveStreamContentDetails {
                 'closedCaptionsIngestionUrl': string;
                 'isReusable': boolean;
             }
 
-            interface LiveStreamHealthStatus {
+            export interface LiveStreamHealthStatus {
                 'configurationIssues': LiveStreamConfigurationIssue[];
                 'lastUpdateTimeSeconds': string;
                 'status': string;
             }
 
-            interface LiveStreamListResponse {
+            export interface LiveStreamListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': LiveStream[];
@@ -968,7 +968,7 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface LiveStreamSnippet {
+            export interface LiveStreamSnippet {
                 'channelId': string;
                 'description': string;
                 'isDefaultStream': boolean;
@@ -976,34 +976,34 @@ declare module google {
                 'title': string;
             }
 
-            interface LiveStreamStatus {
+            export interface LiveStreamStatus {
                 'healthStatus': LiveStreamHealthStatus;
                 'streamStatus': string;
             }
 
-            interface LocalizedProperty {
+            export interface LocalizedProperty {
                 'default': string;
                 'defaultLanguage': LanguageTag;
                 'localized': LocalizedString[];
             }
 
-            interface LocalizedString {
+            export interface LocalizedString {
                 'language': string;
                 'value': string;
             }
 
-            interface MonitorStreamInfo {
+            export interface MonitorStreamInfo {
                 'broadcastStreamDelayMs': number;
                 'embedHtml': string;
                 'enableMonitorStream': boolean;
             }
 
-            interface PageInfo {
+            export interface PageInfo {
                 'resultsPerPage': number;
                 'totalResults': number;
             }
 
-            interface Playlist {
+            export interface Playlist {
                 'contentDetails': PlaylistContentDetails;
                 'etag': string;
                 'id': string;
@@ -1016,11 +1016,11 @@ declare module google {
                 'status': PlaylistStatus;
             }
 
-            interface PlaylistContentDetails {
+            export interface PlaylistContentDetails {
                 'itemCount': number;
             }
 
-            interface PlaylistItem {
+            export interface PlaylistItem {
                 'contentDetails': PlaylistItemContentDetails;
                 'etag': string;
                 'id': string;
@@ -1029,14 +1029,14 @@ declare module google {
                 'status': PlaylistItemStatus;
             }
 
-            interface PlaylistItemContentDetails {
+            export interface PlaylistItemContentDetails {
                 'endAt': string;
                 'note': string;
                 'startAt': string;
                 'videoId': string;
             }
 
-            interface PlaylistItemListResponse {
+            export interface PlaylistItemListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': PlaylistItem[];
@@ -1048,7 +1048,7 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface PlaylistItemSnippet {
+            export interface PlaylistItemSnippet {
                 'channelId': string;
                 'channelTitle': string;
                 'description': string;
@@ -1060,11 +1060,11 @@ declare module google {
                 'title': string;
             }
 
-            interface PlaylistItemStatus {
+            export interface PlaylistItemStatus {
                 'privacyStatus': string;
             }
 
-            interface PlaylistListResponse {
+            export interface PlaylistListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': Playlist[];
@@ -1076,16 +1076,16 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface PlaylistLocalization {
+            export interface PlaylistLocalization {
                 'description': string;
                 'title': string;
             }
 
-            interface PlaylistPlayer {
+            export interface PlaylistPlayer {
                 'embedHtml': string;
             }
 
-            interface PlaylistSnippet {
+            export interface PlaylistSnippet {
                 'channelId': string;
                 'channelTitle': string;
                 'defaultLanguage': string;
@@ -1097,37 +1097,37 @@ declare module google {
                 'title': string;
             }
 
-            interface PlaylistStatus {
+            export interface PlaylistStatus {
                 'privacyStatus': string;
             }
 
-            interface PromotedItem {
+            export interface PromotedItem {
                 'customMessage': string;
                 'id': PromotedItemId;
                 'promotedByContentOwner': boolean;
                 'timing': InvideoTiming;
             }
 
-            interface PromotedItemId {
+            export interface PromotedItemId {
                 'recentlyUploadedBy': string;
                 'type': string;
                 'videoId': string;
                 'websiteUrl': string;
             }
 
-            interface PropertyValue {
+            export interface PropertyValue {
                 'property': string;
                 'value': string;
             }
 
-            interface ResourceId {
+            export interface ResourceId {
                 'channelId': string;
                 'kind': string;
                 'playlistId': string;
                 'videoId': string;
             }
 
-            interface SearchListResponse {
+            export interface SearchListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': SearchResult[];
@@ -1140,14 +1140,14 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface SearchResult {
+            export interface SearchResult {
                 'etag': string;
                 'id': ResourceId;
                 'kind': string;
                 'snippet': SearchResultSnippet;
             }
 
-            interface SearchResultSnippet {
+            export interface SearchResultSnippet {
                 'channelId': string;
                 'channelTitle': string;
                 'description': string;
@@ -1157,14 +1157,14 @@ declare module google {
                 'title': string;
             }
 
-            interface Sponsor {
+            export interface Sponsor {
                 'etag': string;
                 'id': string;
                 'kind': string;
                 'snippet': SponsorSnippet;
             }
 
-            interface SponsorListResponse {
+            export interface SponsorListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': Sponsor[];
@@ -1175,13 +1175,13 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface SponsorSnippet {
+            export interface SponsorSnippet {
                 'channelId': string;
                 'sponsorDetails': ChannelProfileDetails;
                 'sponsorSince': string;
             }
 
-            interface Subscription {
+            export interface Subscription {
                 'contentDetails': SubscriptionContentDetails;
                 'etag': string;
                 'id': string;
@@ -1190,13 +1190,13 @@ declare module google {
                 'subscriberSnippet': SubscriptionSubscriberSnippet;
             }
 
-            interface SubscriptionContentDetails {
+            export interface SubscriptionContentDetails {
                 'activityType': string;
                 'newItemCount': number;
                 'totalItemCount': number;
             }
 
-            interface SubscriptionListResponse {
+            export interface SubscriptionListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': Subscription[];
@@ -1208,7 +1208,7 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface SubscriptionSnippet {
+            export interface SubscriptionSnippet {
                 'channelId': string;
                 'channelTitle': string;
                 'description': string;
@@ -1218,20 +1218,20 @@ declare module google {
                 'title': string;
             }
 
-            interface SubscriptionSubscriberSnippet {
+            export interface SubscriptionSubscriberSnippet {
                 'channelId': string;
                 'description': string;
                 'thumbnails': ThumbnailDetails;
                 'title': string;
             }
 
-            interface Thumbnail {
+            export interface Thumbnail {
                 'height': number;
                 'url': string;
                 'width': number;
             }
 
-            interface ThumbnailDetails {
+            export interface ThumbnailDetails {
                 'default': Thumbnail;
                 'high': Thumbnail;
                 'maxres': Thumbnail;
@@ -1239,7 +1239,7 @@ declare module google {
                 'standard': Thumbnail;
             }
 
-            interface ThumbnailSetResponse {
+            export interface ThumbnailSetResponse {
                 'etag': string;
                 'eventId': string;
                 'items': ThumbnailDetails[];
@@ -1247,9 +1247,9 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface TokenPagination {}
+            export interface TokenPagination {}
 
-            interface Video {
+            export interface Video {
                 'ageGating': VideoAgeGating;
                 'contentDetails': VideoContentDetails;
                 'etag': string;
@@ -1272,7 +1272,7 @@ declare module google {
                 'topicDetails': VideoTopicDetails;
             }
 
-            interface VideoAbuseReport {
+            export interface VideoAbuseReport {
                 'comments': string;
                 'language': string;
                 'reasonId': string;
@@ -1280,14 +1280,14 @@ declare module google {
                 'videoId': string;
             }
 
-            interface VideoAbuseReportReason {
+            export interface VideoAbuseReportReason {
                 'etag': string;
                 'id': string;
                 'kind': string;
                 'snippet': VideoAbuseReportReasonSnippet;
             }
 
-            interface VideoAbuseReportReasonListResponse {
+            export interface VideoAbuseReportReasonListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': VideoAbuseReportReason[];
@@ -1295,30 +1295,30 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface VideoAbuseReportReasonSnippet {
+            export interface VideoAbuseReportReasonSnippet {
                 'label': string;
                 'secondaryReasons': VideoAbuseReportSecondaryReason[];
             }
 
-            interface VideoAbuseReportSecondaryReason {
+            export interface VideoAbuseReportSecondaryReason {
                 'id': string;
                 'label': string;
             }
 
-            interface VideoAgeGating {
+            export interface VideoAgeGating {
                 'alcoholContent': boolean;
                 'restricted': boolean;
                 'videoGameRating': string;
             }
 
-            interface VideoCategory {
+            export interface VideoCategory {
                 'etag': string;
                 'id': string;
                 'kind': string;
                 'snippet': VideoCategorySnippet;
             }
 
-            interface VideoCategoryListResponse {
+            export interface VideoCategoryListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': VideoCategory[];
@@ -1330,13 +1330,13 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface VideoCategorySnippet {
+            export interface VideoCategorySnippet {
                 'assignable': boolean;
                 'channelId': string;
                 'title': string;
             }
 
-            interface VideoContentDetails {
+            export interface VideoContentDetails {
                 'caption': string;
                 'contentRating': ContentRating;
                 'countryRestriction': AccessPolicy;
@@ -1347,12 +1347,12 @@ declare module google {
                 'regionRestriction': VideoContentDetailsRegionRestriction;
             }
 
-            interface VideoContentDetailsRegionRestriction {
+            export interface VideoContentDetailsRegionRestriction {
                 'allowed': string[];
                 'blocked': string[];
             }
 
-            interface VideoFileDetails {
+            export interface VideoFileDetails {
                 'audioStreams': VideoFileDetailsAudioStream[];
                 'bitrateBps': string;
                 'container': string;
@@ -1365,14 +1365,14 @@ declare module google {
                 'videoStreams': VideoFileDetailsVideoStream[];
             }
 
-            interface VideoFileDetailsAudioStream {
+            export interface VideoFileDetailsAudioStream {
                 'bitrateBps': string;
                 'channelCount': number;
                 'codec': string;
                 'vendor': string;
             }
 
-            interface VideoFileDetailsVideoStream {
+            export interface VideoFileDetailsVideoStream {
                 'aspectRatio': number;
                 'bitrateBps': string;
                 'codec': string;
@@ -1383,7 +1383,7 @@ declare module google {
                 'widthPixels': number;
             }
 
-            interface VideoGetRatingResponse {
+            export interface VideoGetRatingResponse {
                 'etag': string;
                 'eventId': string;
                 'items': VideoRating[];
@@ -1391,7 +1391,7 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface VideoListResponse {
+            export interface VideoListResponse {
                 'etag': string;
                 'eventId': string;
                 'items': Video[];
@@ -1403,7 +1403,7 @@ declare module google {
                 'visitorId': string;
             }
 
-            interface VideoLiveStreamingDetails {
+            export interface VideoLiveStreamingDetails {
                 'activeLiveChatId': string;
                 'actualEndTime': string;
                 'actualStartTime': string;
@@ -1412,20 +1412,20 @@ declare module google {
                 'scheduledStartTime': string;
             }
 
-            interface VideoLocalization {
+            export interface VideoLocalization {
                 'description': string;
                 'title': string;
             }
 
-            interface VideoMonetizationDetails {
+            export interface VideoMonetizationDetails {
                 'access': AccessPolicy;
             }
 
-            interface VideoPlayer {
+            export interface VideoPlayer {
                 'embedHtml': string;
             }
 
-            interface VideoProcessingDetails {
+            export interface VideoProcessingDetails {
                 'editorSuggestionsAvailability': string;
                 'fileDetailsAvailability': string;
                 'processingFailureReason': string;
@@ -1436,28 +1436,28 @@ declare module google {
                 'thumbnailsAvailability': string;
             }
 
-            interface VideoProcessingDetailsProcessingProgress {
+            export interface VideoProcessingDetailsProcessingProgress {
                 'partsProcessed': string;
                 'partsTotal': string;
                 'timeLeftMs': string;
             }
 
-            interface VideoProjectDetails {
+            export interface VideoProjectDetails {
                 'tags': string[];
             }
 
-            interface VideoRating {
+            export interface VideoRating {
                 'rating': string;
                 'videoId': string;
             }
 
-            interface VideoRecordingDetails {
+            export interface VideoRecordingDetails {
                 'location': GeoPoint;
                 'locationDescription': string;
                 'recordingDate': string;
             }
 
-            interface VideoSnippet {
+            export interface VideoSnippet {
                 'categoryId': string;
                 'channelId': string;
                 'channelTitle': string;
@@ -1472,7 +1472,7 @@ declare module google {
                 'title': string;
             }
 
-            interface VideoStatistics {
+            export interface VideoStatistics {
                 'commentCount': string;
                 'dislikeCount': string;
                 'favoriteCount': string;
@@ -1480,7 +1480,7 @@ declare module google {
                 'viewCount': string;
             }
 
-            interface VideoStatus {
+            export interface VideoStatus {
                 'embeddable': boolean;
                 'failureReason': string;
                 'license': string;
@@ -1491,7 +1491,7 @@ declare module google {
                 'uploadStatus': string;
             }
 
-            interface VideoSuggestions {
+            export interface VideoSuggestions {
                 'editorSuggestions': string[];
                 'processingErrors': string[];
                 'processingHints': string[];
@@ -1499,17 +1499,17 @@ declare module google {
                 'tagSuggestions': VideoSuggestionsTagSuggestion[];
             }
 
-            interface VideoSuggestionsTagSuggestion {
+            export interface VideoSuggestionsTagSuggestion {
                 'categoryRestricts': string[];
                 'tag': string;
             }
 
-            interface VideoTopicDetails {
+            export interface VideoTopicDetails {
                 'relevantTopicIds': string[];
                 'topicIds': string[];
             }
 
-            interface WatchSettings {
+            export interface WatchSettings {
                 'backgroundColor': string;
                 'featuredPlaylistId': string;
                 'textColor': string;

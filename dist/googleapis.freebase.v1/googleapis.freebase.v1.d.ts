@@ -15,7 +15,7 @@ declare module google {
 
             }
 
-            interface ReconcileCandidate {
+            export interface ReconcileCandidate {
                 'confidence': number;
                 'lang': string;
                 'mid': string;
@@ -26,7 +26,7 @@ declare module google {
                 };
             }
 
-            interface ReconcileGet {
+            export interface ReconcileGet {
                 'candidate': ReconcileCandidate[];
                 'costs': {
                     'hits': number;

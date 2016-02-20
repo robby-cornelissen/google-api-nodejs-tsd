@@ -21,26 +21,26 @@ declare module google {
 
             }
 
-            interface AntennaCharacteristics {
+            export interface AntennaCharacteristics {
                 'height': number;
                 'heightType': string;
                 'heightUncertainty': number;
             }
 
-            interface DatabaseSpec {
+            export interface DatabaseSpec {
                 'name': string;
                 'uri': string;
             }
 
-            interface DbUpdateSpec {
+            export interface DbUpdateSpec {
                 'databases': DatabaseSpec[];
             }
 
-            interface DeviceCapabilities {
+            export interface DeviceCapabilities {
                 'frequencyRanges': FrequencyRange[];
             }
 
-            interface DeviceDescriptor {
+            export interface DeviceDescriptor {
                 'etsiEnDeviceCategory': string;
                 'etsiEnDeviceEmissionsClass': string;
                 'etsiEnDeviceType': string;
@@ -53,57 +53,57 @@ declare module google {
                 'serialNumber': string;
             }
 
-            interface DeviceOwner {
+            export interface DeviceOwner {
                 'operator': Vcard;
                 'owner': Vcard;
             }
 
-            interface DeviceValidity {
+            export interface DeviceValidity {
                 'deviceDesc': DeviceDescriptor;
                 'isValid': boolean;
                 'reason': string;
             }
 
-            interface EventTime {
+            export interface EventTime {
                 'startTime': string;
                 'stopTime': string;
             }
 
-            interface FrequencyRange {
+            export interface FrequencyRange {
                 'channelId': string;
                 'maxPowerDBm': number;
                 'startHz': number;
                 'stopHz': number;
             }
 
-            interface GeoLocation {
+            export interface GeoLocation {
                 'confidence': number;
                 'point': GeoLocationEllipse;
                 'region': GeoLocationPolygon;
             }
 
-            interface GeoLocationEllipse {
+            export interface GeoLocationEllipse {
                 'center': GeoLocationPoint;
                 'orientation': number;
                 'semiMajorAxis': number;
                 'semiMinorAxis': number;
             }
 
-            interface GeoLocationPoint {
+            export interface GeoLocationPoint {
                 'latitude': number;
                 'longitude': number;
             }
 
-            interface GeoLocationPolygon {
+            export interface GeoLocationPolygon {
                 'exterior': GeoLocationPoint[];
             }
 
-            interface GeoSpectrumSchedule {
+            export interface GeoSpectrumSchedule {
                 'location': GeoLocation;
                 'spectrumSchedules': SpectrumSchedule[];
             }
 
-            interface PawsGetSpectrumBatchRequest {
+            export interface PawsGetSpectrumBatchRequest {
                 'antenna': AntennaCharacteristics;
                 'capabilities': DeviceCapabilities;
                 'deviceDesc': DeviceDescriptor;
@@ -115,7 +115,7 @@ declare module google {
                 'version': string;
             }
 
-            interface PawsGetSpectrumBatchResponse {
+            export interface PawsGetSpectrumBatchResponse {
                 'databaseChange': DbUpdateSpec;
                 'deviceDesc': DeviceDescriptor;
                 'geoSpectrumSchedules': GeoSpectrumSchedule[];
@@ -129,7 +129,7 @@ declare module google {
                 'version': string;
             }
 
-            interface PawsGetSpectrumRequest {
+            export interface PawsGetSpectrumRequest {
                 'antenna': AntennaCharacteristics;
                 'capabilities': DeviceCapabilities;
                 'deviceDesc': DeviceDescriptor;
@@ -141,7 +141,7 @@ declare module google {
                 'version': string;
             }
 
-            interface PawsGetSpectrumResponse {
+            export interface PawsGetSpectrumResponse {
                 'databaseChange': DbUpdateSpec;
                 'deviceDesc': DeviceDescriptor;
                 'kind': string;
@@ -155,14 +155,14 @@ declare module google {
                 'version': string;
             }
 
-            interface PawsInitRequest {
+            export interface PawsInitRequest {
                 'deviceDesc': DeviceDescriptor;
                 'location': GeoLocation;
                 'type': string;
                 'version': string;
             }
 
-            interface PawsInitResponse {
+            export interface PawsInitResponse {
                 'databaseChange': DbUpdateSpec;
                 'kind': string;
                 'rulesetInfo': RulesetInfo;
@@ -170,7 +170,7 @@ declare module google {
                 'version': string;
             }
 
-            interface PawsNotifySpectrumUseRequest {
+            export interface PawsNotifySpectrumUseRequest {
                 'deviceDesc': DeviceDescriptor;
                 'location': GeoLocation;
                 'spectra': SpectrumMessage[];
@@ -178,13 +178,13 @@ declare module google {
                 'version': string;
             }
 
-            interface PawsNotifySpectrumUseResponse {
+            export interface PawsNotifySpectrumUseResponse {
                 'kind': string;
                 'type': string;
                 'version': string;
             }
 
-            interface PawsRegisterRequest {
+            export interface PawsRegisterRequest {
                 'antenna': AntennaCharacteristics;
                 'deviceDesc': DeviceDescriptor;
                 'deviceOwner': DeviceOwner;
@@ -193,20 +193,20 @@ declare module google {
                 'version': string;
             }
 
-            interface PawsRegisterResponse {
+            export interface PawsRegisterResponse {
                 'databaseChange': DbUpdateSpec;
                 'kind': string;
                 'type': string;
                 'version': string;
             }
 
-            interface PawsVerifyDeviceRequest {
+            export interface PawsVerifyDeviceRequest {
                 'deviceDescs': DeviceDescriptor[];
                 'type': string;
                 'version': string;
             }
 
-            interface PawsVerifyDeviceResponse {
+            export interface PawsVerifyDeviceResponse {
                 'databaseChange': DbUpdateSpec;
                 'deviceValidities': DeviceValidity[];
                 'kind': string;
@@ -214,24 +214,24 @@ declare module google {
                 'version': string;
             }
 
-            interface RulesetInfo {
+            export interface RulesetInfo {
                 'authority': string;
                 'maxLocationChange': number;
                 'maxPollingSecs': number;
                 'rulesetIds': string[];
             }
 
-            interface SpectrumMessage {
+            export interface SpectrumMessage {
                 'bandwidth': number;
                 'frequencyRanges': FrequencyRange[];
             }
 
-            interface SpectrumSchedule {
+            export interface SpectrumSchedule {
                 'eventTime': EventTime;
                 'spectra': SpectrumMessage[];
             }
 
-            interface Vcard {
+            export interface Vcard {
                 'adr': VcardAddress;
                 'email': VcardTypedText;
                 'fn': string;
@@ -239,7 +239,7 @@ declare module google {
                 'tel': VcardTelephone;
             }
 
-            interface VcardAddress {
+            export interface VcardAddress {
                 'code': string;
                 'country': string;
                 'locality': string;
@@ -248,11 +248,11 @@ declare module google {
                 'street': string;
             }
 
-            interface VcardTelephone {
+            export interface VcardTelephone {
                 'uri': string;
             }
 
-            interface VcardTypedText {
+            export interface VcardTypedText {
                 'text': string;
             }
 

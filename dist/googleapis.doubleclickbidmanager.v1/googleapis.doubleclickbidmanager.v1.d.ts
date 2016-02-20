@@ -30,33 +30,33 @@ declare module google {
 
             }
 
-            interface DownloadLineItemsRequest {
+            export interface DownloadLineItemsRequest {
                 'fileSpec': string;
                 'filterIds': string[];
                 'filterType': string;
                 'format': string;
             }
 
-            interface DownloadLineItemsResponse {
+            export interface DownloadLineItemsResponse {
                 'lineItems': string;
             }
 
-            interface FilterPair {
+            export interface FilterPair {
                 'type': string;
                 'value': string;
             }
 
-            interface ListQueriesResponse {
+            export interface ListQueriesResponse {
                 'kind': string;
                 'queries': Query[];
             }
 
-            interface ListReportsResponse {
+            export interface ListReportsResponse {
                 'kind': string;
                 'reports': Report[];
             }
 
-            interface Note {
+            export interface Note {
                 'id': string;
                 'message': string;
                 'source': string;
@@ -64,7 +64,7 @@ declare module google {
                 'username': string;
             }
 
-            interface NotifyProposalChangeRequest {
+            export interface NotifyProposalChangeRequest {
                 'action': string;
                 'href': string;
                 'id': string;
@@ -72,7 +72,7 @@ declare module google {
                 'token': string;
             }
 
-            interface Parameters {
+            export interface Parameters {
                 'filters': FilterPair[];
                 'groupBys': string[];
                 'includeInviteData': boolean;
@@ -80,7 +80,7 @@ declare module google {
                 'type': string;
             }
 
-            interface Query {
+            export interface Query {
                 'kind': string;
                 'metadata': QueryMetadata;
                 'params': Parameters;
@@ -91,7 +91,7 @@ declare module google {
                 'timezoneCode': string;
             }
 
-            interface QueryMetadata {
+            export interface QueryMetadata {
                 'dataRange': string;
                 'format': string;
                 'googleCloudStoragePathForLatestReport': string;
@@ -105,43 +105,43 @@ declare module google {
                 'title': string;
             }
 
-            interface QuerySchedule {
+            export interface QuerySchedule {
                 'endTimeMs': string;
                 'frequency': string;
                 'nextRunMinuteOfDay': number;
                 'nextRunTimezoneCode': string;
             }
 
-            interface Report {
+            export interface Report {
                 'key': ReportKey;
                 'metadata': ReportMetadata;
                 'params': Parameters;
             }
 
-            interface ReportFailure {
+            export interface ReportFailure {
                 'errorCode': string;
             }
 
-            interface ReportKey {
+            export interface ReportKey {
                 'queryId': string;
                 'reportId': string;
             }
 
-            interface ReportMetadata {
+            export interface ReportMetadata {
                 'googleCloudStoragePath': string;
                 'reportDataEndTimeMs': string;
                 'reportDataStartTimeMs': string;
                 'status': ReportStatus;
             }
 
-            interface ReportStatus {
+            export interface ReportStatus {
                 'failure': ReportFailure;
                 'finishTimeMs': string;
                 'format': string;
                 'state': string;
             }
 
-            interface RowStatus {
+            export interface RowStatus {
                 'changed': boolean;
                 'entityId': string;
                 'entityName': string;
@@ -150,24 +150,24 @@ declare module google {
                 'rowNumber': number;
             }
 
-            interface RunQueryRequest {
+            export interface RunQueryRequest {
                 'dataRange': string;
                 'reportDataEndTimeMs': string;
                 'reportDataStartTimeMs': string;
                 'timezoneCode': string;
             }
 
-            interface UploadLineItemsRequest {
+            export interface UploadLineItemsRequest {
                 'dryRun': boolean;
                 'format': string;
                 'lineItems': string;
             }
 
-            interface UploadLineItemsResponse {
+            export interface UploadLineItemsResponse {
                 'uploadStatus': UploadStatus;
             }
 
-            interface UploadStatus {
+            export interface UploadStatus {
                 'errors': string[];
                 'rowStatus': RowStatus[];
             }

@@ -27,7 +27,7 @@ declare module google {
 
             }
 
-            interface InstanceUpdate {
+            export interface InstanceUpdate {
                 'error': {
                     'errors': {
                         'code': string;
@@ -39,14 +39,14 @@ declare module google {
                 'status': string;
             }
 
-            interface InstanceUpdateList {
+            export interface InstanceUpdateList {
                 'items': InstanceUpdate[];
                 'kind': string;
                 'nextPageToken': string;
                 'selfLink': string;
             }
 
-            interface Operation {
+            export interface Operation {
                 'clientOperationId': string;
                 'creationTimestamp': string;
                 'endTime': string;
@@ -84,7 +84,7 @@ declare module google {
                 'zone': string;
             }
 
-            interface OperationList {
+            export interface OperationList {
                 'id': string;
                 'items': Operation[];
                 'kind': string;
@@ -92,7 +92,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface RollingUpdate {
+            export interface RollingUpdate {
                 'actionType': string;
                 'creationTimestamp': string;
                 'description': string;
@@ -123,7 +123,7 @@ declare module google {
                 'user': string;
             }
 
-            interface RollingUpdateList {
+            export interface RollingUpdateList {
                 'items': RollingUpdate[];
                 'kind': string;
                 'nextPageToken': string;

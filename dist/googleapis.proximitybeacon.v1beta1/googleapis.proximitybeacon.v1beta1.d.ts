@@ -38,7 +38,7 @@ declare module google {
 
             }
 
-            interface Beacon {
+            export interface Beacon {
                 'beaconName': string;
                 'advertisedId': AdvertisedId;
                 'status': string;
@@ -52,91 +52,91 @@ declare module google {
                 };
             }
 
-            interface AdvertisedId {
+            export interface AdvertisedId {
                 'type': string;
                 'id': string;
             }
 
-            interface LatLng {
+            export interface LatLng {
                 'latitude': number;
                 'longitude': number;
             }
 
-            interface IndoorLevel {
+            export interface IndoorLevel {
                 'name': string;
             }
 
-            interface Empty {}
+            export interface Empty {}
 
-            interface ListBeaconsResponse {
+            export interface ListBeaconsResponse {
                 'beacons': Beacon[];
                 'nextPageToken': string;
                 'totalCount': string;
             }
 
-            interface BeaconAttachment {
+            export interface BeaconAttachment {
                 'attachmentName': string;
                 'namespacedType': string;
                 'data': string;
             }
 
-            interface ListBeaconAttachmentsResponse {
+            export interface ListBeaconAttachmentsResponse {
                 'attachments': BeaconAttachment[];
             }
 
-            interface DeleteAttachmentsResponse {
+            export interface DeleteAttachmentsResponse {
                 'numDeleted': number;
             }
 
-            interface ListNamespacesResponse {
+            export interface ListNamespacesResponse {
                 'namespaces': Namespace[];
             }
 
-            interface Namespace {
+            export interface Namespace {
                 'namespaceName': string;
                 'servingVisibility': string;
             }
 
-            interface ListDiagnosticsResponse {
+            export interface ListDiagnosticsResponse {
                 'diagnostics': Diagnostics[];
                 'nextPageToken': string;
             }
 
-            interface Diagnostics {
+            export interface Diagnostics {
                 'beaconName': string;
                 'estimatedLowBatteryDate': Date;
                 'alerts': string[];
             }
 
-            interface Date {
+            export interface Date {
                 'year': number;
                 'month': number;
                 'day': number;
             }
 
-            interface GetInfoForObservedBeaconsRequest {
+            export interface GetInfoForObservedBeaconsRequest {
                 'observations': Observation[];
                 'namespacedTypes': string[];
             }
 
-            interface Observation {
+            export interface Observation {
                 'advertisedId': AdvertisedId;
                 'telemetry': string;
                 'timestampMs': string;
             }
 
-            interface GetInfoForObservedBeaconsResponse {
+            export interface GetInfoForObservedBeaconsResponse {
                 'beacons': BeaconInfo[];
             }
 
-            interface BeaconInfo {
+            export interface BeaconInfo {
                 'advertisedId': AdvertisedId;
                 'beaconName': string;
                 'description': string;
                 'attachments': AttachmentInfo[];
             }
 
-            interface AttachmentInfo {
+            export interface AttachmentInfo {
                 'namespacedType': string;
                 'data': string;
             }

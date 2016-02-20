@@ -41,13 +41,13 @@ declare module google {
 
             }
 
-            interface Activities {
+            export interface Activities {
                 'filters': DimensionValue[];
                 'kind': string;
                 'metricNames': string[];
             }
 
-            interface CompatibleFields {
+            export interface CompatibleFields {
                 'crossDimensionReachReportCompatibleFields': CrossDimensionReachReportCompatibleFields;
                 'floodlightReportCompatibleFields': FloodlightReportCompatibleFields;
                 'kind': string;
@@ -56,7 +56,7 @@ declare module google {
                 'reportCompatibleFields': ReportCompatibleFields;
             }
 
-            interface CrossDimensionReachReportCompatibleFields {
+            export interface CrossDimensionReachReportCompatibleFields {
                 'breakdown': Dimension[];
                 'dimensionFilters': Dimension[];
                 'kind': string;
@@ -64,30 +64,30 @@ declare module google {
                 'overlapMetrics': Metric[];
             }
 
-            interface CustomRichMediaEvents {
+            export interface CustomRichMediaEvents {
                 'filteredEventIds': DimensionValue[];
                 'kind': string;
             }
 
-            interface DateRange {
+            export interface DateRange {
                 'endDate': string;
                 'kind': string;
                 'relativeDateRange': string;
                 'startDate': string;
             }
 
-            interface Dimension {
+            export interface Dimension {
                 'kind': string;
                 'name': string;
             }
 
-            interface DimensionFilter {
+            export interface DimensionFilter {
                 'dimensionName': string;
                 'kind': string;
                 'value': string;
             }
 
-            interface DimensionValue {
+            export interface DimensionValue {
                 'dimensionName': string;
                 'etag': string;
                 'id': string;
@@ -96,14 +96,14 @@ declare module google {
                 'value': string;
             }
 
-            interface DimensionValueList {
+            export interface DimensionValueList {
                 'etag': string;
                 'items': DimensionValue[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface DimensionValueRequest {
+            export interface DimensionValueRequest {
                 'dimensionName': string;
                 'endDate': string;
                 'filters': DimensionFilter[];
@@ -111,7 +111,7 @@ declare module google {
                 'startDate': string;
             }
 
-            interface File {
+            export interface File {
                 'dateRange': DateRange;
                 'etag': string;
                 'fileName': string;
@@ -127,26 +127,26 @@ declare module google {
                 };
             }
 
-            interface FileList {
+            export interface FileList {
                 'etag': string;
                 'items': File[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface FloodlightReportCompatibleFields {
+            export interface FloodlightReportCompatibleFields {
                 'dimensionFilters': Dimension[];
                 'dimensions': Dimension[];
                 'kind': string;
                 'metrics': Metric[];
             }
 
-            interface Metric {
+            export interface Metric {
                 'kind': string;
                 'name': string;
             }
 
-            interface PathToConversionReportCompatibleFields {
+            export interface PathToConversionReportCompatibleFields {
                 'conversionDimensions': Dimension[];
                 'customFloodlightVariables': Dimension[];
                 'kind': string;
@@ -154,7 +154,7 @@ declare module google {
                 'perInteractionDimensions': Dimension[];
             }
 
-            interface ReachReportCompatibleFields {
+            export interface ReachReportCompatibleFields {
                 'dimensionFilters': Dimension[];
                 'dimensions': Dimension[];
                 'kind': string;
@@ -163,13 +163,13 @@ declare module google {
                 'reachByFrequencyMetrics': Metric[];
             }
 
-            interface Recipient {
+            export interface Recipient {
                 'deliveryType': string;
                 'email': string;
                 'kind': string;
             }
 
-            interface Report {
+            export interface Report {
                 'accountId': string;
                 'activeGrpCriteria': {
                     'dateRange': DateRange;
@@ -264,7 +264,7 @@ declare module google {
                 'type': string;
             }
 
-            interface ReportCompatibleFields {
+            export interface ReportCompatibleFields {
                 'dimensionFilters': Dimension[];
                 'dimensions': Dimension[];
                 'kind': string;
@@ -272,20 +272,20 @@ declare module google {
                 'pivotedActivityMetrics': Metric[];
             }
 
-            interface ReportList {
+            export interface ReportList {
                 'etag': string;
                 'items': Report[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface SortedDimension {
+            export interface SortedDimension {
                 'kind': string;
                 'name': string;
                 'sortOrder': string;
             }
 
-            interface UserProfile {
+            export interface UserProfile {
                 'accountId': string;
                 'accountName': string;
                 'etag': string;
@@ -296,7 +296,7 @@ declare module google {
                 'userName': string;
             }
 
-            interface UserProfileList {
+            export interface UserProfileList {
                 'etag': string;
                 'items': UserProfile[];
                 'kind': string;

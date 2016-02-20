@@ -39,9 +39,9 @@ declare module google {
 
             }
 
-            interface Empty {}
+            export interface Empty {}
 
-            interface WriteLogEntriesRequest {
+            export interface WriteLogEntriesRequest {
                 'logName': string;
                 'resource': MonitoredResource;
                 'labels': {
@@ -50,14 +50,14 @@ declare module google {
                 'entries': LogEntry[];
             }
 
-            interface MonitoredResource {
+            export interface MonitoredResource {
                 'type': string;
                 'labels': {
                     [name: string]: string
                 };
             }
 
-            interface LogEntry {
+            export interface LogEntry {
                 'logName': string;
                 'resource': MonitoredResource;
                 'protoPayload': {
@@ -77,7 +77,7 @@ declare module google {
                 'operation': LogEntryOperation;
             }
 
-            interface HttpRequest {
+            export interface HttpRequest {
                 'requestMethod': string;
                 'requestUrl': string;
                 'requestSize': string;
@@ -90,16 +90,16 @@ declare module google {
                 'validatedWithOriginServer': boolean;
             }
 
-            interface LogEntryOperation {
+            export interface LogEntryOperation {
                 'id': string;
                 'producer': string;
                 'first': boolean;
                 'last': boolean;
             }
 
-            interface WriteLogEntriesResponse {}
+            export interface WriteLogEntriesResponse {}
 
-            interface ListLogEntriesRequest {
+            export interface ListLogEntriesRequest {
                 'projectIds': string[];
                 'filter': string;
                 'orderBy': string;
@@ -107,53 +107,53 @@ declare module google {
                 'pageToken': string;
             }
 
-            interface ListLogEntriesResponse {
+            export interface ListLogEntriesResponse {
                 'entries': LogEntry[];
                 'nextPageToken': string;
             }
 
-            interface ListMonitoredResourceDescriptorsResponse {
+            export interface ListMonitoredResourceDescriptorsResponse {
                 'resourceDescriptors': MonitoredResourceDescriptor[];
                 'nextPageToken': string;
             }
 
-            interface MonitoredResourceDescriptor {
+            export interface MonitoredResourceDescriptor {
                 'type': string;
                 'displayName': string;
                 'description': string;
                 'labels': LabelDescriptor[];
             }
 
-            interface LabelDescriptor {
+            export interface LabelDescriptor {
                 'key': string;
                 'valueType': string;
                 'description': string;
             }
 
-            interface ListSinksResponse {
+            export interface ListSinksResponse {
                 'sinks': LogSink[];
                 'nextPageToken': string;
             }
 
-            interface LogSink {
+            export interface LogSink {
                 'name': string;
                 'destination': string;
                 'filter': string;
                 'outputVersionFormat': string;
             }
 
-            interface ListLogMetricsResponse {
+            export interface ListLogMetricsResponse {
                 'metrics': LogMetric[];
                 'nextPageToken': string;
             }
 
-            interface LogMetric {
+            export interface LogMetric {
                 'name': string;
                 'description': string;
                 'filter': string;
             }
 
-            interface RequestLog {
+            export interface RequestLog {
                 'appId': string;
                 'moduleId': string;
                 'versionId': string;
@@ -187,20 +187,20 @@ declare module google {
                 'sourceReference': SourceReference[];
             }
 
-            interface LogLine {
+            export interface LogLine {
                 'time': string;
                 'severity': string;
                 'logMessage': string;
                 'sourceLocation': SourceLocation;
             }
 
-            interface SourceLocation {
+            export interface SourceLocation {
                 'file': string;
                 'line': string;
                 'functionName': string;
             }
 
-            interface SourceReference {
+            export interface SourceReference {
                 'repository': string;
                 'revisionId': string;
             }

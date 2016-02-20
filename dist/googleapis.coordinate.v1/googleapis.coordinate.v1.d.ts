@@ -37,13 +37,13 @@ declare module google {
 
             }
 
-            interface CustomField {
+            export interface CustomField {
                 'customFieldId': string;
                 'kind': string;
                 'value': string;
             }
 
-            interface CustomFieldDef {
+            export interface CustomFieldDef {
                 'enabled': boolean;
                 'enumitems': EnumItemDef[];
                 'id': string;
@@ -53,42 +53,42 @@ declare module google {
                 'type': string;
             }
 
-            interface CustomFieldDefListResponse {
+            export interface CustomFieldDefListResponse {
                 'items': CustomFieldDef[];
                 'kind': string;
             }
 
-            interface CustomFields {
+            export interface CustomFields {
                 'customField': CustomField[];
                 'kind': string;
             }
 
-            interface EnumItemDef {
+            export interface EnumItemDef {
                 'active': boolean;
                 'kind': string;
                 'value': string;
             }
 
-            interface Job {
+            export interface Job {
                 'id': string;
                 'jobChange': JobChange[];
                 'kind': string;
                 'state': JobState;
             }
 
-            interface JobChange {
+            export interface JobChange {
                 'kind': string;
                 'state': JobState;
                 'timestamp': string;
             }
 
-            interface JobListResponse {
+            export interface JobListResponse {
                 'items': Job[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface JobState {
+            export interface JobState {
                 'assignee': string;
                 'customFields': CustomFields;
                 'customerName': string;
@@ -100,21 +100,21 @@ declare module google {
                 'title': string;
             }
 
-            interface Location {
+            export interface Location {
                 'addressLine': string[];
                 'kind': string;
                 'lat': number;
                 'lng': number;
             }
 
-            interface LocationListResponse {
+            export interface LocationListResponse {
                 'items': LocationRecord[];
                 'kind': string;
                 'nextPageToken': string;
                 'tokenPagination': TokenPagination;
             }
 
-            interface LocationRecord {
+            export interface LocationRecord {
                 'collectionTime': string;
                 'confidenceRadius': number;
                 'kind': string;
@@ -122,7 +122,7 @@ declare module google {
                 'longitude': number;
             }
 
-            interface Schedule {
+            export interface Schedule {
                 'allDay': boolean;
                 'duration': string;
                 'endTime': string;
@@ -130,29 +130,29 @@ declare module google {
                 'startTime': string;
             }
 
-            interface Team {
+            export interface Team {
                 'id': string;
                 'kind': string;
                 'name': string;
             }
 
-            interface TeamListResponse {
+            export interface TeamListResponse {
                 'items': Team[];
                 'kind': string;
             }
 
-            interface TokenPagination {
+            export interface TokenPagination {
                 'kind': string;
                 'nextPageToken': string;
                 'previousPageToken': string;
             }
 
-            interface Worker {
+            export interface Worker {
                 'id': string;
                 'kind': string;
             }
 
-            interface WorkerListResponse {
+            export interface WorkerListResponse {
                 'items': Worker[];
                 'kind': string;
             }

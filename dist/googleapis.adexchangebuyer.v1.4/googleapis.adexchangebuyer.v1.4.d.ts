@@ -67,7 +67,7 @@ declare module google {
 
             }
 
-            interface Account {
+            export interface Account {
                 'bidderLocation': {
                     'maximumQps': number;
                     'region': string;
@@ -82,43 +82,43 @@ declare module google {
                 'numberActiveCreatives': number;
             }
 
-            interface AccountsList {
+            export interface AccountsList {
                 'items': Account[];
                 'kind': string;
             }
 
-            interface AddOrderDealsRequest {
+            export interface AddOrderDealsRequest {
                 'deals': MarketplaceDeal[];
                 'proposalRevisionNumber': string;
                 'updateAction': string;
             }
 
-            interface AddOrderDealsResponse {
+            export interface AddOrderDealsResponse {
                 'deals': MarketplaceDeal[];
                 'proposalRevisionNumber': string;
             }
 
-            interface AddOrderNotesRequest {
+            export interface AddOrderNotesRequest {
                 'notes': MarketplaceNote[];
             }
 
-            interface AddOrderNotesResponse {
+            export interface AddOrderNotesResponse {
                 'notes': MarketplaceNote[];
             }
 
-            interface BillingInfo {
+            export interface BillingInfo {
                 'accountId': number;
                 'accountName': string;
                 'billingId': string[];
                 'kind': string;
             }
 
-            interface BillingInfoList {
+            export interface BillingInfoList {
                 'items': BillingInfo[];
                 'kind': string;
             }
 
-            interface Budget {
+            export interface Budget {
                 'accountId': string;
                 'billingId': string;
                 'budgetAmount': string;
@@ -127,25 +127,25 @@ declare module google {
                 'kind': string;
             }
 
-            interface Buyer {
+            export interface Buyer {
                 'accountId': string;
             }
 
-            interface ContactInformation {
+            export interface ContactInformation {
                 'email': string;
                 'name': string;
             }
 
-            interface CreateOrdersRequest {
+            export interface CreateOrdersRequest {
                 'proposals': Proposal[];
                 'webPropertyCode': string;
             }
 
-            interface CreateOrdersResponse {
+            export interface CreateOrdersResponse {
                 'proposals': Proposal[];
             }
 
-            interface Creative {
+            export interface Creative {
                 'HTMLSnippet': string;
                 'accountId': number;
                 'advertiserId': string[];
@@ -219,13 +219,13 @@ declare module google {
                 'width': number;
             }
 
-            interface CreativesList {
+            export interface CreativesList {
                 'items': Creative[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface DealTerms {
+            export interface DealTerms {
                 'brandingType': string;
                 'description': string;
                 'estimatedGrossSpend': Price;
@@ -235,72 +235,72 @@ declare module google {
                 'nonGuaranteedFixedPriceTerms': DealTermsNonGuaranteedFixedPriceTerms;
             }
 
-            interface DealTermsGuaranteedFixedPriceTerms {
+            export interface DealTermsGuaranteedFixedPriceTerms {
                 'fixedPrices': PricePerBuyer[];
                 'guaranteedImpressions': string;
                 'guaranteedLooks': string;
             }
 
-            interface DealTermsNonGuaranteedAuctionTerms {
+            export interface DealTermsNonGuaranteedAuctionTerms {
                 'privateAuctionId': string;
                 'reservePricePerBuyers': PricePerBuyer[];
             }
 
-            interface DealTermsNonGuaranteedFixedPriceTerms {
+            export interface DealTermsNonGuaranteedFixedPriceTerms {
                 'fixedPrices': PricePerBuyer[];
             }
 
-            interface DeleteOrderDealsRequest {
+            export interface DeleteOrderDealsRequest {
                 'dealIds': string[];
                 'proposalRevisionNumber': string;
                 'updateAction': string;
             }
 
-            interface DeleteOrderDealsResponse {
+            export interface DeleteOrderDealsResponse {
                 'deals': MarketplaceDeal[];
                 'proposalRevisionNumber': string;
             }
 
-            interface DeliveryControl {
+            export interface DeliveryControl {
                 'creativeBlockingLevel': string;
                 'deliveryRateType': string;
                 'frequencyCaps': DeliveryControlFrequencyCap[];
             }
 
-            interface DeliveryControlFrequencyCap {
+            export interface DeliveryControlFrequencyCap {
                 'maxImpressions': number;
                 'numTimeUnits': number;
                 'timeUnitType': string;
             }
 
-            interface EditAllOrderDealsRequest {
+            export interface EditAllOrderDealsRequest {
                 'deals': MarketplaceDeal[];
                 'proposal': Proposal;
                 'proposalRevisionNumber': string;
                 'updateAction': string;
             }
 
-            interface EditAllOrderDealsResponse {
+            export interface EditAllOrderDealsResponse {
                 'deals': MarketplaceDeal[];
             }
 
-            interface GetOffersResponse {
+            export interface GetOffersResponse {
                 'products': Product[];
             }
 
-            interface GetOrderDealsResponse {
+            export interface GetOrderDealsResponse {
                 'deals': MarketplaceDeal[];
             }
 
-            interface GetOrderNotesResponse {
+            export interface GetOrderNotesResponse {
                 'notes': MarketplaceNote[];
             }
 
-            interface GetOrdersResponse {
+            export interface GetOrdersResponse {
                 'proposals': Proposal[];
             }
 
-            interface MarketplaceDeal {
+            export interface MarketplaceDeal {
                 'buyerPrivateData': PrivateData;
                 'creationTimeMs': string;
                 'creativePreApprovalPolicy': string;
@@ -323,19 +323,19 @@ declare module google {
                 'webPropertyCode': string;
             }
 
-            interface MarketplaceDealParty {
+            export interface MarketplaceDealParty {
                 'buyer': Buyer;
                 'seller': Seller;
             }
 
-            interface MarketplaceLabel {
+            export interface MarketplaceLabel {
                 'accountId': string;
                 'createTimeMs': string;
                 'deprecatedMarketplaceDealParty': MarketplaceDealParty;
                 'label': string;
             }
 
-            interface MarketplaceNote {
+            export interface MarketplaceNote {
                 'creatorRole': string;
                 'dealId': string;
                 'kind': string;
@@ -346,7 +346,7 @@ declare module google {
                 'timestampMs': string;
             }
 
-            interface PerformanceReport {
+            export interface PerformanceReport {
                 'bidRate': number;
                 'bidRequestRate': number;
                 'calloutStatusRate': any[];
@@ -371,12 +371,12 @@ declare module google {
                 'unsuccessfulRequestRate': number;
             }
 
-            interface PerformanceReportList {
+            export interface PerformanceReportList {
                 'kind': string;
                 'performanceReport': PerformanceReport[];
             }
 
-            interface PretargetingConfig {
+            export interface PretargetingConfig {
                 'billingId': string;
                 'configId': string;
                 'configName': string;
@@ -416,28 +416,28 @@ declare module google {
                 }[];
             }
 
-            interface PretargetingConfigList {
+            export interface PretargetingConfigList {
                 'items': PretargetingConfig[];
                 'kind': string;
             }
 
-            interface Price {
+            export interface Price {
                 'amountMicros': number;
                 'currencyCode': string;
                 'pricingType': string;
             }
 
-            interface PricePerBuyer {
+            export interface PricePerBuyer {
                 'buyer': Buyer;
                 'price': Price;
             }
 
-            interface PrivateData {
+            export interface PrivateData {
                 'referenceId': string;
                 'referencePayload': string;
             }
 
-            interface Product {
+            export interface Product {
                 'creationTimeMs': string;
                 'creatorContacts': ContactInformation[];
                 'flightEndTimeMs': string;
@@ -458,7 +458,7 @@ declare module google {
                 'webPropertyCode': string;
             }
 
-            interface Proposal {
+            export interface Proposal {
                 'billedBuyer': Buyer;
                 'buyer': Buyer;
                 'buyerContacts': ContactInformation[];
@@ -482,36 +482,36 @@ declare module google {
                 'sellerContacts': ContactInformation[];
             }
 
-            interface Seller {
+            export interface Seller {
                 'accountId': string;
                 'subAccountId': string;
             }
 
-            interface SharedTargeting {
+            export interface SharedTargeting {
                 'exclusions': TargetingValue[];
                 'inclusions': TargetingValue[];
                 'key': string;
             }
 
-            interface TargetingValue {
+            export interface TargetingValue {
                 'creativeSizeValue': TargetingValueCreativeSize;
                 'dayPartTargetingValue': TargetingValueDayPartTargeting;
                 'longValue': string;
                 'stringValue': string;
             }
 
-            interface TargetingValueCreativeSize {
+            export interface TargetingValueCreativeSize {
                 'companionSizes': TargetingValueSize[];
                 'creativeSizeType': string;
                 'size': TargetingValueSize;
             }
 
-            interface TargetingValueDayPartTargeting {
+            export interface TargetingValueDayPartTargeting {
                 'dayParts': TargetingValueDayPartTargetingDayPart[];
                 'timeZoneType': string;
             }
 
-            interface TargetingValueDayPartTargetingDayPart {
+            export interface TargetingValueDayPartTargetingDayPart {
                 'dayOfWeek': string;
                 'endHour': number;
                 'endMinute': number;
@@ -519,7 +519,7 @@ declare module google {
                 'startMinute': number;
             }
 
-            interface TargetingValueSize {
+            export interface TargetingValueSize {
                 'height': number;
                 'width': number;
             }

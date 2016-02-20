@@ -96,7 +96,7 @@ declare module google {
 
             }
 
-            interface AchievementDefinition {
+            export interface AchievementDefinition {
                 'achievementType': string;
                 'description': string;
                 'experiencePoints': string;
@@ -112,45 +112,45 @@ declare module google {
                 'unlockedIconUrl': string;
             }
 
-            interface AchievementDefinitionsListResponse {
+            export interface AchievementDefinitionsListResponse {
                 'items': AchievementDefinition[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface AchievementIncrementResponse {
+            export interface AchievementIncrementResponse {
                 'currentSteps': number;
                 'kind': string;
                 'newlyUnlocked': boolean;
             }
 
-            interface AchievementRevealResponse {
+            export interface AchievementRevealResponse {
                 'currentState': string;
                 'kind': string;
             }
 
-            interface AchievementSetStepsAtLeastResponse {
+            export interface AchievementSetStepsAtLeastResponse {
                 'currentSteps': number;
                 'kind': string;
                 'newlyUnlocked': boolean;
             }
 
-            interface AchievementUnlockResponse {
+            export interface AchievementUnlockResponse {
                 'kind': string;
                 'newlyUnlocked': boolean;
             }
 
-            interface AchievementUpdateMultipleRequest {
+            export interface AchievementUpdateMultipleRequest {
                 'kind': string;
                 'updates': AchievementUpdateRequest[];
             }
 
-            interface AchievementUpdateMultipleResponse {
+            export interface AchievementUpdateMultipleResponse {
                 'kind': string;
                 'updatedAchievements': AchievementUpdateResponse[];
             }
 
-            interface AchievementUpdateRequest {
+            export interface AchievementUpdateRequest {
                 'achievementId': string;
                 'incrementPayload': GamesAchievementIncrement;
                 'kind': string;
@@ -158,7 +158,7 @@ declare module google {
                 'updateType': string;
             }
 
-            interface AchievementUpdateResponse {
+            export interface AchievementUpdateResponse {
                 'achievementId': string;
                 'currentState': string;
                 'currentSteps': number;
@@ -167,7 +167,7 @@ declare module google {
                 'updateOccurred': boolean;
             }
 
-            interface AggregateStats {
+            export interface AggregateStats {
                 'count': string;
                 'kind': string;
                 'max': string;
@@ -175,13 +175,13 @@ declare module google {
                 'sum': string;
             }
 
-            interface AnonymousPlayer {
+            export interface AnonymousPlayer {
                 'avatarImageUrl': string;
                 'displayName': string;
                 'kind': string;
             }
 
-            interface Application {
+            export interface Application {
                 'achievement_count': number;
                 'assets': ImageAsset[];
                 'author': string;
@@ -197,41 +197,41 @@ declare module google {
                 'themeColor': string;
             }
 
-            interface ApplicationCategory {
+            export interface ApplicationCategory {
                 'kind': string;
                 'primary': string;
                 'secondary': string;
             }
 
-            interface ApplicationVerifyResponse {
+            export interface ApplicationVerifyResponse {
                 'kind': string;
                 'player_id': string;
             }
 
-            interface Category {
+            export interface Category {
                 'category': string;
                 'experiencePoints': string;
                 'kind': string;
             }
 
-            interface CategoryListResponse {
+            export interface CategoryListResponse {
                 'items': Category[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface EventBatchRecordFailure {
+            export interface EventBatchRecordFailure {
                 'failureCause': string;
                 'kind': string;
                 'range': EventPeriodRange;
             }
 
-            interface EventChild {
+            export interface EventChild {
                 'childId': string;
                 'kind': string;
             }
 
-            interface EventDefinition {
+            export interface EventDefinition {
                 'childEvents': EventChild[];
                 'description': string;
                 'displayName': string;
@@ -242,62 +242,62 @@ declare module google {
                 'visibility': string;
             }
 
-            interface EventDefinitionListResponse {
+            export interface EventDefinitionListResponse {
                 'items': EventDefinition[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface EventPeriodRange {
+            export interface EventPeriodRange {
                 'kind': string;
                 'periodEndMillis': string;
                 'periodStartMillis': string;
             }
 
-            interface EventPeriodUpdate {
+            export interface EventPeriodUpdate {
                 'kind': string;
                 'timePeriod': EventPeriodRange;
                 'updates': EventUpdateRequest[];
             }
 
-            interface EventRecordFailure {
+            export interface EventRecordFailure {
                 'eventId': string;
                 'failureCause': string;
                 'kind': string;
             }
 
-            interface EventRecordRequest {
+            export interface EventRecordRequest {
                 'currentTimeMillis': string;
                 'kind': string;
                 'requestId': string;
                 'timePeriods': EventPeriodUpdate[];
             }
 
-            interface EventUpdateRequest {
+            export interface EventUpdateRequest {
                 'definitionId': string;
                 'kind': string;
                 'updateCount': string;
             }
 
-            interface EventUpdateResponse {
+            export interface EventUpdateResponse {
                 'batchFailures': EventBatchRecordFailure[];
                 'eventFailures': EventRecordFailure[];
                 'kind': string;
                 'playerEvents': PlayerEvent[];
             }
 
-            interface GamesAchievementIncrement {
+            export interface GamesAchievementIncrement {
                 'kind': string;
                 'requestId': string;
                 'steps': number;
             }
 
-            interface GamesAchievementSetStepsAtLeast {
+            export interface GamesAchievementSetStepsAtLeast {
                 'kind': string;
                 'steps': number;
             }
 
-            interface ImageAsset {
+            export interface ImageAsset {
                 'height': number;
                 'kind': string;
                 'name': string;
@@ -305,7 +305,7 @@ declare module google {
                 'width': number;
             }
 
-            interface Instance {
+            export interface Instance {
                 'acquisitionUri': string;
                 'androidInstance': InstanceAndroidDetails;
                 'iosInstance': InstanceIosDetails;
@@ -317,14 +317,14 @@ declare module google {
                 'webInstance': InstanceWebDetails;
             }
 
-            interface InstanceAndroidDetails {
+            export interface InstanceAndroidDetails {
                 'enablePiracyCheck': boolean;
                 'kind': string;
                 'packageName': string;
                 'preferred': boolean;
             }
 
-            interface InstanceIosDetails {
+            export interface InstanceIosDetails {
                 'bundleIdentifier': string;
                 'itunesAppId': string;
                 'kind': string;
@@ -334,13 +334,13 @@ declare module google {
                 'supportIphone': boolean;
             }
 
-            interface InstanceWebDetails {
+            export interface InstanceWebDetails {
                 'kind': string;
                 'launchUrl': string;
                 'preferred': boolean;
             }
 
-            interface Leaderboard {
+            export interface Leaderboard {
                 'iconUrl': string;
                 'id': string;
                 'isIconUrlDefault': boolean;
@@ -349,7 +349,7 @@ declare module google {
                 'order': string;
             }
 
-            interface LeaderboardEntry {
+            export interface LeaderboardEntry {
                 'formattedScore': string;
                 'formattedScoreRank': string;
                 'kind': string;
@@ -361,13 +361,13 @@ declare module google {
                 'writeTimestampMillis': string;
             }
 
-            interface LeaderboardListResponse {
+            export interface LeaderboardListResponse {
                 'items': Leaderboard[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface LeaderboardScoreRank {
+            export interface LeaderboardScoreRank {
                 'formattedNumScores': string;
                 'formattedRank': string;
                 'kind': string;
@@ -375,7 +375,7 @@ declare module google {
                 'rank': string;
             }
 
-            interface LeaderboardScores {
+            export interface LeaderboardScores {
                 'items': LeaderboardEntry[];
                 'kind': string;
                 'nextPageToken': string;
@@ -384,13 +384,13 @@ declare module google {
                 'prevPageToken': string;
             }
 
-            interface MetagameConfig {
+            export interface MetagameConfig {
                 'currentVersion': number;
                 'kind': string;
                 'playerLevels': PlayerLevel[];
             }
 
-            interface NetworkDiagnostics {
+            export interface NetworkDiagnostics {
                 'androidNetworkSubtype': number;
                 'androidNetworkType': number;
                 'iosNetworkType': number;
@@ -400,14 +400,14 @@ declare module google {
                 'registrationLatencyMillis': number;
             }
 
-            interface ParticipantResult {
+            export interface ParticipantResult {
                 'kind': string;
                 'participantId': string;
                 'placing': number;
                 'result': string;
             }
 
-            interface PeerChannelDiagnostics {
+            export interface PeerChannelDiagnostics {
                 'bytesReceived': AggregateStats;
                 'bytesSent': AggregateStats;
                 'kind': string;
@@ -418,7 +418,7 @@ declare module google {
                 'roundtripLatencyMillis': AggregateStats;
             }
 
-            interface PeerSessionDiagnostics {
+            export interface PeerSessionDiagnostics {
                 'connectedTimestampMillis': string;
                 'kind': string;
                 'participantId': string;
@@ -426,13 +426,13 @@ declare module google {
                 'unreliableChannel': PeerChannelDiagnostics;
             }
 
-            interface Played {
+            export interface Played {
                 'autoMatched': boolean;
                 'kind': string;
                 'timeMillis': string;
             }
 
-            interface Player {
+            export interface Player {
                 'avatarImageUrl': string;
                 'bannerUrlLandscape': string;
                 'bannerUrlPortrait': string;
@@ -449,7 +449,7 @@ declare module google {
                 'title': string;
             }
 
-            interface PlayerAchievement {
+            export interface PlayerAchievement {
                 'achievementState': string;
                 'currentSteps': number;
                 'experiencePoints': string;
@@ -459,13 +459,13 @@ declare module google {
                 'lastUpdatedTimestamp': string;
             }
 
-            interface PlayerAchievementListResponse {
+            export interface PlayerAchievementListResponse {
                 'items': PlayerAchievement[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface PlayerEvent {
+            export interface PlayerEvent {
                 'definitionId': string;
                 'formattedNumEvents': string;
                 'kind': string;
@@ -473,13 +473,13 @@ declare module google {
                 'playerId': string;
             }
 
-            interface PlayerEventListResponse {
+            export interface PlayerEventListResponse {
                 'items': PlayerEvent[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface PlayerExperienceInfo {
+            export interface PlayerExperienceInfo {
                 'currentExperiencePoints': string;
                 'currentLevel': PlayerLevel;
                 'kind': string;
@@ -487,7 +487,7 @@ declare module google {
                 'nextLevel': PlayerLevel;
             }
 
-            interface PlayerLeaderboardScore {
+            export interface PlayerLeaderboardScore {
                 'kind': string;
                 'leaderboard_id': string;
                 'publicRank': LeaderboardScoreRank;
@@ -499,27 +499,27 @@ declare module google {
                 'writeTimestamp': string;
             }
 
-            interface PlayerLeaderboardScoreListResponse {
+            export interface PlayerLeaderboardScoreListResponse {
                 'items': PlayerLeaderboardScore[];
                 'kind': string;
                 'nextPageToken': string;
                 'player': Player;
             }
 
-            interface PlayerLevel {
+            export interface PlayerLevel {
                 'kind': string;
                 'level': number;
                 'maxExperiencePoints': string;
                 'minExperiencePoints': string;
             }
 
-            interface PlayerListResponse {
+            export interface PlayerListResponse {
                 'items': Player[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface PlayerScore {
+            export interface PlayerScore {
                 'formattedScore': string;
                 'kind': string;
                 'score': string;
@@ -527,12 +527,12 @@ declare module google {
                 'timeSpan': string;
             }
 
-            interface PlayerScoreListResponse {
+            export interface PlayerScoreListResponse {
                 'kind': string;
                 'submittedScores': PlayerScoreResponse[];
             }
 
-            interface PlayerScoreResponse {
+            export interface PlayerScoreResponse {
                 'beatenScoreTimeSpans': string[];
                 'formattedScore': string;
                 'kind': string;
@@ -541,19 +541,19 @@ declare module google {
                 'unbeatenScores': PlayerScore[];
             }
 
-            interface PlayerScoreSubmissionList {
+            export interface PlayerScoreSubmissionList {
                 'kind': string;
                 'scores': ScoreSubmission[];
             }
 
-            interface PushToken {
+            export interface PushToken {
                 'clientRevision': string;
                 'id': PushTokenId;
                 'kind': string;
                 'language': string;
             }
 
-            interface PushTokenId {
+            export interface PushTokenId {
                 'ios': {
                     'apns_device_token': string;
                     'apns_environment': string;
@@ -561,7 +561,7 @@ declare module google {
                 'kind': string;
             }
 
-            interface Quest {
+            export interface Quest {
                 'acceptedTimestampMillis': string;
                 'applicationId': string;
                 'bannerUrl': string;
@@ -580,13 +580,13 @@ declare module google {
                 'state': string;
             }
 
-            interface QuestContribution {
+            export interface QuestContribution {
                 'formattedValue': string;
                 'kind': string;
                 'value': string;
             }
 
-            interface QuestCriterion {
+            export interface QuestCriterion {
                 'completionContribution': QuestContribution;
                 'currentContribution': QuestContribution;
                 'eventId': string;
@@ -594,13 +594,13 @@ declare module google {
                 'kind': string;
             }
 
-            interface QuestListResponse {
+            export interface QuestListResponse {
                 'items': Quest[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface QuestMilestone {
+            export interface QuestMilestone {
                 'completionRewardData': string;
                 'criteria': QuestCriterion[];
                 'id': string;
@@ -608,13 +608,13 @@ declare module google {
                 'state': string;
             }
 
-            interface RevisionCheckResponse {
+            export interface RevisionCheckResponse {
                 'apiVersion': string;
                 'kind': string;
                 'revisionStatus': string;
             }
 
-            interface Room {
+            export interface Room {
                 'applicationId': string;
                 'autoMatchingCriteria': RoomAutoMatchingCriteria;
                 'autoMatchingStatus': RoomAutoMatchStatus;
@@ -630,24 +630,24 @@ declare module google {
                 'variant': number;
             }
 
-            interface RoomAutoMatchStatus {
+            export interface RoomAutoMatchStatus {
                 'kind': string;
                 'waitEstimateSeconds': number;
             }
 
-            interface RoomAutoMatchingCriteria {
+            export interface RoomAutoMatchingCriteria {
                 'exclusiveBitmask': string;
                 'kind': string;
                 'maxAutoMatchingPlayers': number;
                 'minAutoMatchingPlayers': number;
             }
 
-            interface RoomClientAddress {
+            export interface RoomClientAddress {
                 'kind': string;
                 'xmppAddress': string;
             }
 
-            interface RoomCreateRequest {
+            export interface RoomCreateRequest {
                 'autoMatchingCriteria': RoomAutoMatchingCriteria;
                 'capabilities': string[];
                 'clientAddress': RoomClientAddress;
@@ -658,14 +658,14 @@ declare module google {
                 'variant': number;
             }
 
-            interface RoomJoinRequest {
+            export interface RoomJoinRequest {
                 'capabilities': string[];
                 'clientAddress': RoomClientAddress;
                 'kind': string;
                 'networkDiagnostics': NetworkDiagnostics;
             }
 
-            interface RoomLeaveDiagnostics {
+            export interface RoomLeaveDiagnostics {
                 'androidNetworkSubtype': number;
                 'androidNetworkType': number;
                 'iosNetworkType': number;
@@ -676,25 +676,25 @@ declare module google {
                 'socketsUsed': boolean;
             }
 
-            interface RoomLeaveRequest {
+            export interface RoomLeaveRequest {
                 'kind': string;
                 'leaveDiagnostics': RoomLeaveDiagnostics;
                 'reason': string;
             }
 
-            interface RoomList {
+            export interface RoomList {
                 'items': Room[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface RoomModification {
+            export interface RoomModification {
                 'kind': string;
                 'modifiedTimestampMillis': string;
                 'participantId': string;
             }
 
-            interface RoomP2PStatus {
+            export interface RoomP2PStatus {
                 'connectionSetupLatencyMillis': number;
                 'error': string;
                 'error_reason': string;
@@ -704,12 +704,12 @@ declare module google {
                 'unreliableRoundtripLatencyMillis': number;
             }
 
-            interface RoomP2PStatuses {
+            export interface RoomP2PStatuses {
                 'kind': string;
                 'updates': RoomP2PStatus[];
             }
 
-            interface RoomParticipant {
+            export interface RoomParticipant {
                 'autoMatched': boolean;
                 'autoMatchedPlayer': AnonymousPlayer;
                 'capabilities': string[];
@@ -722,7 +722,7 @@ declare module google {
                 'status': string;
             }
 
-            interface RoomStatus {
+            export interface RoomStatus {
                 'autoMatchingStatus': RoomAutoMatchStatus;
                 'kind': string;
                 'participants': RoomParticipant[];
@@ -731,7 +731,7 @@ declare module google {
                 'statusVersion': number;
             }
 
-            interface ScoreSubmission {
+            export interface ScoreSubmission {
                 'kind': string;
                 'leaderboardId': string;
                 'score': string;
@@ -739,7 +739,7 @@ declare module google {
                 'signature': string;
             }
 
-            interface Snapshot {
+            export interface Snapshot {
                 'coverImage': SnapshotImage;
                 'description': string;
                 'driveId': string;
@@ -753,7 +753,7 @@ declare module google {
                 'uniqueName': string;
             }
 
-            interface SnapshotImage {
+            export interface SnapshotImage {
                 'height': number;
                 'kind': string;
                 'mime_type': string;
@@ -761,20 +761,20 @@ declare module google {
                 'width': number;
             }
 
-            interface SnapshotListResponse {
+            export interface SnapshotListResponse {
                 'items': Snapshot[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface TurnBasedAutoMatchingCriteria {
+            export interface TurnBasedAutoMatchingCriteria {
                 'exclusiveBitmask': string;
                 'kind': string;
                 'maxAutoMatchingPlayers': number;
                 'minAutoMatchingPlayers': number;
             }
 
-            interface TurnBasedMatch {
+            export interface TurnBasedMatch {
                 'applicationId': string;
                 'autoMatchingCriteria': TurnBasedAutoMatchingCriteria;
                 'creationDetails': TurnBasedMatchModification;
@@ -797,7 +797,7 @@ declare module google {
                 'withParticipantId': string;
             }
 
-            interface TurnBasedMatchCreateRequest {
+            export interface TurnBasedMatchCreateRequest {
                 'autoMatchingCriteria': TurnBasedAutoMatchingCriteria;
                 'invitedPlayerIds': string[];
                 'kind': string;
@@ -805,30 +805,30 @@ declare module google {
                 'variant': number;
             }
 
-            interface TurnBasedMatchData {
+            export interface TurnBasedMatchData {
                 'data': string;
                 'dataAvailable': boolean;
                 'kind': string;
             }
 
-            interface TurnBasedMatchDataRequest {
+            export interface TurnBasedMatchDataRequest {
                 'data': string;
                 'kind': string;
             }
 
-            interface TurnBasedMatchList {
+            export interface TurnBasedMatchList {
                 'items': TurnBasedMatch[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface TurnBasedMatchModification {
+            export interface TurnBasedMatchModification {
                 'kind': string;
                 'modifiedTimestampMillis': string;
                 'participantId': string;
             }
 
-            interface TurnBasedMatchParticipant {
+            export interface TurnBasedMatchParticipant {
                 'autoMatched': boolean;
                 'autoMatchedPlayer': AnonymousPlayer;
                 'id': string;
@@ -837,27 +837,27 @@ declare module google {
                 'status': string;
             }
 
-            interface TurnBasedMatchRematch {
+            export interface TurnBasedMatchRematch {
                 'kind': string;
                 'previousMatch': TurnBasedMatch;
                 'rematch': TurnBasedMatch;
             }
 
-            interface TurnBasedMatchResults {
+            export interface TurnBasedMatchResults {
                 'data': TurnBasedMatchDataRequest;
                 'kind': string;
                 'matchVersion': number;
                 'results': ParticipantResult[];
             }
 
-            interface TurnBasedMatchSync {
+            export interface TurnBasedMatchSync {
                 'items': TurnBasedMatch[];
                 'kind': string;
                 'moreAvailable': boolean;
                 'nextPageToken': string;
             }
 
-            interface TurnBasedMatchTurn {
+            export interface TurnBasedMatchTurn {
                 'data': TurnBasedMatchDataRequest;
                 'kind': string;
                 'matchVersion': number;

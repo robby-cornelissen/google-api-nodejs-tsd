@@ -67,21 +67,21 @@ declare module google {
 
             }
 
-            interface AclEntry {
+            export interface AclEntry {
                 'expirationTime': string;
                 'kind': string;
                 'name': string;
                 'value': string;
             }
 
-            interface BackupConfiguration {
+            export interface BackupConfiguration {
                 'binaryLogEnabled': boolean;
                 'enabled': boolean;
                 'kind': string;
                 'startTime': string;
             }
 
-            interface BackupRun {
+            export interface BackupRun {
                 'endTime': string;
                 'enqueuedTime': string;
                 'error': OperationError;
@@ -94,25 +94,25 @@ declare module google {
                 'windowStartTime': string;
             }
 
-            interface BackupRunsListResponse {
+            export interface BackupRunsListResponse {
                 'items': BackupRun[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface BinLogCoordinates {
+            export interface BinLogCoordinates {
                 'binLogFileName': string;
                 'binLogPosition': string;
                 'kind': string;
             }
 
-            interface CloneContext {
+            export interface CloneContext {
                 'binLogCoordinates': BinLogCoordinates;
                 'destinationInstanceName': string;
                 'kind': string;
             }
 
-            interface Database {
+            export interface Database {
                 'charset': string;
                 'collation': string;
                 'etag': string;
@@ -123,12 +123,12 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface DatabaseFlags {
+            export interface DatabaseFlags {
                 'name': string;
                 'value': string;
             }
 
-            interface DatabaseInstance {
+            export interface DatabaseInstance {
                 'currentDiskSize': string;
                 'databaseVersion': string;
                 'etag': string;
@@ -155,12 +155,12 @@ declare module google {
                 'state': string;
             }
 
-            interface DatabasesListResponse {
+            export interface DatabasesListResponse {
                 'items': Database[];
                 'kind': string;
             }
 
-            interface ExportContext {
+            export interface ExportContext {
                 'csvExportOptions': {
                     'selectQuery': string;
                 };
@@ -174,12 +174,12 @@ declare module google {
                 'uri': string;
             }
 
-            interface FailoverContext {
+            export interface FailoverContext {
                 'kind': string;
                 'settingsVersion': string;
             }
 
-            interface Flag {
+            export interface Flag {
                 'allowedStringValues': string[];
                 'appliesTo': string[];
                 'kind': string;
@@ -190,12 +190,12 @@ declare module google {
                 'type': string;
             }
 
-            interface FlagsListResponse {
+            export interface FlagsListResponse {
                 'items': Flag[];
                 'kind': string;
             }
 
-            interface ImportContext {
+            export interface ImportContext {
                 'csvImportOptions': {
                     'columns': string[];
                     'table': string;
@@ -206,57 +206,57 @@ declare module google {
                 'uri': string;
             }
 
-            interface InstancesCloneRequest {
+            export interface InstancesCloneRequest {
                 'cloneContext': CloneContext;
             }
 
-            interface InstancesExportRequest {
+            export interface InstancesExportRequest {
                 'exportContext': ExportContext;
             }
 
-            interface InstancesFailoverRequest {
+            export interface InstancesFailoverRequest {
                 'failoverContext': FailoverContext;
             }
 
-            interface InstancesImportRequest {
+            export interface InstancesImportRequest {
                 'importContext': ImportContext;
             }
 
-            interface InstancesListResponse {
+            export interface InstancesListResponse {
                 'items': DatabaseInstance[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface InstancesRestoreBackupRequest {
+            export interface InstancesRestoreBackupRequest {
                 'restoreBackupContext': RestoreBackupContext;
             }
 
-            interface IpConfiguration {
+            export interface IpConfiguration {
                 'authorizedNetworks': AclEntry[];
                 'ipv4Enabled': boolean;
                 'requireSsl': boolean;
             }
 
-            interface IpMapping {
+            export interface IpMapping {
                 'ipAddress': string;
                 'timeToRetire': string;
             }
 
-            interface LocationPreference {
+            export interface LocationPreference {
                 'followGaeApplication': string;
                 'kind': string;
                 'zone': string;
             }
 
-            interface MaintenanceWindow {
+            export interface MaintenanceWindow {
                 'day': number;
                 'hour': number;
                 'kind': string;
                 'updateTrack': string;
             }
 
-            interface MySqlReplicaConfiguration {
+            export interface MySqlReplicaConfiguration {
                 'caCertificate': string;
                 'clientCertificate': string;
                 'clientKey': string;
@@ -270,12 +270,12 @@ declare module google {
                 'verifyServerCertificate': boolean;
             }
 
-            interface OnPremisesConfiguration {
+            export interface OnPremisesConfiguration {
                 'hostPort': string;
                 'kind': string;
             }
 
-            interface Operation {
+            export interface Operation {
                 'endTime': string;
                 'error': OperationErrors;
                 'exportContext': ExportContext;
@@ -293,36 +293,36 @@ declare module google {
                 'user': string;
             }
 
-            interface OperationError {
+            export interface OperationError {
                 'code': string;
                 'kind': string;
                 'message': string;
             }
 
-            interface OperationErrors {
+            export interface OperationErrors {
                 'errors': OperationError[];
                 'kind': string;
             }
 
-            interface OperationsListResponse {
+            export interface OperationsListResponse {
                 'items': Operation[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface ReplicaConfiguration {
+            export interface ReplicaConfiguration {
                 'failoverTarget': boolean;
                 'kind': string;
                 'mysqlReplicaConfiguration': MySqlReplicaConfiguration;
             }
 
-            interface RestoreBackupContext {
+            export interface RestoreBackupContext {
                 'backupRunId': string;
                 'instanceId': string;
                 'kind': string;
             }
 
-            interface Settings {
+            export interface Settings {
                 'activationPolicy': string;
                 'authorizedGaeApplications': string[];
                 'backupConfiguration': BackupConfiguration;
@@ -341,7 +341,7 @@ declare module google {
                 'tier': string;
             }
 
-            interface SslCert {
+            export interface SslCert {
                 'cert': string;
                 'certSerialNumber': string;
                 'commonName': string;
@@ -353,31 +353,31 @@ declare module google {
                 'sha1Fingerprint': string;
             }
 
-            interface SslCertDetail {
+            export interface SslCertDetail {
                 'certInfo': SslCert;
                 'certPrivateKey': string;
             }
 
-            interface SslCertsCreateEphemeralRequest {
+            export interface SslCertsCreateEphemeralRequest {
                 'public_key': string;
             }
 
-            interface SslCertsInsertRequest {
+            export interface SslCertsInsertRequest {
                 'commonName': string;
             }
 
-            interface SslCertsInsertResponse {
+            export interface SslCertsInsertResponse {
                 'clientCert': SslCertDetail;
                 'kind': string;
                 'serverCaCert': SslCert;
             }
 
-            interface SslCertsListResponse {
+            export interface SslCertsListResponse {
                 'items': SslCert[];
                 'kind': string;
             }
 
-            interface Tier {
+            export interface Tier {
                 'DiskQuota': string;
                 'RAM': string;
                 'kind': string;
@@ -385,12 +385,12 @@ declare module google {
                 'tier': string;
             }
 
-            interface TiersListResponse {
+            export interface TiersListResponse {
                 'items': Tier[];
                 'kind': string;
             }
 
-            interface User {
+            export interface User {
                 'etag': string;
                 'host': string;
                 'instance': string;
@@ -400,7 +400,7 @@ declare module google {
                 'project': string;
             }
 
-            interface UsersListResponse {
+            export interface UsersListResponse {
                 'items': User[];
                 'kind': string;
                 'nextPageToken': string;

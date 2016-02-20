@@ -30,40 +30,40 @@ declare module google {
 
             }
 
-            interface Media {
+            export interface Media {
                 'resourceName': string;
             }
 
-            interface ListReportTypesResponse {
+            export interface ListReportTypesResponse {
                 'reportTypes': ReportType[];
                 'nextPageToken': string;
             }
 
-            interface ReportType {
+            export interface ReportType {
                 'id': string;
                 'name': string;
             }
 
-            interface Job {
+            export interface Job {
                 'id': string;
                 'reportTypeId': string;
                 'name': string;
                 'createTime': string;
             }
 
-            interface ListJobsResponse {
+            export interface ListJobsResponse {
                 'jobs': Job[];
                 'nextPageToken': string;
             }
 
-            interface Empty {}
+            export interface Empty {}
 
-            interface ListReportsResponse {
+            export interface ListReportsResponse {
                 'reports': Report[];
                 'nextPageToken': string;
             }
 
-            interface Report {
+            export interface Report {
                 'id': string;
                 'jobId': string;
                 'startTime': string;

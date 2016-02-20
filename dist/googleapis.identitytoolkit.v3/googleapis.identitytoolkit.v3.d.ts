@@ -31,7 +31,7 @@ declare module google {
 
             }
 
-            interface CreateAuthUriResponse {
+            export interface CreateAuthUriResponse {
                 'allProviders': string[];
                 'authUri': string;
                 'captchaRequired': boolean;
@@ -42,34 +42,34 @@ declare module google {
                 'sessionId': string;
             }
 
-            interface DeleteAccountResponse {
+            export interface DeleteAccountResponse {
                 'kind': string;
             }
 
-            interface DownloadAccountResponse {
+            export interface DownloadAccountResponse {
                 'kind': string;
                 'nextPageToken': string;
                 'users': UserInfo[];
             }
 
-            interface GetAccountInfoResponse {
+            export interface GetAccountInfoResponse {
                 'kind': string;
                 'users': UserInfo[];
             }
 
-            interface GetOobConfirmationCodeResponse {
+            export interface GetOobConfirmationCodeResponse {
                 'email': string;
                 'kind': string;
                 'oobCode': string;
             }
 
-            interface GetRecaptchaParamResponse {
+            export interface GetRecaptchaParamResponse {
                 'kind': string;
                 'recaptchaSiteKey': string;
                 'recaptchaStoken': string;
             }
 
-            interface IdentitytoolkitRelyingpartyCreateAuthUriRequest {
+            export interface IdentitytoolkitRelyingpartyCreateAuthUriRequest {
                 'appId': string;
                 'clientId': string;
                 'context': string;
@@ -82,42 +82,42 @@ declare module google {
                 'providerId': string;
             }
 
-            interface IdentitytoolkitRelyingpartyDeleteAccountRequest {
+            export interface IdentitytoolkitRelyingpartyDeleteAccountRequest {
                 'delegatedProjectNumber': string;
                 'localId': string;
             }
 
-            interface IdentitytoolkitRelyingpartyDownloadAccountRequest {
+            export interface IdentitytoolkitRelyingpartyDownloadAccountRequest {
                 'delegatedProjectNumber': string;
                 'maxResults': number;
                 'nextPageToken': string;
             }
 
-            interface IdentitytoolkitRelyingpartyGetAccountInfoRequest {
+            export interface IdentitytoolkitRelyingpartyGetAccountInfoRequest {
                 'email': string[];
                 'idToken': string;
                 'localId': string[];
             }
 
-            interface IdentitytoolkitRelyingpartyGetProjectConfigResponse {
+            export interface IdentitytoolkitRelyingpartyGetProjectConfigResponse {
                 'allowPasswordUser': boolean;
                 'apiKey': string;
                 'idpConfig': IdpConfig[];
                 'projectId': string;
             }
 
-            interface IdentitytoolkitRelyingpartyGetPublicKeysResponse {
+            export interface IdentitytoolkitRelyingpartyGetPublicKeysResponse {
                 [name: string]: string
             }
 
-            interface IdentitytoolkitRelyingpartyResetPasswordRequest {
+            export interface IdentitytoolkitRelyingpartyResetPasswordRequest {
                 'email': string;
                 'newPassword': string;
                 'oldPassword': string;
                 'oobCode': string;
             }
 
-            interface IdentitytoolkitRelyingpartySetAccountInfoRequest {
+            export interface IdentitytoolkitRelyingpartySetAccountInfoRequest {
                 'captchaChallenge': string;
                 'captchaResponse': string;
                 'delegatedProjectNumber': string;
@@ -136,16 +136,16 @@ declare module google {
                 'validSince': string;
             }
 
-            interface IdentitytoolkitRelyingpartySignOutUserRequest {
+            export interface IdentitytoolkitRelyingpartySignOutUserRequest {
                 'instanceId': string;
                 'localId': string;
             }
 
-            interface IdentitytoolkitRelyingpartySignOutUserResponse {
+            export interface IdentitytoolkitRelyingpartySignOutUserResponse {
                 'localId': string;
             }
 
-            interface IdentitytoolkitRelyingpartySignupNewUserRequest {
+            export interface IdentitytoolkitRelyingpartySignupNewUserRequest {
                 'captchaChallenge': string;
                 'captchaResponse': string;
                 'displayName': string;
@@ -155,7 +155,7 @@ declare module google {
                 'password': string;
             }
 
-            interface IdentitytoolkitRelyingpartyUploadAccountRequest {
+            export interface IdentitytoolkitRelyingpartyUploadAccountRequest {
                 'delegatedProjectNumber': string;
                 'hashAlgorithm': string;
                 'memoryCost': number;
@@ -165,7 +165,7 @@ declare module google {
                 'users': UserInfo[];
             }
 
-            interface IdentitytoolkitRelyingpartyVerifyAssertionRequest {
+            export interface IdentitytoolkitRelyingpartyVerifyAssertionRequest {
                 'delegatedProjectNumber': string;
                 'idToken': string;
                 'instanceId': string;
@@ -176,12 +176,12 @@ declare module google {
                 'sessionId': string;
             }
 
-            interface IdentitytoolkitRelyingpartyVerifyCustomTokenRequest {
+            export interface IdentitytoolkitRelyingpartyVerifyCustomTokenRequest {
                 'instanceId': string;
                 'token': string;
             }
 
-            interface IdentitytoolkitRelyingpartyVerifyPasswordRequest {
+            export interface IdentitytoolkitRelyingpartyVerifyPasswordRequest {
                 'captchaChallenge': string;
                 'captchaResponse': string;
                 'delegatedProjectNumber': string;
@@ -192,14 +192,14 @@ declare module google {
                 'pendingIdToken': string;
             }
 
-            interface IdpConfig {
+            export interface IdpConfig {
                 'clientId': string;
                 'enabled': boolean;
                 'experimentPercent': number;
                 'provider': string;
             }
 
-            interface Relyingparty {
+            export interface Relyingparty {
                 'captchaResp': string;
                 'challenge': string;
                 'email': string;
@@ -210,12 +210,12 @@ declare module google {
                 'userIp': string;
             }
 
-            interface ResetPasswordResponse {
+            export interface ResetPasswordResponse {
                 'email': string;
                 'kind': string;
             }
 
-            interface SetAccountInfoResponse {
+            export interface SetAccountInfoResponse {
                 'displayName': string;
                 'email': string;
                 'idToken': string;
@@ -229,14 +229,14 @@ declare module google {
                 }[];
             }
 
-            interface SignupNewUserResponse {
+            export interface SignupNewUserResponse {
                 'displayName': string;
                 'email': string;
                 'idToken': string;
                 'kind': string;
             }
 
-            interface UploadAccountResponse {
+            export interface UploadAccountResponse {
                 'error': {
                     'index': number;
                     'message': string;
@@ -244,7 +244,7 @@ declare module google {
                 'kind': string;
             }
 
-            interface UserInfo {
+            export interface UserInfo {
                 'disabled': boolean;
                 'displayName': string;
                 'email': string;
@@ -265,7 +265,7 @@ declare module google {
                 'version': number;
             }
 
-            interface VerifyAssertionResponse {
+            export interface VerifyAssertionResponse {
                 'action': string;
                 'appInstallationUrl': string;
                 'appScheme': string;
@@ -299,12 +299,12 @@ declare module google {
                 'verifiedProvider': string[];
             }
 
-            interface VerifyCustomTokenResponse {
+            export interface VerifyCustomTokenResponse {
                 'idToken': string;
                 'kind': string;
             }
 
-            interface VerifyPasswordResponse {
+            export interface VerifyPasswordResponse {
                 'displayName': string;
                 'email': string;
                 'idToken': string;

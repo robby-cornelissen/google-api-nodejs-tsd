@@ -20,25 +20,25 @@ declare module google {
 
             }
 
-            interface GetResponse {
+            export interface GetResponse {
                 'currentStateVersion': string;
                 'data': string;
                 'kind': string;
                 'stateKey': number;
             }
 
-            interface ListResponse {
+            export interface ListResponse {
                 'items': GetResponse[];
                 'kind': string;
                 'maximumKeyCount': number;
             }
 
-            interface UpdateRequest {
+            export interface UpdateRequest {
                 'data': string;
                 'kind': string;
             }
 
-            interface WriteResult {
+            export interface WriteResult {
                 'currentStateVersion': string;
                 'kind': string;
                 'stateKey': number;

@@ -38,11 +38,11 @@ declare module google {
 
             }
 
-            interface ConfigFile {
+            export interface ConfigFile {
                 'content': string;
             }
 
-            interface Deployment {
+            export interface Deployment {
                 'description': string;
                 'fingerprint': string;
                 'id': string;
@@ -55,40 +55,40 @@ declare module google {
                 'update': DeploymentUpdate;
             }
 
-            interface DeploymentLabelEntry {
+            export interface DeploymentLabelEntry {
                 'key': string;
                 'value': string;
             }
 
-            interface DeploymentUpdate {
+            export interface DeploymentUpdate {
                 'labels': DeploymentUpdateLabelEntry[];
                 'manifest': string;
             }
 
-            interface DeploymentUpdateLabelEntry {
+            export interface DeploymentUpdateLabelEntry {
                 'key': string;
                 'value': string;
             }
 
-            interface DeploymentsCancelPreviewRequest {
+            export interface DeploymentsCancelPreviewRequest {
                 'fingerprint': string;
             }
 
-            interface DeploymentsListResponse {
+            export interface DeploymentsListResponse {
                 'deployments': Deployment[];
                 'nextPageToken': string;
             }
 
-            interface DeploymentsStopRequest {
+            export interface DeploymentsStopRequest {
                 'fingerprint': string;
             }
 
-            interface ImportFile {
+            export interface ImportFile {
                 'content': string;
                 'name': string;
             }
 
-            interface Manifest {
+            export interface Manifest {
                 'config': ConfigFile;
                 'expandedConfig': string;
                 'id': string;
@@ -99,12 +99,12 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface ManifestsListResponse {
+            export interface ManifestsListResponse {
                 'manifests': Manifest[];
                 'nextPageToken': string;
             }
 
-            interface Operation {
+            export interface Operation {
                 'clientOperationId': string;
                 'creationTimestamp': string;
                 'description': string;
@@ -143,12 +143,12 @@ declare module google {
                 'zone': string;
             }
 
-            interface OperationsListResponse {
+            export interface OperationsListResponse {
                 'nextPageToken': string;
                 'operations': Operation[];
             }
 
-            interface Resource {
+            export interface Resource {
                 'finalProperties': string;
                 'id': string;
                 'insertTime': string;
@@ -169,7 +169,7 @@ declare module google {
                 }[];
             }
 
-            interface ResourceUpdate {
+            export interface ResourceUpdate {
                 'error': {
                     'errors': {
                         'code': string;
@@ -192,24 +192,24 @@ declare module google {
                 }[];
             }
 
-            interface ResourcesListResponse {
+            export interface ResourcesListResponse {
                 'nextPageToken': string;
                 'resources': Resource[];
             }
 
-            interface TargetConfiguration {
+            export interface TargetConfiguration {
                 'config': ConfigFile;
                 'imports': ImportFile[];
             }
 
-            interface Type {
+            export interface Type {
                 'id': string;
                 'insertTime': string;
                 'name': string;
                 'selfLink': string;
             }
 
-            interface TypesListResponse {
+            export interface TypesListResponse {
                 'nextPageToken': string;
                 'types': Type[];
             }

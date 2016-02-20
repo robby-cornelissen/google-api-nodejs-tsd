@@ -33,12 +33,12 @@ declare module google {
 
             }
 
-            interface ListServiceAccountsResponse {
+            export interface ListServiceAccountsResponse {
                 'accounts': ServiceAccount[];
                 'nextPageToken': string;
             }
 
-            interface ServiceAccount {
+            export interface ServiceAccount {
                 'name': string;
                 'projectId': string;
                 'uniqueId': string;
@@ -48,18 +48,18 @@ declare module google {
                 'oauth2ClientId': string;
             }
 
-            interface CreateServiceAccountRequest {
+            export interface CreateServiceAccountRequest {
                 'accountId': string;
                 'serviceAccount': ServiceAccount;
             }
 
-            interface Empty {}
+            export interface Empty {}
 
-            interface ListServiceAccountKeysResponse {
+            export interface ListServiceAccountKeysResponse {
                 'keys': ServiceAccountKey[];
             }
 
-            interface ServiceAccountKey {
+            export interface ServiceAccountKey {
                 'name': string;
                 'privateKeyType': string;
                 'privateKeyData': string;
@@ -67,32 +67,32 @@ declare module google {
                 'validBeforeTime': string;
             }
 
-            interface CreateServiceAccountKeyRequest {
+            export interface CreateServiceAccountKeyRequest {
                 'privateKeyType': string;
             }
 
-            interface SignBlobRequest {
+            export interface SignBlobRequest {
                 'bytesToSign': string;
             }
 
-            interface SignBlobResponse {
+            export interface SignBlobResponse {
                 'keyId': string;
                 'signature': string;
             }
 
-            interface Policy {
+            export interface Policy {
                 'version': number;
                 'bindings': Binding[];
                 'rules': Rule[];
                 'etag': string;
             }
 
-            interface Binding {
+            export interface Binding {
                 'role': string;
                 'members': string[];
             }
 
-            interface Rule {
+            export interface Rule {
                 'description': string;
                 'permissions': string[];
                 'action': string;
@@ -102,7 +102,7 @@ declare module google {
                 'logConfig': LogConfig[];
             }
 
-            interface Condition {
+            export interface Condition {
                 'iam': string;
                 'sys': string;
                 'svc': string;
@@ -111,30 +111,30 @@ declare module google {
                 'values': string[];
             }
 
-            interface LogConfig {
+            export interface LogConfig {
                 'counter': CounterOptions;
                 'dataAccess': DataAccessOptions;
                 'cloudAudit': CloudAuditOptions;
             }
 
-            interface CounterOptions {
+            export interface CounterOptions {
                 'metric': string;
                 'field': string;
             }
 
-            interface DataAccessOptions {}
+            export interface DataAccessOptions {}
 
-            interface CloudAuditOptions {}
+            export interface CloudAuditOptions {}
 
-            interface SetIamPolicyRequest {
+            export interface SetIamPolicyRequest {
                 'policy': Policy;
             }
 
-            interface TestIamPermissionsRequest {
+            export interface TestIamPermissionsRequest {
                 'permissions': string[];
             }
 
-            interface TestIamPermissionsResponse {
+            export interface TestIamPermissionsResponse {
                 'permissions': string[];
             }
 

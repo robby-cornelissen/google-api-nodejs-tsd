@@ -21,98 +21,98 @@ declare module google {
 
             }
 
-            interface AllocateIdsRequest {
+            export interface AllocateIdsRequest {
                 'keys': Key[];
             }
 
-            interface AllocateIdsResponse {
+            export interface AllocateIdsResponse {
                 'header': ResponseHeader;
                 'keys': Key[];
             }
 
-            interface BeginTransactionRequest {
+            export interface BeginTransactionRequest {
                 'isolationLevel': string;
             }
 
-            interface BeginTransactionResponse {
+            export interface BeginTransactionResponse {
                 'header': ResponseHeader;
                 'transaction': string;
             }
 
-            interface CommitRequest {
+            export interface CommitRequest {
                 'ignoreReadOnly': boolean;
                 'mode': string;
                 'mutation': Mutation;
                 'transaction': string;
             }
 
-            interface CommitResponse {
+            export interface CommitResponse {
                 'header': ResponseHeader;
                 'mutationResult': MutationResult;
             }
 
-            interface CompositeFilter {
+            export interface CompositeFilter {
                 'filters': Filter[];
                 'operator': string;
             }
 
-            interface Entity {
+            export interface Entity {
                 'key': Key;
                 'properties': {
                     [name: string]: Property
                 };
             }
 
-            interface EntityResult {
+            export interface EntityResult {
                 'entity': Entity;
             }
 
-            interface Filter {
+            export interface Filter {
                 'compositeFilter': CompositeFilter;
                 'propertyFilter': PropertyFilter;
             }
 
-            interface GqlQuery {
+            export interface GqlQuery {
                 'allowLiteral': boolean;
                 'nameArgs': GqlQueryArg[];
                 'numberArgs': GqlQueryArg[];
                 'queryString': string;
             }
 
-            interface GqlQueryArg {
+            export interface GqlQueryArg {
                 'cursor': string;
                 'name': string;
                 'value': Value;
             }
 
-            interface Key {
+            export interface Key {
                 'partitionId': PartitionId;
                 'path': KeyPathElement[];
             }
 
-            interface KeyPathElement {
+            export interface KeyPathElement {
                 'id': string;
                 'kind': string;
                 'name': string;
             }
 
-            interface KindExpression {
+            export interface KindExpression {
                 'name': string;
             }
 
-            interface LookupRequest {
+            export interface LookupRequest {
                 'keys': Key[];
                 'readOptions': ReadOptions;
             }
 
-            interface LookupResponse {
+            export interface LookupResponse {
                 'deferred': Key[];
                 'found': EntityResult[];
                 'header': ResponseHeader;
                 'missing': EntityResult[];
             }
 
-            interface Mutation {
+            export interface Mutation {
                 'delete': Key[];
                 'force': boolean;
                 'insert': Entity[];
@@ -121,17 +121,17 @@ declare module google {
                 'upsert': Entity[];
             }
 
-            interface MutationResult {
+            export interface MutationResult {
                 'indexUpdates': number;
                 'insertAutoIdKeys': Key[];
             }
 
-            interface PartitionId {
+            export interface PartitionId {
                 'datasetId': string;
                 'namespace': string;
             }
 
-            interface Property {
+            export interface Property {
                 'blobKeyValue': string;
                 'blobValue': string;
                 'booleanValue': boolean;
@@ -146,27 +146,27 @@ declare module google {
                 'stringValue': string;
             }
 
-            interface PropertyExpression {
+            export interface PropertyExpression {
                 'aggregationFunction': string;
                 'property': PropertyReference;
             }
 
-            interface PropertyFilter {
+            export interface PropertyFilter {
                 'operator': string;
                 'property': PropertyReference;
                 'value': Value;
             }
 
-            interface PropertyOrder {
+            export interface PropertyOrder {
                 'direction': string;
                 'property': PropertyReference;
             }
 
-            interface PropertyReference {
+            export interface PropertyReference {
                 'name': string;
             }
 
-            interface Query {
+            export interface Query {
                 'endCursor': string;
                 'filter': Filter;
                 'groupBy': PropertyReference[];
@@ -178,7 +178,7 @@ declare module google {
                 'startCursor': string;
             }
 
-            interface QueryResultBatch {
+            export interface QueryResultBatch {
                 'endCursor': string;
                 'entityResultType': string;
                 'entityResults': EntityResult[];
@@ -186,36 +186,36 @@ declare module google {
                 'skippedResults': number;
             }
 
-            interface ReadOptions {
+            export interface ReadOptions {
                 'readConsistency': string;
                 'transaction': string;
             }
 
-            interface ResponseHeader {
+            export interface ResponseHeader {
                 'kind': string;
             }
 
-            interface RollbackRequest {
+            export interface RollbackRequest {
                 'transaction': string;
             }
 
-            interface RollbackResponse {
+            export interface RollbackResponse {
                 'header': ResponseHeader;
             }
 
-            interface RunQueryRequest {
+            export interface RunQueryRequest {
                 'gqlQuery': GqlQuery;
                 'partitionId': PartitionId;
                 'query': Query;
                 'readOptions': ReadOptions;
             }
 
-            interface RunQueryResponse {
+            export interface RunQueryResponse {
                 'batch': QueryResultBatch;
                 'header': ResponseHeader;
             }
 
-            interface Value {
+            export interface Value {
                 'blobKeyValue': string;
                 'blobValue': string;
                 'booleanValue': boolean;

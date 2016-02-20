@@ -21,7 +21,7 @@ declare module google {
 
             }
 
-            interface Person {
+            export interface Person {
                 'resourceName': string;
                 'etag': string;
                 'metadata': PersonMetadata;
@@ -53,30 +53,30 @@ declare module google {
                 'memberships': Membership[];
             }
 
-            interface PersonMetadata {
+            export interface PersonMetadata {
                 'sources': Source[];
                 'previousResourceNames': string[];
                 'deleted': boolean;
                 'objectType': string;
             }
 
-            interface Source {
+            export interface Source {
                 'type': string;
                 'id': string;
             }
 
-            interface Locale {
+            export interface Locale {
                 'metadata': FieldMetadata;
                 'value': string;
             }
 
-            interface FieldMetadata {
+            export interface FieldMetadata {
                 'primary': boolean;
                 'verified': boolean;
                 'source': Source;
             }
 
-            interface Name {
+            export interface Name {
                 'metadata': FieldMetadata;
                 'displayName': string;
                 'familyName': string;
@@ -91,49 +91,49 @@ declare module google {
                 'phoneticHonorificSuffix': string;
             }
 
-            interface Nickname {
+            export interface Nickname {
                 'metadata': FieldMetadata;
                 'value': string;
                 'type': string;
             }
 
-            interface CoverPhoto {
+            export interface CoverPhoto {
                 'metadata': FieldMetadata;
                 'url': string;
                 'default': boolean;
             }
 
-            interface Photo {
+            export interface Photo {
                 'metadata': FieldMetadata;
                 'url': string;
             }
 
-            interface Gender {
+            export interface Gender {
                 'metadata': FieldMetadata;
                 'value': string;
                 'formattedValue': string;
             }
 
-            interface Birthday {
+            export interface Birthday {
                 'metadata': FieldMetadata;
                 'date': Date;
                 'text': string;
             }
 
-            interface Date {
+            export interface Date {
                 'year': number;
                 'month': number;
                 'day': number;
             }
 
-            interface Event {
+            export interface Event {
                 'metadata': FieldMetadata;
                 'date': Date;
                 'type': string;
                 'formattedType': string;
             }
 
-            interface Address {
+            export interface Address {
                 'metadata': FieldMetadata;
                 'formattedValue': string;
                 'type': string;
@@ -148,20 +148,20 @@ declare module google {
                 'countryCode': string;
             }
 
-            interface Residence {
+            export interface Residence {
                 'metadata': FieldMetadata;
                 'value': string;
                 'current': boolean;
             }
 
-            interface EmailAddress {
+            export interface EmailAddress {
                 'metadata': FieldMetadata;
                 'value': string;
                 'type': string;
                 'formattedType': string;
             }
 
-            interface PhoneNumber {
+            export interface PhoneNumber {
                 'metadata': FieldMetadata;
                 'value': string;
                 'canonicalForm': string;
@@ -169,7 +169,7 @@ declare module google {
                 'formattedType': string;
             }
 
-            interface ImClient {
+            export interface ImClient {
                 'metadata': FieldMetadata;
                 'username': string;
                 'type': string;
@@ -178,24 +178,24 @@ declare module google {
                 'formattedProtocol': string;
             }
 
-            interface Tagline {
+            export interface Tagline {
                 'metadata': FieldMetadata;
                 'value': string;
             }
 
-            interface Biography {
+            export interface Biography {
                 'metadata': FieldMetadata;
                 'value': string;
             }
 
-            interface Url {
+            export interface Url {
                 'metadata': FieldMetadata;
                 'value': string;
                 'type': string;
                 'formattedType': string;
             }
 
-            interface Organization {
+            export interface Organization {
                 'metadata': FieldMetadata;
                 'type': string;
                 'formattedType': string;
@@ -212,70 +212,70 @@ declare module google {
                 'location': string;
             }
 
-            interface Occupation {
+            export interface Occupation {
                 'metadata': FieldMetadata;
                 'value': string;
             }
 
-            interface Interest {
+            export interface Interest {
                 'metadata': FieldMetadata;
                 'value': string;
             }
 
-            interface Skill {
+            export interface Skill {
                 'metadata': FieldMetadata;
                 'value': string;
             }
 
-            interface BraggingRights {
+            export interface BraggingRights {
                 'metadata': FieldMetadata;
                 'value': string;
             }
 
-            interface Relation {
+            export interface Relation {
                 'metadata': FieldMetadata;
                 'person': string;
                 'type': string;
                 'formattedType': string;
             }
 
-            interface RelationshipInterest {
+            export interface RelationshipInterest {
                 'metadata': FieldMetadata;
                 'value': string;
                 'formattedValue': string;
             }
 
-            interface RelationshipStatus {
+            export interface RelationshipStatus {
                 'metadata': FieldMetadata;
                 'value': string;
                 'formattedValue': string;
             }
 
-            interface Membership {
+            export interface Membership {
                 'metadata': FieldMetadata;
                 'contactGroupMembership': ContactGroupMembership;
                 'domainMembership': DomainMembership;
             }
 
-            interface ContactGroupMembership {
+            export interface ContactGroupMembership {
                 'contactGroupId': string;
             }
 
-            interface DomainMembership {
+            export interface DomainMembership {
                 'inViewerDomain': boolean;
             }
 
-            interface GetPeopleResponse {
+            export interface GetPeopleResponse {
                 'responses': PersonResponse[];
             }
 
-            interface PersonResponse {
+            export interface PersonResponse {
                 'httpStatusCode': number;
                 'person': Person;
                 'requestedResourceName': string;
             }
 
-            interface ListConnectionsResponse {
+            export interface ListConnectionsResponse {
                 'connections': Person[];
                 'nextPageToken': string;
                 'nextSyncToken': string;

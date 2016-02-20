@@ -31,7 +31,7 @@ declare module google {
 
             }
 
-            interface Task {
+            export interface Task {
                 'completed': string;
                 'deleted': boolean;
                 'due': string;
@@ -53,7 +53,7 @@ declare module google {
                 'updated': string;
             }
 
-            interface TaskList {
+            export interface TaskList {
                 'etag': string;
                 'id': string;
                 'kind': string;
@@ -62,14 +62,14 @@ declare module google {
                 'updated': string;
             }
 
-            interface TaskLists {
+            export interface TaskLists {
                 'etag': string;
                 'items': TaskList[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Tasks {
+            export interface Tasks {
                 'etag': string;
                 'items': Task[];
                 'kind': string;

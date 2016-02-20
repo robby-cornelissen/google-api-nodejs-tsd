@@ -281,14 +281,14 @@ declare module google {
 
             }
 
-            interface AccessConfig {
+            export interface AccessConfig {
                 'kind': string;
                 'name': string;
                 'natIP': string;
                 'type': string;
             }
 
-            interface Address {
+            export interface Address {
                 'address': string;
                 'creationTimestamp': string;
                 'description': string;
@@ -301,7 +301,7 @@ declare module google {
                 'users': string[];
             }
 
-            interface AddressAggregatedList {
+            export interface AddressAggregatedList {
                 'id': string;
                 'items': {
                     [name: string]: AddressesScopedList
@@ -311,7 +311,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface AddressList {
+            export interface AddressList {
                 'id': string;
                 'items': Address[];
                 'kind': string;
@@ -319,7 +319,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface AddressesScopedList {
+            export interface AddressesScopedList {
                 'addresses': Address[];
                 'warning': {
                     'code': string;
@@ -331,7 +331,7 @@ declare module google {
                 };
             }
 
-            interface AttachedDisk {
+            export interface AttachedDisk {
                 'autoDelete': boolean;
                 'boot': boolean;
                 'deviceName': string;
@@ -345,14 +345,14 @@ declare module google {
                 'type': string;
             }
 
-            interface AttachedDiskInitializeParams {
+            export interface AttachedDiskInitializeParams {
                 'diskName': string;
                 'diskSizeGb': string;
                 'diskType': string;
                 'sourceImage': string;
             }
 
-            interface Autoscaler {
+            export interface Autoscaler {
                 'autoscalingPolicy': AutoscalingPolicy;
                 'creationTimestamp': string;
                 'description': string;
@@ -364,7 +364,7 @@ declare module google {
                 'zone': string;
             }
 
-            interface AutoscalerAggregatedList {
+            export interface AutoscalerAggregatedList {
                 'id': string;
                 'items': {
                     [name: string]: AutoscalersScopedList
@@ -374,7 +374,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface AutoscalerList {
+            export interface AutoscalerList {
                 'id': string;
                 'items': Autoscaler[];
                 'kind': string;
@@ -382,7 +382,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface AutoscalersScopedList {
+            export interface AutoscalersScopedList {
                 'autoscalers': Autoscaler[];
                 'warning': {
                     'code': string;
@@ -394,7 +394,7 @@ declare module google {
                 };
             }
 
-            interface AutoscalingPolicy {
+            export interface AutoscalingPolicy {
                 'coolDownPeriodSec': number;
                 'cpuUtilization': AutoscalingPolicyCpuUtilization;
                 'customMetricUtilizations': AutoscalingPolicyCustomMetricUtilization[];
@@ -403,21 +403,21 @@ declare module google {
                 'minNumReplicas': number;
             }
 
-            interface AutoscalingPolicyCpuUtilization {
+            export interface AutoscalingPolicyCpuUtilization {
                 'utilizationTarget': number;
             }
 
-            interface AutoscalingPolicyCustomMetricUtilization {
+            export interface AutoscalingPolicyCustomMetricUtilization {
                 'metric': string;
                 'utilizationTarget': number;
                 'utilizationTargetType': string;
             }
 
-            interface AutoscalingPolicyLoadBalancingUtilization {
+            export interface AutoscalingPolicyLoadBalancingUtilization {
                 'utilizationTarget': number;
             }
 
-            interface Backend {
+            export interface Backend {
                 'balancingMode': string;
                 'capacityScaler': number;
                 'description': string;
@@ -427,7 +427,7 @@ declare module google {
                 'maxUtilization': number;
             }
 
-            interface BackendService {
+            export interface BackendService {
                 'backends': Backend[];
                 'creationTimestamp': string;
                 'description': string;
@@ -443,12 +443,12 @@ declare module google {
                 'timeoutSec': number;
             }
 
-            interface BackendServiceGroupHealth {
+            export interface BackendServiceGroupHealth {
                 'healthStatus': HealthStatus[];
                 'kind': string;
             }
 
-            interface BackendServiceList {
+            export interface BackendServiceList {
                 'id': string;
                 'items': BackendService[];
                 'kind': string;
@@ -456,7 +456,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface DeprecationStatus {
+            export interface DeprecationStatus {
                 'deleted': string;
                 'deprecated': string;
                 'obsolete': string;
@@ -464,7 +464,7 @@ declare module google {
                 'state': string;
             }
 
-            interface Disk {
+            export interface Disk {
                 'creationTimestamp': string;
                 'description': string;
                 'id': string;
@@ -486,7 +486,7 @@ declare module google {
                 'zone': string;
             }
 
-            interface DiskAggregatedList {
+            export interface DiskAggregatedList {
                 'id': string;
                 'items': {
                     [name: string]: DisksScopedList
@@ -496,7 +496,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface DiskList {
+            export interface DiskList {
                 'id': string;
                 'items': Disk[];
                 'kind': string;
@@ -504,12 +504,12 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface DiskMoveRequest {
+            export interface DiskMoveRequest {
                 'destinationZone': string;
                 'targetDisk': string;
             }
 
-            interface DiskType {
+            export interface DiskType {
                 'creationTimestamp': string;
                 'defaultDiskSizeGb': string;
                 'deprecated': DeprecationStatus;
@@ -522,7 +522,7 @@ declare module google {
                 'zone': string;
             }
 
-            interface DiskTypeAggregatedList {
+            export interface DiskTypeAggregatedList {
                 'id': string;
                 'items': {
                     [name: string]: DiskTypesScopedList
@@ -532,7 +532,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface DiskTypeList {
+            export interface DiskTypeList {
                 'id': string;
                 'items': DiskType[];
                 'kind': string;
@@ -540,7 +540,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface DiskTypesScopedList {
+            export interface DiskTypesScopedList {
                 'diskTypes': DiskType[];
                 'warning': {
                     'code': string;
@@ -552,7 +552,7 @@ declare module google {
                 };
             }
 
-            interface DisksScopedList {
+            export interface DisksScopedList {
                 'disks': Disk[];
                 'warning': {
                     'code': string;
@@ -564,7 +564,7 @@ declare module google {
                 };
             }
 
-            interface Firewall {
+            export interface Firewall {
                 'allowed': {
                     'IPProtocol': string;
                     'ports': string[];
@@ -581,7 +581,7 @@ declare module google {
                 'targetTags': string[];
             }
 
-            interface FirewallList {
+            export interface FirewallList {
                 'id': string;
                 'items': Firewall[];
                 'kind': string;
@@ -589,7 +589,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface ForwardingRule {
+            export interface ForwardingRule {
                 'IPAddress': string;
                 'IPProtocol': string;
                 'creationTimestamp': string;
@@ -603,7 +603,7 @@ declare module google {
                 'target': string;
             }
 
-            interface ForwardingRuleAggregatedList {
+            export interface ForwardingRuleAggregatedList {
                 'id': string;
                 'items': {
                     [name: string]: ForwardingRulesScopedList
@@ -613,7 +613,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface ForwardingRuleList {
+            export interface ForwardingRuleList {
                 'id': string;
                 'items': ForwardingRule[];
                 'kind': string;
@@ -621,7 +621,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface ForwardingRulesScopedList {
+            export interface ForwardingRulesScopedList {
                 'forwardingRules': ForwardingRule[];
                 'warning': {
                     'code': string;
@@ -633,24 +633,24 @@ declare module google {
                 };
             }
 
-            interface HealthCheckReference {
+            export interface HealthCheckReference {
                 'healthCheck': string;
             }
 
-            interface HealthStatus {
+            export interface HealthStatus {
                 'healthState': string;
                 'instance': string;
                 'ipAddress': string;
                 'port': number;
             }
 
-            interface HostRule {
+            export interface HostRule {
                 'description': string;
                 'hosts': string[];
                 'pathMatcher': string;
             }
 
-            interface HttpHealthCheck {
+            export interface HttpHealthCheck {
                 'checkIntervalSec': number;
                 'creationTimestamp': string;
                 'description': string;
@@ -666,7 +666,7 @@ declare module google {
                 'unhealthyThreshold': number;
             }
 
-            interface HttpHealthCheckList {
+            export interface HttpHealthCheckList {
                 'id': string;
                 'items': HttpHealthCheck[];
                 'kind': string;
@@ -674,7 +674,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface HttpsHealthCheck {
+            export interface HttpsHealthCheck {
                 'checkIntervalSec': number;
                 'creationTimestamp': string;
                 'description': string;
@@ -690,7 +690,7 @@ declare module google {
                 'unhealthyThreshold': number;
             }
 
-            interface HttpsHealthCheckList {
+            export interface HttpsHealthCheckList {
                 'id': string;
                 'items': HttpsHealthCheck[];
                 'kind': string;
@@ -698,7 +698,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface Image {
+            export interface Image {
                 'archiveSizeBytes': string;
                 'creationTimestamp': string;
                 'deprecated': DeprecationStatus;
@@ -720,7 +720,7 @@ declare module google {
                 'status': string;
             }
 
-            interface ImageList {
+            export interface ImageList {
                 'id': string;
                 'items': Image[];
                 'kind': string;
@@ -728,7 +728,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface Instance {
+            export interface Instance {
                 'canIpForward': boolean;
                 'cpuPlatform': string;
                 'creationTimestamp': string;
@@ -749,7 +749,7 @@ declare module google {
                 'zone': string;
             }
 
-            interface InstanceAggregatedList {
+            export interface InstanceAggregatedList {
                 'id': string;
                 'items': {
                     [name: string]: InstancesScopedList
@@ -759,7 +759,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface InstanceGroup {
+            export interface InstanceGroup {
                 'creationTimestamp': string;
                 'description': string;
                 'fingerprint': string;
@@ -774,7 +774,7 @@ declare module google {
                 'zone': string;
             }
 
-            interface InstanceGroupAggregatedList {
+            export interface InstanceGroupAggregatedList {
                 'id': string;
                 'items': {
                     [name: string]: InstanceGroupsScopedList
@@ -784,7 +784,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface InstanceGroupList {
+            export interface InstanceGroupList {
                 'id': string;
                 'items': InstanceGroup[];
                 'kind': string;
@@ -792,7 +792,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface InstanceGroupManager {
+            export interface InstanceGroupManager {
                 'baseInstanceName': string;
                 'creationTimestamp': string;
                 'currentActions': InstanceGroupManagerActionsSummary;
@@ -810,7 +810,7 @@ declare module google {
                 'zone': string;
             }
 
-            interface InstanceGroupManagerActionsSummary {
+            export interface InstanceGroupManagerActionsSummary {
                 'abandoning': number;
                 'creating': number;
                 'deleting': number;
@@ -820,7 +820,7 @@ declare module google {
                 'restarting': number;
             }
 
-            interface InstanceGroupManagerAggregatedList {
+            export interface InstanceGroupManagerAggregatedList {
                 'id': string;
                 'items': {
                     [name: string]: InstanceGroupManagersScopedList
@@ -830,7 +830,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface InstanceGroupManagerList {
+            export interface InstanceGroupManagerList {
                 'id': string;
                 'items': InstanceGroupManager[];
                 'kind': string;
@@ -838,23 +838,23 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface InstanceGroupManagersAbandonInstancesRequest {
+            export interface InstanceGroupManagersAbandonInstancesRequest {
                 'instances': string[];
             }
 
-            interface InstanceGroupManagersDeleteInstancesRequest {
+            export interface InstanceGroupManagersDeleteInstancesRequest {
                 'instances': string[];
             }
 
-            interface InstanceGroupManagersListManagedInstancesResponse {
+            export interface InstanceGroupManagersListManagedInstancesResponse {
                 'managedInstances': ManagedInstance[];
             }
 
-            interface InstanceGroupManagersRecreateInstancesRequest {
+            export interface InstanceGroupManagersRecreateInstancesRequest {
                 'instances': string[];
             }
 
-            interface InstanceGroupManagersScopedList {
+            export interface InstanceGroupManagersScopedList {
                 'instanceGroupManagers': InstanceGroupManager[];
                 'warning': {
                     'code': string;
@@ -866,20 +866,20 @@ declare module google {
                 };
             }
 
-            interface InstanceGroupManagersSetInstanceTemplateRequest {
+            export interface InstanceGroupManagersSetInstanceTemplateRequest {
                 'instanceTemplate': string;
             }
 
-            interface InstanceGroupManagersSetTargetPoolsRequest {
+            export interface InstanceGroupManagersSetTargetPoolsRequest {
                 'fingerprint': string;
                 'targetPools': string[];
             }
 
-            interface InstanceGroupsAddInstancesRequest {
+            export interface InstanceGroupsAddInstancesRequest {
                 'instances': InstanceReference[];
             }
 
-            interface InstanceGroupsListInstances {
+            export interface InstanceGroupsListInstances {
                 'id': string;
                 'items': InstanceWithNamedPorts[];
                 'kind': string;
@@ -887,15 +887,15 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface InstanceGroupsListInstancesRequest {
+            export interface InstanceGroupsListInstancesRequest {
                 'instanceState': string;
             }
 
-            interface InstanceGroupsRemoveInstancesRequest {
+            export interface InstanceGroupsRemoveInstancesRequest {
                 'instances': InstanceReference[];
             }
 
-            interface InstanceGroupsScopedList {
+            export interface InstanceGroupsScopedList {
                 'instanceGroups': InstanceGroup[];
                 'warning': {
                     'code': string;
@@ -907,12 +907,12 @@ declare module google {
                 };
             }
 
-            interface InstanceGroupsSetNamedPortsRequest {
+            export interface InstanceGroupsSetNamedPortsRequest {
                 'fingerprint': string;
                 'namedPorts': NamedPort[];
             }
 
-            interface InstanceList {
+            export interface InstanceList {
                 'id': string;
                 'items': Instance[];
                 'kind': string;
@@ -920,12 +920,12 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface InstanceMoveRequest {
+            export interface InstanceMoveRequest {
                 'destinationZone': string;
                 'targetInstance': string;
             }
 
-            interface InstanceProperties {
+            export interface InstanceProperties {
                 'canIpForward': boolean;
                 'description': string;
                 'disks': AttachedDisk[];
@@ -937,11 +937,11 @@ declare module google {
                 'tags': Tags;
             }
 
-            interface InstanceReference {
+            export interface InstanceReference {
                 'instance': string;
             }
 
-            interface InstanceTemplate {
+            export interface InstanceTemplate {
                 'creationTimestamp': string;
                 'description': string;
                 'id': string;
@@ -951,7 +951,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface InstanceTemplateList {
+            export interface InstanceTemplateList {
                 'id': string;
                 'items': InstanceTemplate[];
                 'kind': string;
@@ -959,13 +959,13 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface InstanceWithNamedPorts {
+            export interface InstanceWithNamedPorts {
                 'instance': string;
                 'namedPorts': NamedPort[];
                 'status': string;
             }
 
-            interface InstancesScopedList {
+            export interface InstancesScopedList {
                 'instances': Instance[];
                 'warning': {
                     'code': string;
@@ -977,18 +977,18 @@ declare module google {
                 };
             }
 
-            interface InstancesSetMachineTypeRequest {
+            export interface InstancesSetMachineTypeRequest {
                 'machineType': string;
             }
 
-            interface License {
+            export interface License {
                 'chargesUseFee': boolean;
                 'kind': string;
                 'name': string;
                 'selfLink': string;
             }
 
-            interface MachineType {
+            export interface MachineType {
                 'creationTimestamp': string;
                 'deprecated': DeprecationStatus;
                 'description': string;
@@ -1007,7 +1007,7 @@ declare module google {
                 'zone': string;
             }
 
-            interface MachineTypeAggregatedList {
+            export interface MachineTypeAggregatedList {
                 'id': string;
                 'items': {
                     [name: string]: MachineTypesScopedList
@@ -1017,7 +1017,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface MachineTypeList {
+            export interface MachineTypeList {
                 'id': string;
                 'items': MachineType[];
                 'kind': string;
@@ -1025,7 +1025,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface MachineTypesScopedList {
+            export interface MachineTypesScopedList {
                 'machineTypes': MachineType[];
                 'warning': {
                     'code': string;
@@ -1037,7 +1037,7 @@ declare module google {
                 };
             }
 
-            interface ManagedInstance {
+            export interface ManagedInstance {
                 'currentAction': string;
                 'id': string;
                 'instance': string;
@@ -1045,7 +1045,7 @@ declare module google {
                 'lastAttempt': ManagedInstanceLastAttempt;
             }
 
-            interface ManagedInstanceLastAttempt {
+            export interface ManagedInstanceLastAttempt {
                 'errors': {
                     'errors': {
                         'code': string;
@@ -1055,7 +1055,7 @@ declare module google {
                 };
             }
 
-            interface Metadata {
+            export interface Metadata {
                 'fingerprint': string;
                 'items': {
                     'key': string;
@@ -1064,12 +1064,12 @@ declare module google {
                 'kind': string;
             }
 
-            interface NamedPort {
+            export interface NamedPort {
                 'name': string;
                 'port': number;
             }
 
-            interface Network {
+            export interface Network {
                 'IPv4Range': string;
                 'autoCreateSubnetworks': boolean;
                 'creationTimestamp': string;
@@ -1082,7 +1082,7 @@ declare module google {
                 'subnetworks': string[];
             }
 
-            interface NetworkInterface {
+            export interface NetworkInterface {
                 'accessConfigs': AccessConfig[];
                 'name': string;
                 'network': string;
@@ -1090,7 +1090,7 @@ declare module google {
                 'subnetwork': string;
             }
 
-            interface NetworkList {
+            export interface NetworkList {
                 'id': string;
                 'items': Network[];
                 'kind': string;
@@ -1098,7 +1098,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface Operation {
+            export interface Operation {
                 'clientOperationId': string;
                 'creationTimestamp': string;
                 'description': string;
@@ -1137,7 +1137,7 @@ declare module google {
                 'zone': string;
             }
 
-            interface OperationAggregatedList {
+            export interface OperationAggregatedList {
                 'id': string;
                 'items': {
                     [name: string]: OperationsScopedList
@@ -1147,7 +1147,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface OperationList {
+            export interface OperationList {
                 'id': string;
                 'items': Operation[];
                 'kind': string;
@@ -1155,7 +1155,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface OperationsScopedList {
+            export interface OperationsScopedList {
                 'operations': Operation[];
                 'warning': {
                     'code': string;
@@ -1167,19 +1167,19 @@ declare module google {
                 };
             }
 
-            interface PathMatcher {
+            export interface PathMatcher {
                 'defaultService': string;
                 'description': string;
                 'name': string;
                 'pathRules': PathRule[];
             }
 
-            interface PathRule {
+            export interface PathRule {
                 'paths': string[];
                 'service': string;
             }
 
-            interface Project {
+            export interface Project {
                 'commonInstanceMetadata': Metadata;
                 'creationTimestamp': string;
                 'description': string;
@@ -1192,13 +1192,13 @@ declare module google {
                 'usageExportLocation': UsageExportLocation;
             }
 
-            interface Quota {
+            export interface Quota {
                 'limit': number;
                 'metric': string;
                 'usage': number;
             }
 
-            interface Region {
+            export interface Region {
                 'creationTimestamp': string;
                 'deprecated': DeprecationStatus;
                 'description': string;
@@ -1211,7 +1211,7 @@ declare module google {
                 'zones': string[];
             }
 
-            interface RegionList {
+            export interface RegionList {
                 'id': string;
                 'items': Region[];
                 'kind': string;
@@ -1219,11 +1219,11 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface ResourceGroupReference {
+            export interface ResourceGroupReference {
                 'group': string;
             }
 
-            interface Route {
+            export interface Route {
                 'creationTimestamp': string;
                 'description': string;
                 'destRange': string;
@@ -1249,7 +1249,7 @@ declare module google {
                 }[];
             }
 
-            interface RouteList {
+            export interface RouteList {
                 'id': string;
                 'items': Route[];
                 'kind': string;
@@ -1257,24 +1257,24 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface Scheduling {
+            export interface Scheduling {
                 'automaticRestart': boolean;
                 'onHostMaintenance': string;
                 'preemptible': boolean;
             }
 
-            interface SerialPortOutput {
+            export interface SerialPortOutput {
                 'contents': string;
                 'kind': string;
                 'selfLink': string;
             }
 
-            interface ServiceAccount {
+            export interface ServiceAccount {
                 'email': string;
                 'scopes': string[];
             }
 
-            interface Snapshot {
+            export interface Snapshot {
                 'creationTimestamp': string;
                 'description': string;
                 'diskSizeGb': string;
@@ -1290,7 +1290,7 @@ declare module google {
                 'storageBytesStatus': string;
             }
 
-            interface SnapshotList {
+            export interface SnapshotList {
                 'id': string;
                 'items': Snapshot[];
                 'kind': string;
@@ -1298,7 +1298,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface SslCertificate {
+            export interface SslCertificate {
                 'certificate': string;
                 'creationTimestamp': string;
                 'description': string;
@@ -1309,7 +1309,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface SslCertificateList {
+            export interface SslCertificateList {
                 'id': string;
                 'items': SslCertificate[];
                 'kind': string;
@@ -1317,7 +1317,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface Subnetwork {
+            export interface Subnetwork {
                 'creationTimestamp': string;
                 'description': string;
                 'gatewayAddress': string;
@@ -1330,7 +1330,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface SubnetworkAggregatedList {
+            export interface SubnetworkAggregatedList {
                 'id': string;
                 'items': {
                     [name: string]: SubnetworksScopedList
@@ -1340,7 +1340,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface SubnetworkList {
+            export interface SubnetworkList {
                 'id': string;
                 'items': Subnetwork[];
                 'kind': string;
@@ -1348,7 +1348,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface SubnetworksScopedList {
+            export interface SubnetworksScopedList {
                 'subnetworks': Subnetwork[];
                 'warning': {
                     'code': string;
@@ -1360,12 +1360,12 @@ declare module google {
                 };
             }
 
-            interface Tags {
+            export interface Tags {
                 'fingerprint': string;
                 'items': string[];
             }
 
-            interface TargetHttpProxy {
+            export interface TargetHttpProxy {
                 'creationTimestamp': string;
                 'description': string;
                 'id': string;
@@ -1375,7 +1375,7 @@ declare module google {
                 'urlMap': string;
             }
 
-            interface TargetHttpProxyList {
+            export interface TargetHttpProxyList {
                 'id': string;
                 'items': TargetHttpProxy[];
                 'kind': string;
@@ -1383,11 +1383,11 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface TargetHttpsProxiesSetSslCertificatesRequest {
+            export interface TargetHttpsProxiesSetSslCertificatesRequest {
                 'sslCertificates': string[];
             }
 
-            interface TargetHttpsProxy {
+            export interface TargetHttpsProxy {
                 'creationTimestamp': string;
                 'description': string;
                 'id': string;
@@ -1398,7 +1398,7 @@ declare module google {
                 'urlMap': string;
             }
 
-            interface TargetHttpsProxyList {
+            export interface TargetHttpsProxyList {
                 'id': string;
                 'items': TargetHttpsProxy[];
                 'kind': string;
@@ -1406,7 +1406,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface TargetInstance {
+            export interface TargetInstance {
                 'creationTimestamp': string;
                 'description': string;
                 'id': string;
@@ -1418,7 +1418,7 @@ declare module google {
                 'zone': string;
             }
 
-            interface TargetInstanceAggregatedList {
+            export interface TargetInstanceAggregatedList {
                 'id': string;
                 'items': {
                     [name: string]: TargetInstancesScopedList
@@ -1428,7 +1428,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface TargetInstanceList {
+            export interface TargetInstanceList {
                 'id': string;
                 'items': TargetInstance[];
                 'kind': string;
@@ -1436,7 +1436,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface TargetInstancesScopedList {
+            export interface TargetInstancesScopedList {
                 'targetInstances': TargetInstance[];
                 'warning': {
                     'code': string;
@@ -1448,7 +1448,7 @@ declare module google {
                 };
             }
 
-            interface TargetPool {
+            export interface TargetPool {
                 'backupPool': string;
                 'creationTimestamp': string;
                 'description': string;
@@ -1463,7 +1463,7 @@ declare module google {
                 'sessionAffinity': string;
             }
 
-            interface TargetPoolAggregatedList {
+            export interface TargetPoolAggregatedList {
                 'id': string;
                 'items': {
                     [name: string]: TargetPoolsScopedList
@@ -1473,12 +1473,12 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface TargetPoolInstanceHealth {
+            export interface TargetPoolInstanceHealth {
                 'healthStatus': HealthStatus[];
                 'kind': string;
             }
 
-            interface TargetPoolList {
+            export interface TargetPoolList {
                 'id': string;
                 'items': TargetPool[];
                 'kind': string;
@@ -1486,23 +1486,23 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface TargetPoolsAddHealthCheckRequest {
+            export interface TargetPoolsAddHealthCheckRequest {
                 'healthChecks': HealthCheckReference[];
             }
 
-            interface TargetPoolsAddInstanceRequest {
+            export interface TargetPoolsAddInstanceRequest {
                 'instances': InstanceReference[];
             }
 
-            interface TargetPoolsRemoveHealthCheckRequest {
+            export interface TargetPoolsRemoveHealthCheckRequest {
                 'healthChecks': HealthCheckReference[];
             }
 
-            interface TargetPoolsRemoveInstanceRequest {
+            export interface TargetPoolsRemoveInstanceRequest {
                 'instances': InstanceReference[];
             }
 
-            interface TargetPoolsScopedList {
+            export interface TargetPoolsScopedList {
                 'targetPools': TargetPool[];
                 'warning': {
                     'code': string;
@@ -1514,11 +1514,11 @@ declare module google {
                 };
             }
 
-            interface TargetReference {
+            export interface TargetReference {
                 'target': string;
             }
 
-            interface TargetVpnGateway {
+            export interface TargetVpnGateway {
                 'creationTimestamp': string;
                 'description': string;
                 'forwardingRules': string[];
@@ -1532,7 +1532,7 @@ declare module google {
                 'tunnels': string[];
             }
 
-            interface TargetVpnGatewayAggregatedList {
+            export interface TargetVpnGatewayAggregatedList {
                 'id': string;
                 'items': {
                     [name: string]: TargetVpnGatewaysScopedList
@@ -1542,7 +1542,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface TargetVpnGatewayList {
+            export interface TargetVpnGatewayList {
                 'id': string;
                 'items': TargetVpnGateway[];
                 'kind': string;
@@ -1550,7 +1550,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface TargetVpnGatewaysScopedList {
+            export interface TargetVpnGatewaysScopedList {
                 'targetVpnGateways': TargetVpnGateway[];
                 'warning': {
                     'code': string;
@@ -1562,14 +1562,14 @@ declare module google {
                 };
             }
 
-            interface TestFailure {
+            export interface TestFailure {
                 'actualService': string;
                 'expectedService': string;
                 'host': string;
                 'path': string;
             }
 
-            interface UrlMap {
+            export interface UrlMap {
                 'creationTimestamp': string;
                 'defaultService': string;
                 'description': string;
@@ -1583,7 +1583,7 @@ declare module google {
                 'tests': UrlMapTest[];
             }
 
-            interface UrlMapList {
+            export interface UrlMapList {
                 'id': string;
                 'items': UrlMap[];
                 'kind': string;
@@ -1591,38 +1591,38 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface UrlMapReference {
+            export interface UrlMapReference {
                 'urlMap': string;
             }
 
-            interface UrlMapTest {
+            export interface UrlMapTest {
                 'description': string;
                 'host': string;
                 'path': string;
                 'service': string;
             }
 
-            interface UrlMapValidationResult {
+            export interface UrlMapValidationResult {
                 'loadErrors': string[];
                 'loadSucceeded': boolean;
                 'testFailures': TestFailure[];
                 'testPassed': boolean;
             }
 
-            interface UrlMapsValidateRequest {
+            export interface UrlMapsValidateRequest {
                 'resource': UrlMap;
             }
 
-            interface UrlMapsValidateResponse {
+            export interface UrlMapsValidateResponse {
                 'result': UrlMapValidationResult;
             }
 
-            interface UsageExportLocation {
+            export interface UsageExportLocation {
                 'bucketName': string;
                 'reportNamePrefix': string;
             }
 
-            interface VpnTunnel {
+            export interface VpnTunnel {
                 'creationTimestamp': string;
                 'description': string;
                 'detailedStatus': string;
@@ -1640,7 +1640,7 @@ declare module google {
                 'targetVpnGateway': string;
             }
 
-            interface VpnTunnelAggregatedList {
+            export interface VpnTunnelAggregatedList {
                 'id': string;
                 'items': {
                     [name: string]: VpnTunnelsScopedList
@@ -1650,7 +1650,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface VpnTunnelList {
+            export interface VpnTunnelList {
                 'id': string;
                 'items': VpnTunnel[];
                 'kind': string;
@@ -1658,7 +1658,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface VpnTunnelsScopedList {
+            export interface VpnTunnelsScopedList {
                 'vpnTunnels': VpnTunnel[];
                 'warning': {
                     'code': string;
@@ -1670,7 +1670,7 @@ declare module google {
                 };
             }
 
-            interface Zone {
+            export interface Zone {
                 'creationTimestamp': string;
                 'deprecated': DeprecationStatus;
                 'description': string;
@@ -1688,7 +1688,7 @@ declare module google {
                 'status': string;
             }
 
-            interface ZoneList {
+            export interface ZoneList {
                 'id': string;
                 'items': Zone[];
                 'kind': string;

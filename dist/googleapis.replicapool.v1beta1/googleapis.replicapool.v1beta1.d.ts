@@ -27,35 +27,35 @@ declare module google {
 
             }
 
-            interface AccessConfig {
+            export interface AccessConfig {
                 'name': string;
                 'natIp': string;
                 'type': string;
             }
 
-            interface Action {
+            export interface Action {
                 'commands': string[];
                 'envVariables': EnvVariable[];
                 'timeoutMilliSeconds': number;
             }
 
-            interface DiskAttachment {
+            export interface DiskAttachment {
                 'deviceName': string;
                 'index': number;
             }
 
-            interface EnvVariable {
+            export interface EnvVariable {
                 'hidden': boolean;
                 'name': string;
                 'value': string;
             }
 
-            interface ExistingDisk {
+            export interface ExistingDisk {
                 'attachment': DiskAttachment;
                 'source': string;
             }
 
-            interface HealthCheck {
+            export interface HealthCheck {
                 'checkIntervalSec': number;
                 'description': string;
                 'healthyThreshold': number;
@@ -67,41 +67,41 @@ declare module google {
                 'unhealthyThreshold': number;
             }
 
-            interface Label {
+            export interface Label {
                 'key': string;
                 'value': string;
             }
 
-            interface Metadata {
+            export interface Metadata {
                 'fingerPrint': string;
                 'items': MetadataItem[];
             }
 
-            interface MetadataItem {
+            export interface MetadataItem {
                 'key': string;
                 'value': string;
             }
 
-            interface NetworkInterface {
+            export interface NetworkInterface {
                 'accessConfigs': AccessConfig[];
                 'network': string;
                 'networkIp': string;
             }
 
-            interface NewDisk {
+            export interface NewDisk {
                 'attachment': DiskAttachment;
                 'autoDelete': boolean;
                 'boot': boolean;
                 'initializeParams': NewDiskInitializeParams;
             }
 
-            interface NewDiskInitializeParams {
+            export interface NewDiskInitializeParams {
                 'diskSizeGb': string;
                 'diskType': string;
                 'sourceImage': string;
             }
 
-            interface Pool {
+            export interface Pool {
                 'autoRestart': boolean;
                 'baseInstanceName': string;
                 'currentNumReplicas': number;
@@ -119,22 +119,22 @@ declare module google {
                 'type': string;
             }
 
-            interface PoolsDeleteRequest {
+            export interface PoolsDeleteRequest {
                 'abandonInstances': string[];
             }
 
-            interface PoolsListResponse {
+            export interface PoolsListResponse {
                 'nextPageToken': string;
                 'resources': Pool[];
             }
 
-            interface Replica {
+            export interface Replica {
                 'name': string;
                 'selfLink': string;
                 'status': ReplicaStatus;
             }
 
-            interface ReplicaStatus {
+            export interface ReplicaStatus {
                 'details': string;
                 'state': string;
                 'templateVersion': string;
@@ -142,33 +142,33 @@ declare module google {
                 'vmStartTime': string;
             }
 
-            interface ReplicasDeleteRequest {
+            export interface ReplicasDeleteRequest {
                 'abandonInstance': boolean;
             }
 
-            interface ReplicasListResponse {
+            export interface ReplicasListResponse {
                 'nextPageToken': string;
                 'resources': Replica[];
             }
 
-            interface ServiceAccount {
+            export interface ServiceAccount {
                 'email': string;
                 'scopes': string[];
             }
 
-            interface Tag {
+            export interface Tag {
                 'fingerPrint': string;
                 'items': string[];
             }
 
-            interface Template {
+            export interface Template {
                 'action': Action;
                 'healthChecks': HealthCheck[];
                 'version': string;
                 'vmParams': VmParams;
             }
 
-            interface VmParams {
+            export interface VmParams {
                 'baseInstanceName': string;
                 'canIpForward': boolean;
                 'description': string;

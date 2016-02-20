@@ -48,7 +48,7 @@ declare module google {
 
             }
 
-            interface Account {
+            export interface Account {
                 'bidderLocation': {
                     'maximumQps': number;
                     'region': string;
@@ -63,24 +63,24 @@ declare module google {
                 'numberActiveCreatives': number;
             }
 
-            interface AccountsList {
+            export interface AccountsList {
                 'items': Account[];
                 'kind': string;
             }
 
-            interface BillingInfo {
+            export interface BillingInfo {
                 'accountId': number;
                 'accountName': string;
                 'billingId': string[];
                 'kind': string;
             }
 
-            interface BillingInfoList {
+            export interface BillingInfoList {
                 'items': BillingInfo[];
                 'kind': string;
             }
 
-            interface Budget {
+            export interface Budget {
                 'accountId': string;
                 'billingId': string;
                 'budgetAmount': string;
@@ -89,7 +89,7 @@ declare module google {
                 'kind': string;
             }
 
-            interface Creative {
+            export interface Creative {
                 'HTMLSnippet': string;
                 'accountId': number;
                 'advertiserId': string[];
@@ -153,13 +153,13 @@ declare module google {
                 'width': number;
             }
 
-            interface CreativesList {
+            export interface CreativesList {
                 'items': Creative[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface DirectDeal {
+            export interface DirectDeal {
                 'accountId': number;
                 'advertiser': string;
                 'currencyCode': string;
@@ -175,12 +175,12 @@ declare module google {
                 'startTime': string;
             }
 
-            interface DirectDealsList {
+            export interface DirectDealsList {
                 'directDeals': DirectDeal[];
                 'kind': string;
             }
 
-            interface PerformanceReport {
+            export interface PerformanceReport {
                 'bidRate': number;
                 'bidRequestRate': number;
                 'calloutStatusRate': any[];
@@ -205,12 +205,12 @@ declare module google {
                 'unsuccessfulRequestRate': number;
             }
 
-            interface PerformanceReportList {
+            export interface PerformanceReportList {
                 'kind': string;
                 'performanceReport': PerformanceReport[];
             }
 
-            interface PretargetingConfig {
+            export interface PretargetingConfig {
                 'billingId': string;
                 'configId': string;
                 'configName': string;
@@ -245,7 +245,7 @@ declare module google {
                 'verticals': string[];
             }
 
-            interface PretargetingConfigList {
+            export interface PretargetingConfigList {
                 'items': PretargetingConfig[];
                 'kind': string;
             }

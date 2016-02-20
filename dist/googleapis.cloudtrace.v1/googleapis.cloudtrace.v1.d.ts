@@ -21,18 +21,18 @@ declare module google {
 
             }
 
-            interface ListTracesResponse {
+            export interface ListTracesResponse {
                 'traces': Trace[];
                 'nextPageToken': string;
             }
 
-            interface Trace {
+            export interface Trace {
                 'projectId': string;
                 'traceId': string;
                 'spans': TraceSpan[];
             }
 
-            interface TraceSpan {
+            export interface TraceSpan {
                 'spanId': string;
                 'kind': string;
                 'name': string;
@@ -44,11 +44,11 @@ declare module google {
                 };
             }
 
-            interface Traces {
+            export interface Traces {
                 'traces': Trace[];
             }
 
-            interface Empty {}
+            export interface Empty {}
 
         }
     }

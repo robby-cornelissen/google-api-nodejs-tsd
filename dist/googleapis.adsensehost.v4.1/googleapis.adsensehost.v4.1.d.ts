@@ -58,20 +58,20 @@ declare module google {
 
             }
 
-            interface Account {
+            export interface Account {
                 'id': string;
                 'kind': string;
                 'name': string;
                 'status': string;
             }
 
-            interface Accounts {
+            export interface Accounts {
                 'etag': string;
                 'items': Account[];
                 'kind': string;
             }
 
-            interface AdClient {
+            export interface AdClient {
                 'arcOptIn': boolean;
                 'id': string;
                 'kind': string;
@@ -79,19 +79,19 @@ declare module google {
                 'supportsReporting': boolean;
             }
 
-            interface AdClients {
+            export interface AdClients {
                 'etag': string;
                 'items': AdClient[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface AdCode {
+            export interface AdCode {
                 'adCode': string;
                 'kind': string;
             }
 
-            interface AdStyle {
+            export interface AdStyle {
                 'colors': {
                     'background': string;
                     'border': string;
@@ -107,7 +107,7 @@ declare module google {
                 'kind': string;
             }
 
-            interface AdUnit {
+            export interface AdUnit {
                 'code': string;
                 'contentAdsSettings': {
                     'backupOption': {
@@ -131,14 +131,14 @@ declare module google {
                 'status': string;
             }
 
-            interface AdUnits {
+            export interface AdUnits {
                 'etag': string;
                 'items': AdUnit[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface AssociationSession {
+            export interface AssociationSession {
                 'accountId': string;
                 'id': string;
                 'kind': string;
@@ -150,21 +150,21 @@ declare module google {
                 'websiteUrl': string;
             }
 
-            interface CustomChannel {
+            export interface CustomChannel {
                 'code': string;
                 'id': string;
                 'kind': string;
                 'name': string;
             }
 
-            interface CustomChannels {
+            export interface CustomChannels {
                 'etag': string;
                 'items': CustomChannel[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Report {
+            export interface Report {
                 'averages': string[];
                 'headers': {
                     'currency': string;
@@ -178,13 +178,13 @@ declare module google {
                 'warnings': string[];
             }
 
-            interface UrlChannel {
+            export interface UrlChannel {
                 'id': string;
                 'kind': string;
                 'urlPattern': string;
             }
 
-            interface UrlChannels {
+            export interface UrlChannels {
                 'etag': string;
                 'items': UrlChannel[];
                 'kind': string;

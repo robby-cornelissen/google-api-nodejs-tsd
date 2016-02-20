@@ -22,7 +22,7 @@ declare module google {
 
             }
 
-            interface Application {
+            export interface Application {
                 'etag': string;
                 'id': string;
                 'kind': string;
@@ -30,25 +30,25 @@ declare module google {
                 'transferParams': ApplicationTransferParam[];
             }
 
-            interface ApplicationDataTransfer {
+            export interface ApplicationDataTransfer {
                 'applicationId': string;
                 'applicationTransferParams': ApplicationTransferParam[];
                 'applicationTransferStatus': string;
             }
 
-            interface ApplicationTransferParam {
+            export interface ApplicationTransferParam {
                 'key': string;
                 'value': string[];
             }
 
-            interface ApplicationsListResponse {
+            export interface ApplicationsListResponse {
                 'applications': Application[];
                 'etag': string;
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface DataTransfer {
+            export interface DataTransfer {
                 'applicationDataTransfers': ApplicationDataTransfer[];
                 'etag': string;
                 'id': string;
@@ -59,7 +59,7 @@ declare module google {
                 'requestTime': string;
             }
 
-            interface DataTransfersListResponse {
+            export interface DataTransfersListResponse {
                 'dataTransfers': DataTransfer[];
                 'etag': string;
                 'kind': string;

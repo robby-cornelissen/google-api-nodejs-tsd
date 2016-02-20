@@ -62,7 +62,7 @@ declare module google {
 
             }
 
-            interface Blog {
+            export interface Blog {
                 'customMetaData': string;
                 'description': string;
                 'id': string;
@@ -89,13 +89,13 @@ declare module google {
                 'url': string;
             }
 
-            interface BlogList {
+            export interface BlogList {
                 'blogUserInfos': BlogUserInfo[];
                 'items': Blog[];
                 'kind': string;
             }
 
-            interface BlogPerUserInfo {
+            export interface BlogPerUserInfo {
                 'blogId': string;
                 'hasAdminAccess': boolean;
                 'kind': string;
@@ -104,13 +104,13 @@ declare module google {
                 'userId': string;
             }
 
-            interface BlogUserInfo {
+            export interface BlogUserInfo {
                 'blog': Blog;
                 'blog_user_info': BlogPerUserInfo;
                 'kind': string;
             }
 
-            interface Comment {
+            export interface Comment {
                 'author': {
                     'displayName': string;
                     'id': string;
@@ -137,7 +137,7 @@ declare module google {
                 'updated': string;
             }
 
-            interface CommentList {
+            export interface CommentList {
                 'etag': string;
                 'items': Comment[];
                 'kind': string;
@@ -145,7 +145,7 @@ declare module google {
                 'prevPageToken': string;
             }
 
-            interface Page {
+            export interface Page {
                 'author': {
                     'displayName': string;
                     'id': string;
@@ -169,14 +169,14 @@ declare module google {
                 'url': string;
             }
 
-            interface PageList {
+            export interface PageList {
                 'etag': string;
                 'items': Page[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Pageviews {
+            export interface Pageviews {
                 'blogId': string;
                 'counts': {
                     'count': string;
@@ -185,7 +185,7 @@ declare module google {
                 'kind': string;
             }
 
-            interface Post {
+            export interface Post {
                 'author': {
                     'displayName': string;
                     'id': string;
@@ -227,14 +227,14 @@ declare module google {
                 'url': string;
             }
 
-            interface PostList {
+            export interface PostList {
                 'etag': string;
                 'items': Post[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface PostPerUserInfo {
+            export interface PostPerUserInfo {
                 'blogId': string;
                 'hasEditAccess': boolean;
                 'kind': string;
@@ -242,19 +242,19 @@ declare module google {
                 'userId': string;
             }
 
-            interface PostUserInfo {
+            export interface PostUserInfo {
                 'kind': string;
                 'post': Post;
                 'post_user_info': PostPerUserInfo;
             }
 
-            interface PostUserInfosList {
+            export interface PostUserInfosList {
                 'items': PostUserInfo[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface User {
+            export interface User {
                 'about': string;
                 'blogs': {
                     'selfLink': string;

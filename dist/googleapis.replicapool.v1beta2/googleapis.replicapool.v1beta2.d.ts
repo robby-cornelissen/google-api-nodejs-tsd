@@ -29,7 +29,7 @@ declare module google {
 
             }
 
-            interface InstanceGroupManager {
+            export interface InstanceGroupManager {
                 'autoHealingPolicies': ReplicaPoolAutoHealingPolicy[];
                 'baseInstanceName': string;
                 'creationTimestamp': string;
@@ -46,7 +46,7 @@ declare module google {
                 'targetSize': number;
             }
 
-            interface InstanceGroupManagerList {
+            export interface InstanceGroupManagerList {
                 'id': string;
                 'items': InstanceGroupManager[];
                 'kind': string;
@@ -54,28 +54,28 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface InstanceGroupManagersAbandonInstancesRequest {
+            export interface InstanceGroupManagersAbandonInstancesRequest {
                 'instances': string[];
             }
 
-            interface InstanceGroupManagersDeleteInstancesRequest {
+            export interface InstanceGroupManagersDeleteInstancesRequest {
                 'instances': string[];
             }
 
-            interface InstanceGroupManagersRecreateInstancesRequest {
+            export interface InstanceGroupManagersRecreateInstancesRequest {
                 'instances': string[];
             }
 
-            interface InstanceGroupManagersSetInstanceTemplateRequest {
+            export interface InstanceGroupManagersSetInstanceTemplateRequest {
                 'instanceTemplate': string;
             }
 
-            interface InstanceGroupManagersSetTargetPoolsRequest {
+            export interface InstanceGroupManagersSetTargetPoolsRequest {
                 'fingerprint': string;
                 'targetPools': string[];
             }
 
-            interface Operation {
+            export interface Operation {
                 'clientOperationId': string;
                 'creationTimestamp': string;
                 'endTime': string;
@@ -113,7 +113,7 @@ declare module google {
                 'zone': string;
             }
 
-            interface OperationList {
+            export interface OperationList {
                 'id': string;
                 'items': Operation[];
                 'kind': string;
@@ -121,7 +121,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface ReplicaPoolAutoHealingPolicy {
+            export interface ReplicaPoolAutoHealingPolicy {
                 'actionType': string;
                 'healthCheck': string;
             }

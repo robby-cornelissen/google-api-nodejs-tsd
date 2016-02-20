@@ -103,7 +103,7 @@ declare module google {
 
             }
 
-            interface Annotation {
+            export interface Annotation {
                 'annotationSetId': string;
                 'id': string;
                 'info': {
@@ -116,7 +116,7 @@ declare module google {
                 'variant': VariantAnnotation;
             }
 
-            interface AnnotationSet {
+            export interface AnnotationSet {
                 'datasetId': string;
                 'id': string;
                 'info': {
@@ -128,25 +128,25 @@ declare module google {
                 'type': string;
             }
 
-            interface BatchAnnotationsResponse {
+            export interface BatchAnnotationsResponse {
                 'entries': BatchAnnotationsResponseEntry[];
             }
 
-            interface BatchAnnotationsResponseEntry {
+            export interface BatchAnnotationsResponseEntry {
                 'annotation': Annotation;
                 'status': BatchAnnotationsResponseEntryStatus;
             }
 
-            interface BatchAnnotationsResponseEntryStatus {
+            export interface BatchAnnotationsResponseEntryStatus {
                 'code': number;
                 'message': string;
             }
 
-            interface BatchCreateAnnotationsRequest {
+            export interface BatchCreateAnnotationsRequest {
                 'annotations': Annotation[];
             }
 
-            interface Call {
+            export interface Call {
                 'callSetId': string;
                 'callSetName': string;
                 'genotype': number[];
@@ -157,7 +157,7 @@ declare module google {
                 'phaseset': string;
             }
 
-            interface CallSet {
+            export interface CallSet {
                 'created': string;
                 'id': string;
                 'info': {
@@ -168,18 +168,18 @@ declare module google {
                 'variantSetIds': string[];
             }
 
-            interface CigarUnit {
+            export interface CigarUnit {
                 'operation': string;
                 'operationLength': string;
                 'referenceSequence': string;
             }
 
-            interface CoverageBucket {
+            export interface CoverageBucket {
                 'meanCoverage': number;
                 'range': Range;
             }
 
-            interface Dataset {
+            export interface Dataset {
                 'createTime': string;
                 'id': string;
                 'isPublic': boolean;
@@ -187,7 +187,7 @@ declare module google {
                 'projectNumber': string;
             }
 
-            interface ExperimentalCreateJobRequest {
+            export interface ExperimentalCreateJobRequest {
                 'align': boolean;
                 'callVariants': boolean;
                 'gcsOutputPath': string;
@@ -196,22 +196,22 @@ declare module google {
                 'sourceUris': string[];
             }
 
-            interface ExperimentalCreateJobResponse {
+            export interface ExperimentalCreateJobResponse {
                 'jobId': string;
             }
 
-            interface ExportReadGroupSetsRequest {
+            export interface ExportReadGroupSetsRequest {
                 'exportUri': string;
                 'projectNumber': string;
                 'readGroupSetIds': string[];
                 'referenceNames': string[];
             }
 
-            interface ExportReadGroupSetsResponse {
+            export interface ExportReadGroupSetsResponse {
                 'jobId': string;
             }
 
-            interface ExportVariantSetRequest {
+            export interface ExportVariantSetRequest {
                 'bigqueryDataset': string;
                 'bigqueryTable': string;
                 'callSetIds': string[];
@@ -219,41 +219,41 @@ declare module google {
                 'projectNumber': string;
             }
 
-            interface ExportVariantSetResponse {
+            export interface ExportVariantSetResponse {
                 'jobId': string;
             }
 
-            interface ExternalId {
+            export interface ExternalId {
                 'id': string;
                 'sourceName': string;
             }
 
-            interface ImportReadGroupSetsRequest {
+            export interface ImportReadGroupSetsRequest {
                 'datasetId': string;
                 'partitionStrategy': string;
                 'referenceSetId': string;
                 'sourceUris': string[];
             }
 
-            interface ImportReadGroupSetsResponse {
+            export interface ImportReadGroupSetsResponse {
                 'jobId': string;
             }
 
-            interface ImportVariantsRequest {
+            export interface ImportVariantsRequest {
                 'format': string;
                 'normalizeReferenceNames': boolean;
                 'sourceUris': string[];
             }
 
-            interface ImportVariantsResponse {
+            export interface ImportVariantsResponse {
                 'jobId': string;
             }
 
-            interface Int32Value {
+            export interface Int32Value {
                 'value': number;
             }
 
-            interface Job {
+            export interface Job {
                 'created': string;
                 'detailedStatus': string;
                 'errors': string[];
@@ -265,45 +265,45 @@ declare module google {
                 'warnings': string[];
             }
 
-            interface JobRequest {
+            export interface JobRequest {
                 'destination': string[];
                 'source': string[];
                 'type': string;
             }
 
-            interface KeyValue {
+            export interface KeyValue {
                 'key': string;
                 'value': string[];
             }
 
-            interface LinearAlignment {
+            export interface LinearAlignment {
                 'cigar': CigarUnit[];
                 'mappingQuality': number;
                 'position': Position;
             }
 
-            interface ListBasesResponse {
+            export interface ListBasesResponse {
                 'nextPageToken': string;
                 'offset': string;
                 'sequence': string;
             }
 
-            interface ListCoverageBucketsResponse {
+            export interface ListCoverageBucketsResponse {
                 'bucketWidth': string;
                 'coverageBuckets': CoverageBucket[];
                 'nextPageToken': string;
             }
 
-            interface ListDatasetsResponse {
+            export interface ListDatasetsResponse {
                 'datasets': Dataset[];
                 'nextPageToken': string;
             }
 
-            interface MergeVariantsRequest {
+            export interface MergeVariantsRequest {
                 'variants': Variant[];
             }
 
-            interface Metadata {
+            export interface Metadata {
                 'description': string;
                 'id': string;
                 'info': {
@@ -315,26 +315,26 @@ declare module google {
                 'value': string;
             }
 
-            interface Position {
+            export interface Position {
                 'position': string;
                 'referenceName': string;
                 'reverseStrand': boolean;
             }
 
-            interface QueryRange {
+            export interface QueryRange {
                 'end': string;
                 'referenceId': string;
                 'referenceName': string;
                 'start': string;
             }
 
-            interface Range {
+            export interface Range {
                 'end': string;
                 'referenceName': string;
                 'start': string;
             }
 
-            interface RangePosition {
+            export interface RangePosition {
                 'end': string;
                 'referenceId': string;
                 'referenceName': string;
@@ -342,7 +342,7 @@ declare module google {
                 'start': string;
             }
 
-            interface Read {
+            export interface Read {
                 'alignedQuality': number[];
                 'alignedSequence': string;
                 'alignment': LinearAlignment;
@@ -364,7 +364,7 @@ declare module google {
                 'supplementaryAlignment': boolean;
             }
 
-            interface ReadGroup {
+            export interface ReadGroup {
                 'datasetId': string;
                 'description': string;
                 'experiment': ReadGroupExperiment;
@@ -379,14 +379,14 @@ declare module google {
                 'sampleId': string;
             }
 
-            interface ReadGroupExperiment {
+            export interface ReadGroupExperiment {
                 'instrumentModel': string;
                 'libraryId': string;
                 'platformUnit': string;
                 'sequencingCenter': string;
             }
 
-            interface ReadGroupProgram {
+            export interface ReadGroupProgram {
                 'commandLine': string;
                 'id': string;
                 'name': string;
@@ -394,7 +394,7 @@ declare module google {
                 'version': string;
             }
 
-            interface ReadGroupSet {
+            export interface ReadGroupSet {
                 'datasetId': string;
                 'filename': string;
                 'id': string;
@@ -406,7 +406,7 @@ declare module google {
                 'referenceSetId': string;
             }
 
-            interface Reference {
+            export interface Reference {
                 'id': string;
                 'length': string;
                 'md5checksum': string;
@@ -416,12 +416,12 @@ declare module google {
                 'sourceURI': string;
             }
 
-            interface ReferenceBound {
+            export interface ReferenceBound {
                 'referenceName': string;
                 'upperBound': string;
             }
 
-            interface ReferenceSet {
+            export interface ReferenceSet {
                 'assemblyId': string;
                 'description': string;
                 'id': string;
@@ -432,7 +432,7 @@ declare module google {
                 'sourceURI': string;
             }
 
-            interface SearchAnnotationSetsRequest {
+            export interface SearchAnnotationSetsRequest {
                 'datasetIds': string[];
                 'name': string;
                 'pageSize': number;
@@ -441,36 +441,36 @@ declare module google {
                 'types': string[];
             }
 
-            interface SearchAnnotationSetsResponse {
+            export interface SearchAnnotationSetsResponse {
                 'annotationSets': AnnotationSet[];
                 'nextPageToken': string;
             }
 
-            interface SearchAnnotationsRequest {
+            export interface SearchAnnotationsRequest {
                 'annotationSetIds': string[];
                 'pageSize': number;
                 'pageToken': string;
                 'range': QueryRange;
             }
 
-            interface SearchAnnotationsResponse {
+            export interface SearchAnnotationsResponse {
                 'annotations': Annotation[];
                 'nextPageToken': string;
             }
 
-            interface SearchCallSetsRequest {
+            export interface SearchCallSetsRequest {
                 'name': string;
                 'pageSize': number;
                 'pageToken': string;
                 'variantSetIds': string[];
             }
 
-            interface SearchCallSetsResponse {
+            export interface SearchCallSetsResponse {
                 'callSets': CallSet[];
                 'nextPageToken': string;
             }
 
-            interface SearchJobsRequest {
+            export interface SearchJobsRequest {
                 'createdAfter': string;
                 'createdBefore': string;
                 'pageSize': number;
@@ -479,24 +479,24 @@ declare module google {
                 'status': string[];
             }
 
-            interface SearchJobsResponse {
+            export interface SearchJobsResponse {
                 'jobs': Job[];
                 'nextPageToken': string;
             }
 
-            interface SearchReadGroupSetsRequest {
+            export interface SearchReadGroupSetsRequest {
                 'datasetIds': string[];
                 'name': string;
                 'pageSize': number;
                 'pageToken': string;
             }
 
-            interface SearchReadGroupSetsResponse {
+            export interface SearchReadGroupSetsResponse {
                 'nextPageToken': string;
                 'readGroupSets': ReadGroupSet[];
             }
 
-            interface SearchReadsRequest {
+            export interface SearchReadsRequest {
                 'end': string;
                 'pageSize': number;
                 'pageToken': string;
@@ -506,12 +506,12 @@ declare module google {
                 'start': string;
             }
 
-            interface SearchReadsResponse {
+            export interface SearchReadsResponse {
                 'alignments': Read[];
                 'nextPageToken': string;
             }
 
-            interface SearchReferenceSetsRequest {
+            export interface SearchReferenceSetsRequest {
                 'accessions': string[];
                 'assemblyId': string;
                 'md5checksums': string[];
@@ -519,12 +519,12 @@ declare module google {
                 'pageToken': string;
             }
 
-            interface SearchReferenceSetsResponse {
+            export interface SearchReferenceSetsResponse {
                 'nextPageToken': string;
                 'referenceSets': ReferenceSet[];
             }
 
-            interface SearchReferencesRequest {
+            export interface SearchReferencesRequest {
                 'accessions': string[];
                 'md5checksums': string[];
                 'pageSize': number;
@@ -532,23 +532,23 @@ declare module google {
                 'referenceSetId': string;
             }
 
-            interface SearchReferencesResponse {
+            export interface SearchReferencesResponse {
                 'nextPageToken': string;
                 'references': Reference[];
             }
 
-            interface SearchVariantSetsRequest {
+            export interface SearchVariantSetsRequest {
                 'datasetIds': string[];
                 'pageSize': number;
                 'pageToken': string;
             }
 
-            interface SearchVariantSetsResponse {
+            export interface SearchVariantSetsResponse {
                 'nextPageToken': string;
                 'variantSets': VariantSet[];
             }
 
-            interface SearchVariantsRequest {
+            export interface SearchVariantsRequest {
                 'callSetIds': string[];
                 'end': string;
                 'maxCalls': number;
@@ -560,29 +560,29 @@ declare module google {
                 'variantSetIds': string[];
             }
 
-            interface SearchVariantsResponse {
+            export interface SearchVariantsResponse {
                 'nextPageToken': string;
                 'variants': Variant[];
             }
 
-            interface Transcript {
+            export interface Transcript {
                 'codingSequence': TranscriptCodingSequence;
                 'exons': TranscriptExon[];
                 'geneId': string;
             }
 
-            interface TranscriptCodingSequence {
+            export interface TranscriptCodingSequence {
                 'end': string;
                 'start': string;
             }
 
-            interface TranscriptExon {
+            export interface TranscriptExon {
                 'end': string;
                 'frame': Int32Value;
                 'start': string;
             }
 
-            interface Variant {
+            export interface Variant {
                 'alternateBases': string[];
                 'calls': Call[];
                 'created': string;
@@ -600,7 +600,7 @@ declare module google {
                 'variantSetId': string;
             }
 
-            interface VariantAnnotation {
+            export interface VariantAnnotation {
                 'alternateBases': string;
                 'clinicalSignificance': string;
                 'conditions': VariantAnnotationCondition[];
@@ -610,14 +610,14 @@ declare module google {
                 'type': string;
             }
 
-            interface VariantAnnotationCondition {
+            export interface VariantAnnotationCondition {
                 'conceptId': string;
                 'externalIds': ExternalId[];
                 'names': string[];
                 'omimId': string;
             }
 
-            interface VariantSet {
+            export interface VariantSet {
                 'datasetId': string;
                 'id': string;
                 'metadata': Metadata[];

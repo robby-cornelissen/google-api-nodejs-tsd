@@ -45,7 +45,7 @@ declare module google {
 
             }
 
-            interface Bucket {
+            export interface Bucket {
                 'acl': BucketAccessControl[];
                 'defaultObjectAcl': ObjectAccessControl[];
                 'id': string;
@@ -64,7 +64,7 @@ declare module google {
                 };
             }
 
-            interface BucketAccessControl {
+            export interface BucketAccessControl {
                 'bucket': string;
                 'domain': string;
                 'email': string;
@@ -76,18 +76,18 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface BucketAccessControls {
+            export interface BucketAccessControls {
                 'items': BucketAccessControl[];
                 'kind': string;
             }
 
-            interface Buckets {
+            export interface Buckets {
                 'items': Bucket[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Object {
+            export interface Object {
                 'acl': ObjectAccessControl[];
                 'bucket': string;
                 'cacheControl': string;
@@ -116,7 +116,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface ObjectAccessControl {
+            export interface ObjectAccessControl {
                 'bucket': string;
                 'domain': string;
                 'email': string;
@@ -129,12 +129,12 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface ObjectAccessControls {
+            export interface ObjectAccessControls {
                 'items': ObjectAccessControl[];
                 'kind': string;
             }
 
-            interface Objects {
+            export interface Objects {
                 'items': Object[];
                 'kind': string;
                 'nextPageToken': string;

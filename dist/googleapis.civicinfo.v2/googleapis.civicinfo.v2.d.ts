@@ -24,7 +24,7 @@ declare module google {
 
             }
 
-            interface AdministrationRegion {
+            export interface AdministrationRegion {
                 'electionAdministrationBody': AdministrativeBody;
                 'id': string;
                 'local_jurisdiction': AdministrationRegion;
@@ -32,7 +32,7 @@ declare module google {
                 'sources': Source[];
             }
 
-            interface AdministrativeBody {
+            export interface AdministrativeBody {
                 'absenteeVotingInfoUrl': string;
                 'ballotInfoUrl': string;
                 'correspondenceAddress': SimpleAddressType;
@@ -48,7 +48,7 @@ declare module google {
                 'votingLocationFinderUrl': string;
             }
 
-            interface Candidate {
+            export interface Candidate {
                 'candidateUrl': string;
                 'channels': Channel[];
                 'email': string;
@@ -59,12 +59,12 @@ declare module google {
                 'photoUrl': string;
             }
 
-            interface Channel {
+            export interface Channel {
                 'id': string;
                 'type': string;
             }
 
-            interface Contest {
+            export interface Contest {
                 'ballotPlacement': string;
                 'candidates': Candidate[];
                 'district': ElectoralDistrict;
@@ -91,25 +91,25 @@ declare module google {
                 'type': string;
             }
 
-            interface DivisionSearchResponse {
+            export interface DivisionSearchResponse {
                 'kind': string;
                 'results': DivisionSearchResult[];
             }
 
-            interface DivisionSearchResult {
+            export interface DivisionSearchResult {
                 'aliases': string[];
                 'name': string;
                 'ocdId': string;
             }
 
-            interface Election {
+            export interface Election {
                 'electionDay': string;
                 'id': string;
                 'name': string;
                 'ocdDivisionId': string;
             }
 
-            interface ElectionOfficial {
+            export interface ElectionOfficial {
                 'emailAddress': string;
                 'faxNumber': string;
                 'name': string;
@@ -117,24 +117,24 @@ declare module google {
                 'title': string;
             }
 
-            interface ElectionsQueryResponse {
+            export interface ElectionsQueryResponse {
                 'elections': Election[];
                 'kind': string;
             }
 
-            interface ElectoralDistrict {
+            export interface ElectoralDistrict {
                 'id': string;
                 'name': string;
                 'scope': string;
             }
 
-            interface GeographicDivision {
+            export interface GeographicDivision {
                 'alsoKnownAs': string[];
                 'name': string;
                 'officeIndices': number[];
             }
 
-            interface Office {
+            export interface Office {
                 'divisionId': string;
                 'levels': string[];
                 'name': string;
@@ -143,7 +143,7 @@ declare module google {
                 'sources': Source[];
             }
 
-            interface Official {
+            export interface Official {
                 'address': SimpleAddressType[];
                 'channels': Channel[];
                 'emails': string[];
@@ -154,7 +154,7 @@ declare module google {
                 'urls': string[];
             }
 
-            interface PollingLocation {
+            export interface PollingLocation {
                 'address': SimpleAddressType;
                 'endDate': string;
                 'id': string;
@@ -166,7 +166,7 @@ declare module google {
                 'voterServices': string;
             }
 
-            interface RepresentativeInfoData {
+            export interface RepresentativeInfoData {
                 'divisions': {
                     [name: string]: GeographicDivision
                 };
@@ -174,7 +174,7 @@ declare module google {
                 'officials': Official[];
             }
 
-            interface RepresentativeInfoResponse {
+            export interface RepresentativeInfoResponse {
                 'divisions': {
                     [name: string]: GeographicDivision
                 };
@@ -184,7 +184,7 @@ declare module google {
                 'officials': Official[];
             }
 
-            interface SimpleAddressType {
+            export interface SimpleAddressType {
                 'city': string;
                 'line1': string;
                 'line2': string;
@@ -194,12 +194,12 @@ declare module google {
                 'zip': string;
             }
 
-            interface Source {
+            export interface Source {
                 'name': string;
                 'official': boolean;
             }
 
-            interface VoterInfoResponse {
+            export interface VoterInfoResponse {
                 'contests': Contest[];
                 'dropOffLocations': PollingLocation[];
                 'earlyVoteSites': PollingLocation[];

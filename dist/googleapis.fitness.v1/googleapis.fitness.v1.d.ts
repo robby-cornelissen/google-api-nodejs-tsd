@@ -37,7 +37,7 @@ declare module google {
 
             }
 
-            interface AggregateBucket {
+            export interface AggregateBucket {
                 'activity': number;
                 'dataset': Dataset[];
                 'endTimeMillis': string;
@@ -46,12 +46,12 @@ declare module google {
                 'type': string;
             }
 
-            interface AggregateBy {
+            export interface AggregateBy {
                 'dataSourceId': string;
                 'dataTypeName': string;
             }
 
-            interface AggregateRequest {
+            export interface AggregateRequest {
                 'aggregateBy': AggregateBy[];
                 'bucketByActivitySegment': BucketByActivity;
                 'bucketByActivityType': BucketByActivity;
@@ -61,31 +61,31 @@ declare module google {
                 'startTimeMillis': string;
             }
 
-            interface AggregateResponse {
+            export interface AggregateResponse {
                 'bucket': AggregateBucket[];
             }
 
-            interface Application {
+            export interface Application {
                 'detailsUrl': string;
                 'name': string;
                 'packageName': string;
                 'version': string;
             }
 
-            interface BucketByActivity {
+            export interface BucketByActivity {
                 'activityDataSourceId': string;
                 'minDurationMillis': string;
             }
 
-            interface BucketBySession {
+            export interface BucketBySession {
                 'minDurationMillis': string;
             }
 
-            interface BucketByTime {
+            export interface BucketByTime {
                 'durationMillis': string;
             }
 
-            interface DataPoint {
+            export interface DataPoint {
                 'computationTimeMillis': string;
                 'dataTypeName': string;
                 'endTimeNanos': string;
@@ -96,7 +96,7 @@ declare module google {
                 'value': Value[];
             }
 
-            interface DataSource {
+            export interface DataSource {
                 'application': Application;
                 'dataStreamId': string;
                 'dataStreamName': string;
@@ -106,18 +106,18 @@ declare module google {
                 'type': string;
             }
 
-            interface DataType {
+            export interface DataType {
                 'field': DataTypeField[];
                 'name': string;
             }
 
-            interface DataTypeField {
+            export interface DataTypeField {
                 'format': string;
                 'name': string;
                 'optional': boolean;
             }
 
-            interface Dataset {
+            export interface Dataset {
                 'dataSourceId': string;
                 'maxEndTimeNs': string;
                 'minStartTimeNs': string;
@@ -125,7 +125,7 @@ declare module google {
                 'point': DataPoint[];
             }
 
-            interface Device {
+            export interface Device {
                 'manufacturer': string;
                 'model': string;
                 'type': string;
@@ -133,21 +133,21 @@ declare module google {
                 'version': string;
             }
 
-            interface ListDataSourcesResponse {
+            export interface ListDataSourcesResponse {
                 'dataSource': DataSource[];
             }
 
-            interface ListSessionsResponse {
+            export interface ListSessionsResponse {
                 'deletedSession': Session[];
                 'nextPageToken': string;
                 'session': Session[];
             }
 
-            interface MapValue {
+            export interface MapValue {
                 'fpVal': number;
             }
 
-            interface Session {
+            export interface Session {
                 'activeTimeMillis': string;
                 'activityType': number;
                 'application': Application;
@@ -159,14 +159,14 @@ declare module google {
                 'startTimeMillis': string;
             }
 
-            interface Value {
+            export interface Value {
                 'fpVal': number;
                 'intVal': number;
                 'mapVal': ValueMapValEntry[];
                 'stringVal': string;
             }
 
-            interface ValueMapValEntry {
+            export interface ValueMapValEntry {
                 'key': string;
                 'value': MapValue;
             }

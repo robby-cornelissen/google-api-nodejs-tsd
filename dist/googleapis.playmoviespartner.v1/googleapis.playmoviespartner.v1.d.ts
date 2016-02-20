@@ -33,12 +33,12 @@ declare module google {
 
             }
 
-            interface ListAvailsResponse {
+            export interface ListAvailsResponse {
                 'avails': Avail[];
                 'nextPageToken': string;
             }
 
-            interface Avail {
+            export interface Avail {
                 'displayName': string;
                 'storeLanguage': string;
                 'territory': string;
@@ -73,7 +73,7 @@ declare module google {
                 'pphNames': string[];
             }
 
-            interface Order {
+            export interface Order {
                 'orderId': string;
                 'customId': string;
                 'videoId': string;
@@ -99,12 +99,12 @@ declare module google {
                 'normalizedPriority': string;
             }
 
-            interface ListOrdersResponse {
+            export interface ListOrdersResponse {
                 'orders': Order[];
                 'nextPageToken': string;
             }
 
-            interface ExperienceLocale {
+            export interface ExperienceLocale {
                 'elId': string;
                 'country': string;
                 'language': string;
@@ -130,12 +130,12 @@ declare module google {
                 'normalizedPriority': string;
             }
 
-            interface ListExperienceLocalesResponse {
+            export interface ListExperienceLocalesResponse {
                 'experienceLocales': ExperienceLocale[];
                 'nextPageToken': string;
             }
 
-            interface StoreInfo {
+            export interface StoreInfo {
                 'videoId': string;
                 'seasonId': string;
                 'showId': string;
@@ -163,7 +163,7 @@ declare module google {
                 'pphNames': string[];
             }
 
-            interface ListStoreInfosResponse {
+            export interface ListStoreInfosResponse {
                 'storeInfos': StoreInfo[];
                 'nextPageToken': string;
             }

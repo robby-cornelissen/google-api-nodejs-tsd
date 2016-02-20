@@ -18,7 +18,7 @@ declare module google {
 
             }
 
-            interface AnalyticsSnapshot {
+            export interface AnalyticsSnapshot {
                 'browsers': StringCount[];
                 'countries': StringCount[];
                 'longUrlClicks': string;
@@ -27,7 +27,7 @@ declare module google {
                 'shortUrlClicks': string;
             }
 
-            interface AnalyticsSummary {
+            export interface AnalyticsSummary {
                 'allTime': AnalyticsSnapshot;
                 'day': AnalyticsSnapshot;
                 'month': AnalyticsSnapshot;
@@ -35,12 +35,12 @@ declare module google {
                 'week': AnalyticsSnapshot;
             }
 
-            interface StringCount {
+            export interface StringCount {
                 'count': string;
                 'id': string;
             }
 
-            interface Url {
+            export interface Url {
                 'analytics': AnalyticsSummary;
                 'created': string;
                 'id': string;
@@ -49,7 +49,7 @@ declare module google {
                 'status': string;
             }
 
-            interface UrlHistory {
+            export interface UrlHistory {
                 'items': Url[];
                 'itemsPerPage': number;
                 'kind': string;

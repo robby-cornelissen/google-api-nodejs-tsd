@@ -25,7 +25,7 @@ declare module google {
 
             }
 
-            interface Status {
+            export interface Status {
                 'code': number;
                 'details': {
                     [name: string]: any
@@ -33,15 +33,15 @@ declare module google {
                 'message': string;
             }
 
-            interface BuildOperationMetadata {
+            export interface BuildOperationMetadata {
                 'build': Build;
             }
 
-            interface Source {
+            export interface Source {
                 'storageSource': StorageSource;
             }
 
-            interface Operation {
+            export interface Operation {
                 'error': Status;
                 'done': boolean;
                 'response': {
@@ -53,21 +53,21 @@ declare module google {
                 'name': string;
             }
 
-            interface BuiltImage {
+            export interface BuiltImage {
                 'digest': string;
                 'name': string;
             }
 
-            interface StorageSource {
+            export interface StorageSource {
                 'bucket': string;
                 'object': string;
             }
 
-            interface Results {
+            export interface Results {
                 'images': BuiltImage[];
             }
 
-            interface Build {
+            export interface Build {
                 'id': string;
                 'results': Results;
                 'status': string;
@@ -82,21 +82,21 @@ declare module google {
                 'projectId': string;
             }
 
-            interface CancelBuildRequest {}
+            export interface CancelBuildRequest {}
 
-            interface ListOperationsResponse {
+            export interface ListOperationsResponse {
                 'nextPageToken': string;
                 'operations': Operation[];
             }
 
-            interface BuildStep {
+            export interface BuildStep {
                 'args': string[];
                 'dir': string;
                 'env': string[];
                 'name': string;
             }
 
-            interface ListBuildsResponse {
+            export interface ListBuildsResponse {
                 'nextPageToken': string;
                 'builds': Build[];
             }

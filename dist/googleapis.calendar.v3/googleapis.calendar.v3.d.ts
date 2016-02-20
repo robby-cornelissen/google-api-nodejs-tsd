@@ -66,7 +66,7 @@ declare module google {
 
             }
 
-            interface Acl {
+            export interface Acl {
                 'etag': string;
                 'items': AclRule[];
                 'kind': string;
@@ -74,7 +74,7 @@ declare module google {
                 'nextSyncToken': string;
             }
 
-            interface AclRule {
+            export interface AclRule {
                 'etag': string;
                 'id': string;
                 'kind': string;
@@ -85,7 +85,7 @@ declare module google {
                 };
             }
 
-            interface Calendar {
+            export interface Calendar {
                 'description': string;
                 'etag': string;
                 'id': string;
@@ -95,7 +95,7 @@ declare module google {
                 'timeZone': string;
             }
 
-            interface CalendarList {
+            export interface CalendarList {
                 'etag': string;
                 'items': CalendarListEntry[];
                 'kind': string;
@@ -103,7 +103,7 @@ declare module google {
                 'nextSyncToken': string;
             }
 
-            interface CalendarListEntry {
+            export interface CalendarListEntry {
                 'accessRole': string;
                 'backgroundColor': string;
                 'colorId': string;
@@ -126,12 +126,12 @@ declare module google {
                 'timeZone': string;
             }
 
-            interface CalendarNotification {
+            export interface CalendarNotification {
                 'method': string;
                 'type': string;
             }
 
-            interface Channel {
+            export interface Channel {
                 'address': string;
                 'expiration': string;
                 'id': string;
@@ -146,12 +146,12 @@ declare module google {
                 'type': string;
             }
 
-            interface ColorDefinition {
+            export interface ColorDefinition {
                 'background': string;
                 'foreground': string;
             }
 
-            interface Colors {
+            export interface Colors {
                 'calendar': {
                     [name: string]: ColorDefinition
                 };
@@ -162,12 +162,12 @@ declare module google {
                 'updated': string;
             }
 
-            interface Error {
+            export interface Error {
                 'domain': string;
                 'reason': string;
             }
 
-            interface Event {
+            export interface Event {
                 'anyoneCanAddSelf': boolean;
                 'attachments': EventAttachment[];
                 'attendees': EventAttendee[];
@@ -241,7 +241,7 @@ declare module google {
                 'visibility': string;
             }
 
-            interface EventAttachment {
+            export interface EventAttachment {
                 'fileId': string;
                 'fileUrl': string;
                 'iconLink': string;
@@ -249,7 +249,7 @@ declare module google {
                 'title': string;
             }
 
-            interface EventAttendee {
+            export interface EventAttendee {
                 'additionalGuests': number;
                 'comment': string;
                 'displayName': string;
@@ -262,18 +262,18 @@ declare module google {
                 'self': boolean;
             }
 
-            interface EventDateTime {
+            export interface EventDateTime {
                 'date': string;
                 'dateTime': string;
                 'timeZone': string;
             }
 
-            interface EventReminder {
+            export interface EventReminder {
                 'method': string;
                 'minutes': number;
             }
 
-            interface Events {
+            export interface Events {
                 'accessRole': string;
                 'defaultReminders': EventReminder[];
                 'description': string;
@@ -287,17 +287,17 @@ declare module google {
                 'updated': string;
             }
 
-            interface FreeBusyCalendar {
+            export interface FreeBusyCalendar {
                 'busy': TimePeriod[];
                 'errors': Error[];
             }
 
-            interface FreeBusyGroup {
+            export interface FreeBusyGroup {
                 'calendars': string[];
                 'errors': Error[];
             }
 
-            interface FreeBusyRequest {
+            export interface FreeBusyRequest {
                 'calendarExpansionMax': number;
                 'groupExpansionMax': number;
                 'items': FreeBusyRequestItem[];
@@ -306,11 +306,11 @@ declare module google {
                 'timeZone': string;
             }
 
-            interface FreeBusyRequestItem {
+            export interface FreeBusyRequestItem {
                 'id': string;
             }
 
-            interface FreeBusyResponse {
+            export interface FreeBusyResponse {
                 'calendars': {
                     [name: string]: FreeBusyCalendar
                 };
@@ -322,14 +322,14 @@ declare module google {
                 'timeMin': string;
             }
 
-            interface Setting {
+            export interface Setting {
                 'etag': string;
                 'id': string;
                 'kind': string;
                 'value': string;
             }
 
-            interface Settings {
+            export interface Settings {
                 'etag': string;
                 'items': Setting[];
                 'kind': string;
@@ -337,7 +337,7 @@ declare module google {
                 'nextSyncToken': string;
             }
 
-            interface TimePeriod {
+            export interface TimePeriod {
                 'end': string;
                 'start': string;
             }

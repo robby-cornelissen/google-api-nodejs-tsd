@@ -57,7 +57,7 @@ declare module google {
 
             }
 
-            interface Bucket {
+            export interface Bucket {
                 'color': string;
                 'icon': string;
                 'max': number;
@@ -66,7 +66,7 @@ declare module google {
                 'weight': number;
             }
 
-            interface Column {
+            export interface Column {
                 'baseColumn': {
                     'columnId': number;
                     'tableIndex': number;
@@ -79,30 +79,30 @@ declare module google {
                 'type': string;
             }
 
-            interface ColumnList {
+            export interface ColumnList {
                 'items': Column[];
                 'kind': string;
                 'nextPageToken': string;
                 'totalItems': number;
             }
 
-            interface Geometry {
+            export interface Geometry {
                 'geometries': any[];
                 'geometry': any;
                 'type': string;
             }
 
-            interface Import {
+            export interface Import {
                 'kind': string;
                 'numRowsReceived': string;
             }
 
-            interface Line {
+            export interface Line {
                 'coordinates': number[][];
                 'type': string;
             }
 
-            interface LineStyle {
+            export interface LineStyle {
                 'strokeColor': string;
                 'strokeColorStyler': StyleFunction;
                 'strokeOpacity': number;
@@ -110,22 +110,22 @@ declare module google {
                 'strokeWeightStyler': StyleFunction;
             }
 
-            interface Point {
+            export interface Point {
                 'coordinates': number[];
                 'type': string;
             }
 
-            interface PointStyle {
+            export interface PointStyle {
                 'iconName': string;
                 'iconStyler': StyleFunction;
             }
 
-            interface Polygon {
+            export interface Polygon {
                 'coordinates': number[][][];
                 'type': string;
             }
 
-            interface PolygonStyle {
+            export interface PolygonStyle {
                 'fillColor': string;
                 'fillColorStyler': StyleFunction;
                 'fillOpacity': number;
@@ -136,13 +136,13 @@ declare module google {
                 'strokeWeightStyler': StyleFunction;
             }
 
-            interface Sqlresponse {
+            export interface Sqlresponse {
                 'columns': string[];
                 'kind': string;
                 'rows': any[][];
             }
 
-            interface StyleFunction {
+            export interface StyleFunction {
                 'buckets': Bucket[];
                 'columnName': string;
                 'gradient': {
@@ -156,7 +156,7 @@ declare module google {
                 'kind': string;
             }
 
-            interface StyleSetting {
+            export interface StyleSetting {
                 'kind': string;
                 'markerOptions': PointStyle;
                 'name': string;
@@ -166,14 +166,14 @@ declare module google {
                 'tableId': string;
             }
 
-            interface StyleSettingList {
+            export interface StyleSettingList {
                 'items': StyleSetting[];
                 'kind': string;
                 'nextPageToken': string;
                 'totalItems': number;
             }
 
-            interface Table {
+            export interface Table {
                 'attribution': string;
                 'attributionLink': string;
                 'baseTableIds': string[];
@@ -186,13 +186,13 @@ declare module google {
                 'tableId': string;
             }
 
-            interface TableList {
+            export interface TableList {
                 'items': Table[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Task {
+            export interface Task {
                 'kind': string;
                 'progress': string;
                 'started': boolean;
@@ -200,14 +200,14 @@ declare module google {
                 'type': string;
             }
 
-            interface TaskList {
+            export interface TaskList {
                 'items': Task[];
                 'kind': string;
                 'nextPageToken': string;
                 'totalItems': number;
             }
 
-            interface Template {
+            export interface Template {
                 'automaticColumnNames': string[];
                 'body': string;
                 'kind': string;
@@ -216,7 +216,7 @@ declare module google {
                 'templateId': number;
             }
 
-            interface TemplateList {
+            export interface TemplateList {
                 'items': Template[];
                 'kind': string;
                 'nextPageToken': string;

@@ -102,7 +102,7 @@ declare module google {
 
             }
 
-            interface Account {
+            export interface Account {
                 'id': string;
                 'kind': string;
                 'name': string;
@@ -110,14 +110,14 @@ declare module google {
                 'subAccounts': Account[];
             }
 
-            interface Accounts {
+            export interface Accounts {
                 'etag': string;
                 'items': Account[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface AdClient {
+            export interface AdClient {
                 'arcOptIn': boolean;
                 'id': string;
                 'kind': string;
@@ -125,19 +125,19 @@ declare module google {
                 'supportsReporting': boolean;
             }
 
-            interface AdClients {
+            export interface AdClients {
                 'etag': string;
                 'items': AdClient[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface AdCode {
+            export interface AdCode {
                 'adCode': string;
                 'kind': string;
             }
 
-            interface AdStyle {
+            export interface AdStyle {
                 'colors': {
                     'background': string;
                     'border': string;
@@ -153,7 +153,7 @@ declare module google {
                 'kind': string;
             }
 
-            interface AdUnit {
+            export interface AdUnit {
                 'code': string;
                 'contentAdsSettings': {
                     'backupOption': {
@@ -184,14 +184,14 @@ declare module google {
                 'status': string;
             }
 
-            interface AdUnits {
+            export interface AdUnits {
                 'etag': string;
                 'items': AdUnit[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface AdsenseReportsGenerateResponse {
+            export interface AdsenseReportsGenerateResponse {
                 'averages': string[];
                 'headers': {
                     'currency': string;
@@ -205,7 +205,7 @@ declare module google {
                 'warnings': string[];
             }
 
-            interface Alert {
+            export interface Alert {
                 'id': string;
                 'kind': string;
                 'message': string;
@@ -213,12 +213,12 @@ declare module google {
                 'type': string;
             }
 
-            interface Alerts {
+            export interface Alerts {
                 'items': Alert[];
                 'kind': string;
             }
 
-            interface CustomChannel {
+            export interface CustomChannel {
                 'code': string;
                 'id': string;
                 'kind': string;
@@ -231,19 +231,19 @@ declare module google {
                 };
             }
 
-            interface CustomChannels {
+            export interface CustomChannels {
                 'etag': string;
                 'items': CustomChannel[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Metadata {
+            export interface Metadata {
                 'items': ReportingMetadataEntry[];
                 'kind': string;
             }
 
-            interface ReportingMetadataEntry {
+            export interface ReportingMetadataEntry {
                 'compatibleDimensions': string[];
                 'compatibleMetrics': string[];
                 'id': string;
@@ -253,40 +253,40 @@ declare module google {
                 'supportedProducts': string[];
             }
 
-            interface SavedAdStyle {
+            export interface SavedAdStyle {
                 'adStyle': AdStyle;
                 'id': string;
                 'kind': string;
                 'name': string;
             }
 
-            interface SavedAdStyles {
+            export interface SavedAdStyles {
                 'etag': string;
                 'items': SavedAdStyle[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface SavedReport {
+            export interface SavedReport {
                 'id': string;
                 'kind': string;
                 'name': string;
             }
 
-            interface SavedReports {
+            export interface SavedReports {
                 'etag': string;
                 'items': SavedReport[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface UrlChannel {
+            export interface UrlChannel {
                 'id': string;
                 'kind': string;
                 'urlPattern': string;
             }
 
-            interface UrlChannels {
+            export interface UrlChannels {
                 'etag': string;
                 'items': UrlChannel[];
                 'kind': string;

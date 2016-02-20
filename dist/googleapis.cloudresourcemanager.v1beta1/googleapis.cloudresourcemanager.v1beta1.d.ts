@@ -32,7 +32,7 @@ declare module google {
 
             }
 
-            interface Project {
+            export interface Project {
                 'projectNumber': string;
                 'projectId': string;
                 'lifecycleState': string;
@@ -44,56 +44,56 @@ declare module google {
                 'parent': ResourceId;
             }
 
-            interface ResourceId {
+            export interface ResourceId {
                 'type': string;
                 'id': string;
             }
 
-            interface ListProjectsResponse {
+            export interface ListProjectsResponse {
                 'projects': Project[];
                 'nextPageToken': string;
             }
 
-            interface Empty {}
+            export interface Empty {}
 
-            interface GetIamPolicyRequest {}
+            export interface GetIamPolicyRequest {}
 
-            interface Policy {
+            export interface Policy {
                 'version': number;
                 'bindings': Binding[];
                 'etag': string;
             }
 
-            interface Binding {
+            export interface Binding {
                 'role': string;
                 'members': string[];
             }
 
-            interface SetIamPolicyRequest {
+            export interface SetIamPolicyRequest {
                 'policy': Policy;
             }
 
-            interface TestIamPermissionsRequest {
+            export interface TestIamPermissionsRequest {
                 'permissions': string[];
             }
 
-            interface TestIamPermissionsResponse {
+            export interface TestIamPermissionsResponse {
                 'permissions': string[];
             }
 
-            interface ListOrganizationsResponse {
+            export interface ListOrganizationsResponse {
                 'organizations': Organization[];
                 'nextPageToken': string;
             }
 
-            interface Organization {
+            export interface Organization {
                 'organizationId': string;
                 'displayName': string;
                 'owner': OrganizationOwner;
                 'creationTime': string;
             }
 
-            interface OrganizationOwner {
+            export interface OrganizationOwner {
                 'directoryCustomerId': string;
             }
 

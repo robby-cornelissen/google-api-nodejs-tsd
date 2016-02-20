@@ -44,17 +44,17 @@ declare module google {
 
             }
 
-            interface AuthorizedKeysView {
+            export interface AuthorizedKeysView {
                 'keys': string[];
                 'sudoer': boolean;
             }
 
-            interface Binding {
+            export interface Binding {
                 'members': string[];
                 'role': string;
             }
 
-            interface Condition {
+            export interface Condition {
                 'iam': string;
                 'op': string;
                 'svc': string;
@@ -63,7 +63,7 @@ declare module google {
                 'values': string[];
             }
 
-            interface Group {
+            export interface Group {
                 'creationTimestamp': string;
                 'description': string;
                 'id': string;
@@ -73,7 +73,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface GroupList {
+            export interface GroupList {
                 'id': string;
                 'items': Group[];
                 'kind': string;
@@ -81,35 +81,35 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface GroupsAddMemberRequest {
+            export interface GroupsAddMemberRequest {
                 'users': string[];
             }
 
-            interface GroupsRemoveMemberRequest {
+            export interface GroupsRemoveMemberRequest {
                 'users': string[];
             }
 
-            interface LinuxAccountViews {
+            export interface LinuxAccountViews {
                 'groupViews': LinuxGroupView[];
                 'kind': string;
                 'userViews': LinuxUserView[];
             }
 
-            interface LinuxGetAuthorizedKeysViewResponse {
+            export interface LinuxGetAuthorizedKeysViewResponse {
                 'resource': AuthorizedKeysView;
             }
 
-            interface LinuxGetLinuxAccountViewsResponse {
+            export interface LinuxGetLinuxAccountViewsResponse {
                 'resource': LinuxAccountViews;
             }
 
-            interface LinuxGroupView {
+            export interface LinuxGroupView {
                 'gid': number;
                 'groupName': string;
                 'members': string[];
             }
 
-            interface LinuxUserView {
+            export interface LinuxUserView {
                 'gecos': string;
                 'gid': number;
                 'homeDirectory': string;
@@ -118,16 +118,16 @@ declare module google {
                 'username': string;
             }
 
-            interface LogConfig {
+            export interface LogConfig {
                 'counter': LogConfigCounterOptions;
             }
 
-            interface LogConfigCounterOptions {
+            export interface LogConfigCounterOptions {
                 'field': string;
                 'metric': string;
             }
 
-            interface Operation {
+            export interface Operation {
                 'clientOperationId': string;
                 'creationTimestamp': string;
                 'endTime': string;
@@ -165,7 +165,7 @@ declare module google {
                 'zone': string;
             }
 
-            interface OperationList {
+            export interface OperationList {
                 'id': string;
                 'items': Operation[];
                 'kind': string;
@@ -173,14 +173,14 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface Policy {
+            export interface Policy {
                 'bindings': Binding[];
                 'etag': string;
                 'rules': Rule[];
                 'version': number;
             }
 
-            interface PublicKey {
+            export interface PublicKey {
                 'creationTimestamp': string;
                 'description': string;
                 'expirationTimestamp': string;
@@ -188,7 +188,7 @@ declare module google {
                 'key': string;
             }
 
-            interface Rule {
+            export interface Rule {
                 'action': string;
                 'conditions': Condition[];
                 'description': string;
@@ -198,15 +198,15 @@ declare module google {
                 'permissions': string[];
             }
 
-            interface TestPermissionsRequest {
+            export interface TestPermissionsRequest {
                 'permissions': string[];
             }
 
-            interface TestPermissionsResponse {
+            export interface TestPermissionsResponse {
                 'permissions': string[];
             }
 
-            interface User {
+            export interface User {
                 'creationTimestamp': string;
                 'description': string;
                 'groups': string[];
@@ -218,7 +218,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface UserList {
+            export interface UserList {
                 'id': string;
                 'items': User[];
                 'kind': string;

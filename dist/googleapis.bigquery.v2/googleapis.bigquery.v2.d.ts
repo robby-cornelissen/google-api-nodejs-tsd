@@ -44,7 +44,7 @@ declare module google {
 
             }
 
-            interface CsvOptions {
+            export interface CsvOptions {
                 'allowJaggedRows': boolean;
                 'allowQuotedNewlines': boolean;
                 'encoding': string;
@@ -53,7 +53,7 @@ declare module google {
                 'skipLeadingRows': number;
             }
 
-            interface Dataset {
+            export interface Dataset {
                 'access': {
                     'domain': string;
                     'groupByEmail': string;
@@ -75,7 +75,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface DatasetList {
+            export interface DatasetList {
                 'datasets': {
                     'datasetReference': DatasetReference;
                     'friendlyName': string;
@@ -87,19 +87,19 @@ declare module google {
                 'nextPageToken': string;
             }
 
-            interface DatasetReference {
+            export interface DatasetReference {
                 'datasetId': string;
                 'projectId': string;
             }
 
-            interface ErrorProto {
+            export interface ErrorProto {
                 'debugInfo': string;
                 'location': string;
                 'message': string;
                 'reason': string;
             }
 
-            interface ExplainQueryStage {
+            export interface ExplainQueryStage {
                 'computeRatioAvg': number;
                 'computeRatioMax': number;
                 'id': string;
@@ -115,12 +115,12 @@ declare module google {
                 'writeRatioMax': number;
             }
 
-            interface ExplainQueryStep {
+            export interface ExplainQueryStep {
                 'kind': string;
                 'substeps': string[];
             }
 
-            interface ExternalDataConfiguration {
+            export interface ExternalDataConfiguration {
                 'compression': string;
                 'csvOptions': CsvOptions;
                 'ignoreUnknownValues': boolean;
@@ -130,7 +130,7 @@ declare module google {
                 'sourceUris': string[];
             }
 
-            interface GetQueryResultsResponse {
+            export interface GetQueryResultsResponse {
                 'cacheHit': boolean;
                 'errors': ErrorProto[];
                 'etag': string;
@@ -144,7 +144,7 @@ declare module google {
                 'totalRows': string;
             }
 
-            interface Job {
+            export interface Job {
                 'configuration': JobConfiguration;
                 'etag': string;
                 'id': string;
@@ -156,12 +156,12 @@ declare module google {
                 'user_email': string;
             }
 
-            interface JobCancelResponse {
+            export interface JobCancelResponse {
                 'job': Job;
                 'kind': string;
             }
 
-            interface JobConfiguration {
+            export interface JobConfiguration {
                 'copy': JobConfigurationTableCopy;
                 'dryRun': boolean;
                 'extract': JobConfigurationExtract;
@@ -169,7 +169,7 @@ declare module google {
                 'query': JobConfigurationQuery;
             }
 
-            interface JobConfigurationExtract {
+            export interface JobConfigurationExtract {
                 'compression': string;
                 'destinationFormat': string;
                 'destinationUri': string;
@@ -179,7 +179,7 @@ declare module google {
                 'sourceTable': TableReference;
             }
 
-            interface JobConfigurationLoad {
+            export interface JobConfigurationLoad {
                 'allowJaggedRows': boolean;
                 'allowQuotedNewlines': boolean;
                 'createDisposition': string;
@@ -199,7 +199,7 @@ declare module google {
                 'writeDisposition': string;
             }
 
-            interface JobConfigurationQuery {
+            export interface JobConfigurationQuery {
                 'allowLargeResults': boolean;
                 'createDisposition': string;
                 'defaultDataset': DatasetReference;
@@ -218,7 +218,7 @@ declare module google {
                 'writeDisposition': string;
             }
 
-            interface JobConfigurationTableCopy {
+            export interface JobConfigurationTableCopy {
                 'createDisposition': string;
                 'destinationTable': TableReference;
                 'sourceTable': TableReference;
@@ -226,7 +226,7 @@ declare module google {
                 'writeDisposition': string;
             }
 
-            interface JobList {
+            export interface JobList {
                 'etag': string;
                 'jobs': {
                     'configuration': JobConfiguration;
@@ -243,12 +243,12 @@ declare module google {
                 'nextPageToken': string;
             }
 
-            interface JobReference {
+            export interface JobReference {
                 'jobId': string;
                 'projectId': string;
             }
 
-            interface JobStatistics {
+            export interface JobStatistics {
                 'creationTime': string;
                 'endTime': string;
                 'extract': JobStatistics4;
@@ -258,7 +258,7 @@ declare module google {
                 'totalBytesProcessed': string;
             }
 
-            interface JobStatistics2 {
+            export interface JobStatistics2 {
                 'billingTier': number;
                 'cacheHit': boolean;
                 'queryPlan': ExplainQueryStage[];
@@ -267,30 +267,30 @@ declare module google {
                 'totalBytesProcessed': string;
             }
 
-            interface JobStatistics3 {
+            export interface JobStatistics3 {
                 'inputFileBytes': string;
                 'inputFiles': string;
                 'outputBytes': string;
                 'outputRows': string;
             }
 
-            interface JobStatistics4 {
+            export interface JobStatistics4 {
                 'destinationUriFileCounts': string[];
             }
 
-            interface JobStatus {
+            export interface JobStatus {
                 'errorResult': ErrorProto;
                 'errors': ErrorProto[];
                 'state': string;
             }
 
-            interface JsonObject {
+            export interface JsonObject {
                 [name: string]: JsonValue
             }
 
-            type JsonValue = any;
+            export type JsonValue = any;
 
-            interface ProjectList {
+            export interface ProjectList {
                 'etag': string;
                 'kind': string;
                 'nextPageToken': string;
@@ -304,11 +304,11 @@ declare module google {
                 'totalItems': number;
             }
 
-            interface ProjectReference {
+            export interface ProjectReference {
                 'projectId': string;
             }
 
-            interface QueryRequest {
+            export interface QueryRequest {
                 'defaultDataset': DatasetReference;
                 'dryRun': boolean;
                 'kind': string;
@@ -320,7 +320,7 @@ declare module google {
                 'useQueryCache': boolean;
             }
 
-            interface QueryResponse {
+            export interface QueryResponse {
                 'cacheHit': boolean;
                 'errors': ErrorProto[];
                 'jobComplete': boolean;
@@ -333,13 +333,13 @@ declare module google {
                 'totalRows': string;
             }
 
-            interface Streamingbuffer {
+            export interface Streamingbuffer {
                 'estimatedBytes': string;
                 'estimatedRows': string;
                 'oldestEntryTime': string;
             }
 
-            interface Table {
+            export interface Table {
                 'creationTime': string;
                 'description': string;
                 'etag': string;
@@ -360,11 +360,11 @@ declare module google {
                 'view': ViewDefinition;
             }
 
-            interface TableCell {
+            export interface TableCell {
                 'v': any;
             }
 
-            interface TableDataInsertAllRequest {
+            export interface TableDataInsertAllRequest {
                 'ignoreUnknownValues': boolean;
                 'kind': string;
                 'rows': {
@@ -375,7 +375,7 @@ declare module google {
                 'templateSuffix': string;
             }
 
-            interface TableDataInsertAllResponse {
+            export interface TableDataInsertAllResponse {
                 'insertErrors': {
                     'errors': ErrorProto[];
                     'index': number;
@@ -383,7 +383,7 @@ declare module google {
                 'kind': string;
             }
 
-            interface TableDataList {
+            export interface TableDataList {
                 'etag': string;
                 'kind': string;
                 'pageToken': string;
@@ -391,7 +391,7 @@ declare module google {
                 'totalRows': string;
             }
 
-            interface TableFieldSchema {
+            export interface TableFieldSchema {
                 'description': string;
                 'fields': TableFieldSchema[];
                 'mode': string;
@@ -399,7 +399,7 @@ declare module google {
                 'type': string;
             }
 
-            interface TableList {
+            export interface TableList {
                 'etag': string;
                 'kind': string;
                 'nextPageToken': string;
@@ -413,26 +413,26 @@ declare module google {
                 'totalItems': number;
             }
 
-            interface TableReference {
+            export interface TableReference {
                 'datasetId': string;
                 'projectId': string;
                 'tableId': string;
             }
 
-            interface TableRow {
+            export interface TableRow {
                 'f': TableCell[];
             }
 
-            interface TableSchema {
+            export interface TableSchema {
                 'fields': TableFieldSchema[];
             }
 
-            interface UserDefinedFunctionResource {
+            export interface UserDefinedFunctionResource {
                 'inlineCode': string;
                 'resourceUri': string;
             }
 
-            interface ViewDefinition {
+            export interface ViewDefinition {
                 'query': string;
                 'userDefinedFunctionResources': UserDefinedFunctionResource[];
             }

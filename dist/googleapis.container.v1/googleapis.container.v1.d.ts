@@ -30,11 +30,11 @@ declare module google {
 
             }
 
-            interface ListClustersResponse {
+            export interface ListClustersResponse {
                 'clusters': Cluster[];
             }
 
-            interface Cluster {
+            export interface Cluster {
                 'name': string;
                 'description': string;
                 'initialNodeCount': number;
@@ -58,13 +58,13 @@ declare module google {
                 'instanceGroupUrls': string[];
             }
 
-            interface NodeConfig {
+            export interface NodeConfig {
                 'machineType': string;
                 'diskSizeGb': number;
                 'oauthScopes': string[];
             }
 
-            interface MasterAuth {
+            export interface MasterAuth {
                 'username': string;
                 'password': string;
                 'clusterCaCertificate': string;
@@ -72,11 +72,11 @@ declare module google {
                 'clientKey': string;
             }
 
-            interface CreateClusterRequest {
+            export interface CreateClusterRequest {
                 'cluster': Cluster;
             }
 
-            interface Operation {
+            export interface Operation {
                 'name': string;
                 'zone': string;
                 'operationType': string;
@@ -86,19 +86,19 @@ declare module google {
                 'targetLink': string;
             }
 
-            interface UpdateClusterRequest {
+            export interface UpdateClusterRequest {
                 'update': ClusterUpdate;
             }
 
-            interface ClusterUpdate {
+            export interface ClusterUpdate {
                 'desiredNodeVersion': string;
             }
 
-            interface ListOperationsResponse {
+            export interface ListOperationsResponse {
                 'operations': Operation[];
             }
 
-            interface ServerConfig {
+            export interface ServerConfig {
                 'defaultClusterVersion': string;
                 'validNodeVersions': string[];
             }

@@ -17,7 +17,7 @@ declare module google {
 
             }
 
-            interface DirectoryList {
+            export interface DirectoryList {
                 'discoveryVersion': string;
                 'items': {
                     'description': string;
@@ -39,7 +39,7 @@ declare module google {
                 'kind': string;
             }
 
-            interface JsonSchema {
+            export interface JsonSchema {
                 '$ref': string;
                 'additionalProperties': JsonSchema;
                 'annotations': {
@@ -72,7 +72,7 @@ declare module google {
                 };
             }
 
-            interface RestDescription {
+            export interface RestDescription {
                 'auth': {
                     'oauth2': {
                         'scopes': {
@@ -124,7 +124,7 @@ declare module google {
                 'version_module': boolean;
             }
 
-            interface RestMethod {
+            export interface RestMethod {
                 'description': string;
                 'etagRequired': boolean;
                 'httpMethod': string;
@@ -162,7 +162,7 @@ declare module google {
                 'useMediaDownloadService': boolean;
             }
 
-            interface RestResource {
+            export interface RestResource {
                 'methods': {
                     [name: string]: RestMethod
                 };

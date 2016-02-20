@@ -17,7 +17,7 @@ declare module google {
 
             }
 
-            interface SubscriptionPurchase {
+            export interface SubscriptionPurchase {
                 'autoRenewing': boolean;
                 'initiationTimestampMsec': string;
                 'kind': string;

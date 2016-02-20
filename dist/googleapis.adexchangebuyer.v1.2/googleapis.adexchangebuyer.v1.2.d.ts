@@ -24,7 +24,7 @@ declare module google {
 
             }
 
-            interface Account {
+            export interface Account {
                 'bidderLocation': {
                     'maximumQps': number;
                     'region': string;
@@ -39,12 +39,12 @@ declare module google {
                 'numberActiveCreatives': number;
             }
 
-            interface AccountsList {
+            export interface AccountsList {
                 'items': Account[];
                 'kind': string;
             }
 
-            interface Creative {
+            export interface Creative {
                 'HTMLSnippet': string;
                 'accountId': number;
                 'advertiserId': string[];
@@ -82,7 +82,7 @@ declare module google {
                 'width': number;
             }
 
-            interface CreativesList {
+            export interface CreativesList {
                 'items': Creative[];
                 'kind': string;
                 'nextPageToken': string;

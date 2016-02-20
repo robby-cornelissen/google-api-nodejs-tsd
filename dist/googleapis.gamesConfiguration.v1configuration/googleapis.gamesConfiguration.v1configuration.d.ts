@@ -32,7 +32,7 @@ declare module google {
 
             }
 
-            interface AchievementConfiguration {
+            export interface AchievementConfiguration {
                 'achievementType': string;
                 'draft': AchievementConfigurationDetail;
                 'id': string;
@@ -43,7 +43,7 @@ declare module google {
                 'token': string;
             }
 
-            interface AchievementConfigurationDetail {
+            export interface AchievementConfigurationDetail {
                 'description': LocalizedStringBundle;
                 'iconUrl': string;
                 'kind': string;
@@ -52,13 +52,13 @@ declare module google {
                 'sortRank': number;
             }
 
-            interface AchievementConfigurationListResponse {
+            export interface AchievementConfigurationListResponse {
                 'items': AchievementConfiguration[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface GamesNumberAffixConfiguration {
+            export interface GamesNumberAffixConfiguration {
                 'few': LocalizedStringBundle;
                 'many': LocalizedStringBundle;
                 'one': LocalizedStringBundle;
@@ -67,21 +67,21 @@ declare module google {
                 'zero': LocalizedStringBundle;
             }
 
-            interface GamesNumberFormatConfiguration {
+            export interface GamesNumberFormatConfiguration {
                 'currencyCode': string;
                 'numDecimalPlaces': number;
                 'numberFormatType': string;
                 'suffix': GamesNumberAffixConfiguration;
             }
 
-            interface ImageConfiguration {
+            export interface ImageConfiguration {
                 'imageType': string;
                 'kind': string;
                 'resourceId': string;
                 'url': string;
             }
 
-            interface LeaderboardConfiguration {
+            export interface LeaderboardConfiguration {
                 'draft': LeaderboardConfigurationDetail;
                 'id': string;
                 'kind': string;
@@ -92,7 +92,7 @@ declare module google {
                 'token': string;
             }
 
-            interface LeaderboardConfigurationDetail {
+            export interface LeaderboardConfigurationDetail {
                 'iconUrl': string;
                 'kind': string;
                 'name': LocalizedStringBundle;
@@ -100,19 +100,19 @@ declare module google {
                 'sortRank': number;
             }
 
-            interface LeaderboardConfigurationListResponse {
+            export interface LeaderboardConfigurationListResponse {
                 'items': LeaderboardConfiguration[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface LocalizedString {
+            export interface LocalizedString {
                 'kind': string;
                 'locale': string;
                 'value': string;
             }
 
-            interface LocalizedStringBundle {
+            export interface LocalizedStringBundle {
                 'kind': string;
                 'translations': LocalizedString[];
             }

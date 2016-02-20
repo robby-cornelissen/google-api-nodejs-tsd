@@ -25,25 +25,25 @@ declare module google {
 
             }
 
-            interface DeleteMetricDescriptorResponse {
+            export interface DeleteMetricDescriptorResponse {
                 'kind': string;
             }
 
-            interface ListMetricDescriptorsRequest {
+            export interface ListMetricDescriptorsRequest {
                 'kind': string;
             }
 
-            interface ListMetricDescriptorsResponse {
+            export interface ListMetricDescriptorsResponse {
                 'kind': string;
                 'metrics': MetricDescriptor[];
                 'nextPageToken': string;
             }
 
-            interface ListTimeseriesDescriptorsRequest {
+            export interface ListTimeseriesDescriptorsRequest {
                 'kind': string;
             }
 
-            interface ListTimeseriesDescriptorsResponse {
+            export interface ListTimeseriesDescriptorsResponse {
                 'kind': string;
                 'nextPageToken': string;
                 'oldest': string;
@@ -51,11 +51,11 @@ declare module google {
                 'youngest': string;
             }
 
-            interface ListTimeseriesRequest {
+            export interface ListTimeseriesRequest {
                 'kind': string;
             }
 
-            interface ListTimeseriesResponse {
+            export interface ListTimeseriesResponse {
                 'kind': string;
                 'nextPageToken': string;
                 'oldest': string;
@@ -63,7 +63,7 @@ declare module google {
                 'youngest': string;
             }
 
-            interface MetricDescriptor {
+            export interface MetricDescriptor {
                 'description': string;
                 'labels': MetricDescriptorLabelDescriptor[];
                 'name': string;
@@ -71,17 +71,17 @@ declare module google {
                 'typeDescriptor': MetricDescriptorTypeDescriptor;
             }
 
-            interface MetricDescriptorLabelDescriptor {
+            export interface MetricDescriptorLabelDescriptor {
                 'description': string;
                 'key': string;
             }
 
-            interface MetricDescriptorTypeDescriptor {
+            export interface MetricDescriptorTypeDescriptor {
                 'metricType': string;
                 'valueType': string;
             }
 
-            interface Point {
+            export interface Point {
                 'boolValue': boolean;
                 'distributionValue': PointDistribution;
                 'doubleValue': number;
@@ -91,34 +91,34 @@ declare module google {
                 'stringValue': string;
             }
 
-            interface PointDistribution {
+            export interface PointDistribution {
                 'buckets': PointDistributionBucket[];
                 'overflowBucket': PointDistributionOverflowBucket;
                 'underflowBucket': PointDistributionUnderflowBucket;
             }
 
-            interface PointDistributionBucket {
+            export interface PointDistributionBucket {
                 'count': string;
                 'lowerBound': number;
                 'upperBound': number;
             }
 
-            interface PointDistributionOverflowBucket {
+            export interface PointDistributionOverflowBucket {
                 'count': string;
                 'lowerBound': number;
             }
 
-            interface PointDistributionUnderflowBucket {
+            export interface PointDistributionUnderflowBucket {
                 'count': string;
                 'upperBound': number;
             }
 
-            interface Timeseries {
+            export interface Timeseries {
                 'points': Point[];
                 'timeseriesDesc': TimeseriesDescriptor;
             }
 
-            interface TimeseriesDescriptor {
+            export interface TimeseriesDescriptor {
                 'labels': {
                     [name: string]: string
                 };
@@ -126,24 +126,24 @@ declare module google {
                 'project': string;
             }
 
-            interface TimeseriesDescriptorLabel {
+            export interface TimeseriesDescriptorLabel {
                 'key': string;
                 'value': string;
             }
 
-            interface TimeseriesPoint {
+            export interface TimeseriesPoint {
                 'point': Point;
                 'timeseriesDesc': TimeseriesDescriptor;
             }
 
-            interface WriteTimeseriesRequest {
+            export interface WriteTimeseriesRequest {
                 'commonLabels': {
                     [name: string]: string
                 };
                 'timeseries': TimeseriesPoint[];
             }
 
-            interface WriteTimeseriesResponse {
+            export interface WriteTimeseriesResponse {
                 'kind': string;
             }
 

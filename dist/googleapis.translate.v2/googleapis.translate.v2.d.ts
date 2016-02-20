@@ -22,30 +22,30 @@ declare module google {
 
             }
 
-            interface DetectionsListResponse {
+            export interface DetectionsListResponse {
                 'detections': DetectionsResource[];
             }
 
-            type DetectionsResource = {
+            export type DetectionsResource = {
                 'confidence': number;
                 'isReliable': boolean;
                 'language': string;
             }[];
 
-            interface LanguagesListResponse {
+            export interface LanguagesListResponse {
                 'languages': LanguagesResource[];
             }
 
-            interface LanguagesResource {
+            export interface LanguagesResource {
                 'language': string;
                 'name': string;
             }
 
-            interface TranslationsListResponse {
+            export interface TranslationsListResponse {
                 'translations': TranslationsResource[];
             }
 
-            interface TranslationsResource {
+            export interface TranslationsResource {
                 'detectedSourceLanguage': string;
                 'translatedText': string;
             }

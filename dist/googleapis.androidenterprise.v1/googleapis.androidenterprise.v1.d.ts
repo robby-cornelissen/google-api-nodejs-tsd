@@ -102,12 +102,12 @@ declare module google {
 
             }
 
-            interface AppRestrictionsSchema {
+            export interface AppRestrictionsSchema {
                 'kind': string;
                 'restrictions': AppRestrictionsSchemaRestriction[];
             }
 
-            interface AppRestrictionsSchemaRestriction {
+            export interface AppRestrictionsSchemaRestriction {
                 'defaultValue': AppRestrictionsSchemaRestrictionRestrictionValue;
                 'description': string;
                 'entry': string[];
@@ -117,7 +117,7 @@ declare module google {
                 'title': string;
             }
 
-            interface AppRestrictionsSchemaRestrictionRestrictionValue {
+            export interface AppRestrictionsSchemaRestrictionRestrictionValue {
                 'type': string;
                 'valueBool': boolean;
                 'valueInteger': number;
@@ -125,17 +125,17 @@ declare module google {
                 'valueString': string;
             }
 
-            interface AppVersion {
+            export interface AppVersion {
                 'versionCode': number;
                 'versionString': string;
             }
 
-            interface ApprovalUrlInfo {
+            export interface ApprovalUrlInfo {
                 'approvalUrl': string;
                 'kind': string;
             }
 
-            interface Collection {
+            export interface Collection {
                 'collectionId': string;
                 'kind': string;
                 'name': string;
@@ -143,66 +143,66 @@ declare module google {
                 'visibility': string;
             }
 
-            interface CollectionViewersListResponse {
+            export interface CollectionViewersListResponse {
                 'kind': string;
                 'user': User[];
             }
 
-            interface CollectionsListResponse {
+            export interface CollectionsListResponse {
                 'collection': Collection[];
                 'kind': string;
             }
 
-            interface Device {
+            export interface Device {
                 'androidId': string;
                 'kind': string;
                 'managementType': string;
             }
 
-            interface DeviceState {
+            export interface DeviceState {
                 'accountState': string;
                 'kind': string;
             }
 
-            interface DevicesListResponse {
+            export interface DevicesListResponse {
                 'device': Device[];
                 'kind': string;
             }
 
-            interface Enterprise {
+            export interface Enterprise {
                 'id': string;
                 'kind': string;
                 'name': string;
                 'primaryDomain': string;
             }
 
-            interface EnterpriseAccount {
+            export interface EnterpriseAccount {
                 'accountEmail': string;
                 'kind': string;
             }
 
-            interface EnterprisesListResponse {
+            export interface EnterprisesListResponse {
                 'enterprise': Enterprise[];
                 'kind': string;
             }
 
-            interface EnterprisesSendTestPushNotificationResponse {
+            export interface EnterprisesSendTestPushNotificationResponse {
                 'messageId': string;
                 'topicName': string;
             }
 
-            interface Entitlement {
+            export interface Entitlement {
                 'kind': string;
                 'productId': string;
                 'reason': string;
             }
 
-            interface EntitlementsListResponse {
+            export interface EntitlementsListResponse {
                 'entitlement': Entitlement[];
                 'kind': string;
             }
 
-            interface GroupLicense {
+            export interface GroupLicense {
                 'acquisitionKind': string;
                 'approval': string;
                 'kind': string;
@@ -211,41 +211,41 @@ declare module google {
                 'productId': string;
             }
 
-            interface GroupLicenseUsersListResponse {
+            export interface GroupLicenseUsersListResponse {
                 'kind': string;
                 'user': User[];
             }
 
-            interface GroupLicensesListResponse {
+            export interface GroupLicensesListResponse {
                 'groupLicense': GroupLicense[];
                 'kind': string;
             }
 
-            interface Install {
+            export interface Install {
                 'installState': string;
                 'kind': string;
                 'productId': string;
                 'versionCode': number;
             }
 
-            interface InstallsListResponse {
+            export interface InstallsListResponse {
                 'install': Install[];
                 'kind': string;
             }
 
-            interface LocalizedText {
+            export interface LocalizedText {
                 'locale': string;
                 'text': string;
             }
 
-            interface Permission {
+            export interface Permission {
                 'description': string;
                 'kind': string;
                 'name': string;
                 'permissionId': string;
             }
 
-            interface Product {
+            export interface Product {
                 'appVersion': AppVersion[];
                 'authorName': string;
                 'detailsUrl': string;
@@ -259,31 +259,31 @@ declare module google {
                 'workDetailsUrl': string;
             }
 
-            interface ProductPermission {
+            export interface ProductPermission {
                 'permissionId': string;
                 'state': string;
             }
 
-            interface ProductPermissions {
+            export interface ProductPermissions {
                 'kind': string;
                 'permission': ProductPermission[];
                 'productId': string;
             }
 
-            interface ProductSet {
+            export interface ProductSet {
                 'kind': string;
                 'productId': string[];
             }
 
-            interface ProductsApproveRequest {
+            export interface ProductsApproveRequest {
                 'approvalUrlInfo': ApprovalUrlInfo;
             }
 
-            interface ProductsGenerateApprovalUrlResponse {
+            export interface ProductsGenerateApprovalUrlResponse {
                 'url': string;
             }
 
-            interface StoreCluster {
+            export interface StoreCluster {
                 'id': string;
                 'kind': string;
                 'name': LocalizedText[];
@@ -291,41 +291,41 @@ declare module google {
                 'productId': string[];
             }
 
-            interface StoreLayout {
+            export interface StoreLayout {
                 'homepageId': string;
                 'kind': string;
             }
 
-            interface StoreLayoutClustersListResponse {
+            export interface StoreLayoutClustersListResponse {
                 'cluster': StoreCluster[];
                 'kind': string;
             }
 
-            interface StoreLayoutPagesListResponse {
+            export interface StoreLayoutPagesListResponse {
                 'kind': string;
                 'page': StorePage[];
             }
 
-            interface StorePage {
+            export interface StorePage {
                 'id': string;
                 'kind': string;
                 'link': string[];
                 'name': LocalizedText[];
             }
 
-            interface User {
+            export interface User {
                 'id': string;
                 'kind': string;
                 'primaryEmail': string;
             }
 
-            interface UserToken {
+            export interface UserToken {
                 'kind': string;
                 'token': string;
                 'userId': string;
             }
 
-            interface UsersListResponse {
+            export interface UsersListResponse {
                 'kind': string;
                 'user': User[];
             }

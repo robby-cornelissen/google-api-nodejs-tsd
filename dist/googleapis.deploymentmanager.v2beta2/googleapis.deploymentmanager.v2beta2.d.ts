@@ -36,7 +36,7 @@ declare module google {
 
             }
 
-            interface Deployment {
+            export interface Deployment {
                 'description': string;
                 'fingerprint': string;
                 'id': string;
@@ -50,22 +50,22 @@ declare module google {
                 'updateTime': string;
             }
 
-            interface DeploymentUpdate {
+            export interface DeploymentUpdate {
                 'errors': string[];
                 'manifest': string;
             }
 
-            interface DeploymentsListResponse {
+            export interface DeploymentsListResponse {
                 'deployments': Deployment[];
                 'nextPageToken': string;
             }
 
-            interface ImportFile {
+            export interface ImportFile {
                 'content': string;
                 'name': string;
             }
 
-            interface Manifest {
+            export interface Manifest {
                 'config': string;
                 'evaluatedConfig': string;
                 'id': string;
@@ -76,12 +76,12 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface ManifestsListResponse {
+            export interface ManifestsListResponse {
                 'manifests': Manifest[];
                 'nextPageToken': string;
             }
 
-            interface Operation {
+            export interface Operation {
                 'clientOperationId': string;
                 'creationTimestamp': string;
                 'description': string;
@@ -120,12 +120,12 @@ declare module google {
                 'zone': string;
             }
 
-            interface OperationsListResponse {
+            export interface OperationsListResponse {
                 'nextPageToken': string;
                 'operations': Operation[];
             }
 
-            interface Resource {
+            export interface Resource {
                 'finalProperties': string;
                 'id': string;
                 'insertTime': string;
@@ -138,7 +138,7 @@ declare module google {
                 'url': string;
             }
 
-            interface ResourceUpdate {
+            export interface ResourceUpdate {
                 'errors': string[];
                 'finalProperties': string;
                 'intent': string;
@@ -147,24 +147,24 @@ declare module google {
                 'state': string;
             }
 
-            interface ResourcesListResponse {
+            export interface ResourcesListResponse {
                 'nextPageToken': string;
                 'resources': Resource[];
             }
 
-            interface TargetConfiguration {
+            export interface TargetConfiguration {
                 'config': string;
                 'imports': ImportFile[];
             }
 
-            interface Type {
+            export interface Type {
                 'id': string;
                 'insertTime': string;
                 'name': string;
                 'selfLink': string;
             }
 
-            interface TypesListResponse {
+            export interface TypesListResponse {
                 'nextPageToken': string;
                 'types': Type[];
             }

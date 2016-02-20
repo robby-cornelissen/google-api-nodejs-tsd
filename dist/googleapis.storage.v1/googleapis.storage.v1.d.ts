@@ -60,7 +60,7 @@ declare module google {
 
             }
 
-            interface Bucket {
+            export interface Bucket {
                 'acl': BucketAccessControl[];
                 'cors': {
                     'maxAgeSeconds': number;
@@ -110,7 +110,7 @@ declare module google {
                 };
             }
 
-            interface BucketAccessControl {
+            export interface BucketAccessControl {
                 'bucket': string;
                 'domain': string;
                 'email': string;
@@ -127,18 +127,18 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface BucketAccessControls {
+            export interface BucketAccessControls {
                 'items': BucketAccessControl[];
                 'kind': string;
             }
 
-            interface Buckets {
+            export interface Buckets {
                 'items': Bucket[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Channel {
+            export interface Channel {
                 'address': string;
                 'expiration': string;
                 'id': string;
@@ -153,7 +153,7 @@ declare module google {
                 'type': string;
             }
 
-            interface ComposeRequest {
+            export interface ComposeRequest {
                 'destination': Object;
                 'kind': string;
                 'sourceObjects': {
@@ -165,7 +165,7 @@ declare module google {
                 }[];
             }
 
-            interface Object {
+            export interface Object {
                 'acl': ObjectAccessControl[];
                 'bucket': string;
                 'cacheControl': string;
@@ -202,7 +202,7 @@ declare module google {
                 'updated': string;
             }
 
-            interface ObjectAccessControl {
+            export interface ObjectAccessControl {
                 'bucket': string;
                 'domain': string;
                 'email': string;
@@ -221,19 +221,19 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface ObjectAccessControls {
+            export interface ObjectAccessControls {
                 'items': any[];
                 'kind': string;
             }
 
-            interface Objects {
+            export interface Objects {
                 'items': Object[];
                 'kind': string;
                 'nextPageToken': string;
                 'prefixes': string[];
             }
 
-            interface RewriteResponse {
+            export interface RewriteResponse {
                 'done': boolean;
                 'kind': string;
                 'objectSize': string;

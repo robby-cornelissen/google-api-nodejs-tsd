@@ -31,7 +31,7 @@ declare module google {
 
             }
 
-            interface Address {
+            export interface Address {
                 'addressLine1': string;
                 'addressLine2': string;
                 'addressLine3': string;
@@ -44,14 +44,14 @@ declare module google {
                 'region': string;
             }
 
-            interface ChangePlanRequest {
+            export interface ChangePlanRequest {
                 'kind': string;
                 'planName': string;
                 'purchaseOrderId': string;
                 'seats': Seats;
             }
 
-            interface Customer {
+            export interface Customer {
                 'alternateEmail': string;
                 'customerDomain': string;
                 'customerDomainVerified': boolean;
@@ -62,19 +62,19 @@ declare module google {
                 'resourceUiUrl': string;
             }
 
-            interface RenewalSettings {
+            export interface RenewalSettings {
                 'kind': string;
                 'renewalType': string;
             }
 
-            interface Seats {
+            export interface Seats {
                 'kind': string;
                 'licensedNumberOfSeats': number;
                 'maximumNumberOfSeats': number;
                 'numberOfSeats': number;
             }
 
-            interface Subscription {
+            export interface Subscription {
                 'billingMethod': string;
                 'creationTime': string;
                 'customerId': string;
@@ -105,7 +105,7 @@ declare module google {
                 };
             }
 
-            interface Subscriptions {
+            export interface Subscriptions {
                 'kind': string;
                 'nextPageToken': string;
                 'subscriptions': Subscription[];

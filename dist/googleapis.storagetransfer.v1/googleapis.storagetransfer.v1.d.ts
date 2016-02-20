@@ -33,11 +33,11 @@ declare module google {
 
             }
 
-            interface GoogleServiceAccount {
+            export interface GoogleServiceAccount {
                 'accountEmail': string;
             }
 
-            interface TransferJob {
+            export interface TransferJob {
                 'name': string;
                 'description': string;
                 'projectId': string;
@@ -49,7 +49,7 @@ declare module google {
                 'deletionTime': string;
             }
 
-            interface TransferSpec {
+            export interface TransferSpec {
                 'gcsDataSource': GcsData;
                 'awsS3DataSource': AwsS3Data;
                 'httpDataSource': HttpData;
@@ -58,74 +58,74 @@ declare module google {
                 'transferOptions': TransferOptions;
             }
 
-            interface GcsData {
+            export interface GcsData {
                 'bucketName': string;
             }
 
-            interface AwsS3Data {
+            export interface AwsS3Data {
                 'bucketName': string;
                 'awsAccessKey': AwsAccessKey;
             }
 
-            interface AwsAccessKey {
+            export interface AwsAccessKey {
                 'accessKeyId': string;
                 'secretAccessKey': string;
             }
 
-            interface HttpData {
+            export interface HttpData {
                 'listUrl': string;
             }
 
-            interface ObjectConditions {
+            export interface ObjectConditions {
                 'minTimeElapsedSinceLastModification': string;
                 'maxTimeElapsedSinceLastModification': string;
                 'includePrefixes': string[];
                 'excludePrefixes': string[];
             }
 
-            interface TransferOptions {
+            export interface TransferOptions {
                 'overwriteObjectsAlreadyExistingInSink': boolean;
                 'deleteObjectsUniqueInSink': boolean;
                 'deleteObjectsFromSourceAfterTransfer': boolean;
             }
 
-            interface Schedule {
+            export interface Schedule {
                 'scheduleStartDate': Date;
                 'scheduleEndDate': Date;
                 'startTimeOfDay': TimeOfDay;
             }
 
-            interface Date {
+            export interface Date {
                 'year': number;
                 'month': number;
                 'day': number;
             }
 
-            interface TimeOfDay {
+            export interface TimeOfDay {
                 'hours': number;
                 'minutes': number;
                 'seconds': number;
                 'nanos': number;
             }
 
-            interface UpdateTransferJobRequest {
+            export interface UpdateTransferJobRequest {
                 'projectId': string;
                 'transferJob': TransferJob;
                 'updateTransferJobFieldMask': string;
             }
 
-            interface ListTransferJobsResponse {
+            export interface ListTransferJobsResponse {
                 'transferJobs': TransferJob[];
                 'nextPageToken': string;
             }
 
-            interface PauseTransferOperationRequest {}
+            export interface PauseTransferOperationRequest {}
 
-            interface Empty {}
+            export interface Empty {}
 
-            interface ResumeTransferOperationRequest {}
+            export interface ResumeTransferOperationRequest {}
 
-            interface Operation {
+            export interface Operation {
                 'name': string;
                 'metadata': {
                     [name: string]: any
@@ -137,7 +137,7 @@ declare module google {
                 };
             }
 
-            interface Status {
+            export interface Status {
                 'code': number;
                 'message': string;
                 'details': {
@@ -145,12 +145,12 @@ declare module google {
                 }[];
             }
 
-            interface ListOperationsResponse {
+            export interface ListOperationsResponse {
                 'operations': Operation[];
                 'nextPageToken': string;
             }
 
-            interface TransferOperation {
+            export interface TransferOperation {
                 'name': string;
                 'projectId': string;
                 'transferSpec': TransferSpec;
@@ -162,7 +162,7 @@ declare module google {
                 'transferJobName': string;
             }
 
-            interface TransferCounters {
+            export interface TransferCounters {
                 'objectsFoundFromSource': string;
                 'bytesFoundFromSource': string;
                 'objectsFoundOnlyFromSink': string;
@@ -181,13 +181,13 @@ declare module google {
                 'bytesFailedToDeleteFromSink': string;
             }
 
-            interface ErrorSummary {
+            export interface ErrorSummary {
                 'errorCode': string;
                 'errorCount': string;
                 'errorLogEntries': ErrorLogEntry[];
             }
 
-            interface ErrorLogEntry {
+            export interface ErrorLogEntry {
                 'url': string;
                 'errorDetails': string[];
             }

@@ -24,13 +24,13 @@ declare module google {
 
             }
 
-            interface Input {
+            export interface Input {
                 'input': {
                     'csvInstance': any[];
                 };
             }
 
-            interface Output {
+            export interface Output {
                 'id': string;
                 'kind': string;
                 'outputLabel': string;
@@ -42,7 +42,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface Training {
+            export interface Training {
                 'id': string;
                 'kind': string;
                 'modelInfo': {
@@ -54,7 +54,7 @@ declare module google {
                 'trainingStatus': string;
             }
 
-            interface Update {
+            export interface Update {
                 'classLabel': string;
                 'csvInstance': any[];
             }

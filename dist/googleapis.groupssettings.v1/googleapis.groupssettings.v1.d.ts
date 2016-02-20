@@ -18,7 +18,7 @@ declare module google {
 
             }
 
-            interface Groups {
+            export interface Groups {
                 'allowExternalMembers': string;
                 'allowGoogleCommunication': string;
                 'allowWebPosting': string;

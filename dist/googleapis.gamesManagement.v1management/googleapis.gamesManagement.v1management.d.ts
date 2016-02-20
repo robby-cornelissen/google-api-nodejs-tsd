@@ -56,59 +56,59 @@ declare module google {
 
             }
 
-            interface AchievementResetAllResponse {
+            export interface AchievementResetAllResponse {
                 'kind': string;
                 'results': AchievementResetResponse[];
             }
 
-            interface AchievementResetMultipleForAllRequest {
+            export interface AchievementResetMultipleForAllRequest {
                 'achievement_ids': string[];
                 'kind': string;
             }
 
-            interface AchievementResetResponse {
+            export interface AchievementResetResponse {
                 'currentState': string;
                 'definitionId': string;
                 'kind': string;
                 'updateOccurred': boolean;
             }
 
-            interface EventsResetMultipleForAllRequest {
+            export interface EventsResetMultipleForAllRequest {
                 'event_ids': string[];
                 'kind': string;
             }
 
-            interface GamesPlayedResource {
+            export interface GamesPlayedResource {
                 'autoMatched': boolean;
                 'timeMillis': string;
             }
 
-            interface GamesPlayerExperienceInfoResource {
+            export interface GamesPlayerExperienceInfoResource {
                 'currentExperiencePoints': string;
                 'currentLevel': GamesPlayerLevelResource;
                 'lastLevelUpTimestampMillis': string;
                 'nextLevel': GamesPlayerLevelResource;
             }
 
-            interface GamesPlayerLevelResource {
+            export interface GamesPlayerLevelResource {
                 'level': number;
                 'maxExperiencePoints': string;
                 'minExperiencePoints': string;
             }
 
-            interface HiddenPlayer {
+            export interface HiddenPlayer {
                 'hiddenTimeMillis': string;
                 'kind': string;
                 'player': Player;
             }
 
-            interface HiddenPlayerList {
+            export interface HiddenPlayerList {
                 'items': HiddenPlayer[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Player {
+            export interface Player {
                 'avatarImageUrl': string;
                 'bannerUrlLandscape': string;
                 'bannerUrlPortrait': string;
@@ -125,23 +125,23 @@ declare module google {
                 'title': string;
             }
 
-            interface PlayerScoreResetAllResponse {
+            export interface PlayerScoreResetAllResponse {
                 'kind': string;
                 'results': PlayerScoreResetResponse[];
             }
 
-            interface PlayerScoreResetResponse {
+            export interface PlayerScoreResetResponse {
                 'definitionId': string;
                 'kind': string;
                 'resetScoreTimeSpans': string[];
             }
 
-            interface QuestsResetMultipleForAllRequest {
+            export interface QuestsResetMultipleForAllRequest {
                 'kind': string;
                 'quest_ids': string[];
             }
 
-            interface ScoresResetMultipleForAllRequest {
+            export interface ScoresResetMultipleForAllRequest {
                 'kind': string;
                 'leaderboard_ids': string[];
             }

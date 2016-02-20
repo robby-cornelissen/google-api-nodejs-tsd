@@ -90,23 +90,23 @@ declare module google {
 
             }
 
-            interface Account {
+            export interface Account {
                 'accountId': string;
                 'fingerprint': string;
                 'name': string;
                 'shareData': boolean;
             }
 
-            interface AccountAccess {
+            export interface AccountAccess {
                 'permission': string[];
             }
 
-            interface Condition {
+            export interface Condition {
                 'parameter': Parameter[];
                 'type': string;
             }
 
-            interface Container {
+            export interface Container {
                 'accountId': string;
                 'containerId': string;
                 'domainName': string[];
@@ -120,12 +120,12 @@ declare module google {
                 'usageContext': string[];
             }
 
-            interface ContainerAccess {
+            export interface ContainerAccess {
                 'containerId': string;
                 'permission': string[];
             }
 
-            interface ContainerVersion {
+            export interface ContainerVersion {
                 'accountId': string;
                 'container': Container;
                 'containerId': string;
@@ -142,7 +142,7 @@ declare module google {
                 'variable': Variable[];
             }
 
-            interface ContainerVersionHeader {
+            export interface ContainerVersionHeader {
                 'accountId': string;
                 'containerId': string;
                 'containerVersionId': string;
@@ -155,18 +155,18 @@ declare module google {
                 'numVariables': string;
             }
 
-            interface CreateContainerVersionRequestVersionOptions {
+            export interface CreateContainerVersionRequestVersionOptions {
                 'name': string;
                 'notes': string;
                 'quickPreview': boolean;
             }
 
-            interface CreateContainerVersionResponse {
+            export interface CreateContainerVersionResponse {
                 'compilerError': boolean;
                 'containerVersion': ContainerVersion;
             }
 
-            interface Environment {
+            export interface Environment {
                 'accountId': string;
                 'authorizationCode': string;
                 'authorizationTimestampMs': string;
@@ -181,7 +181,7 @@ declare module google {
                 'url': string;
             }
 
-            interface Folder {
+            export interface Folder {
                 'accountId': string;
                 'containerId': string;
                 'fingerprint': string;
@@ -189,50 +189,50 @@ declare module google {
                 'name': string;
             }
 
-            interface FolderEntities {
+            export interface FolderEntities {
                 'tag': Tag[];
                 'trigger': Trigger[];
                 'variable': Variable[];
             }
 
-            interface ListAccountUsersResponse {
+            export interface ListAccountUsersResponse {
                 'userAccess': UserAccess[];
             }
 
-            interface ListAccountsResponse {
+            export interface ListAccountsResponse {
                 'accounts': Account[];
             }
 
-            interface ListContainerVersionsResponse {
+            export interface ListContainerVersionsResponse {
                 'containerVersion': ContainerVersion[];
                 'containerVersionHeader': ContainerVersionHeader[];
             }
 
-            interface ListContainersResponse {
+            export interface ListContainersResponse {
                 'containers': Container[];
             }
 
-            interface ListEnvironmentsResponse {
+            export interface ListEnvironmentsResponse {
                 'environments': Environment[];
             }
 
-            interface ListFoldersResponse {
+            export interface ListFoldersResponse {
                 'folders': Folder[];
             }
 
-            interface ListTagsResponse {
+            export interface ListTagsResponse {
                 'tags': Tag[];
             }
 
-            interface ListTriggersResponse {
+            export interface ListTriggersResponse {
                 'triggers': Trigger[];
             }
 
-            interface ListVariablesResponse {
+            export interface ListVariablesResponse {
                 'variables': Variable[];
             }
 
-            interface Macro {
+            export interface Macro {
                 'accountId': string;
                 'containerId': string;
                 'disablingRuleId': string[];
@@ -248,7 +248,7 @@ declare module google {
                 'type': string;
             }
 
-            interface Parameter {
+            export interface Parameter {
                 'key': string;
                 'list': Parameter[];
                 'map': Parameter[];
@@ -256,12 +256,12 @@ declare module google {
                 'value': string;
             }
 
-            interface PublishContainerVersionResponse {
+            export interface PublishContainerVersionResponse {
                 'compilerError': boolean;
                 'containerVersion': ContainerVersion;
             }
 
-            interface Rule {
+            export interface Rule {
                 'accountId': string;
                 'condition': Condition[];
                 'containerId': string;
@@ -271,12 +271,12 @@ declare module google {
                 'ruleId': string;
             }
 
-            interface SetupTag {
+            export interface SetupTag {
                 'stopOnSetupFailure': boolean;
                 'tagName': string;
             }
 
-            interface Tag {
+            export interface Tag {
                 'accountId': string;
                 'blockingRuleId': string[];
                 'blockingTriggerId': string[];
@@ -299,12 +299,12 @@ declare module google {
                 'type': string;
             }
 
-            interface TeardownTag {
+            export interface TeardownTag {
                 'stopTeardownOnFailure': boolean;
                 'tagName': string;
             }
 
-            interface Trigger {
+            export interface Trigger {
                 'accountId': string;
                 'autoEventFilter': Condition[];
                 'checkValidation': Parameter;
@@ -326,7 +326,7 @@ declare module google {
                 'waitForTagsTimeout': Parameter;
             }
 
-            interface UserAccess {
+            export interface UserAccess {
                 'accountAccess': AccountAccess;
                 'accountId': string;
                 'containerAccess': ContainerAccess[];
@@ -334,7 +334,7 @@ declare module google {
                 'permissionId': string;
             }
 
-            interface Variable {
+            export interface Variable {
                 'accountId': string;
                 'containerId': string;
                 'disablingTriggerId': string[];

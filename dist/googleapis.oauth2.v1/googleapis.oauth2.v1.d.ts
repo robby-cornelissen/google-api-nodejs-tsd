@@ -29,7 +29,7 @@ declare module google {
 
             }
 
-            interface Jwk {
+            export interface Jwk {
                 'keys': {
                     'alg': string;
                     'e': string;
@@ -40,7 +40,7 @@ declare module google {
                 }[];
             }
 
-            interface Raw {
+            export interface Raw {
                 'keyvalues': {
                     'algorithm': string;
                     'exponent': string;
@@ -49,7 +49,7 @@ declare module google {
                 }[];
             }
 
-            interface Tokeninfo {
+            export interface Tokeninfo {
                 'access_type': string;
                 'audience': string;
                 'email': string;
@@ -64,7 +64,7 @@ declare module google {
                 'verified_email': boolean;
             }
 
-            interface Userinfoplus {
+            export interface Userinfoplus {
                 'email': string;
                 'family_name': string;
                 'gender': string;
@@ -78,7 +78,7 @@ declare module google {
                 'verified_email': boolean;
             }
 
-            interface X509 {
+            export interface X509 {
                 [name: string]: string
             }
 

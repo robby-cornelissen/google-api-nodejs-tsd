@@ -29,7 +29,7 @@ declare module google {
 
             }
 
-            interface Availability {
+            export interface Availability {
                 'advertiserId': string;
                 'agencyId': string;
                 'availabilityTimestamp': string;
@@ -38,7 +38,7 @@ declare module google {
                 'segmentationType': string;
             }
 
-            interface Conversion {
+            export interface Conversion {
                 'adGroupId': string;
                 'adId': string;
                 'advertiserId': string;
@@ -74,22 +74,22 @@ declare module google {
                 'type': string;
             }
 
-            interface ConversionList {
+            export interface ConversionList {
                 'conversion': Conversion[];
                 'kind': string;
             }
 
-            interface CustomDimension {
+            export interface CustomDimension {
                 'name': string;
                 'value': string;
             }
 
-            interface CustomMetric {
+            export interface CustomMetric {
                 'name': string;
                 'value': number;
             }
 
-            interface Report {
+            export interface Report {
                 'files': {
                     'byteCount': string;
                     'url': string;
@@ -104,7 +104,7 @@ declare module google {
                 'statisticsTimeZone': string;
             }
 
-            interface ReportApiColumnSpec {
+            export interface ReportApiColumnSpec {
                 'columnName': string;
                 'customDimensionName': string;
                 'customMetricName': string;
@@ -117,7 +117,7 @@ declare module google {
                 'startDate': string;
             }
 
-            interface ReportRequest {
+            export interface ReportRequest {
                 'columns': ReportApiColumnSpec[];
                 'downloadFormat': string;
                 'filters': {
@@ -154,26 +154,26 @@ declare module google {
                 'verifySingleTimeZone': boolean;
             }
 
-            interface ReportRow {
+            export interface ReportRow {
                 [name: string]: any
             }
 
-            interface SavedColumn {
+            export interface SavedColumn {
                 'kind': string;
                 'savedColumnName': string;
                 'type': string;
             }
 
-            interface SavedColumnList {
+            export interface SavedColumnList {
                 'items': SavedColumn[];
                 'kind': string;
             }
 
-            interface UpdateAvailabilityRequest {
+            export interface UpdateAvailabilityRequest {
                 'availabilities': Availability[];
             }
 
-            interface UpdateAvailabilityResponse {
+            export interface UpdateAvailabilityResponse {
                 'availabilities': Availability[];
             }
 

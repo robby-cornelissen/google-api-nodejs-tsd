@@ -25,7 +25,7 @@ declare module google {
 
             }
 
-            interface Endpoint {
+            export interface Endpoint {
                 'address': string;
                 'creationTimestamp': string;
                 'description': string;
@@ -38,17 +38,17 @@ declare module google {
                 'visibility': EndpointEndpointVisibility;
             }
 
-            interface EndpointEndpointVisibility {
+            export interface EndpointEndpointVisibility {
                 'networks': string[];
                 'projects': string[];
             }
 
-            interface EndpointsListResponse {
+            export interface EndpointsListResponse {
                 'endpoints': Endpoint[];
                 'nextPageToken': string;
             }
 
-            interface Operation {
+            export interface Operation {
                 'clientOperationId': string;
                 'creationTimestamp': string;
                 'description': string;
@@ -87,7 +87,7 @@ declare module google {
                 'zone': string;
             }
 
-            interface OperationsListResponse {
+            export interface OperationsListResponse {
                 'nextPageToken': string;
                 'operations': Operation[];
             }

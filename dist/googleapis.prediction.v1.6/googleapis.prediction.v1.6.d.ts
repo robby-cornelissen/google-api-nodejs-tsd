@@ -25,7 +25,7 @@ declare module google {
 
             }
 
-            interface Analyze {
+            export interface Analyze {
                 'dataDescription': {
                     'features': {
                         'categorical': {
@@ -76,13 +76,13 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface Input {
+            export interface Input {
                 'input': {
                     'csvInstance': any[];
                 };
             }
 
-            interface Insert {
+            export interface Insert {
                 'id': string;
                 'modelType': string;
                 'sourceModel': string;
@@ -98,7 +98,7 @@ declare module google {
                 }[];
             }
 
-            interface Insert2 {
+            export interface Insert2 {
                 'created': string;
                 'id': string;
                 'kind': string;
@@ -119,14 +119,14 @@ declare module google {
                 'trainingStatus': string;
             }
 
-            interface List {
+            export interface List {
                 'items': Insert2[];
                 'kind': string;
                 'nextPageToken': string;
                 'selfLink': string;
             }
 
-            interface Output {
+            export interface Output {
                 'id': string;
                 'kind': string;
                 'outputLabel': string;
@@ -134,11 +134,11 @@ declare module google {
                     'label': string;
                     'score': string;
                 }[];
-                'outputValue': string;
+                'outputValue': number;
                 'selfLink': string;
             }
 
-            interface Update {
+            export interface Update {
                 'csvInstance': any[];
                 'output': string;
             }

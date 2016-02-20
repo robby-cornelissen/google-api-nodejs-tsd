@@ -33,7 +33,7 @@ declare module google {
 
             }
 
-            interface BatchReport {
+            export interface BatchReport {
                 'id': string;
                 'kind': string;
                 'outputs': {
@@ -49,7 +49,7 @@ declare module google {
                 'timeUpdated': string;
             }
 
-            interface BatchReportDefinition {
+            export interface BatchReportDefinition {
                 'id': string;
                 'kind': string;
                 'name': string;
@@ -57,17 +57,17 @@ declare module google {
                 'type': string;
             }
 
-            interface BatchReportDefinitionList {
+            export interface BatchReportDefinitionList {
                 'items': BatchReportDefinition[];
                 'kind': string;
             }
 
-            interface BatchReportList {
+            export interface BatchReportList {
                 'items': BatchReport[];
                 'kind': string;
             }
 
-            interface Group {
+            export interface Group {
                 'contentDetails': {
                     'itemCount': string;
                     'itemType': string;
@@ -81,7 +81,7 @@ declare module google {
                 };
             }
 
-            interface GroupItem {
+            export interface GroupItem {
                 'etag': string;
                 'groupId': string;
                 'id': string;
@@ -92,20 +92,20 @@ declare module google {
                 };
             }
 
-            interface GroupItemListResponse {
+            export interface GroupItemListResponse {
                 'etag': string;
                 'items': GroupItem[];
                 'kind': string;
             }
 
-            interface GroupListResponse {
+            export interface GroupListResponse {
                 'etag': string;
                 'items': Group[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface ResultTable {
+            export interface ResultTable {
                 'columnHeaders': {
                     'columnType': string;
                     'dataType': string;

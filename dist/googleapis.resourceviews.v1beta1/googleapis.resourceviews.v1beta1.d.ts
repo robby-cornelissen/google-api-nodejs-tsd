@@ -31,34 +31,34 @@ declare module google {
 
             }
 
-            interface Label {
+            export interface Label {
                 'key': string;
                 'value': string;
             }
 
-            interface RegionViewsAddResourcesRequest {
+            export interface RegionViewsAddResourcesRequest {
                 'resources': string[];
             }
 
-            interface RegionViewsInsertResponse {
+            export interface RegionViewsInsertResponse {
                 'resource': ResourceView;
             }
 
-            interface RegionViewsListResourcesResponse {
+            export interface RegionViewsListResourcesResponse {
                 'members': string[];
                 'nextPageToken': string;
             }
 
-            interface RegionViewsListResponse {
+            export interface RegionViewsListResponse {
                 'nextPageToken': string;
                 'resourceViews': ResourceView[];
             }
 
-            interface RegionViewsRemoveResourcesRequest {
+            export interface RegionViewsRemoveResourcesRequest {
                 'resources': string[];
             }
 
-            interface ResourceView {
+            export interface ResourceView {
                 'creationTime': string;
                 'description': string;
                 'id': string;
@@ -71,25 +71,25 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface ZoneViewsAddResourcesRequest {
+            export interface ZoneViewsAddResourcesRequest {
                 'resources': string[];
             }
 
-            interface ZoneViewsInsertResponse {
+            export interface ZoneViewsInsertResponse {
                 'resource': ResourceView;
             }
 
-            interface ZoneViewsListResourcesResponse {
+            export interface ZoneViewsListResourcesResponse {
                 'members': string[];
                 'nextPageToken': string;
             }
 
-            interface ZoneViewsListResponse {
+            export interface ZoneViewsListResponse {
                 'nextPageToken': string;
                 'resourceViews': ResourceView[];
             }
 
-            interface ZoneViewsRemoveResourcesRequest {
+            export interface ZoneViewsRemoveResourcesRequest {
                 'resources': string[];
             }
 

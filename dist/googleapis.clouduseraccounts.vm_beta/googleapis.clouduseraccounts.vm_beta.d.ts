@@ -38,12 +38,12 @@ declare module google {
 
             }
 
-            interface AuthorizedKeysView {
+            export interface AuthorizedKeysView {
                 'keys': string[];
                 'sudoer': boolean;
             }
 
-            interface Group {
+            export interface Group {
                 'creationTimestamp': string;
                 'description': string;
                 'id': string;
@@ -53,7 +53,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface GroupList {
+            export interface GroupList {
                 'id': string;
                 'items': Group[];
                 'kind': string;
@@ -61,35 +61,35 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface GroupsAddMemberRequest {
+            export interface GroupsAddMemberRequest {
                 'users': string[];
             }
 
-            interface GroupsRemoveMemberRequest {
+            export interface GroupsRemoveMemberRequest {
                 'users': string[];
             }
 
-            interface LinuxAccountViews {
+            export interface LinuxAccountViews {
                 'groupViews': LinuxGroupView[];
                 'kind': string;
                 'userViews': LinuxUserView[];
             }
 
-            interface LinuxGetAuthorizedKeysViewResponse {
+            export interface LinuxGetAuthorizedKeysViewResponse {
                 'resource': AuthorizedKeysView;
             }
 
-            interface LinuxGetLinuxAccountViewsResponse {
+            export interface LinuxGetLinuxAccountViewsResponse {
                 'resource': LinuxAccountViews;
             }
 
-            interface LinuxGroupView {
+            export interface LinuxGroupView {
                 'gid': number;
                 'groupName': string;
                 'members': string[];
             }
 
-            interface LinuxUserView {
+            export interface LinuxUserView {
                 'gecos': string;
                 'gid': number;
                 'homeDirectory': string;
@@ -98,7 +98,7 @@ declare module google {
                 'username': string;
             }
 
-            interface Operation {
+            export interface Operation {
                 'clientOperationId': string;
                 'creationTimestamp': string;
                 'endTime': string;
@@ -136,7 +136,7 @@ declare module google {
                 'zone': string;
             }
 
-            interface OperationList {
+            export interface OperationList {
                 'id': string;
                 'items': Operation[];
                 'kind': string;
@@ -144,7 +144,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface PublicKey {
+            export interface PublicKey {
                 'creationTimestamp': string;
                 'description': string;
                 'expirationTimestamp': string;
@@ -152,7 +152,7 @@ declare module google {
                 'key': string;
             }
 
-            interface User {
+            export interface User {
                 'creationTimestamp': string;
                 'description': string;
                 'groups': string[];
@@ -164,7 +164,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface UserList {
+            export interface UserList {
                 'id': string;
                 'items': User[];
                 'kind': string;

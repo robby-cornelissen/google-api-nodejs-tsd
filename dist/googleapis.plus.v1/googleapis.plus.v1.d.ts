@@ -28,13 +28,13 @@ declare module google {
 
             }
 
-            interface Acl {
+            export interface Acl {
                 'description': string;
                 'items': PlusAclentryResource[];
                 'kind': string;
             }
 
-            interface Activity {
+            export interface Activity {
                 'access': Acl;
                 'actor': {
                     'clientSpecificActorInfo': {
@@ -145,7 +145,7 @@ declare module google {
                 'verb': string;
             }
 
-            interface ActivityFeed {
+            export interface ActivityFeed {
                 'etag': string;
                 'id': string;
                 'items': Activity[];
@@ -157,7 +157,7 @@ declare module google {
                 'updated': string;
             }
 
-            interface Comment {
+            export interface Comment {
                 'actor': {
                     'clientSpecificActorInfo': {
                         'youtubeActorInfo': {
@@ -195,7 +195,7 @@ declare module google {
                 'verb': string;
             }
 
-            interface CommentFeed {
+            export interface CommentFeed {
                 'etag': string;
                 'id': string;
                 'items': Comment[];
@@ -206,7 +206,7 @@ declare module google {
                 'updated': string;
             }
 
-            interface PeopleFeed {
+            export interface PeopleFeed {
                 'etag': string;
                 'items': Person[];
                 'kind': string;
@@ -216,7 +216,7 @@ declare module google {
                 'totalItems': number;
             }
 
-            interface Person {
+            export interface Person {
                 'aboutMe': string;
                 'ageRange': {
                     'max': number;
@@ -293,7 +293,7 @@ declare module google {
                 'verified': boolean;
             }
 
-            interface Place {
+            export interface Place {
                 'address': {
                     'formatted': string;
                 };
@@ -306,7 +306,7 @@ declare module google {
                 };
             }
 
-            interface PlusAclentryResource {
+            export interface PlusAclentryResource {
                 'displayName': string;
                 'id': string;
                 'type': string;

@@ -81,48 +81,48 @@ declare module google {
 
             }
 
-            interface ListDatasetsResponse {
+            export interface ListDatasetsResponse {
                 'datasets': Dataset[];
                 'nextPageToken': string;
             }
 
-            interface Dataset {
+            export interface Dataset {
                 'id': string;
                 'projectId': string;
                 'name': string;
                 'createTime': string;
             }
 
-            interface Empty {}
+            export interface Empty {}
 
-            interface UndeleteDatasetRequest {}
+            export interface UndeleteDatasetRequest {}
 
-            interface SetIamPolicyRequest {
+            export interface SetIamPolicyRequest {
                 'policy': Policy;
             }
 
-            interface Policy {
+            export interface Policy {
                 'version': number;
                 'bindings': Binding[];
                 'etag': string;
             }
 
-            interface Binding {
+            export interface Binding {
                 'role': string;
                 'members': string[];
             }
 
-            interface GetIamPolicyRequest {}
+            export interface GetIamPolicyRequest {}
 
-            interface TestIamPermissionsRequest {
+            export interface TestIamPermissionsRequest {
                 'permissions': string[];
             }
 
-            interface TestIamPermissionsResponse {
+            export interface TestIamPermissionsResponse {
                 'permissions': string[];
             }
 
-            interface Operation {
+            export interface Operation {
                 'name': string;
                 'metadata': {
                     [name: string]: any
@@ -134,7 +134,7 @@ declare module google {
                 };
             }
 
-            interface Status {
+            export interface Status {
                 'code': number;
                 'message': string;
                 'details': {
@@ -142,39 +142,39 @@ declare module google {
                 }[];
             }
 
-            interface ListOperationsResponse {
+            export interface ListOperationsResponse {
                 'operations': Operation[];
                 'nextPageToken': string;
             }
 
-            interface CancelOperationRequest {}
+            export interface CancelOperationRequest {}
 
-            interface ImportReadGroupSetsRequest {
+            export interface ImportReadGroupSetsRequest {
                 'datasetId': string;
                 'referenceSetId': string;
                 'sourceUris': string[];
                 'partitionStrategy': string;
             }
 
-            interface ExportReadGroupSetRequest {
+            export interface ExportReadGroupSetRequest {
                 'projectId': string;
                 'exportUri': string;
                 'referenceNames': string[];
             }
 
-            interface SearchReadGroupSetsRequest {
+            export interface SearchReadGroupSetsRequest {
                 'datasetIds': string[];
                 'name': string;
                 'pageToken': string;
                 'pageSize': number;
             }
 
-            interface SearchReadGroupSetsResponse {
+            export interface SearchReadGroupSetsResponse {
                 'readGroupSets': ReadGroupSet[];
                 'nextPageToken': string;
             }
 
-            interface ReadGroupSet {
+            export interface ReadGroupSet {
                 'id': string;
                 'datasetId': string;
                 'referenceSetId': string;
@@ -186,7 +186,7 @@ declare module google {
                 };
             }
 
-            interface ReadGroup {
+            export interface ReadGroup {
                 'id': string;
                 'datasetId': string;
                 'name': string;
@@ -201,14 +201,14 @@ declare module google {
                 };
             }
 
-            interface Experiment {
+            export interface Experiment {
                 'libraryId': string;
                 'platformUnit': string;
                 'sequencingCenter': string;
                 'instrumentModel': string;
             }
 
-            interface Program {
+            export interface Program {
                 'commandLine': string;
                 'id': string;
                 'name': string;
@@ -216,24 +216,24 @@ declare module google {
                 'version': string;
             }
 
-            interface ListCoverageBucketsResponse {
+            export interface ListCoverageBucketsResponse {
                 'bucketWidth': string;
                 'coverageBuckets': CoverageBucket[];
                 'nextPageToken': string;
             }
 
-            interface CoverageBucket {
+            export interface CoverageBucket {
                 'range': Range;
                 'meanCoverage': number;
             }
 
-            interface Range {
+            export interface Range {
                 'referenceName': string;
                 'start': string;
                 'end': string;
             }
 
-            interface SearchReadsRequest {
+            export interface SearchReadsRequest {
                 'readGroupSetIds': string[];
                 'readGroupIds': string[];
                 'referenceName': string;
@@ -243,12 +243,12 @@ declare module google {
                 'pageSize': number;
             }
 
-            interface SearchReadsResponse {
+            export interface SearchReadsResponse {
                 'alignments': Read[];
                 'nextPageToken': string;
             }
 
-            interface Read {
+            export interface Read {
                 'id': string;
                 'readGroupId': string;
                 'readGroupSetId': string;
@@ -270,25 +270,25 @@ declare module google {
                 };
             }
 
-            interface LinearAlignment {
+            export interface LinearAlignment {
                 'position': Position;
                 'mappingQuality': number;
                 'cigar': CigarUnit[];
             }
 
-            interface Position {
+            export interface Position {
                 'referenceName': string;
                 'position': string;
                 'reverseStrand': boolean;
             }
 
-            interface CigarUnit {
+            export interface CigarUnit {
                 'operation': string;
                 'operationLength': string;
                 'referenceSequence': string;
             }
 
-            interface StreamReadsRequest {
+            export interface StreamReadsRequest {
                 'projectId': string;
                 'readGroupSetId': string;
                 'referenceName': string;
@@ -296,11 +296,11 @@ declare module google {
                 'end': string;
             }
 
-            interface StreamReadsResponse {
+            export interface StreamReadsResponse {
                 'alignments': Read[];
             }
 
-            interface SearchReferenceSetsRequest {
+            export interface SearchReferenceSetsRequest {
                 'md5checksums': string[];
                 'accessions': string[];
                 'assemblyId': string;
@@ -308,12 +308,12 @@ declare module google {
                 'pageSize': number;
             }
 
-            interface SearchReferenceSetsResponse {
+            export interface SearchReferenceSetsResponse {
                 'referenceSets': ReferenceSet[];
                 'nextPageToken': string;
             }
 
-            interface ReferenceSet {
+            export interface ReferenceSet {
                 'id': string;
                 'referenceIds': string[];
                 'md5checksum': string;
@@ -324,7 +324,7 @@ declare module google {
                 'sourceAccessions': string[];
             }
 
-            interface SearchReferencesRequest {
+            export interface SearchReferencesRequest {
                 'md5checksums': string[];
                 'accessions': string[];
                 'referenceSetId': string;
@@ -332,12 +332,12 @@ declare module google {
                 'pageSize': number;
             }
 
-            interface SearchReferencesResponse {
+            export interface SearchReferencesResponse {
                 'references': Reference[];
                 'nextPageToken': string;
             }
 
-            interface Reference {
+            export interface Reference {
                 'id': string;
                 'length': string;
                 'md5checksum': string;
@@ -347,20 +347,20 @@ declare module google {
                 'ncbiTaxonId': number;
             }
 
-            interface ListBasesResponse {
+            export interface ListBasesResponse {
                 'offset': string;
                 'sequence': string;
                 'nextPageToken': string;
             }
 
-            interface ImportVariantsRequest {
+            export interface ImportVariantsRequest {
                 'variantSetId': string;
                 'sourceUris': string[];
                 'format': string;
                 'normalizeReferenceNames': boolean;
             }
 
-            interface VariantSet {
+            export interface VariantSet {
                 'datasetId': string;
                 'id': string;
                 'referenceSetId': string;
@@ -368,12 +368,12 @@ declare module google {
                 'metadata': VariantSetMetadata[];
             }
 
-            interface ReferenceBound {
+            export interface ReferenceBound {
                 'referenceName': string;
                 'upperBound': string;
             }
 
-            interface VariantSetMetadata {
+            export interface VariantSetMetadata {
                 'key': string;
                 'value': string;
                 'id': string;
@@ -385,7 +385,7 @@ declare module google {
                 };
             }
 
-            interface ExportVariantSetRequest {
+            export interface ExportVariantSetRequest {
                 'callSetIds': string[];
                 'projectId': string;
                 'format': string;
@@ -393,18 +393,18 @@ declare module google {
                 'bigqueryTable': string;
             }
 
-            interface SearchVariantSetsRequest {
+            export interface SearchVariantSetsRequest {
                 'datasetIds': string[];
                 'pageToken': string;
                 'pageSize': number;
             }
 
-            interface SearchVariantSetsResponse {
+            export interface SearchVariantSetsResponse {
                 'variantSets': VariantSet[];
                 'nextPageToken': string;
             }
 
-            interface SearchVariantsRequest {
+            export interface SearchVariantsRequest {
                 'variantSetIds': string[];
                 'variantName': string;
                 'callSetIds': string[];
@@ -416,12 +416,12 @@ declare module google {
                 'maxCalls': number;
             }
 
-            interface SearchVariantsResponse {
+            export interface SearchVariantsResponse {
                 'variants': Variant[];
                 'nextPageToken': string;
             }
 
-            interface Variant {
+            export interface Variant {
                 'variantSetId': string;
                 'id': string;
                 'names': string[];
@@ -439,7 +439,7 @@ declare module google {
                 'calls': VariantCall[];
             }
 
-            interface VariantCall {
+            export interface VariantCall {
                 'callSetId': string;
                 'callSetName': string;
                 'genotype': number[];
@@ -450,19 +450,19 @@ declare module google {
                 };
             }
 
-            interface SearchCallSetsRequest {
+            export interface SearchCallSetsRequest {
                 'variantSetIds': string[];
                 'name': string;
                 'pageToken': string;
                 'pageSize': number;
             }
 
-            interface SearchCallSetsResponse {
+            export interface SearchCallSetsResponse {
                 'callSets': CallSet[];
                 'nextPageToken': string;
             }
 
-            interface CallSet {
+            export interface CallSet {
                 'id': string;
                 'name': string;
                 'sampleId': string;
@@ -473,7 +473,7 @@ declare module google {
                 };
             }
 
-            interface StreamVariantsRequest {
+            export interface StreamVariantsRequest {
                 'projectId': string;
                 'variantSetId': string;
                 'callSetIds': string[];
@@ -482,19 +482,19 @@ declare module google {
                 'end': string;
             }
 
-            interface StreamVariantsResponse {
+            export interface StreamVariantsResponse {
                 'variants': Variant[];
             }
 
-            interface ImportReadGroupSetsResponse {
+            export interface ImportReadGroupSetsResponse {
                 'readGroupSetIds': string[];
             }
 
-            interface ImportVariantsResponse {
+            export interface ImportVariantsResponse {
                 'callSetIds': string[];
             }
 
-            interface OperationMetadata {
+            export interface OperationMetadata {
                 'projectId': string;
                 'createTime': string;
                 'request': {
@@ -503,7 +503,7 @@ declare module google {
                 'events': OperationEvent[];
             }
 
-            interface OperationEvent {
+            export interface OperationEvent {
                 'description': string;
             }
 

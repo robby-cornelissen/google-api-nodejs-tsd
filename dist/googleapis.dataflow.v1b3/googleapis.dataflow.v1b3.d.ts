@@ -32,7 +32,7 @@ declare module google {
 
             }
 
-            interface Job {
+            export interface Job {
                 'id': string;
                 'projectId': string;
                 'name': string;
@@ -53,7 +53,7 @@ declare module google {
                 'tempFiles': string[];
             }
 
-            interface Environment {
+            export interface Environment {
                 'tempStoragePrefix': string;
                 'clusterManagerApiService': string;
                 'experiments': string[];
@@ -73,7 +73,7 @@ declare module google {
                 };
             }
 
-            interface WorkerPool {
+            export interface WorkerPool {
                 'kind': string;
                 'numWorkers': number;
                 'packages': Package[];
@@ -98,12 +98,12 @@ declare module google {
                 'workerHarnessContainerImage': string;
             }
 
-            interface Package {
+            export interface Package {
                 'name': string;
                 'location': string;
             }
 
-            interface TaskRunnerSettings {
+            export interface TaskRunnerSettings {
                 'taskUser': string;
                 'taskGroup': string;
                 'oauthScopes': string[];
@@ -125,7 +125,7 @@ declare module google {
                 'streamingWorkerMainClass': string;
             }
 
-            interface WorkerSettings {
+            export interface WorkerSettings {
                 'baseUrl': string;
                 'reportingEnabled': boolean;
                 'servicePath': string;
@@ -134,18 +134,18 @@ declare module google {
                 'tempStoragePrefix': string;
             }
 
-            interface Disk {
+            export interface Disk {
                 'sizeGb': number;
                 'diskType': string;
                 'mountPoint': string;
             }
 
-            interface AutoscalingSettings {
+            export interface AutoscalingSettings {
                 'algorithm': string;
                 'maxNumWorkers': number;
             }
 
-            interface Step {
+            export interface Step {
                 'kind': string;
                 'name': string;
                 'properties': {
@@ -153,39 +153,39 @@ declare module google {
                 };
             }
 
-            interface JobExecutionInfo {
+            export interface JobExecutionInfo {
                 'stages': {
                     [name: string]: JobExecutionStageInfo
                 };
             }
 
-            interface JobExecutionStageInfo {
+            export interface JobExecutionStageInfo {
                 'stepName': string[];
             }
 
-            interface ListJobsResponse {
+            export interface ListJobsResponse {
                 'jobs': Job[];
                 'nextPageToken': string;
             }
 
-            interface ListJobMessagesResponse {
+            export interface ListJobMessagesResponse {
                 'jobMessages': JobMessage[];
                 'nextPageToken': string;
             }
 
-            interface JobMessage {
+            export interface JobMessage {
                 'id': string;
                 'time': string;
                 'messageText': string;
                 'messageImportance': string;
             }
 
-            interface JobMetrics {
+            export interface JobMetrics {
                 'metricTime': string;
                 'metrics': MetricUpdate[];
             }
 
-            interface MetricUpdate {
+            export interface MetricUpdate {
                 'name': MetricStructuredName;
                 'kind': string;
                 'cumulative': boolean;
@@ -197,7 +197,7 @@ declare module google {
                 'updateTime': string;
             }
 
-            interface MetricStructuredName {
+            export interface MetricStructuredName {
                 'origin': string;
                 'name': string;
                 'context': {
@@ -205,13 +205,13 @@ declare module google {
                 };
             }
 
-            interface ReportWorkItemStatusRequest {
+            export interface ReportWorkItemStatusRequest {
                 'workerId': string;
                 'workItemStatuses': WorkItemStatus[];
                 'currentWorkerTime': string;
             }
 
-            interface WorkItemStatus {
+            export interface WorkItemStatus {
                 'workItemId': string;
                 'reportIndex': string;
                 'requestedLeaseDuration': string;
@@ -226,7 +226,7 @@ declare module google {
                 'progress': ApproximateProgress;
             }
 
-            interface Status {
+            export interface Status {
                 'code': number;
                 'message': string;
                 'details': {
@@ -234,14 +234,14 @@ declare module google {
                 }[];
             }
 
-            interface ApproximateReportedProgress {
+            export interface ApproximateReportedProgress {
                 'position': Position;
                 'fractionConsumed': number;
                 'remainingParallelism': ReportedParallelism;
                 'consumedParallelism': ReportedParallelism;
             }
 
-            interface Position {
+            export interface Position {
                 'end': boolean;
                 'key': string;
                 'byteOffset': string;
@@ -250,27 +250,27 @@ declare module google {
                 'concatPosition': ConcatPosition;
             }
 
-            interface ConcatPosition {
+            export interface ConcatPosition {
                 'index': number;
                 'position': Position;
             }
 
-            interface ReportedParallelism {
+            export interface ReportedParallelism {
                 'isInfinite': boolean;
                 'value': number;
             }
 
-            interface DynamicSourceSplit {
+            export interface DynamicSourceSplit {
                 'primary': DerivedSource;
                 'residual': DerivedSource;
             }
 
-            interface DerivedSource {
+            export interface DerivedSource {
                 'source': Source;
                 'derivationMode': string;
             }
 
-            interface Source {
+            export interface Source {
                 'spec': {
                     [name: string]: any
                 };
@@ -284,50 +284,50 @@ declare module google {
                 'doesNotNeedSplitting': boolean;
             }
 
-            interface SourceMetadata {
+            export interface SourceMetadata {
                 'producesSortedKeys': boolean;
                 'infinite': boolean;
                 'estimatedSizeBytes': string;
             }
 
-            interface SourceOperationResponse {
+            export interface SourceOperationResponse {
                 'split': SourceSplitResponse;
                 'getMetadata': SourceGetMetadataResponse;
             }
 
-            interface SourceSplitResponse {
+            export interface SourceSplitResponse {
                 'outcome': string;
                 'bundles': DerivedSource[];
                 'shards': SourceSplitShard[];
             }
 
-            interface SourceSplitShard {
+            export interface SourceSplitShard {
                 'source': Source;
                 'derivationMode': string;
             }
 
-            interface SourceGetMetadataResponse {
+            export interface SourceGetMetadataResponse {
                 'metadata': SourceMetadata;
             }
 
-            interface SourceFork {
+            export interface SourceFork {
                 'primary': SourceSplitShard;
                 'residual': SourceSplitShard;
                 'primarySource': DerivedSource;
                 'residualSource': DerivedSource;
             }
 
-            interface ApproximateProgress {
+            export interface ApproximateProgress {
                 'position': Position;
                 'percentComplete': number;
                 'remainingTime': string;
             }
 
-            interface ReportWorkItemStatusResponse {
+            export interface ReportWorkItemStatusResponse {
                 'workItemServiceStates': WorkItemServiceState[];
             }
 
-            interface WorkItemServiceState {
+            export interface WorkItemServiceState {
                 'splitRequest': ApproximateSplitRequest;
                 'leaseExpireTime': string;
                 'reportStatusInterval': string;
@@ -339,12 +339,12 @@ declare module google {
                 'suggestedStopPoint': ApproximateProgress;
             }
 
-            interface ApproximateSplitRequest {
+            export interface ApproximateSplitRequest {
                 'position': Position;
                 'fractionConsumed': number;
             }
 
-            interface LeaseWorkItemRequest {
+            export interface LeaseWorkItemRequest {
                 'workItemTypes': string[];
                 'workerCapabilities': string[];
                 'requestedLeaseDuration': string;
@@ -352,11 +352,11 @@ declare module google {
                 'workerId': string;
             }
 
-            interface LeaseWorkItemResponse {
+            export interface LeaseWorkItemResponse {
                 'workItems': WorkItem[];
             }
 
-            interface WorkItem {
+            export interface WorkItem {
                 'id': string;
                 'projectId': string;
                 'jobId': string;
@@ -373,13 +373,13 @@ declare module google {
                 'initialReportIndex': string;
             }
 
-            interface MapTask {
+            export interface MapTask {
                 'instructions': ParallelInstruction[];
                 'systemName': string;
                 'stageName': string;
             }
 
-            interface ParallelInstruction {
+            export interface ParallelInstruction {
                 'systemName': string;
                 'name': string;
                 'read': ReadInstruction;
@@ -390,21 +390,21 @@ declare module google {
                 'outputs': InstructionOutput[];
             }
 
-            interface ReadInstruction {
+            export interface ReadInstruction {
                 'source': Source;
             }
 
-            interface WriteInstruction {
+            export interface WriteInstruction {
                 'input': InstructionInput;
                 'sink': Sink;
             }
 
-            interface InstructionInput {
+            export interface InstructionInput {
                 'producerInstructionIndex': number;
                 'outputNum': number;
             }
 
-            interface Sink {
+            export interface Sink {
                 'spec': {
                     [name: string]: any
                 };
@@ -413,7 +413,7 @@ declare module google {
                 };
             }
 
-            interface ParDoInstruction {
+            export interface ParDoInstruction {
                 'input': InstructionInput;
                 'sideInputs': SideInputInfo[];
                 'userFn': {
@@ -423,7 +423,7 @@ declare module google {
                 'multiOutputInfos': MultiOutputInfo[];
             }
 
-            interface SideInputInfo {
+            export interface SideInputInfo {
                 'sources': Source[];
                 'kind': {
                     [name: string]: any
@@ -431,11 +431,11 @@ declare module google {
                 'tag': string;
             }
 
-            interface MultiOutputInfo {
+            export interface MultiOutputInfo {
                 'tag': string;
             }
 
-            interface PartialGroupByKeyInstruction {
+            export interface PartialGroupByKeyInstruction {
                 'input': InstructionInput;
                 'inputElementCodec': {
                     [name: string]: any
@@ -446,11 +446,11 @@ declare module google {
                 'sideInputs': SideInputInfo[];
             }
 
-            interface FlattenInstruction {
+            export interface FlattenInstruction {
                 'inputs': InstructionInput[];
             }
 
-            interface InstructionOutput {
+            export interface InstructionOutput {
                 'name': string;
                 'systemName': string;
                 'codec': {
@@ -458,7 +458,7 @@ declare module google {
                 };
             }
 
-            interface SeqMapTask {
+            export interface SeqMapTask {
                 'inputs': SideInputInfo[];
                 'userFn': {
                     [name: string]: any
@@ -469,24 +469,24 @@ declare module google {
                 'stageName': string;
             }
 
-            interface SeqMapTaskOutputInfo {
+            export interface SeqMapTaskOutputInfo {
                 'tag': string;
                 'sink': Sink;
             }
 
-            interface ShellTask {
+            export interface ShellTask {
                 'command': string;
                 'exitCode': number;
             }
 
-            interface StreamingSetupTask {
+            export interface StreamingSetupTask {
                 'receiveWorkPort': number;
                 'workerHarnessPort': number;
                 'streamingComputationTopology': TopologyConfig;
                 'drain': boolean;
             }
 
-            interface TopologyConfig {
+            export interface TopologyConfig {
                 'computations': ComputationTopology[];
                 'dataDiskAssignments': DataDiskAssignment[];
                 'userStageToComputationNameMap': {
@@ -495,7 +495,7 @@ declare module google {
                 'forwardingKeyBits': number;
             }
 
-            interface ComputationTopology {
+            export interface ComputationTopology {
                 'systemStageName': string;
                 'computationId': string;
                 'userStageName': string;
@@ -505,7 +505,7 @@ declare module google {
                 'stateFamilies': StateFamilyConfig[];
             }
 
-            interface KeyRangeLocation {
+            export interface KeyRangeLocation {
                 'start': string;
                 'end': string;
                 'deliveryEndpoint': string;
@@ -513,18 +513,18 @@ declare module google {
                 'dataDisk': string;
             }
 
-            interface StreamLocation {
+            export interface StreamLocation {
                 'streamingStageLocation': StreamingStageLocation;
                 'pubsubLocation': PubsubLocation;
                 'sideInputLocation': StreamingSideInputLocation;
                 'customSourceLocation': CustomSourceLocation;
             }
 
-            interface StreamingStageLocation {
+            export interface StreamingStageLocation {
                 'streamId': string;
             }
 
-            interface PubsubLocation {
+            export interface PubsubLocation {
                 'topic': string;
                 'subscription': string;
                 'timestampLabel': string;
@@ -533,70 +533,70 @@ declare module google {
                 'trackingSubscription': string;
             }
 
-            interface StreamingSideInputLocation {
+            export interface StreamingSideInputLocation {
                 'tag': string;
                 'stateFamily': string;
             }
 
-            interface CustomSourceLocation {
+            export interface CustomSourceLocation {
                 'stateful': boolean;
             }
 
-            interface StateFamilyConfig {
+            export interface StateFamilyConfig {
                 'stateFamily': string;
                 'isRead': boolean;
             }
 
-            interface DataDiskAssignment {
+            export interface DataDiskAssignment {
                 'vmInstance': string;
                 'dataDisks': string[];
             }
 
-            interface SourceOperationRequest {
+            export interface SourceOperationRequest {
                 'split': SourceSplitRequest;
                 'getMetadata': SourceGetMetadataRequest;
             }
 
-            interface SourceSplitRequest {
+            export interface SourceSplitRequest {
                 'source': Source;
                 'options': SourceSplitOptions;
             }
 
-            interface SourceSplitOptions {
+            export interface SourceSplitOptions {
                 'desiredBundleSizeBytes': string;
                 'desiredShardSizeBytes': string;
             }
 
-            interface SourceGetMetadataRequest {
+            export interface SourceGetMetadataRequest {
                 'source': Source;
             }
 
-            interface StreamingComputationTask {
+            export interface StreamingComputationTask {
                 'taskType': string;
                 'dataDisks': MountedDataDisk[];
                 'computationRanges': StreamingComputationRanges[];
             }
 
-            interface MountedDataDisk {
+            export interface MountedDataDisk {
                 'dataDisk': string;
             }
 
-            interface StreamingComputationRanges {
+            export interface StreamingComputationRanges {
                 'computationId': string;
                 'rangeAssignments': KeyRangeDataDiskAssignment[];
             }
 
-            interface KeyRangeDataDiskAssignment {
+            export interface KeyRangeDataDiskAssignment {
                 'start': string;
                 'end': string;
                 'dataDisk': string;
             }
 
-            interface SendWorkerMessagesRequest {
+            export interface SendWorkerMessagesRequest {
                 'workerMessages': WorkerMessage[];
             }
 
-            interface WorkerMessage {
+            export interface WorkerMessage {
                 'labels': {
                     [name: string]: string
                 };
@@ -605,7 +605,7 @@ declare module google {
                 'workerMessageCode': WorkerMessageCode;
             }
 
-            interface WorkerHealthReport {
+            export interface WorkerHealthReport {
                 'vmIsHealthy': boolean;
                 'vmStartupTime': string;
                 'reportInterval': string;
@@ -614,22 +614,22 @@ declare module google {
                 }[];
             }
 
-            interface WorkerMessageCode {
+            export interface WorkerMessageCode {
                 'code': string;
                 'parameters': {
                     [name: string]: any
                 };
             }
 
-            interface SendWorkerMessagesResponse {
+            export interface SendWorkerMessagesResponse {
                 'workerMessageResponses': WorkerMessageResponse[];
             }
 
-            interface WorkerMessageResponse {
+            export interface WorkerMessageResponse {
                 'workerHealthReportResponse': WorkerHealthReportResponse;
             }
 
-            interface WorkerHealthReportResponse {
+            export interface WorkerHealthReportResponse {
                 'reportInterval': string;
             }
 

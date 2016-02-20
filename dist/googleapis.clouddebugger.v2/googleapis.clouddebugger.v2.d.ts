@@ -35,11 +35,11 @@ declare module google {
 
             }
 
-            interface RegisterDebuggeeRequest {
+            export interface RegisterDebuggeeRequest {
                 'debuggee': Debuggee;
             }
 
-            interface Debuggee {
+            export interface Debuggee {
                 'id': string;
                 'project': string;
                 'uniquifier': string;
@@ -55,57 +55,57 @@ declare module google {
                 };
             }
 
-            interface StatusMessage {
+            export interface StatusMessage {
                 'isError': boolean;
                 'refersTo': string;
                 'description': FormatMessage;
             }
 
-            interface FormatMessage {
+            export interface FormatMessage {
                 'format': string;
                 'parameters': string[];
             }
 
-            interface SourceContext {
+            export interface SourceContext {
                 'cloudRepo': CloudRepoSourceContext;
                 'cloudWorkspace': CloudWorkspaceSourceContext;
                 'gerrit': GerritSourceContext;
                 'git': GitSourceContext;
             }
 
-            interface CloudRepoSourceContext {
+            export interface CloudRepoSourceContext {
                 'repoId': RepoId;
                 'revisionId': string;
                 'aliasName': string;
                 'aliasContext': AliasContext;
             }
 
-            interface RepoId {
+            export interface RepoId {
                 'projectRepoId': ProjectRepoId;
                 'uid': string;
             }
 
-            interface ProjectRepoId {
+            export interface ProjectRepoId {
                 'projectId': string;
                 'repoName': string;
             }
 
-            interface AliasContext {
+            export interface AliasContext {
                 'kind': string;
                 'name': string;
             }
 
-            interface CloudWorkspaceSourceContext {
+            export interface CloudWorkspaceSourceContext {
                 'workspaceId': CloudWorkspaceId;
                 'snapshotId': string;
             }
 
-            interface CloudWorkspaceId {
+            export interface CloudWorkspaceId {
                 'repoId': RepoId;
                 'name': string;
             }
 
-            interface GerritSourceContext {
+            export interface GerritSourceContext {
                 'hostUri': string;
                 'gerritProject': string;
                 'revisionId': string;
@@ -113,29 +113,29 @@ declare module google {
                 'aliasContext': AliasContext;
             }
 
-            interface GitSourceContext {
+            export interface GitSourceContext {
                 'url': string;
                 'revisionId': string;
             }
 
-            interface ExtendedSourceContext {
+            export interface ExtendedSourceContext {
                 'context': SourceContext;
                 'labels': {
                     [name: string]: string
                 };
             }
 
-            interface RegisterDebuggeeResponse {
+            export interface RegisterDebuggeeResponse {
                 'debuggee': Debuggee;
             }
 
-            interface ListActiveBreakpointsResponse {
+            export interface ListActiveBreakpointsResponse {
                 'breakpoints': Breakpoint[];
                 'nextWaitToken': string;
                 'waitExpired': boolean;
             }
 
-            interface Breakpoint {
+            export interface Breakpoint {
                 'id': string;
                 'action': string;
                 'location': SourceLocation;
@@ -153,19 +153,19 @@ declare module google {
                 'variableTable': Variable[];
             }
 
-            interface SourceLocation {
+            export interface SourceLocation {
                 'path': string;
                 'line': number;
             }
 
-            interface StackFrame {
+            export interface StackFrame {
                 'function': string;
                 'location': SourceLocation;
                 'arguments': Variable[];
                 'locals': Variable[];
             }
 
-            interface Variable {
+            export interface Variable {
                 'name': string;
                 'value': string;
                 'type': string;
@@ -174,28 +174,28 @@ declare module google {
                 'status': StatusMessage;
             }
 
-            interface UpdateActiveBreakpointRequest {
+            export interface UpdateActiveBreakpointRequest {
                 'breakpoint': Breakpoint;
             }
 
-            interface UpdateActiveBreakpointResponse {}
+            export interface UpdateActiveBreakpointResponse {}
 
-            interface SetBreakpointResponse {
+            export interface SetBreakpointResponse {
                 'breakpoint': Breakpoint;
             }
 
-            interface GetBreakpointResponse {
+            export interface GetBreakpointResponse {
                 'breakpoint': Breakpoint;
             }
 
-            interface Empty {}
+            export interface Empty {}
 
-            interface ListBreakpointsResponse {
+            export interface ListBreakpointsResponse {
                 'breakpoints': Breakpoint[];
                 'nextWaitToken': string;
             }
 
-            interface ListDebuggeesResponse {
+            export interface ListDebuggeesResponse {
                 'debuggees': Debuggee[];
             }
 

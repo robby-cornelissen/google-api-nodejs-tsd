@@ -36,7 +36,7 @@ declare module google {
 
             }
 
-            interface ApiDataRow {
+            export interface ApiDataRow {
                 'clicks': number;
                 'ctr': number;
                 'impressions': number;
@@ -44,18 +44,18 @@ declare module google {
                 'position': number;
             }
 
-            interface ApiDimensionFilter {
+            export interface ApiDimensionFilter {
                 'dimension': string;
                 'expression': string;
                 'operator': string;
             }
 
-            interface ApiDimensionFilterGroup {
+            export interface ApiDimensionFilterGroup {
                 'filters': ApiDimensionFilter[];
                 'groupType': string;
             }
 
-            interface SearchAnalyticsQueryRequest {
+            export interface SearchAnalyticsQueryRequest {
                 'aggregationType': string;
                 'dimensionFilterGroups': ApiDimensionFilterGroup[];
                 'dimensions': string[];
@@ -65,35 +65,35 @@ declare module google {
                 'startDate': string;
             }
 
-            interface SearchAnalyticsQueryResponse {
+            export interface SearchAnalyticsQueryResponse {
                 'responseAggregationType': string;
                 'rows': ApiDataRow[];
             }
 
-            interface SitemapsListResponse {
+            export interface SitemapsListResponse {
                 'sitemap': WmxSitemap[];
             }
 
-            interface SitesListResponse {
+            export interface SitesListResponse {
                 'siteEntry': WmxSite[];
             }
 
-            interface UrlCrawlErrorCount {
+            export interface UrlCrawlErrorCount {
                 'count': string;
                 'timestamp': string;
             }
 
-            interface UrlCrawlErrorCountsPerType {
+            export interface UrlCrawlErrorCountsPerType {
                 'category': string;
                 'entries': UrlCrawlErrorCount[];
                 'platform': string;
             }
 
-            interface UrlCrawlErrorsCountsQueryResponse {
+            export interface UrlCrawlErrorsCountsQueryResponse {
                 'countPerTypes': UrlCrawlErrorCountsPerType[];
             }
 
-            interface UrlCrawlErrorsSample {
+            export interface UrlCrawlErrorsSample {
                 'first_detected': string;
                 'last_crawled': string;
                 'pageUrl': string;
@@ -101,21 +101,21 @@ declare module google {
                 'urlDetails': UrlSampleDetails;
             }
 
-            interface UrlCrawlErrorsSamplesListResponse {
+            export interface UrlCrawlErrorsSamplesListResponse {
                 'urlCrawlErrorSample': UrlCrawlErrorsSample[];
             }
 
-            interface UrlSampleDetails {
+            export interface UrlSampleDetails {
                 'containingSitemaps': string[];
                 'linkedFromUrls': string[];
             }
 
-            interface WmxSite {
+            export interface WmxSite {
                 'permissionLevel': string;
                 'siteUrl': string;
             }
 
-            interface WmxSitemap {
+            export interface WmxSitemap {
                 'contents': WmxSitemapContent[];
                 'errors': string;
                 'isPending': boolean;
@@ -127,7 +127,7 @@ declare module google {
                 'warnings': string;
             }
 
-            interface WmxSitemapContent {
+            export interface WmxSitemapContent {
                 'indexed': string;
                 'submitted': string;
                 'type': string;

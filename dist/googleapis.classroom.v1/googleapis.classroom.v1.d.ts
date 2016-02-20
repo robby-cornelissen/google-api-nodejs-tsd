@@ -49,7 +49,7 @@ declare module google {
 
             }
 
-            interface Course {
+            export interface Course {
                 'id': string;
                 'name': string;
                 'section': string;
@@ -64,35 +64,35 @@ declare module google {
                 'alternateLink': string;
             }
 
-            interface Empty {}
+            export interface Empty {}
 
-            interface ListCoursesResponse {
+            export interface ListCoursesResponse {
                 'courses': Course[];
                 'nextPageToken': string;
             }
 
-            interface CourseAlias {
+            export interface CourseAlias {
                 'alias': string;
             }
 
-            interface ListCourseAliasesResponse {
+            export interface ListCourseAliasesResponse {
                 'aliases': CourseAlias[];
                 'nextPageToken': string;
             }
 
-            interface Invitation {
+            export interface Invitation {
                 'id': string;
                 'userId': string;
                 'courseId': string;
                 'role': string;
             }
 
-            interface ListInvitationsResponse {
+            export interface ListInvitationsResponse {
                 'invitations': Invitation[];
                 'nextPageToken': string;
             }
 
-            interface UserProfile {
+            export interface UserProfile {
                 'id': string;
                 'name': Name;
                 'emailAddress': string;
@@ -100,34 +100,34 @@ declare module google {
                 'permissions': GlobalPermission[];
             }
 
-            interface Name {
+            export interface Name {
                 'givenName': string;
                 'familyName': string;
                 'fullName': string;
             }
 
-            interface GlobalPermission {
+            export interface GlobalPermission {
                 'permission': string;
             }
 
-            interface Teacher {
+            export interface Teacher {
                 'courseId': string;
                 'userId': string;
                 'profile': UserProfile;
             }
 
-            interface ListTeachersResponse {
+            export interface ListTeachersResponse {
                 'teachers': Teacher[];
                 'nextPageToken': string;
             }
 
-            interface Student {
+            export interface Student {
                 'courseId': string;
                 'userId': string;
                 'profile': UserProfile;
             }
 
-            interface ListStudentsResponse {
+            export interface ListStudentsResponse {
                 'students': Student[];
                 'nextPageToken': string;
             }

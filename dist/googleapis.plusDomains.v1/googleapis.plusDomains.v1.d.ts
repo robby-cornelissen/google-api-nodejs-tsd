@@ -45,14 +45,14 @@ declare module google {
 
             }
 
-            interface Acl {
+            export interface Acl {
                 'description': string;
                 'domainRestricted': boolean;
                 'items': PlusDomainsAclentryResource[];
                 'kind': string;
             }
 
-            interface Activity {
+            export interface Activity {
                 'access': Acl;
                 'actor': {
                     'clientSpecificActorInfo': {
@@ -173,7 +173,7 @@ declare module google {
                 'verb': string;
             }
 
-            interface ActivityFeed {
+            export interface ActivityFeed {
                 'etag': string;
                 'id': string;
                 'items': Activity[];
@@ -185,7 +185,7 @@ declare module google {
                 'updated': string;
             }
 
-            interface Audience {
+            export interface Audience {
                 'etag': string;
                 'item': PlusDomainsAclentryResource;
                 'kind': string;
@@ -193,7 +193,7 @@ declare module google {
                 'visibility': string;
             }
 
-            interface AudiencesFeed {
+            export interface AudiencesFeed {
                 'etag': string;
                 'items': Audience[];
                 'kind': string;
@@ -201,7 +201,7 @@ declare module google {
                 'totalItems': number;
             }
 
-            interface Circle {
+            export interface Circle {
                 'description': string;
                 'displayName': string;
                 'etag': string;
@@ -213,7 +213,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface CircleFeed {
+            export interface CircleFeed {
                 'etag': string;
                 'items': Circle[];
                 'kind': string;
@@ -224,7 +224,7 @@ declare module google {
                 'totalItems': number;
             }
 
-            interface Comment {
+            export interface Comment {
                 'actor': {
                     'clientSpecificActorInfo': {
                         'youtubeActorInfo': {
@@ -262,7 +262,7 @@ declare module google {
                 'verb': string;
             }
 
-            interface CommentFeed {
+            export interface CommentFeed {
                 'etag': string;
                 'id': string;
                 'items': Comment[];
@@ -273,7 +273,7 @@ declare module google {
                 'updated': string;
             }
 
-            interface Media {
+            export interface Media {
                 'author': {
                     'displayName': string;
                     'id': string;
@@ -303,7 +303,7 @@ declare module google {
                 'width': number;
             }
 
-            interface PeopleFeed {
+            export interface PeopleFeed {
                 'etag': string;
                 'items': Person[];
                 'kind': string;
@@ -313,7 +313,7 @@ declare module google {
                 'totalItems': number;
             }
 
-            interface Person {
+            export interface Person {
                 'aboutMe': string;
                 'birthday': string;
                 'braggingRights': string;
@@ -385,7 +385,7 @@ declare module google {
                 'verified': boolean;
             }
 
-            interface Place {
+            export interface Place {
                 'address': {
                     'formatted': string;
                 };
@@ -398,13 +398,13 @@ declare module google {
                 };
             }
 
-            interface PlusDomainsAclentryResource {
+            export interface PlusDomainsAclentryResource {
                 'displayName': string;
                 'id': string;
                 'type': string;
             }
 
-            interface Videostream {
+            export interface Videostream {
                 'height': number;
                 'type': string;
                 'url': string;

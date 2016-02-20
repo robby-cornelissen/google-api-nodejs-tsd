@@ -61,12 +61,12 @@ declare module google {
 
             }
 
-            interface Draft {
+            export interface Draft {
                 'id': string;
                 'message': Message;
             }
 
-            interface History {
+            export interface History {
                 'id': string;
                 'labelsAdded': HistoryLabelAdded[];
                 'labelsRemoved': HistoryLabelRemoved[];
@@ -75,25 +75,25 @@ declare module google {
                 'messagesDeleted': HistoryMessageDeleted[];
             }
 
-            interface HistoryLabelAdded {
+            export interface HistoryLabelAdded {
                 'labelIds': string[];
                 'message': Message;
             }
 
-            interface HistoryLabelRemoved {
+            export interface HistoryLabelRemoved {
                 'labelIds': string[];
                 'message': Message;
             }
 
-            interface HistoryMessageAdded {
+            export interface HistoryMessageAdded {
                 'message': Message;
             }
 
-            interface HistoryMessageDeleted {
+            export interface HistoryMessageDeleted {
                 'message': Message;
             }
 
-            interface Label {
+            export interface Label {
                 'id': string;
                 'labelListVisibility': string;
                 'messageListVisibility': string;
@@ -105,35 +105,35 @@ declare module google {
                 'type': string;
             }
 
-            interface ListDraftsResponse {
+            export interface ListDraftsResponse {
                 'drafts': Draft[];
                 'nextPageToken': string;
                 'resultSizeEstimate': number;
             }
 
-            interface ListHistoryResponse {
+            export interface ListHistoryResponse {
                 'history': History[];
                 'historyId': string;
                 'nextPageToken': string;
             }
 
-            interface ListLabelsResponse {
+            export interface ListLabelsResponse {
                 'labels': Label[];
             }
 
-            interface ListMessagesResponse {
+            export interface ListMessagesResponse {
                 'messages': Message[];
                 'nextPageToken': string;
                 'resultSizeEstimate': number;
             }
 
-            interface ListThreadsResponse {
+            export interface ListThreadsResponse {
                 'nextPageToken': string;
                 'resultSizeEstimate': number;
                 'threads': Thread[];
             }
 
-            interface Message {
+            export interface Message {
                 'historyId': string;
                 'id': string;
                 'internalDate': string;
@@ -145,7 +145,7 @@ declare module google {
                 'threadId': string;
             }
 
-            interface MessagePart {
+            export interface MessagePart {
                 'body': MessagePartBody;
                 'filename': string;
                 'headers': MessagePartHeader[];
@@ -154,48 +154,48 @@ declare module google {
                 'parts': MessagePart[];
             }
 
-            interface MessagePartBody {
+            export interface MessagePartBody {
                 'attachmentId': string;
                 'data': string;
                 'size': number;
             }
 
-            interface MessagePartHeader {
+            export interface MessagePartHeader {
                 'name': string;
                 'value': string;
             }
 
-            interface ModifyMessageRequest {
+            export interface ModifyMessageRequest {
                 'addLabelIds': string[];
                 'removeLabelIds': string[];
             }
 
-            interface ModifyThreadRequest {
+            export interface ModifyThreadRequest {
                 'addLabelIds': string[];
                 'removeLabelIds': string[];
             }
 
-            interface Profile {
+            export interface Profile {
                 'emailAddress': string;
                 'historyId': string;
                 'messagesTotal': number;
                 'threadsTotal': number;
             }
 
-            interface Thread {
+            export interface Thread {
                 'historyId': string;
                 'id': string;
                 'messages': Message[];
                 'snippet': string;
             }
 
-            interface WatchRequest {
+            export interface WatchRequest {
                 'labelFilterAction': string;
                 'labelIds': string[];
                 'topicName': string;
             }
 
-            interface WatchResponse {
+            export interface WatchResponse {
                 'expiration': string;
                 'historyId': string;
             }

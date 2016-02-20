@@ -34,7 +34,7 @@ declare module google {
 
             }
 
-            interface Deployment {
+            export interface Deployment {
                 'description': string;
                 'id': string;
                 'manifest': string;
@@ -42,12 +42,12 @@ declare module google {
                 'targetConfig': string;
             }
 
-            interface DeploymentsListResponse {
+            export interface DeploymentsListResponse {
                 'deployments': Deployment[];
                 'nextPageToken': string;
             }
 
-            interface Manifest {
+            export interface Manifest {
                 'config': string;
                 'evaluatedConfig': string;
                 'id': string;
@@ -55,12 +55,12 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface ManifestsListResponse {
+            export interface ManifestsListResponse {
                 'manifests': Manifest[];
                 'nextPageToken': string;
             }
 
-            interface Operation {
+            export interface Operation {
                 'creationTimestamp': string;
                 'endTime': string;
                 'error': {
@@ -94,12 +94,12 @@ declare module google {
                 }[];
             }
 
-            interface OperationsListResponse {
+            export interface OperationsListResponse {
                 'nextPageToken': string;
                 'operations': Operation[];
             }
 
-            interface Resource {
+            export interface Resource {
                 'errors': string[];
                 'id': string;
                 'intent': string;
@@ -110,16 +110,16 @@ declare module google {
                 'url': string;
             }
 
-            interface ResourcesListResponse {
+            export interface ResourcesListResponse {
                 'nextPageToken': string;
                 'resources': Resource[];
             }
 
-            interface Type {
+            export interface Type {
                 'name': string;
             }
 
-            interface TypesListResponse {
+            export interface TypesListResponse {
                 'types': Type[];
             }
 

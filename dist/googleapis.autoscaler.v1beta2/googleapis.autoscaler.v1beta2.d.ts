@@ -29,7 +29,7 @@ declare module google {
 
             }
 
-            interface Autoscaler {
+            export interface Autoscaler {
                 'autoscalingPolicy': AutoscalingPolicy;
                 'creationTimestamp': string;
                 'description': string;
@@ -40,13 +40,13 @@ declare module google {
                 'target': string;
             }
 
-            interface AutoscalerListResponse {
+            export interface AutoscalerListResponse {
                 'items': Autoscaler[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface AutoscalingPolicy {
+            export interface AutoscalingPolicy {
                 'coolDownPeriodSec': number;
                 'cpuUtilization': AutoscalingPolicyCpuUtilization;
                 'customMetricUtilizations': AutoscalingPolicyCustomMetricUtilization[];
@@ -55,21 +55,21 @@ declare module google {
                 'minNumReplicas': number;
             }
 
-            interface AutoscalingPolicyCpuUtilization {
+            export interface AutoscalingPolicyCpuUtilization {
                 'utilizationTarget': number;
             }
 
-            interface AutoscalingPolicyCustomMetricUtilization {
+            export interface AutoscalingPolicyCustomMetricUtilization {
                 'metric': string;
                 'utilizationTarget': number;
                 'utilizationTargetType': string;
             }
 
-            interface AutoscalingPolicyLoadBalancingUtilization {
+            export interface AutoscalingPolicyLoadBalancingUtilization {
                 'utilizationTarget': number;
             }
 
-            interface DeprecationStatus {
+            export interface DeprecationStatus {
                 'deleted': string;
                 'deprecated': string;
                 'obsolete': string;
@@ -77,7 +77,7 @@ declare module google {
                 'state': string;
             }
 
-            interface Operation {
+            export interface Operation {
                 'clientOperationId': string;
                 'creationTimestamp': string;
                 'endTime': string;
@@ -115,7 +115,7 @@ declare module google {
                 'zone': string;
             }
 
-            interface OperationList {
+            export interface OperationList {
                 'id': string;
                 'items': Operation[];
                 'kind': string;
@@ -123,7 +123,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface Zone {
+            export interface Zone {
                 'creationTimestamp': string;
                 'deprecated': DeprecationStatus;
                 'description': string;
@@ -141,7 +141,7 @@ declare module google {
                 'status': string;
             }
 
-            interface ZoneList {
+            export interface ZoneList {
                 'id': string;
                 'items': Zone[];
                 'kind': string;

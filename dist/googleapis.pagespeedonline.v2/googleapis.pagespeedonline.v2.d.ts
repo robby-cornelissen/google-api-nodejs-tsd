@@ -16,7 +16,7 @@ declare module google {
 
             }
 
-            interface PagespeedApiFormatStringV2 {
+            export interface PagespeedApiFormatStringV2 {
                 'args': {
                     'key': string;
                     'rects': {
@@ -37,7 +37,7 @@ declare module google {
                 'format': string;
             }
 
-            interface PagespeedApiImageV2 {
+            export interface PagespeedApiImageV2 {
                 'data': string;
                 'height': number;
                 'key': string;
@@ -51,7 +51,7 @@ declare module google {
                 'width': number;
             }
 
-            interface Result {
+            export interface Result {
                 'formattedResults': {
                     'locale': string;
                     'ruleResults': {

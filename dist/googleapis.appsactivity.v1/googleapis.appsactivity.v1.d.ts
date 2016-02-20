@@ -16,12 +16,12 @@ declare module google {
 
             }
 
-            interface Activity {
+            export interface Activity {
                 'combinedEvent': Event;
                 'singleEvents': Event[];
             }
 
-            interface Event {
+            export interface Event {
                 'additionalEventTypes': string[];
                 'eventTimeMillis': string;
                 'fromUserDeletion': boolean;
@@ -33,23 +33,23 @@ declare module google {
                 'user': User;
             }
 
-            interface ListActivitiesResponse {
+            export interface ListActivitiesResponse {
                 'activities': Activity[];
                 'nextPageToken': string;
             }
 
-            interface Move {
+            export interface Move {
                 'addedParents': Parent[];
                 'removedParents': Parent[];
             }
 
-            interface Parent {
+            export interface Parent {
                 'id': string;
                 'isRoot': boolean;
                 'title': string;
             }
 
-            interface Permission {
+            export interface Permission {
                 'name': string;
                 'permissionId': string;
                 'role': string;
@@ -58,27 +58,27 @@ declare module google {
                 'withLink': boolean;
             }
 
-            interface PermissionChange {
+            export interface PermissionChange {
                 'addedPermissions': Permission[];
                 'removedPermissions': Permission[];
             }
 
-            interface Photo {
+            export interface Photo {
                 'url': string;
             }
 
-            interface Rename {
+            export interface Rename {
                 'newTitle': string;
                 'oldTitle': string;
             }
 
-            interface Target {
+            export interface Target {
                 'id': string;
                 'mimeType': string;
                 'name': string;
             }
 
-            interface User {
+            export interface User {
                 'name': string;
                 'photo': Photo;
             }

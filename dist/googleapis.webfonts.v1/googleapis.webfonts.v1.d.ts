@@ -16,7 +16,7 @@ declare module google {
 
             }
 
-            interface Webfont {
+            export interface Webfont {
                 'category': string;
                 'family': string;
                 'files': {
@@ -29,7 +29,7 @@ declare module google {
                 'version': string;
             }
 
-            interface WebfontList {
+            export interface WebfontList {
                 'items': Webfont[];
                 'kind': string;
             }

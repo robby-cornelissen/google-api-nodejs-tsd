@@ -16,20 +16,20 @@ declare module google {
 
             }
 
-            interface AircraftData {
+            export interface AircraftData {
                 'code': string;
                 'kind': string;
                 'name': string;
             }
 
-            interface AirportData {
+            export interface AirportData {
                 'city': string;
                 'code': string;
                 'kind': string;
                 'name': string;
             }
 
-            interface BagDescriptor {
+            export interface BagDescriptor {
                 'commercialName': string;
                 'count': number;
                 'description': string[];
@@ -37,20 +37,20 @@ declare module google {
                 'subcode': string;
             }
 
-            interface CarrierData {
+            export interface CarrierData {
                 'code': string;
                 'kind': string;
                 'name': string;
             }
 
-            interface CityData {
+            export interface CityData {
                 'code': string;
                 'country': string;
                 'kind': string;
                 'name': string;
             }
 
-            interface Data {
+            export interface Data {
                 'aircraft': AircraftData[];
                 'airport': AirportData[];
                 'carrier': CarrierData[];
@@ -59,7 +59,7 @@ declare module google {
                 'tax': TaxData[];
             }
 
-            interface FareInfo {
+            export interface FareInfo {
                 'basisCode': string;
                 'carrier': string;
                 'destination': string;
@@ -69,12 +69,12 @@ declare module google {
                 'private': boolean;
             }
 
-            interface FlightInfo {
+            export interface FlightInfo {
                 'carrier': string;
                 'number': string;
             }
 
-            interface FreeBaggageAllowance {
+            export interface FreeBaggageAllowance {
                 'bagDescriptor': BagDescriptor[];
                 'kilos': number;
                 'kilosPerPiece': number;
@@ -83,7 +83,7 @@ declare module google {
                 'pounds': number;
             }
 
-            interface LegInfo {
+            export interface LegInfo {
                 'aircraft': string;
                 'arrivalTime': string;
                 'changePlane': boolean;
@@ -103,7 +103,7 @@ declare module google {
                 'secure': boolean;
             }
 
-            interface PassengerCounts {
+            export interface PassengerCounts {
                 'adultCount': number;
                 'childCount': number;
                 'infantInLapCount': number;
@@ -112,7 +112,7 @@ declare module google {
                 'seniorCount': number;
             }
 
-            interface PricingInfo {
+            export interface PricingInfo {
                 'baseFareTotal': string;
                 'fare': FareInfo[];
                 'fareCalculation': string;
@@ -128,7 +128,7 @@ declare module google {
                 'tax': TaxInfo[];
             }
 
-            interface SegmentInfo {
+            export interface SegmentInfo {
                 'bookingCode': string;
                 'bookingCodeCount': number;
                 'cabin': string;
@@ -142,20 +142,20 @@ declare module google {
                 'subjectToGovernmentApproval': boolean;
             }
 
-            interface SegmentPricing {
+            export interface SegmentPricing {
                 'fareId': string;
                 'freeBaggageOption': FreeBaggageAllowance[];
                 'kind': string;
                 'segmentId': string;
             }
 
-            interface SliceInfo {
+            export interface SliceInfo {
                 'duration': number;
                 'kind': string;
                 'segment': SegmentInfo[];
             }
 
-            interface SliceInput {
+            export interface SliceInput {
                 'alliance': string;
                 'date': string;
                 'destination': string;
@@ -169,13 +169,13 @@ declare module google {
                 'prohibitedCarrier': string[];
             }
 
-            interface TaxData {
+            export interface TaxData {
                 'id': string;
                 'kind': string;
                 'name': string;
             }
 
-            interface TaxInfo {
+            export interface TaxInfo {
                 'chargeType': string;
                 'code': string;
                 'country': string;
@@ -184,13 +184,13 @@ declare module google {
                 'salePrice': string;
             }
 
-            interface TimeOfDayRange {
+            export interface TimeOfDayRange {
                 'earliestTime': string;
                 'kind': string;
                 'latestTime': string;
             }
 
-            interface TripOption {
+            export interface TripOption {
                 'id': string;
                 'kind': string;
                 'pricing': PricingInfo[];
@@ -198,7 +198,7 @@ declare module google {
                 'slice': SliceInfo[];
             }
 
-            interface TripOptionsRequest {
+            export interface TripOptionsRequest {
                 'maxPrice': string;
                 'passengers': PassengerCounts;
                 'refundable': boolean;
@@ -207,18 +207,18 @@ declare module google {
                 'solutions': number;
             }
 
-            interface TripOptionsResponse {
+            export interface TripOptionsResponse {
                 'data': Data;
                 'kind': string;
                 'requestId': string;
                 'tripOption': TripOption[];
             }
 
-            interface TripsSearchRequest {
+            export interface TripsSearchRequest {
                 'request': TripOptionsRequest;
             }
 
-            interface TripsSearchResponse {
+            export interface TripsSearchResponse {
                 'kind': string;
                 'trips': TripOptionsResponse;
             }

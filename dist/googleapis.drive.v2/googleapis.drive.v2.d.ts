@@ -100,7 +100,7 @@ declare module google {
 
             }
 
-            interface About {
+            export interface About {
                 'additionalRoleInfo': {
                     'roleSets': {
                         'additionalRoles': string[];
@@ -148,7 +148,7 @@ declare module google {
                 'user': User;
             }
 
-            interface App {
+            export interface App {
                 'authorized': boolean;
                 'createInFolderTemplate': string;
                 'createUrl': string;
@@ -179,7 +179,7 @@ declare module google {
                 'useByDefault': boolean;
             }
 
-            interface AppList {
+            export interface AppList {
                 'defaultAppIds': string[];
                 'etag': string;
                 'items': App[];
@@ -187,7 +187,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface Change {
+            export interface Change {
                 'deleted': boolean;
                 'file': File;
                 'fileId': string;
@@ -197,7 +197,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface ChangeList {
+            export interface ChangeList {
                 'etag': string;
                 'items': Change[];
                 'kind': string;
@@ -207,7 +207,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface Channel {
+            export interface Channel {
                 'address': string;
                 'expiration': string;
                 'id': string;
@@ -222,7 +222,7 @@ declare module google {
                 'type': string;
             }
 
-            interface ChildList {
+            export interface ChildList {
                 'etag': string;
                 'items': ChildReference[];
                 'kind': string;
@@ -231,14 +231,14 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface ChildReference {
+            export interface ChildReference {
                 'childLink': string;
                 'id': string;
                 'kind': string;
                 'selfLink': string;
             }
 
-            interface Comment {
+            export interface Comment {
                 'anchor': string;
                 'author': User;
                 'commentId': string;
@@ -259,7 +259,7 @@ declare module google {
                 'status': string;
             }
 
-            interface CommentList {
+            export interface CommentList {
                 'items': Comment[];
                 'kind': string;
                 'nextLink': string;
@@ -267,7 +267,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface CommentReply {
+            export interface CommentReply {
                 'author': User;
                 'content': string;
                 'createdDate': string;
@@ -279,7 +279,7 @@ declare module google {
                 'verb': string;
             }
 
-            interface CommentReplyList {
+            export interface CommentReplyList {
                 'items': CommentReply[];
                 'kind': string;
                 'nextLink': string;
@@ -287,7 +287,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface File {
+            export interface File {
                 'alternateLink': string;
                 'appDataContents': boolean;
                 'canComment': boolean;
@@ -392,7 +392,7 @@ declare module google {
                 'writersCanShare': boolean;
             }
 
-            interface FileList {
+            export interface FileList {
                 'etag': string;
                 'items': File[];
                 'kind': string;
@@ -401,20 +401,20 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface GeneratedIds {
+            export interface GeneratedIds {
                 'ids': string[];
                 'kind': string;
                 'space': string;
             }
 
-            interface ParentList {
+            export interface ParentList {
                 'etag': string;
                 'items': ParentReference[];
                 'kind': string;
                 'selfLink': string;
             }
 
-            interface ParentReference {
+            export interface ParentReference {
                 'id': string;
                 'isRoot': boolean;
                 'kind': string;
@@ -422,7 +422,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface Permission {
+            export interface Permission {
                 'additionalRoles': string[];
                 'authKey': string;
                 'domain': string;
@@ -439,19 +439,19 @@ declare module google {
                 'withLink': boolean;
             }
 
-            interface PermissionId {
+            export interface PermissionId {
                 'id': string;
                 'kind': string;
             }
 
-            interface PermissionList {
+            export interface PermissionList {
                 'etag': string;
                 'items': Permission[];
                 'kind': string;
                 'selfLink': string;
             }
 
-            interface Property {
+            export interface Property {
                 'etag': string;
                 'key': string;
                 'kind': string;
@@ -460,14 +460,14 @@ declare module google {
                 'visibility': string;
             }
 
-            interface PropertyList {
+            export interface PropertyList {
                 'etag': string;
                 'items': Property[];
                 'kind': string;
                 'selfLink': string;
             }
 
-            interface Revision {
+            export interface Revision {
                 'downloadUrl': string;
                 'etag': string;
                 'exportLinks': {
@@ -490,14 +490,14 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface RevisionList {
+            export interface RevisionList {
                 'etag': string;
                 'items': Revision[];
                 'kind': string;
                 'selfLink': string;
             }
 
-            interface User {
+            export interface User {
                 'displayName': string;
                 'emailAddress': string;
                 'isAuthenticatedUser': boolean;

@@ -144,7 +144,7 @@ declare module google {
 
             }
 
-            interface Account {
+            export interface Account {
                 'childLink': {
                     'href': string;
                     'type': string;
@@ -160,14 +160,14 @@ declare module google {
                 'updated': string;
             }
 
-            interface AccountRef {
+            export interface AccountRef {
                 'href': string;
                 'id': string;
                 'kind': string;
                 'name': string;
             }
 
-            interface AccountSummaries {
+            export interface AccountSummaries {
                 'items': AccountSummary[];
                 'itemsPerPage': number;
                 'kind': string;
@@ -178,14 +178,14 @@ declare module google {
                 'username': string;
             }
 
-            interface AccountSummary {
+            export interface AccountSummary {
                 'id': string;
                 'kind': string;
                 'name': string;
                 'webProperties': WebPropertySummary[];
             }
 
-            interface AccountTicket {
+            export interface AccountTicket {
                 'account': Account;
                 'id': string;
                 'kind': string;
@@ -194,7 +194,7 @@ declare module google {
                 'webproperty': Webproperty;
             }
 
-            interface Accounts {
+            export interface Accounts {
                 'items': Account[];
                 'itemsPerPage': number;
                 'kind': string;
@@ -205,17 +205,17 @@ declare module google {
                 'username': string;
             }
 
-            interface AdWordsAccount {
+            export interface AdWordsAccount {
                 'autoTaggingEnabled': boolean;
                 'customerId': string;
                 'kind': string;
             }
 
-            interface AnalyticsDataimportDeleteUploadDataRequest {
+            export interface AnalyticsDataimportDeleteUploadDataRequest {
                 'customDataImportUids': string[];
             }
 
-            interface Column {
+            export interface Column {
                 'attributes': {
                     [name: string]: string
                 };
@@ -223,7 +223,7 @@ declare module google {
                 'kind': string;
             }
 
-            interface Columns {
+            export interface Columns {
                 'attributeNames': string[];
                 'etag': string;
                 'items': Column[];
@@ -231,7 +231,7 @@ declare module google {
                 'totalResults': number;
             }
 
-            interface CustomDataSource {
+            export interface CustomDataSource {
                 'accountId': string;
                 'childLink': {
                     'href': string;
@@ -255,7 +255,7 @@ declare module google {
                 'webPropertyId': string;
             }
 
-            interface CustomDataSources {
+            export interface CustomDataSources {
                 'items': CustomDataSource[];
                 'itemsPerPage': number;
                 'kind': string;
@@ -266,7 +266,7 @@ declare module google {
                 'username': string;
             }
 
-            interface CustomDimension {
+            export interface CustomDimension {
                 'accountId': string;
                 'active': boolean;
                 'created': string;
@@ -284,7 +284,7 @@ declare module google {
                 'webPropertyId': string;
             }
 
-            interface CustomDimensions {
+            export interface CustomDimensions {
                 'items': CustomDimension[];
                 'itemsPerPage': number;
                 'kind': string;
@@ -295,7 +295,7 @@ declare module google {
                 'username': string;
             }
 
-            interface CustomMetric {
+            export interface CustomMetric {
                 'accountId': string;
                 'active': boolean;
                 'created': string;
@@ -316,7 +316,7 @@ declare module google {
                 'webPropertyId': string;
             }
 
-            interface CustomMetrics {
+            export interface CustomMetrics {
                 'items': CustomMetric[];
                 'itemsPerPage': number;
                 'kind': string;
@@ -327,7 +327,7 @@ declare module google {
                 'username': string;
             }
 
-            interface EntityAdWordsLink {
+            export interface EntityAdWordsLink {
                 'adWordsAccounts': AdWordsAccount[];
                 'entity': {
                     'webPropertyRef': WebPropertyRef;
@@ -339,7 +339,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface EntityAdWordsLinks {
+            export interface EntityAdWordsLinks {
                 'items': EntityAdWordsLink[];
                 'itemsPerPage': number;
                 'kind': string;
@@ -349,7 +349,7 @@ declare module google {
                 'totalResults': number;
             }
 
-            interface EntityUserLink {
+            export interface EntityUserLink {
                 'entity': {
                     'accountRef': AccountRef;
                     'profileRef': ProfileRef;
@@ -365,7 +365,7 @@ declare module google {
                 'userRef': UserRef;
             }
 
-            interface EntityUserLinks {
+            export interface EntityUserLinks {
                 'items': EntityUserLink[];
                 'itemsPerPage': number;
                 'kind': string;
@@ -375,7 +375,7 @@ declare module google {
                 'totalResults': number;
             }
 
-            interface Experiment {
+            export interface Experiment {
                 'accountId': string;
                 'created': string;
                 'description': string;
@@ -415,7 +415,7 @@ declare module google {
                 'winnerFound': boolean;
             }
 
-            interface Experiments {
+            export interface Experiments {
                 'items': Experiment[];
                 'itemsPerPage': number;
                 'kind': string;
@@ -426,7 +426,7 @@ declare module google {
                 'username': string;
             }
 
-            interface Filter {
+            export interface Filter {
                 'accountId': string;
                 'advancedDetails': {
                     'caseSensitive': boolean;
@@ -473,7 +473,7 @@ declare module google {
                 };
             }
 
-            interface FilterExpression {
+            export interface FilterExpression {
                 'caseSensitive': boolean;
                 'expressionValue': string;
                 'field': string;
@@ -482,7 +482,7 @@ declare module google {
                 'matchType': string;
             }
 
-            interface FilterRef {
+            export interface FilterRef {
                 'accountId': string;
                 'href': string;
                 'id': string;
@@ -490,7 +490,7 @@ declare module google {
                 'name': string;
             }
 
-            interface Filters {
+            export interface Filters {
                 'items': Filter[];
                 'itemsPerPage': number;
                 'kind': string;
@@ -501,7 +501,7 @@ declare module google {
                 'username': string;
             }
 
-            interface GaData {
+            export interface GaData {
                 'columnHeaders': {
                     'columnType': string;
                     'dataType': string;
@@ -556,7 +556,7 @@ declare module google {
                 };
             }
 
-            interface Goal {
+            export interface Goal {
                 'accountId': string;
                 'active': boolean;
                 'created': string;
@@ -605,7 +605,7 @@ declare module google {
                 'webPropertyId': string;
             }
 
-            interface Goals {
+            export interface Goals {
                 'items': Goal[];
                 'itemsPerPage': number;
                 'kind': string;
@@ -616,7 +616,7 @@ declare module google {
                 'username': string;
             }
 
-            interface McfData {
+            export interface McfData {
                 'columnHeaders': {
                     'columnType': string;
                     'dataType': string;
@@ -665,7 +665,7 @@ declare module google {
                 };
             }
 
-            interface Profile {
+            export interface Profile {
                 'accountId': string;
                 'botFilteringEnabled': boolean;
                 'childLink': {
@@ -701,7 +701,7 @@ declare module google {
                 'websiteUrl': string;
             }
 
-            interface ProfileFilterLink {
+            export interface ProfileFilterLink {
                 'filterRef': FilterRef;
                 'id': string;
                 'kind': string;
@@ -710,7 +710,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface ProfileFilterLinks {
+            export interface ProfileFilterLinks {
                 'items': ProfileFilterLink[];
                 'itemsPerPage': number;
                 'kind': string;
@@ -721,7 +721,7 @@ declare module google {
                 'username': string;
             }
 
-            interface ProfileRef {
+            export interface ProfileRef {
                 'accountId': string;
                 'href': string;
                 'id': string;
@@ -731,14 +731,14 @@ declare module google {
                 'webPropertyId': string;
             }
 
-            interface ProfileSummary {
+            export interface ProfileSummary {
                 'id': string;
                 'kind': string;
                 'name': string;
                 'type': string;
             }
 
-            interface Profiles {
+            export interface Profiles {
                 'items': Profile[];
                 'itemsPerPage': number;
                 'kind': string;
@@ -749,7 +749,7 @@ declare module google {
                 'username': string;
             }
 
-            interface RealtimeData {
+            export interface RealtimeData {
                 'columnHeaders': {
                     'columnType': string;
                     'dataType': string;
@@ -781,7 +781,7 @@ declare module google {
                 };
             }
 
-            interface Segment {
+            export interface Segment {
                 'created': string;
                 'definition': string;
                 'id': string;
@@ -793,7 +793,7 @@ declare module google {
                 'updated': string;
             }
 
-            interface Segments {
+            export interface Segments {
                 'items': Segment[];
                 'itemsPerPage': number;
                 'kind': string;
@@ -804,7 +804,7 @@ declare module google {
                 'username': string;
             }
 
-            interface UnsampledReport {
+            export interface UnsampledReport {
                 'accountId': string;
                 'cloudStorageDownloadDetails': {
                     'bucketId': string;
@@ -831,7 +831,7 @@ declare module google {
                 'webPropertyId': string;
             }
 
-            interface UnsampledReports {
+            export interface UnsampledReports {
                 'items': UnsampledReport[];
                 'itemsPerPage': number;
                 'kind': string;
@@ -842,7 +842,7 @@ declare module google {
                 'username': string;
             }
 
-            interface Upload {
+            export interface Upload {
                 'accountId': string;
                 'customDataSourceId': string;
                 'errors': string[];
@@ -851,7 +851,7 @@ declare module google {
                 'status': string;
             }
 
-            interface Uploads {
+            export interface Uploads {
                 'items': Upload[];
                 'itemsPerPage': number;
                 'kind': string;
@@ -861,13 +861,13 @@ declare module google {
                 'totalResults': number;
             }
 
-            interface UserRef {
+            export interface UserRef {
                 'email': string;
                 'id': string;
                 'kind': string;
             }
 
-            interface WebPropertyRef {
+            export interface WebPropertyRef {
                 'accountId': string;
                 'href': string;
                 'id': string;
@@ -876,7 +876,7 @@ declare module google {
                 'name': string;
             }
 
-            interface WebPropertySummary {
+            export interface WebPropertySummary {
                 'id': string;
                 'internalWebPropertyId': string;
                 'kind': string;
@@ -886,7 +886,7 @@ declare module google {
                 'websiteUrl': string;
             }
 
-            interface Webproperties {
+            export interface Webproperties {
                 'items': Webproperty[];
                 'itemsPerPage': number;
                 'kind': string;
@@ -897,7 +897,7 @@ declare module google {
                 'username': string;
             }
 
-            interface Webproperty {
+            export interface Webproperty {
                 'accountId': string;
                 'childLink': {
                     'href': string;

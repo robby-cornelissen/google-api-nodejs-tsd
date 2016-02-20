@@ -17,36 +17,36 @@ declare module google {
 
             }
 
-            interface AggregatedStats {
+            export interface AggregatedStats {
                 'stats': Stats[];
             }
 
-            interface AggregatedStatsReply {
+            export interface AggregatedStatsReply {
                 'testValue': string;
             }
 
-            interface DoubleValue {
+            export interface DoubleValue {
                 'label': string;
                 'value': number;
             }
 
-            interface IntValue {
+            export interface IntValue {
                 'label': string;
                 'value': string;
             }
 
-            interface Stats {
+            export interface Stats {
                 'doubleValues': DoubleValue[];
                 'intValues': IntValue[];
                 'stringValues': StringValue[];
                 'time': number;
             }
 
-            interface StatsReply {
+            export interface StatsReply {
                 'testValue': string;
             }
 
-            interface StringValue {
+            export interface StringValue {
                 'label': string;
                 'value': string;
             }

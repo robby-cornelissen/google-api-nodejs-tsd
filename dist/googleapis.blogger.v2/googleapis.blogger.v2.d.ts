@@ -35,7 +35,7 @@ declare module google {
 
             }
 
-            interface Blog {
+            export interface Blog {
                 'description': string;
                 'id': string;
                 'kind': string;
@@ -59,12 +59,12 @@ declare module google {
                 'url': string;
             }
 
-            interface BlogList {
+            export interface BlogList {
                 'items': Blog[];
                 'kind': string;
             }
 
-            interface Comment {
+            export interface Comment {
                 'author': {
                     'displayName': string;
                     'id': string;
@@ -90,14 +90,14 @@ declare module google {
                 'updated': string;
             }
 
-            interface CommentList {
+            export interface CommentList {
                 'items': Comment[];
                 'kind': string;
                 'nextPageToken': string;
                 'prevPageToken': string;
             }
 
-            interface Page {
+            export interface Page {
                 'author': {
                     'displayName': string;
                     'id': string;
@@ -119,12 +119,12 @@ declare module google {
                 'url': string;
             }
 
-            interface PageList {
+            export interface PageList {
                 'items': Page[];
                 'kind': string;
             }
 
-            interface Post {
+            export interface Post {
                 'author': {
                     'displayName': string;
                     'id': string;
@@ -151,14 +151,14 @@ declare module google {
                 'url': string;
             }
 
-            interface PostList {
+            export interface PostList {
                 'items': Post[];
                 'kind': string;
                 'nextPageToken': string;
                 'prevPageToken': string;
             }
 
-            interface User {
+            export interface User {
                 'about': string;
                 'blogs': {
                     'selfLink': string;

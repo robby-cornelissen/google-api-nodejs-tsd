@@ -20,7 +20,7 @@ declare module google {
 
             }
 
-            interface InappPurchase {
+            export interface InappPurchase {
                 'consumptionState': number;
                 'developerPayload': string;
                 'kind': string;
@@ -28,7 +28,7 @@ declare module google {
                 'purchaseTime': string;
             }
 
-            interface SubscriptionPurchase {
+            export interface SubscriptionPurchase {
                 'autoRenewing': boolean;
                 'initiationTimestampMsec': string;
                 'kind': string;

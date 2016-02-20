@@ -25,23 +25,23 @@ declare module google {
 
             }
 
-            interface BillingAccount {
+            export interface BillingAccount {
                 'name': string;
                 'open': boolean;
                 'displayName': string;
             }
 
-            interface ListBillingAccountsResponse {
+            export interface ListBillingAccountsResponse {
                 'billingAccounts': BillingAccount[];
                 'nextPageToken': string;
             }
 
-            interface ListProjectBillingInfoResponse {
+            export interface ListProjectBillingInfoResponse {
                 'projectBillingInfo': ProjectBillingInfo[];
                 'nextPageToken': string;
             }
 
-            interface ProjectBillingInfo {
+            export interface ProjectBillingInfo {
                 'name': string;
                 'projectId': string;
                 'billingAccountName': string;

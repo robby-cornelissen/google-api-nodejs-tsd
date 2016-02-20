@@ -22,7 +22,7 @@ declare module google {
 
             }
 
-            interface Task {
+            export interface Task {
                 'enqueueTimestamp': string;
                 'id': string;
                 'kind': string;
@@ -31,7 +31,7 @@ declare module google {
                 'queueName': string;
             }
 
-            interface TaskQueue {
+            export interface TaskQueue {
                 'acl': {
                     'adminEmails': string[];
                     'consumerEmails': string[];
@@ -48,12 +48,12 @@ declare module google {
                 };
             }
 
-            interface Tasks {
+            export interface Tasks {
                 'items': Task[];
                 'kind': string;
             }
 
-            interface Tasks2 {
+            export interface Tasks2 {
                 'items': Task[];
                 'kind': string;
             }

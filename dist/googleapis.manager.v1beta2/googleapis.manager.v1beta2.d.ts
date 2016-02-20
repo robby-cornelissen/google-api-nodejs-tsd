@@ -25,23 +25,23 @@ declare module google {
 
             }
 
-            interface AccessConfig {
+            export interface AccessConfig {
                 'name': string;
                 'natIp': string;
                 'type': string;
             }
 
-            interface Action {
+            export interface Action {
                 'commands': string[];
                 'timeoutMs': number;
             }
 
-            interface AllowedRule {
+            export interface AllowedRule {
                 'IPProtocol': string;
                 'ports': string[];
             }
 
-            interface AutoscalingModule {
+            export interface AutoscalingModule {
                 'coolDownPeriodSec': number;
                 'description': string;
                 'maxNumReplicas': number;
@@ -51,16 +51,16 @@ declare module google {
                 'targetUtilization': number;
             }
 
-            interface AutoscalingModuleStatus {
+            export interface AutoscalingModuleStatus {
                 'autoscalingConfigUrl': string;
             }
 
-            interface DeployState {
+            export interface DeployState {
                 'details': string;
                 'status': string;
             }
 
-            interface Deployment {
+            export interface Deployment {
                 'creationDate': string;
                 'description': string;
                 'modules': {
@@ -72,27 +72,27 @@ declare module google {
                 'templateName': string;
             }
 
-            interface DeploymentsListResponse {
+            export interface DeploymentsListResponse {
                 'nextPageToken': string;
                 'resources': Deployment[];
             }
 
-            interface DiskAttachment {
+            export interface DiskAttachment {
                 'deviceName': string;
                 'index': number;
             }
 
-            interface EnvVariable {
+            export interface EnvVariable {
                 'hidden': boolean;
                 'value': string;
             }
 
-            interface ExistingDisk {
+            export interface ExistingDisk {
                 'attachment': DiskAttachment;
                 'source': string;
             }
 
-            interface FirewallModule {
+            export interface FirewallModule {
                 'allowed': AllowedRule[];
                 'description': string;
                 'network': string;
@@ -101,11 +101,11 @@ declare module google {
                 'targetTags': string[];
             }
 
-            interface FirewallModuleStatus {
+            export interface FirewallModuleStatus {
                 'firewallUrl': string;
             }
 
-            interface HealthCheckModule {
+            export interface HealthCheckModule {
                 'checkIntervalSec': number;
                 'description': string;
                 'healthyThreshold': number;
@@ -116,11 +116,11 @@ declare module google {
                 'unhealthyThreshold': number;
             }
 
-            interface HealthCheckModuleStatus {
+            export interface HealthCheckModuleStatus {
                 'healthCheckUrl': string;
             }
 
-            interface LbModule {
+            export interface LbModule {
                 'description': string;
                 'healthChecks': string[];
                 'ipAddress': string;
@@ -130,22 +130,22 @@ declare module google {
                 'targetModules': string[];
             }
 
-            interface LbModuleStatus {
+            export interface LbModuleStatus {
                 'forwardingRuleUrl': string;
                 'targetPoolUrl': string;
             }
 
-            interface Metadata {
+            export interface Metadata {
                 'fingerPrint': string;
                 'items': MetadataItem[];
             }
 
-            interface MetadataItem {
+            export interface MetadataItem {
                 'key': string;
                 'value': string;
             }
 
-            interface Module {
+            export interface Module {
                 'autoscalingModule': AutoscalingModule;
                 'firewallModule': FirewallModule;
                 'healthCheckModule': HealthCheckModule;
@@ -155,7 +155,7 @@ declare module google {
                 'type': string;
             }
 
-            interface ModuleStatus {
+            export interface ModuleStatus {
                 'autoscalingModuleStatus': AutoscalingModuleStatus;
                 'firewallModuleStatus': FirewallModuleStatus;
                 'healthCheckModuleStatus': HealthCheckModuleStatus;
@@ -166,42 +166,42 @@ declare module google {
                 'type': string;
             }
 
-            interface NetworkInterface {
+            export interface NetworkInterface {
                 'accessConfigs': AccessConfig[];
                 'name': string;
                 'network': string;
                 'networkIp': string;
             }
 
-            interface NetworkModule {
+            export interface NetworkModule {
                 'IPv4Range': string;
                 'description': string;
                 'gatewayIPv4': string;
             }
 
-            interface NetworkModuleStatus {
+            export interface NetworkModuleStatus {
                 'networkUrl': string;
             }
 
-            interface NewDisk {
+            export interface NewDisk {
                 'attachment': DiskAttachment;
                 'autoDelete': boolean;
                 'boot': boolean;
                 'initializeParams': NewDiskInitializeParams;
             }
 
-            interface NewDiskInitializeParams {
+            export interface NewDiskInitializeParams {
                 'diskSizeGb': string;
                 'diskType': string;
                 'sourceImage': string;
             }
 
-            interface ParamOverride {
+            export interface ParamOverride {
                 'path': string;
                 'value': string;
             }
 
-            interface ReplicaPoolModule {
+            export interface ReplicaPoolModule {
                 'envVariables': {
                     [name: string]: EnvVariable
                 };
@@ -211,16 +211,16 @@ declare module google {
                 'resourceView': string;
             }
 
-            interface ReplicaPoolModuleStatus {
+            export interface ReplicaPoolModuleStatus {
                 'replicaPoolUrl': string;
                 'resourceViewUrl': string;
             }
 
-            interface ReplicaPoolParams {
+            export interface ReplicaPoolParams {
                 'v1beta1': ReplicaPoolParamsV1Beta1;
             }
 
-            interface ReplicaPoolParamsV1Beta1 {
+            export interface ReplicaPoolParamsV1Beta1 {
                 'autoRestart': boolean;
                 'baseInstanceName': string;
                 'canIpForward': boolean;
@@ -237,17 +237,17 @@ declare module google {
                 'zone': string;
             }
 
-            interface ServiceAccount {
+            export interface ServiceAccount {
                 'email': string;
                 'scopes': string[];
             }
 
-            interface Tag {
+            export interface Tag {
                 'fingerPrint': string;
                 'items': string[];
             }
 
-            interface Template {
+            export interface Template {
                 'actions': {
                     [name: string]: Action
                 };
@@ -258,7 +258,7 @@ declare module google {
                 'name': string;
             }
 
-            interface TemplatesListResponse {
+            export interface TemplatesListResponse {
                 'nextPageToken': string;
                 'resources': Template[];
             }

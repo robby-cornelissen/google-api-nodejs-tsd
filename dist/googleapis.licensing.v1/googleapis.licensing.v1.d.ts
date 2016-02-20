@@ -22,7 +22,7 @@ declare module google {
 
             }
 
-            interface LicenseAssignment {
+            export interface LicenseAssignment {
                 'etags': string;
                 'kind': string;
                 'productId': string;
@@ -31,11 +31,11 @@ declare module google {
                 'userId': string;
             }
 
-            interface LicenseAssignmentInsert {
+            export interface LicenseAssignmentInsert {
                 'userId': string;
             }
 
-            interface LicenseAssignmentList {
+            export interface LicenseAssignmentList {
                 'etag': string;
                 'items': LicenseAssignment[];
                 'kind': string;

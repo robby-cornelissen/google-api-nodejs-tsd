@@ -42,7 +42,7 @@ declare module google {
 
             }
 
-            interface Cluster {
+            export interface Cluster {
                 'projectId': string;
                 'clusterName': string;
                 'configuration': ClusterConfiguration;
@@ -51,7 +51,7 @@ declare module google {
                 'clusterUuid': string;
             }
 
-            interface ClusterConfiguration {
+            export interface ClusterConfiguration {
                 'configurationBucket': string;
                 'gceClusterConfiguration': GceClusterConfiguration;
                 'masterConfiguration': InstanceGroupConfiguration;
@@ -61,7 +61,7 @@ declare module google {
                 'initializationActions': NodeInitializationAction[];
             }
 
-            interface GceClusterConfiguration {
+            export interface GceClusterConfiguration {
                 'zoneUri': string;
                 'networkUri': string;
                 'subnetworkUri': string;
@@ -72,7 +72,7 @@ declare module google {
                 };
             }
 
-            interface InstanceGroupConfiguration {
+            export interface InstanceGroupConfiguration {
                 'numInstances': number;
                 'instanceNames': string[];
                 'imageUri': string;
@@ -82,35 +82,35 @@ declare module google {
                 'managedGroupConfiguration': ManagedGroupConfiguration;
             }
 
-            interface DiskConfiguration {
+            export interface DiskConfiguration {
                 'bootDiskSizeGb': number;
                 'numLocalSsds': number;
             }
 
-            interface ManagedGroupConfiguration {
+            export interface ManagedGroupConfiguration {
                 'instanceTemplateName': string;
                 'instanceGroupManagerName': string;
             }
 
-            interface SoftwareConfiguration {
+            export interface SoftwareConfiguration {
                 'imageVersion': string;
                 'properties': {
                     [name: string]: string
                 };
             }
 
-            interface NodeInitializationAction {
+            export interface NodeInitializationAction {
                 'executableFile': string;
                 'executionTimeout': string;
             }
 
-            interface ClusterStatus {
+            export interface ClusterStatus {
                 'state': string;
                 'detail': string;
                 'stateStartTime': string;
             }
 
-            interface Operation {
+            export interface Operation {
                 'name': string;
                 'metadata': {
                     [name: string]: any
@@ -122,7 +122,7 @@ declare module google {
                 };
             }
 
-            interface Status {
+            export interface Status {
                 'code': number;
                 'message': string;
                 'details': {
@@ -130,18 +130,18 @@ declare module google {
                 }[];
             }
 
-            interface ListClustersResponse {
+            export interface ListClustersResponse {
                 'clusters': Cluster[];
                 'nextPageToken': string;
             }
 
-            interface DiagnoseClusterRequest {}
+            export interface DiagnoseClusterRequest {}
 
-            interface SubmitJobRequest {
+            export interface SubmitJobRequest {
                 'job': Job;
             }
 
-            interface Job {
+            export interface Job {
                 'reference': JobReference;
                 'placement': JobPlacement;
                 'hadoopJob': HadoopJob;
@@ -160,17 +160,17 @@ declare module google {
                 'interactive': boolean;
             }
 
-            interface JobReference {
+            export interface JobReference {
                 'projectId': string;
                 'jobId': string;
             }
 
-            interface JobPlacement {
+            export interface JobPlacement {
                 'clusterName': string;
                 'clusterUuid': string;
             }
 
-            interface HadoopJob {
+            export interface HadoopJob {
                 'mainJarFileUri': string;
                 'mainClass': string;
                 'args': string[];
@@ -183,13 +183,13 @@ declare module google {
                 'loggingConfiguration': LoggingConfiguration;
             }
 
-            interface LoggingConfiguration {
+            export interface LoggingConfiguration {
                 'driverLogLevels': {
                     [name: string]: string
                 };
             }
 
-            interface SparkJob {
+            export interface SparkJob {
                 'mainJarFileUri': string;
                 'mainClass': string;
                 'args': string[];
@@ -202,7 +202,7 @@ declare module google {
                 'loggingConfiguration': LoggingConfiguration;
             }
 
-            interface PySparkJob {
+            export interface PySparkJob {
                 'mainPythonFileUri': string;
                 'args': string[];
                 'pythonFileUris': string[];
@@ -215,7 +215,7 @@ declare module google {
                 'loggingConfiguration': LoggingConfiguration;
             }
 
-            interface HiveJob {
+            export interface HiveJob {
                 'queryFileUri': string;
                 'queryList': QueryList;
                 'continueOnFailure': boolean;
@@ -228,11 +228,11 @@ declare module google {
                 'jarFileUris': string[];
             }
 
-            interface QueryList {
+            export interface QueryList {
                 'queries': string[];
             }
 
-            interface PigJob {
+            export interface PigJob {
                 'queryFileUri': string;
                 'queryList': QueryList;
                 'continueOnFailure': boolean;
@@ -246,7 +246,7 @@ declare module google {
                 'loggingConfiguration': LoggingConfiguration;
             }
 
-            interface SparkSqlJob {
+            export interface SparkSqlJob {
                 'queryFileUri': string;
                 'queryList': QueryList;
                 'scriptVariables': {
@@ -259,63 +259,63 @@ declare module google {
                 'loggingConfiguration': LoggingConfiguration;
             }
 
-            interface JobStatus {
+            export interface JobStatus {
                 'state': string;
                 'details': string;
                 'stateStartTime': string;
             }
 
-            interface YarnApplication {
+            export interface YarnApplication {
                 'name': string;
                 'state': string;
                 'progress': number;
                 'trackingUrl': string;
             }
 
-            interface ListJobsResponse {
+            export interface ListJobsResponse {
                 'jobs': Job[];
                 'nextPageToken': string;
             }
 
-            interface CancelJobRequest {}
+            export interface CancelJobRequest {}
 
-            interface Empty {}
+            export interface Empty {}
 
-            interface ListOperationsResponse {
+            export interface ListOperationsResponse {
                 'operations': Operation[];
                 'nextPageToken': string;
             }
 
-            interface CancelOperationRequest {}
+            export interface CancelOperationRequest {}
 
-            interface SetIamPolicyRequest {
+            export interface SetIamPolicyRequest {
                 'policy': Policy;
             }
 
-            interface Policy {
+            export interface Policy {
                 'version': number;
                 'bindings': Binding[];
                 'etag': string;
             }
 
-            interface Binding {
+            export interface Binding {
                 'role': string;
                 'members': string[];
             }
 
-            interface TestIamPermissionsRequest {
+            export interface TestIamPermissionsRequest {
                 'permissions': string[];
             }
 
-            interface TestIamPermissionsResponse {
+            export interface TestIamPermissionsResponse {
                 'permissions': string[];
             }
 
-            interface DiagnoseClusterResults {
+            export interface DiagnoseClusterResults {
                 'outputUri': string;
             }
 
-            interface ClusterOperationMetadata {
+            export interface ClusterOperationMetadata {
                 'clusterName': string;
                 'clusterUuid': string;
                 'status': ClusterOperationStatus;
@@ -324,18 +324,18 @@ declare module google {
                 'description': string;
             }
 
-            interface ClusterOperationStatus {
+            export interface ClusterOperationStatus {
                 'state': string;
                 'innerState': string;
                 'details': string;
                 'stateStartTime': string;
             }
 
-            interface DiagnoseClusterOutputLocation {
+            export interface DiagnoseClusterOutputLocation {
                 'outputUri': string;
             }
 
-            interface OperationMetadata {
+            export interface OperationMetadata {
                 'state': string;
                 'innerState': string;
                 'details': string;
@@ -350,7 +350,7 @@ declare module google {
                 'description': string;
             }
 
-            interface OperationStatus {
+            export interface OperationStatus {
                 'state': string;
                 'innerState': string;
                 'details': string;

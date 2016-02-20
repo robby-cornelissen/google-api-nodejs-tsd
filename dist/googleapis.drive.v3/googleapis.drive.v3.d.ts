@@ -63,7 +63,7 @@ declare module google {
 
             }
 
-            interface About {
+            export interface About {
                 'appInstalled': boolean;
                 'exportFormats': {
                     [name: string]: string[]
@@ -86,7 +86,7 @@ declare module google {
                 'user': User;
             }
 
-            interface Change {
+            export interface Change {
                 'file': File;
                 'fileId': string;
                 'kind': string;
@@ -94,14 +94,14 @@ declare module google {
                 'time': string;
             }
 
-            interface ChangeList {
+            export interface ChangeList {
                 'changes': Change[];
                 'kind': string;
                 'newStartPageToken': string;
                 'nextPageToken': string;
             }
 
-            interface Channel {
+            export interface Channel {
                 'address': string;
                 'expiration': string;
                 'id': string;
@@ -116,7 +116,7 @@ declare module google {
                 'type': string;
             }
 
-            interface Comment {
+            export interface Comment {
                 'anchor': string;
                 'author': User;
                 'content': string;
@@ -134,13 +134,13 @@ declare module google {
                 'resolved': boolean;
             }
 
-            interface CommentList {
+            export interface CommentList {
                 'comments': Comment[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface File {
+            export interface File {
                 'appProperties': {
                     [name: string]: string
                 };
@@ -232,19 +232,19 @@ declare module google {
                 'writersCanShare': boolean;
             }
 
-            interface FileList {
+            export interface FileList {
                 'files': File[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface GeneratedIds {
+            export interface GeneratedIds {
                 'ids': string[];
                 'kind': string;
                 'space': string;
             }
 
-            interface Permission {
+            export interface Permission {
                 'allowFileDiscovery': boolean;
                 'displayName': string;
                 'domain': string;
@@ -256,12 +256,12 @@ declare module google {
                 'type': string;
             }
 
-            interface PermissionList {
+            export interface PermissionList {
                 'kind': string;
                 'permissions': Permission[];
             }
 
-            interface Reply {
+            export interface Reply {
                 'action': string;
                 'author': User;
                 'content': string;
@@ -273,13 +273,13 @@ declare module google {
                 'modifiedTime': string;
             }
 
-            interface ReplyList {
+            export interface ReplyList {
                 'kind': string;
                 'nextPageToken': string;
                 'replies': Reply[];
             }
 
-            interface Revision {
+            export interface Revision {
                 'id': string;
                 'keepForever': boolean;
                 'kind': string;
@@ -294,17 +294,17 @@ declare module google {
                 'size': string;
             }
 
-            interface RevisionList {
+            export interface RevisionList {
                 'kind': string;
                 'revisions': Revision[];
             }
 
-            interface StartPageToken {
+            export interface StartPageToken {
                 'kind': string;
                 'startPageToken': string;
             }
 
-            interface User {
+            export interface User {
                 'displayName': string;
                 'emailAddress': string;
                 'kind': string;

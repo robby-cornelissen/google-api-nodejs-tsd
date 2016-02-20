@@ -16,7 +16,7 @@ declare module google {
 
             }
 
-            interface Context {
+            export interface Context {
                 'facets': {
                     'anchor': string;
                     'label': string;
@@ -25,7 +25,7 @@ declare module google {
                 'title': string;
             }
 
-            interface Promotion {
+            export interface Promotion {
                 'bodyLines': {
                     'htmlTitle': string;
                     'link': string;
@@ -43,7 +43,7 @@ declare module google {
                 'title': string;
             }
 
-            interface Query {
+            export interface Query {
                 'count': number;
                 'cr': string;
                 'cref': string;
@@ -83,7 +83,7 @@ declare module google {
                 'totalResults': string;
             }
 
-            interface Result {
+            export interface Result {
                 'cacheId': string;
                 'displayLink': string;
                 'fileFormat': string;
@@ -117,7 +117,7 @@ declare module google {
                 'title': string;
             }
 
-            interface Search {
+            export interface Search {
                 'context': Context;
                 'items': Result[];
                 'kind': string;

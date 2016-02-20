@@ -28,19 +28,19 @@ declare module google {
 
             }
 
-            interface Label {
+            export interface Label {
                 'key': string;
                 'value': string;
             }
 
-            interface ListResourceResponseItem {
+            export interface ListResourceResponseItem {
                 'endpoints': {
                     [name: string]: number[]
                 };
                 'resource': string;
             }
 
-            interface Operation {
+            export interface Operation {
                 'clientOperationId': string;
                 'creationTimestamp': string;
                 'endTime': string;
@@ -78,7 +78,7 @@ declare module google {
                 'zone': string;
             }
 
-            interface OperationList {
+            export interface OperationList {
                 'id': string;
                 'items': Operation[];
                 'kind': string;
@@ -86,7 +86,7 @@ declare module google {
                 'selfLink': string;
             }
 
-            interface ResourceView {
+            export interface ResourceView {
                 'creationTimestamp': string;
                 'description': string;
                 'endpoints': ServiceEndpoint[];
@@ -101,38 +101,38 @@ declare module google {
                 'size': number;
             }
 
-            interface ServiceEndpoint {
+            export interface ServiceEndpoint {
                 'name': string;
                 'port': number;
             }
 
-            interface ZoneViewsAddResourcesRequest {
+            export interface ZoneViewsAddResourcesRequest {
                 'resources': string[];
             }
 
-            interface ZoneViewsGetServiceResponse {
+            export interface ZoneViewsGetServiceResponse {
                 'endpoints': ServiceEndpoint[];
                 'fingerprint': string;
             }
 
-            interface ZoneViewsList {
+            export interface ZoneViewsList {
                 'items': ResourceView[];
                 'kind': string;
                 'nextPageToken': string;
                 'selfLink': string;
             }
 
-            interface ZoneViewsListResourcesResponse {
+            export interface ZoneViewsListResourcesResponse {
                 'items': ListResourceResponseItem[];
                 'network': string;
                 'nextPageToken': string;
             }
 
-            interface ZoneViewsRemoveResourcesRequest {
+            export interface ZoneViewsRemoveResourcesRequest {
                 'resources': string[];
             }
 
-            interface ZoneViewsSetServiceRequest {
+            export interface ZoneViewsSetServiceRequest {
                 'endpoints': ServiceEndpoint[];
                 'fingerprint': string;
                 'resourceName': string;

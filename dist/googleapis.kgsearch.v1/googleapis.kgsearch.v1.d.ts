@@ -16,7 +16,7 @@ declare module google {
 
             }
 
-            interface SearchResponse {
+            export interface SearchResponse {
                 'context': any;
                 'type': any;
                 'itemListElement': any[];

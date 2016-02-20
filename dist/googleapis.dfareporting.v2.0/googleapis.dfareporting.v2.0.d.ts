@@ -281,7 +281,7 @@ declare module google {
 
             }
 
-            interface Account {
+            export interface Account {
                 'accountPermissionIds': string[];
                 'accountProfile': string;
                 'active': boolean;
@@ -303,7 +303,7 @@ declare module google {
                 'teaserSizeLimit': string;
             }
 
-            interface AccountActiveAdSummary {
+            export interface AccountActiveAdSummary {
                 'accountId': string;
                 'activeAds': string;
                 'activeAdsLimitTier': string;
@@ -311,7 +311,7 @@ declare module google {
                 'kind': string;
             }
 
-            interface AccountPermission {
+            export interface AccountPermission {
                 'accountProfiles': string[];
                 'id': string;
                 'kind': string;
@@ -320,23 +320,23 @@ declare module google {
                 'permissionGroupId': string;
             }
 
-            interface AccountPermissionGroup {
+            export interface AccountPermissionGroup {
                 'id': string;
                 'kind': string;
                 'name': string;
             }
 
-            interface AccountPermissionGroupsListResponse {
+            export interface AccountPermissionGroupsListResponse {
                 'accountPermissionGroups': AccountPermissionGroup[];
                 'kind': string;
             }
 
-            interface AccountPermissionsListResponse {
+            export interface AccountPermissionsListResponse {
                 'accountPermissions': AccountPermission[];
                 'kind': string;
             }
 
-            interface AccountUserProfile {
+            export interface AccountUserProfile {
                 'accountId': string;
                 'active': boolean;
                 'advertiserFilter': ObjectFilter;
@@ -355,25 +355,25 @@ declare module google {
                 'userRoleId': string;
             }
 
-            interface AccountUserProfilesListResponse {
+            export interface AccountUserProfilesListResponse {
                 'accountUserProfiles': AccountUserProfile[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface AccountsListResponse {
+            export interface AccountsListResponse {
                 'accounts': Account[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Activities {
+            export interface Activities {
                 'filters': DimensionValue[];
                 'kind': string;
                 'metricNames': string[];
             }
 
-            interface Ad {
+            export interface Ad {
                 'accountId': string;
                 'active': boolean;
                 'advertiserId': string;
@@ -413,13 +413,13 @@ declare module google {
                 'type': string;
             }
 
-            interface AdsListResponse {
+            export interface AdsListResponse {
                 'ads': Ad[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Advertiser {
+            export interface Advertiser {
                 'accountId': string;
                 'advertiserGroupId': string;
                 'clickThroughUrlSuffix': string;
@@ -435,38 +435,38 @@ declare module google {
                 'subaccountId': string;
             }
 
-            interface AdvertiserGroup {
+            export interface AdvertiserGroup {
                 'accountId': string;
                 'id': string;
                 'kind': string;
                 'name': string;
             }
 
-            interface AdvertiserGroupsListResponse {
+            export interface AdvertiserGroupsListResponse {
                 'advertiserGroups': AdvertiserGroup[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface AdvertisersListResponse {
+            export interface AdvertisersListResponse {
                 'advertisers': Advertiser[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface AudienceSegment {
+            export interface AudienceSegment {
                 'allocation': number;
                 'id': string;
                 'name': string;
             }
 
-            interface AudienceSegmentGroup {
+            export interface AudienceSegmentGroup {
                 'audienceSegments': AudienceSegment[];
                 'id': string;
                 'name': string;
             }
 
-            interface Browser {
+            export interface Browser {
                 'browserVersionId': string;
                 'dartId': string;
                 'kind': string;
@@ -475,12 +475,12 @@ declare module google {
                 'name': string;
             }
 
-            interface BrowsersListResponse {
+            export interface BrowsersListResponse {
                 'browsers': Browser[];
                 'kind': string;
             }
 
-            interface Campaign {
+            export interface Campaign {
                 'accountId': string;
                 'additionalCreativeOptimizationConfigurations': CreativeOptimizationConfiguration[];
                 'advertiserGroupId': string;
@@ -511,24 +511,24 @@ declare module google {
                 'traffickerEmails': string[];
             }
 
-            interface CampaignCreativeAssociation {
+            export interface CampaignCreativeAssociation {
                 'creativeId': string;
                 'kind': string;
             }
 
-            interface CampaignCreativeAssociationsListResponse {
+            export interface CampaignCreativeAssociationsListResponse {
                 'campaignCreativeAssociations': CampaignCreativeAssociation[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface CampaignsListResponse {
+            export interface CampaignsListResponse {
                 'campaigns': Campaign[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface ChangeLog {
+            export interface ChangeLog {
                 'accountId': string;
                 'action': string;
                 'changeTime': string;
@@ -545,18 +545,18 @@ declare module google {
                 'userProfileName': string;
             }
 
-            interface ChangeLogsListResponse {
+            export interface ChangeLogsListResponse {
                 'changeLogs': ChangeLog[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface CitiesListResponse {
+            export interface CitiesListResponse {
                 'cities': City[];
                 'kind': string;
             }
 
-            interface City {
+            export interface City {
                 'countryCode': string;
                 'countryDartId': string;
                 'dartId': string;
@@ -568,29 +568,29 @@ declare module google {
                 'regionDartId': string;
             }
 
-            interface ClickTag {
+            export interface ClickTag {
                 'eventName': string;
                 'name': string;
                 'value': string;
             }
 
-            interface ClickThroughUrl {
+            export interface ClickThroughUrl {
                 'customClickThroughUrl': string;
                 'defaultLandingPage': boolean;
                 'landingPageId': string;
             }
 
-            interface ClickThroughUrlSuffixProperties {
+            export interface ClickThroughUrlSuffixProperties {
                 'clickThroughUrlSuffix': string;
                 'overrideInheritedSuffix': boolean;
             }
 
-            interface CompanionClickThroughOverride {
+            export interface CompanionClickThroughOverride {
                 'clickThroughUrl': ClickThroughUrl;
                 'creativeId': string;
             }
 
-            interface CompatibleFields {
+            export interface CompatibleFields {
                 'crossDimensionReachReportCompatibleFields': CrossDimensionReachReportCompatibleFields;
                 'floodlightReportCompatibleFields': FloodlightReportCompatibleFields;
                 'kind': string;
@@ -599,24 +599,24 @@ declare module google {
                 'reportCompatibleFields': ReportCompatibleFields;
             }
 
-            interface ConnectionType {
+            export interface ConnectionType {
                 'id': string;
                 'kind': string;
                 'name': string;
             }
 
-            interface ConnectionTypesListResponse {
+            export interface ConnectionTypesListResponse {
                 'connectionTypes': ConnectionType[];
                 'kind': string;
             }
 
-            interface ContentCategoriesListResponse {
+            export interface ContentCategoriesListResponse {
                 'contentCategories': ContentCategory[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface ContentCategory {
+            export interface ContentCategory {
                 'accountId': string;
                 'description': string;
                 'id': string;
@@ -624,12 +624,12 @@ declare module google {
                 'name': string;
             }
 
-            interface CountriesListResponse {
+            export interface CountriesListResponse {
                 'countries': Country[];
                 'kind': string;
             }
 
-            interface Country {
+            export interface Country {
                 'countryCode': string;
                 'dartId': string;
                 'kind': string;
@@ -637,7 +637,7 @@ declare module google {
                 'sslEnabled': boolean;
             }
 
-            interface Creative {
+            export interface Creative {
                 'accountId': string;
                 'active': boolean;
                 'adParameters': string;
@@ -695,7 +695,7 @@ declare module google {
                 'videoDuration': number;
             }
 
-            interface CreativeAsset {
+            export interface CreativeAsset {
                 'actionScript3': boolean;
                 'active': boolean;
                 'alignment': string;
@@ -740,12 +740,12 @@ declare module google {
                 'zipFilesize': string;
             }
 
-            interface CreativeAssetId {
+            export interface CreativeAssetId {
                 'name': string;
                 'type': string;
             }
 
-            interface CreativeAssetMetadata {
+            export interface CreativeAssetMetadata {
                 'assetIdentifier': CreativeAssetId;
                 'clickTags': ClickTag[];
                 'detectedFeatures': string[];
@@ -753,7 +753,7 @@ declare module google {
                 'warnedValidationRules': string[];
             }
 
-            interface CreativeAssignment {
+            export interface CreativeAssignment {
                 'active': boolean;
                 'applyEventTags': boolean;
                 'clickThroughUrl': ClickThroughUrl;
@@ -769,7 +769,7 @@ declare module google {
                 'weight': number;
             }
 
-            interface CreativeCustomEvent {
+            export interface CreativeCustomEvent {
                 'active': boolean;
                 'advertiserCustomEventName': string;
                 'advertiserCustomEventType': string;
@@ -782,7 +782,7 @@ declare module google {
                 'videoReportingId': string;
             }
 
-            interface CreativeField {
+            export interface CreativeField {
                 'accountId': string;
                 'advertiserId': string;
                 'advertiserIdDimensionValue': DimensionValue;
@@ -792,30 +792,30 @@ declare module google {
                 'subaccountId': string;
             }
 
-            interface CreativeFieldAssignment {
+            export interface CreativeFieldAssignment {
                 'creativeFieldId': string;
                 'creativeFieldValueId': string;
             }
 
-            interface CreativeFieldValue {
+            export interface CreativeFieldValue {
                 'id': string;
                 'kind': string;
                 'value': string;
             }
 
-            interface CreativeFieldValuesListResponse {
+            export interface CreativeFieldValuesListResponse {
                 'creativeFieldValues': CreativeFieldValue[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface CreativeFieldsListResponse {
+            export interface CreativeFieldsListResponse {
                 'creativeFields': CreativeField[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface CreativeGroup {
+            export interface CreativeGroup {
                 'accountId': string;
                 'advertiserId': string;
                 'advertiserIdDimensionValue': DimensionValue;
@@ -826,43 +826,43 @@ declare module google {
                 'subaccountId': string;
             }
 
-            interface CreativeGroupAssignment {
+            export interface CreativeGroupAssignment {
                 'creativeGroupId': string;
                 'creativeGroupNumber': string;
             }
 
-            interface CreativeGroupsListResponse {
+            export interface CreativeGroupsListResponse {
                 'creativeGroups': CreativeGroup[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface CreativeOptimizationConfiguration {
+            export interface CreativeOptimizationConfiguration {
                 'id': string;
                 'name': string;
                 'optimizationActivitys': OptimizationActivity[];
                 'optimizationModel': string;
             }
 
-            interface CreativeRotation {
+            export interface CreativeRotation {
                 'creativeAssignments': CreativeAssignment[];
                 'creativeOptimizationConfigurationId': string;
                 'type': string;
                 'weightCalculationStrategy': string;
             }
 
-            interface CreativeSettings {
+            export interface CreativeSettings {
                 'iFrameFooter': string;
                 'iFrameHeader': string;
             }
 
-            interface CreativesListResponse {
+            export interface CreativesListResponse {
                 'creatives': Creative[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface CrossDimensionReachReportCompatibleFields {
+            export interface CrossDimensionReachReportCompatibleFields {
                 'breakdown': Dimension[];
                 'dimensionFilters': Dimension[];
                 'kind': string;
@@ -870,37 +870,37 @@ declare module google {
                 'overlapMetrics': Metric[];
             }
 
-            interface CustomRichMediaEvents {
+            export interface CustomRichMediaEvents {
                 'filteredEventIds': DimensionValue[];
                 'kind': string;
             }
 
-            interface DateRange {
+            export interface DateRange {
                 'endDate': string;
                 'kind': string;
                 'relativeDateRange': string;
                 'startDate': string;
             }
 
-            interface DayPartTargeting {
+            export interface DayPartTargeting {
                 'daysOfWeek': string[];
                 'hoursOfDay': number[];
                 'userLocalTime': boolean;
             }
 
-            interface DefaultClickThroughEventTagProperties {
+            export interface DefaultClickThroughEventTagProperties {
                 'defaultClickThroughEventTagId': string;
                 'overrideInheritedEventTag': boolean;
             }
 
-            interface DeliverySchedule {
+            export interface DeliverySchedule {
                 'frequencyCap': FrequencyCap;
                 'hardCutoff': boolean;
                 'impressionRatio': string;
                 'priority': string;
             }
 
-            interface DfpSettings {
+            export interface DfpSettings {
                 'dfp_network_code': string;
                 'dfp_network_name': string;
                 'programmaticPlacementAccepted': boolean;
@@ -908,18 +908,18 @@ declare module google {
                 'publisherPortalOnly': boolean;
             }
 
-            interface Dimension {
+            export interface Dimension {
                 'kind': string;
                 'name': string;
             }
 
-            interface DimensionFilter {
+            export interface DimensionFilter {
                 'dimensionName': string;
                 'kind': string;
                 'value': string;
             }
 
-            interface DimensionValue {
+            export interface DimensionValue {
                 'dimensionName': string;
                 'etag': string;
                 'id': string;
@@ -928,14 +928,14 @@ declare module google {
                 'value': string;
             }
 
-            interface DimensionValueList {
+            export interface DimensionValueList {
                 'etag': string;
                 'items': DimensionValue[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface DimensionValueRequest {
+            export interface DimensionValueRequest {
                 'dimensionName': string;
                 'endDate': string;
                 'filters': DimensionFilter[];
@@ -943,7 +943,7 @@ declare module google {
                 'startDate': string;
             }
 
-            interface DirectorySite {
+            export interface DirectorySite {
                 'active': boolean;
                 'contactAssignments': DirectorySiteContactAssignment[];
                 'countryId': string;
@@ -960,7 +960,7 @@ declare module google {
                 'url': string;
             }
 
-            interface DirectorySiteContact {
+            export interface DirectorySiteContact {
                 'email': string;
                 'firstName': string;
                 'id': string;
@@ -970,18 +970,18 @@ declare module google {
                 'type': string;
             }
 
-            interface DirectorySiteContactAssignment {
+            export interface DirectorySiteContactAssignment {
                 'contactId': string;
                 'visibility': string;
             }
 
-            interface DirectorySiteContactsListResponse {
+            export interface DirectorySiteContactsListResponse {
                 'directorySiteContacts': DirectorySiteContact[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface DirectorySiteSettings {
+            export interface DirectorySiteSettings {
                 'activeViewOptOut': boolean;
                 'dfp_settings': DfpSettings;
                 'instream_video_placement_accepted': boolean;
@@ -991,13 +991,13 @@ declare module google {
                 'videoActiveViewOptOut': boolean;
             }
 
-            interface DirectorySitesListResponse {
+            export interface DirectorySitesListResponse {
                 'directorySites': DirectorySite[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface EventTag {
+            export interface EventTag {
                 'accountId': string;
                 'advertiserId': string;
                 'advertiserIdDimensionValue': DimensionValue;
@@ -1017,17 +1017,17 @@ declare module google {
                 'urlEscapeLevels': number;
             }
 
-            interface EventTagOverride {
+            export interface EventTagOverride {
                 'enabled': boolean;
                 'id': string;
             }
 
-            interface EventTagsListResponse {
+            export interface EventTagsListResponse {
                 'eventTags': EventTag[];
                 'kind': string;
             }
 
-            interface File {
+            export interface File {
                 'dateRange': DateRange;
                 'etag': string;
                 'fileName': string;
@@ -1043,25 +1043,25 @@ declare module google {
                 };
             }
 
-            interface FileList {
+            export interface FileList {
                 'etag': string;
                 'items': File[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface FloodlightActivitiesGenerateTagResponse {
+            export interface FloodlightActivitiesGenerateTagResponse {
                 'floodlightActivityTag': string;
                 'kind': string;
             }
 
-            interface FloodlightActivitiesListResponse {
+            export interface FloodlightActivitiesListResponse {
                 'floodlightActivities': FloodlightActivity[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface FloodlightActivity {
+            export interface FloodlightActivity {
                 'accountId': string;
                 'advertiserId': string;
                 'advertiserIdDimensionValue': DimensionValue;
@@ -1092,13 +1092,13 @@ declare module google {
                 'userDefinedVariableTypes': string[];
             }
 
-            interface FloodlightActivityDynamicTag {
+            export interface FloodlightActivityDynamicTag {
                 'id': string;
                 'name': string;
                 'tag': string;
             }
 
-            interface FloodlightActivityGroup {
+            export interface FloodlightActivityGroup {
                 'accountId': string;
                 'advertiserId': string;
                 'advertiserIdDimensionValue': DimensionValue;
@@ -1113,13 +1113,13 @@ declare module google {
                 'type': string;
             }
 
-            interface FloodlightActivityGroupsListResponse {
+            export interface FloodlightActivityGroupsListResponse {
                 'floodlightActivityGroups': FloodlightActivityGroup[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface FloodlightActivityPublisherDynamicTag {
+            export interface FloodlightActivityPublisherDynamicTag {
                 'clickThrough': boolean;
                 'directorySiteId': string;
                 'dynamicTag': FloodlightActivityDynamicTag;
@@ -1128,7 +1128,7 @@ declare module google {
                 'viewThrough': boolean;
             }
 
-            interface FloodlightConfiguration {
+            export interface FloodlightConfiguration {
                 'accountId': string;
                 'advertiserId': string;
                 'advertiserIdDimensionValue': DimensionValue;
@@ -1148,24 +1148,24 @@ declare module google {
                 'userDefinedVariableConfigurations': UserDefinedVariableConfiguration[];
             }
 
-            interface FloodlightConfigurationsListResponse {
+            export interface FloodlightConfigurationsListResponse {
                 'floodlightConfigurations': FloodlightConfiguration[];
                 'kind': string;
             }
 
-            interface FloodlightReportCompatibleFields {
+            export interface FloodlightReportCompatibleFields {
                 'dimensionFilters': Dimension[];
                 'dimensions': Dimension[];
                 'kind': string;
                 'metrics': Metric[];
             }
 
-            interface FrequencyCap {
+            export interface FrequencyCap {
                 'duration': string;
                 'impressions': string;
             }
 
-            interface FsCommand {
+            export interface FsCommand {
                 'left': number;
                 'positionOption': string;
                 'top': number;
@@ -1173,7 +1173,7 @@ declare module google {
                 'windowWidth': number;
             }
 
-            interface GeoTargeting {
+            export interface GeoTargeting {
                 'cities': City[];
                 'countries': Country[];
                 'excludeCountries': boolean;
@@ -1182,11 +1182,11 @@ declare module google {
                 'regions': Region[];
             }
 
-            interface KeyValueTargetingExpression {
+            export interface KeyValueTargetingExpression {
                 'expression': string;
             }
 
-            interface LandingPage {
+            export interface LandingPage {
                 'default': boolean;
                 'id': string;
                 'kind': string;
@@ -1194,30 +1194,30 @@ declare module google {
                 'url': string;
             }
 
-            interface LandingPagesListResponse {
+            export interface LandingPagesListResponse {
                 'kind': string;
                 'landingPages': LandingPage[];
             }
 
-            interface LastModifiedInfo {
+            export interface LastModifiedInfo {
                 'time': string;
             }
 
-            interface ListTargetingExpression {
+            export interface ListTargetingExpression {
                 'expression': string;
             }
 
-            interface LookbackConfiguration {
+            export interface LookbackConfiguration {
                 'clickDuration': number;
                 'postImpressionActivitiesDuration': number;
             }
 
-            interface Metric {
+            export interface Metric {
                 'kind': string;
                 'name': string;
             }
 
-            interface Metro {
+            export interface Metro {
                 'countryCode': string;
                 'countryDartId': string;
                 'dartId': string;
@@ -1227,12 +1227,12 @@ declare module google {
                 'name': string;
             }
 
-            interface MetrosListResponse {
+            export interface MetrosListResponse {
                 'kind': string;
                 'metros': Metro[];
             }
 
-            interface MobileCarrier {
+            export interface MobileCarrier {
                 'countryCode': string;
                 'countryDartId': string;
                 'id': string;
@@ -1240,28 +1240,28 @@ declare module google {
                 'name': string;
             }
 
-            interface MobileCarriersListResponse {
+            export interface MobileCarriersListResponse {
                 'kind': string;
                 'mobileCarriers': MobileCarrier[];
             }
 
-            interface ObjectFilter {
+            export interface ObjectFilter {
                 'kind': string;
                 'objectIds': string[];
                 'status': string;
             }
 
-            interface OffsetPosition {
+            export interface OffsetPosition {
                 'left': number;
                 'top': number;
             }
 
-            interface OmnitureSettings {
+            export interface OmnitureSettings {
                 'omnitureCostDataEnabled': boolean;
                 'omnitureIntegrationEnabled': boolean;
             }
 
-            interface OperatingSystem {
+            export interface OperatingSystem {
                 'dartId': string;
                 'desktop': boolean;
                 'kind': string;
@@ -1269,7 +1269,7 @@ declare module google {
                 'name': string;
             }
 
-            interface OperatingSystemVersion {
+            export interface OperatingSystemVersion {
                 'id': string;
                 'kind': string;
                 'majorVersion': string;
@@ -1278,23 +1278,23 @@ declare module google {
                 'operatingSystem': OperatingSystem;
             }
 
-            interface OperatingSystemVersionsListResponse {
+            export interface OperatingSystemVersionsListResponse {
                 'kind': string;
                 'operatingSystemVersions': OperatingSystemVersion[];
             }
 
-            interface OperatingSystemsListResponse {
+            export interface OperatingSystemsListResponse {
                 'kind': string;
                 'operatingSystems': OperatingSystem[];
             }
 
-            interface OptimizationActivity {
+            export interface OptimizationActivity {
                 'floodlightActivityId': string;
                 'floodlightActivityIdDimensionValue': DimensionValue;
                 'weight': number;
             }
 
-            interface PathToConversionReportCompatibleFields {
+            export interface PathToConversionReportCompatibleFields {
                 'conversionDimensions': Dimension[];
                 'customFloodlightVariables': Dimension[];
                 'kind': string;
@@ -1302,7 +1302,7 @@ declare module google {
                 'perInteractionDimensions': Dimension[];
             }
 
-            interface Placement {
+            export interface Placement {
                 'accountId': string;
                 'advertiserId': string;
                 'advertiserIdDimensionValue': DimensionValue;
@@ -1341,14 +1341,14 @@ declare module google {
                 'tagSetting': TagSetting;
             }
 
-            interface PlacementAssignment {
+            export interface PlacementAssignment {
                 'active': boolean;
                 'placementId': string;
                 'placementIdDimensionValue': DimensionValue;
                 'sslRequired': boolean;
             }
 
-            interface PlacementGroup {
+            export interface PlacementGroup {
                 'accountId': string;
                 'advertiserId': string;
                 'advertiserIdDimensionValue': DimensionValue;
@@ -1378,53 +1378,53 @@ declare module google {
                 'subaccountId': string;
             }
 
-            interface PlacementGroupsListResponse {
+            export interface PlacementGroupsListResponse {
                 'kind': string;
                 'nextPageToken': string;
                 'placementGroups': PlacementGroup[];
             }
 
-            interface PlacementStrategiesListResponse {
+            export interface PlacementStrategiesListResponse {
                 'kind': string;
                 'nextPageToken': string;
                 'placementStrategies': PlacementStrategy[];
             }
 
-            interface PlacementStrategy {
+            export interface PlacementStrategy {
                 'accountId': string;
                 'id': string;
                 'kind': string;
                 'name': string;
             }
 
-            interface PlacementTag {
+            export interface PlacementTag {
                 'placementId': string;
                 'tagDatas': TagData[];
             }
 
-            interface PlacementsGenerateTagsResponse {
+            export interface PlacementsGenerateTagsResponse {
                 'kind': string;
                 'placementTags': PlacementTag[];
             }
 
-            interface PlacementsListResponse {
+            export interface PlacementsListResponse {
                 'kind': string;
                 'nextPageToken': string;
                 'placements': Placement[];
             }
 
-            interface PlatformType {
+            export interface PlatformType {
                 'id': string;
                 'kind': string;
                 'name': string;
             }
 
-            interface PlatformTypesListResponse {
+            export interface PlatformTypesListResponse {
                 'kind': string;
                 'platformTypes': PlatformType[];
             }
 
-            interface PopupWindowProperties {
+            export interface PopupWindowProperties {
                 'dimension': Size;
                 'offset': OffsetPosition;
                 'positionType': string;
@@ -1436,19 +1436,19 @@ declare module google {
                 'title': string;
             }
 
-            interface PostalCode {
+            export interface PostalCode {
                 'countryCode': string;
                 'countryDartId': string;
                 'id': string;
                 'kind': string;
             }
 
-            interface PostalCodesListResponse {
+            export interface PostalCodesListResponse {
                 'kind': string;
                 'postalCodes': PostalCode[];
             }
 
-            interface PricingSchedule {
+            export interface PricingSchedule {
                 'capCostOption': string;
                 'disregardOverdelivery': boolean;
                 'endDate': string;
@@ -1460,7 +1460,7 @@ declare module google {
                 'testingStartDate': string;
             }
 
-            interface PricingSchedulePricingPeriod {
+            export interface PricingSchedulePricingPeriod {
                 'endDate': string;
                 'pricingComment': string;
                 'rateOrCostNanos': string;
@@ -1468,7 +1468,7 @@ declare module google {
                 'units': string;
             }
 
-            interface ProgrammaticSetting {
+            export interface ProgrammaticSetting {
                 'adxDealIds': string[];
                 'insertionOrderId': string;
                 'insertionOrderIdStatus': boolean;
@@ -1477,7 +1477,7 @@ declare module google {
                 'traffickerEmails': string[];
             }
 
-            interface ReachReportCompatibleFields {
+            export interface ReachReportCompatibleFields {
                 'dimensionFilters': Dimension[];
                 'dimensions': Dimension[];
                 'kind': string;
@@ -1486,13 +1486,13 @@ declare module google {
                 'reachByFrequencyMetrics': Metric[];
             }
 
-            interface Recipient {
+            export interface Recipient {
                 'deliveryType': string;
                 'email': string;
                 'kind': string;
             }
 
-            interface Region {
+            export interface Region {
                 'countryCode': string;
                 'countryDartId': string;
                 'dartId': string;
@@ -1501,12 +1501,12 @@ declare module google {
                 'regionCode': string;
             }
 
-            interface RegionsListResponse {
+            export interface RegionsListResponse {
                 'kind': string;
                 'regions': Region[];
             }
 
-            interface Report {
+            export interface Report {
                 'accountId': string;
                 'criteria': {
                     'activities': Activities;
@@ -1596,7 +1596,7 @@ declare module google {
                 'type': string;
             }
 
-            interface ReportCompatibleFields {
+            export interface ReportCompatibleFields {
                 'dimensionFilters': Dimension[];
                 'dimensions': Dimension[];
                 'kind': string;
@@ -1604,26 +1604,26 @@ declare module google {
                 'pivotedActivityMetrics': Metric[];
             }
 
-            interface ReportList {
+            export interface ReportList {
                 'etag': string;
                 'items': Report[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface ReportsConfiguration {
+            export interface ReportsConfiguration {
                 'exposureToConversionEnabled': boolean;
                 'lookbackConfiguration': LookbackConfiguration;
                 'reportGenerationTimeZoneId': string;
             }
 
-            interface RichMediaExitOverride {
+            export interface RichMediaExitOverride {
                 'customExitUrl': string;
                 'exitId': string;
                 'useCustomExitUrl': boolean;
             }
 
-            interface Site {
+            export interface Site {
                 'accountId': string;
                 'approved': boolean;
                 'directorySiteId': string;
@@ -1638,7 +1638,7 @@ declare module google {
                 'subaccountId': string;
             }
 
-            interface SiteContact {
+            export interface SiteContact {
                 'contactType': string;
                 'email': string;
                 'firstName': string;
@@ -1646,7 +1646,7 @@ declare module google {
                 'lastName': string;
             }
 
-            interface SiteSettings {
+            export interface SiteSettings {
                 'activeViewOptOut': boolean;
                 'creativeSettings': CreativeSettings;
                 'disableBrandSafeAds': boolean;
@@ -1655,13 +1655,13 @@ declare module google {
                 'tagSetting': TagSetting;
             }
 
-            interface SitesListResponse {
+            export interface SitesListResponse {
                 'kind': string;
                 'nextPageToken': string;
                 'sites': Site[];
             }
 
-            interface Size {
+            export interface Size {
                 'height': number;
                 'iab': boolean;
                 'id': string;
@@ -1669,18 +1669,18 @@ declare module google {
                 'width': number;
             }
 
-            interface SizesListResponse {
+            export interface SizesListResponse {
                 'kind': string;
                 'sizes': Size[];
             }
 
-            interface SortedDimension {
+            export interface SortedDimension {
                 'kind': string;
                 'name': string;
                 'sortOrder': string;
             }
 
-            interface Subaccount {
+            export interface Subaccount {
                 'accountId': string;
                 'availablePermissionIds': string[];
                 'id': string;
@@ -1688,13 +1688,13 @@ declare module google {
                 'name': string;
             }
 
-            interface SubaccountsListResponse {
+            export interface SubaccountsListResponse {
                 'kind': string;
                 'nextPageToken': string;
                 'subaccounts': Subaccount[];
             }
 
-            interface TagData {
+            export interface TagData {
                 'adId': string;
                 'clickTag': string;
                 'creativeId': string;
@@ -1702,24 +1702,24 @@ declare module google {
                 'impressionTag': string;
             }
 
-            interface TagSetting {
+            export interface TagSetting {
                 'additionalKeyValues': string;
                 'includeClickThroughUrls': boolean;
                 'includeClickTracking': boolean;
                 'keywordOption': string;
             }
 
-            interface TagSettings {
+            export interface TagSettings {
                 'dynamicTagEnabled': boolean;
                 'imageTagEnabled': boolean;
             }
 
-            interface TargetWindow {
+            export interface TargetWindow {
                 'customHtml': string;
                 'targetWindowOption': string;
             }
 
-            interface TechnologyTargeting {
+            export interface TechnologyTargeting {
                 'browsers': Browser[];
                 'connectionTypes': ConnectionType[];
                 'mobileCarriers': MobileCarrier[];
@@ -1728,18 +1728,18 @@ declare module google {
                 'platformTypes': PlatformType[];
             }
 
-            interface ThirdPartyTrackingUrl {
+            export interface ThirdPartyTrackingUrl {
                 'thirdPartyUrlType': string;
                 'url': string;
             }
 
-            interface UserDefinedVariableConfiguration {
+            export interface UserDefinedVariableConfiguration {
                 'dataType': string;
                 'reportName': string;
                 'variableType': string;
             }
 
-            interface UserProfile {
+            export interface UserProfile {
                 'accountId': string;
                 'accountName': string;
                 'etag': string;
@@ -1750,13 +1750,13 @@ declare module google {
                 'userName': string;
             }
 
-            interface UserProfileList {
+            export interface UserProfileList {
                 'etag': string;
                 'items': UserProfile[];
                 'kind': string;
             }
 
-            interface UserRole {
+            export interface UserRole {
                 'accountId': string;
                 'defaultUserRole': boolean;
                 'id': string;
@@ -1767,7 +1767,7 @@ declare module google {
                 'subaccountId': string;
             }
 
-            interface UserRolePermission {
+            export interface UserRolePermission {
                 'availability': string;
                 'id': string;
                 'kind': string;
@@ -1775,23 +1775,23 @@ declare module google {
                 'permissionGroupId': string;
             }
 
-            interface UserRolePermissionGroup {
+            export interface UserRolePermissionGroup {
                 'id': string;
                 'kind': string;
                 'name': string;
             }
 
-            interface UserRolePermissionGroupsListResponse {
+            export interface UserRolePermissionGroupsListResponse {
                 'kind': string;
                 'userRolePermissionGroups': UserRolePermissionGroup[];
             }
 
-            interface UserRolePermissionsListResponse {
+            export interface UserRolePermissionsListResponse {
                 'kind': string;
                 'userRolePermissions': UserRolePermission[];
             }
 
-            interface UserRolesListResponse {
+            export interface UserRolesListResponse {
                 'kind': string;
                 'nextPageToken': string;
                 'userRoles': UserRole[];

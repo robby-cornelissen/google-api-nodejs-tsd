@@ -26,14 +26,14 @@ declare module google {
 
             }
 
-            interface Activities {
+            export interface Activities {
                 'etag': string;
                 'items': Activity[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Activity {
+            export interface Activity {
                 'actor': {
                     'callerType': string;
                     'email': string;
@@ -64,7 +64,7 @@ declare module google {
                 'ownerDomain': string;
             }
 
-            interface Channel {
+            export interface Channel {
                 'address': string;
                 'expiration': string;
                 'id': string;
@@ -79,7 +79,7 @@ declare module google {
                 'type': string;
             }
 
-            interface UsageReport {
+            export interface UsageReport {
                 'date': string;
                 'entity': {
                     'customerId': string;
@@ -101,7 +101,7 @@ declare module google {
                 }[];
             }
 
-            interface UsageReports {
+            export interface UsageReports {
                 'etag': string;
                 'kind': string;
                 'nextPageToken': string;

@@ -16,7 +16,7 @@ declare module google {
 
             }
 
-            interface Result {
+            export interface Result {
                 'formattedResults': {
                     'locale': string;
                     'ruleResults': {

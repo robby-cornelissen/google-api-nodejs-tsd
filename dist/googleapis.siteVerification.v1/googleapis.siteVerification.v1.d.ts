@@ -22,7 +22,7 @@ declare module google {
 
             }
 
-            interface SiteVerificationWebResourceGettokenRequest {
+            export interface SiteVerificationWebResourceGettokenRequest {
                 'site': {
                     'identifier': string;
                     'type': string;
@@ -30,16 +30,16 @@ declare module google {
                 'verificationMethod': string;
             }
 
-            interface SiteVerificationWebResourceGettokenResponse {
+            export interface SiteVerificationWebResourceGettokenResponse {
                 'method': string;
                 'token': string;
             }
 
-            interface SiteVerificationWebResourceListResponse {
+            export interface SiteVerificationWebResourceListResponse {
                 'items': SiteVerificationWebResourceResource[];
             }
 
-            interface SiteVerificationWebResourceResource {
+            export interface SiteVerificationWebResourceResource {
                 'id': string;
                 'owners': string[];
                 'site': {

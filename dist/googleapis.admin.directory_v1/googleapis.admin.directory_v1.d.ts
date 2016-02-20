@@ -156,7 +156,7 @@ declare module google {
 
             }
 
-            interface Alias {
+            export interface Alias {
                 'alias': string;
                 'etag': string;
                 'id': string;
@@ -164,13 +164,13 @@ declare module google {
                 'primaryEmail': string;
             }
 
-            interface Aliases {
+            export interface Aliases {
                 'aliases': Alias[];
                 'etag': string;
                 'kind': string;
             }
 
-            interface Asp {
+            export interface Asp {
                 'codeId': number;
                 'creationTime': string;
                 'etag': string;
@@ -180,13 +180,13 @@ declare module google {
                 'userKey': string;
             }
 
-            interface Asps {
+            export interface Asps {
                 'etag': string;
                 'items': Asp[];
                 'kind': string;
             }
 
-            interface CalendarResource {
+            export interface CalendarResource {
                 'etags': string;
                 'kind': string;
                 'resourceDescription': string;
@@ -196,14 +196,14 @@ declare module google {
                 'resourceType': string;
             }
 
-            interface CalendarResources {
+            export interface CalendarResources {
                 'etag': string;
                 'items': CalendarResource[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Channel {
+            export interface Channel {
                 'address': string;
                 'expiration': string;
                 'id': string;
@@ -218,7 +218,7 @@ declare module google {
                 'type': string;
             }
 
-            interface ChromeOsDevice {
+            export interface ChromeOsDevice {
                 'activeTimeRanges': {
                     'activeTime': number;
                     'date': string;
@@ -252,14 +252,14 @@ declare module google {
                 'willAutoRenew': boolean;
             }
 
-            interface ChromeOsDevices {
+            export interface ChromeOsDevices {
                 'chromeosdevices': ChromeOsDevice[];
                 'etag': string;
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Customer {
+            export interface Customer {
                 'alternateEmail': string;
                 'customerCreationTime': string;
                 'customerDomain': string;
@@ -271,7 +271,7 @@ declare module google {
                 'postalAddress': CustomerPostalAddress;
             }
 
-            interface CustomerPostalAddress {
+            export interface CustomerPostalAddress {
                 'addressLine1': string;
                 'addressLine2': string;
                 'addressLine3': string;
@@ -283,7 +283,7 @@ declare module google {
                 'region': string;
             }
 
-            interface DomainAlias {
+            export interface DomainAlias {
                 'creationTime': string;
                 'domainAliasName': string;
                 'etag': string;
@@ -292,13 +292,13 @@ declare module google {
                 'verified': boolean;
             }
 
-            interface DomainAliases {
+            export interface DomainAliases {
                 'domainAliases': DomainAlias[];
                 'etag': string;
                 'kind': string;
             }
 
-            interface Domains {
+            export interface Domains {
                 'creationTime': string;
                 'domainAliases': DomainAlias[];
                 'domainName': string;
@@ -308,13 +308,13 @@ declare module google {
                 'verified': boolean;
             }
 
-            interface Domains2 {
+            export interface Domains2 {
                 'domains': Domains[];
                 'etag': string;
                 'kind': string;
             }
 
-            interface Group {
+            export interface Group {
                 'adminCreated': boolean;
                 'aliases': string[];
                 'description': string;
@@ -327,14 +327,14 @@ declare module google {
                 'nonEditableAliases': string[];
             }
 
-            interface Groups {
+            export interface Groups {
                 'etag': string;
                 'groups': Group[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Member {
+            export interface Member {
                 'email': string;
                 'etag': string;
                 'id': string;
@@ -343,14 +343,14 @@ declare module google {
                 'type': string;
             }
 
-            interface Members {
+            export interface Members {
                 'etag': string;
                 'kind': string;
                 'members': Member[];
                 'nextPageToken': string;
             }
 
-            interface MobileDevice {
+            export interface MobileDevice {
                 'adbStatus': boolean;
                 'applications': {
                     'displayName': string;
@@ -390,18 +390,18 @@ declare module google {
                 'wifiMacAddress': string;
             }
 
-            interface MobileDeviceAction {
+            export interface MobileDeviceAction {
                 'action': string;
             }
 
-            interface MobileDevices {
+            export interface MobileDevices {
                 'etag': string;
                 'kind': string;
                 'mobiledevices': MobileDevice[];
                 'nextPageToken': string;
             }
 
-            interface Notification {
+            export interface Notification {
                 'body': string;
                 'etag': string;
                 'fromAddress': string;
@@ -412,7 +412,7 @@ declare module google {
                 'subject': string;
             }
 
-            interface Notifications {
+            export interface Notifications {
                 'etag': string;
                 'items': Notification[];
                 'kind': string;
@@ -420,7 +420,7 @@ declare module google {
                 'unreadNotificationsCount': number;
             }
 
-            interface OrgUnit {
+            export interface OrgUnit {
                 'blockInheritance': boolean;
                 'description': string;
                 'etag': string;
@@ -432,13 +432,13 @@ declare module google {
                 'parentOrgUnitPath': string;
             }
 
-            interface OrgUnits {
+            export interface OrgUnits {
                 'etag': string;
                 'kind': string;
                 'organizationUnits': OrgUnit[];
             }
 
-            interface Privilege {
+            export interface Privilege {
                 'childPrivileges': Privilege[];
                 'etag': string;
                 'isOuScopable': boolean;
@@ -448,13 +448,13 @@ declare module google {
                 'serviceName': string;
             }
 
-            interface Privileges {
+            export interface Privileges {
                 'etag': string;
                 'items': Privilege[];
                 'kind': string;
             }
 
-            interface Role {
+            export interface Role {
                 'etag': string;
                 'isSuperAdminRole': boolean;
                 'isSystemRole': boolean;
@@ -468,7 +468,7 @@ declare module google {
                 }[];
             }
 
-            interface RoleAssignment {
+            export interface RoleAssignment {
                 'assignedTo': string;
                 'etag': string;
                 'kind': string;
@@ -478,21 +478,21 @@ declare module google {
                 'scopeType': string;
             }
 
-            interface RoleAssignments {
+            export interface RoleAssignments {
                 'etag': string;
                 'items': RoleAssignment[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Roles {
+            export interface Roles {
                 'etag': string;
                 'items': Role[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Schema {
+            export interface Schema {
                 'etag': string;
                 'fields': SchemaFieldSpec[];
                 'kind': string;
@@ -500,7 +500,7 @@ declare module google {
                 'schemaName': string;
             }
 
-            interface SchemaFieldSpec {
+            export interface SchemaFieldSpec {
                 'etag': string;
                 'fieldId': string;
                 'fieldName': string;
@@ -515,13 +515,13 @@ declare module google {
                 'readAccessType': string;
             }
 
-            interface Schemas {
+            export interface Schemas {
                 'etag': string;
                 'kind': string;
                 'schemas': Schema[];
             }
 
-            interface Token {
+            export interface Token {
                 'anonymous': boolean;
                 'clientId': string;
                 'displayText': string;
@@ -532,13 +532,13 @@ declare module google {
                 'userKey': string;
             }
 
-            interface Tokens {
+            export interface Tokens {
                 'etag': string;
                 'items': Token[];
                 'kind': string;
             }
 
-            interface User {
+            export interface User {
                 'addresses': any;
                 'agreedToTerms': boolean;
                 'aliases': string[];
@@ -578,12 +578,12 @@ declare module google {
                 'websites': any;
             }
 
-            interface UserAbout {
+            export interface UserAbout {
                 'contentType': string;
                 'value': string;
             }
 
-            interface UserAddress {
+            export interface UserAddress {
                 'country': string;
                 'countryCode': string;
                 'customType': string;
@@ -599,24 +599,24 @@ declare module google {
                 'type': string;
             }
 
-            interface UserCustomProperties {
+            export interface UserCustomProperties {
                 [name: string]: any
             }
 
-            interface UserEmail {
+            export interface UserEmail {
                 'address': string;
                 'customType': string;
                 'primary': boolean;
                 'type': string;
             }
 
-            interface UserExternalId {
+            export interface UserExternalId {
                 'customType': string;
                 'type': string;
                 'value': string;
             }
 
-            interface UserIm {
+            export interface UserIm {
                 'customProtocol': string;
                 'customType': string;
                 'im': string;
@@ -625,17 +625,17 @@ declare module google {
                 'type': string;
             }
 
-            interface UserMakeAdmin {
+            export interface UserMakeAdmin {
                 'status': boolean;
             }
 
-            interface UserName {
+            export interface UserName {
                 'familyName': string;
                 'fullName': string;
                 'givenName': string;
             }
 
-            interface UserOrganization {
+            export interface UserOrganization {
                 'costCenter': string;
                 'customType': string;
                 'department': string;
@@ -649,14 +649,14 @@ declare module google {
                 'type': string;
             }
 
-            interface UserPhone {
+            export interface UserPhone {
                 'customType': string;
                 'primary': boolean;
                 'type': string;
                 'value': string;
             }
 
-            interface UserPhoto {
+            export interface UserPhoto {
                 'etag': string;
                 'height': number;
                 'id': string;
@@ -667,24 +667,24 @@ declare module google {
                 'width': number;
             }
 
-            interface UserRelation {
+            export interface UserRelation {
                 'customType': string;
                 'type': string;
                 'value': string;
             }
 
-            interface UserUndelete {
+            export interface UserUndelete {
                 'orgUnitPath': string;
             }
 
-            interface UserWebsite {
+            export interface UserWebsite {
                 'customType': string;
                 'primary': boolean;
                 'type': string;
                 'value': string;
             }
 
-            interface Users {
+            export interface Users {
                 'etag': string;
                 'kind': string;
                 'nextPageToken': string;
@@ -692,14 +692,14 @@ declare module google {
                 'users': User[];
             }
 
-            interface VerificationCode {
+            export interface VerificationCode {
                 'etag': string;
                 'kind': string;
                 'userId': string;
                 'verificationCode': string;
             }
 
-            interface VerificationCodes {
+            export interface VerificationCodes {
                 'etag': string;
                 'items': VerificationCode[];
                 'kind': string;

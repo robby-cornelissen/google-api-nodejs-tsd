@@ -19,7 +19,7 @@ declare module google {
 
             }
 
-            interface File {
+            export interface File {
                 'createdDate': string;
                 'description': string;
                 'downloadUrl': string;
@@ -50,7 +50,7 @@ declare module google {
                 'userPermission': Permission;
             }
 
-            interface Permission {
+            export interface Permission {
                 'additionalRoles': string[];
                 'etag': string;
                 'kind': string;

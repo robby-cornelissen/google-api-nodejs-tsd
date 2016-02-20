@@ -16,14 +16,14 @@ declare module google {
 
             }
 
-            interface ExecutionRequest {
+            export interface ExecutionRequest {
                 'function': string;
                 'parameters': any[];
                 'sessionState': string;
                 'devMode': boolean;
             }
 
-            interface Operation {
+            export interface Operation {
                 'name': string;
                 'metadata': {
                     [name: string]: any
@@ -35,7 +35,7 @@ declare module google {
                 };
             }
 
-            interface Status {
+            export interface Status {
                 'code': number;
                 'message': string;
                 'details': {
@@ -43,18 +43,18 @@ declare module google {
                 }[];
             }
 
-            interface ExecutionError {
+            export interface ExecutionError {
                 'scriptStackTraceElements': ScriptStackTraceElement[];
                 'errorMessage': string;
                 'errorType': string;
             }
 
-            interface ScriptStackTraceElement {
+            export interface ScriptStackTraceElement {
                 'function': string;
                 'lineNumber': number;
             }
 
-            interface ExecutionResponse {
+            export interface ExecutionResponse {
                 'result': any;
             }
 

@@ -94,73 +94,73 @@ declare module google {
 
             }
 
-            interface Apk {
+            export interface Apk {
                 'binary': ApkBinary;
                 'versionCode': number;
             }
 
-            interface ApkBinary {
+            export interface ApkBinary {
                 'sha1': string;
             }
 
-            interface ApkListing {
+            export interface ApkListing {
                 'language': string;
                 'recentChanges': string;
             }
 
-            interface ApkListingsListResponse {
+            export interface ApkListingsListResponse {
                 'kind': string;
                 'listings': ApkListing[];
             }
 
-            interface ApksAddExternallyHostedRequest {
+            export interface ApksAddExternallyHostedRequest {
                 'externallyHostedApk': ExternallyHostedApk;
             }
 
-            interface ApksAddExternallyHostedResponse {
+            export interface ApksAddExternallyHostedResponse {
                 'externallyHostedApk': ExternallyHostedApk;
             }
 
-            interface ApksListResponse {
+            export interface ApksListResponse {
                 'apks': Apk[];
                 'kind': string;
             }
 
-            interface AppDetails {
+            export interface AppDetails {
                 'contactEmail': string;
                 'contactPhone': string;
                 'contactWebsite': string;
                 'defaultLanguage': string;
             }
 
-            interface AppEdit {
+            export interface AppEdit {
                 'expiryTimeSeconds': string;
                 'id': string;
             }
 
-            interface Entitlement {
+            export interface Entitlement {
                 'kind': string;
                 'productId': string;
                 'productType': string;
                 'token': string;
             }
 
-            interface EntitlementsListResponse {
+            export interface EntitlementsListResponse {
                 'pageInfo': PageInfo;
                 'resources': Entitlement[];
                 'tokenPagination': TokenPagination;
             }
 
-            interface ExpansionFile {
+            export interface ExpansionFile {
                 'fileSize': string;
                 'referencesVersion': number;
             }
 
-            interface ExpansionFilesUploadResponse {
+            export interface ExpansionFilesUploadResponse {
                 'expansionFile': ExpansionFile;
             }
 
-            interface ExternallyHostedApk {
+            export interface ExternallyHostedApk {
                 'applicationLabel': string;
                 'certificateBase64s': string[];
                 'externallyHostedUrl': string;
@@ -178,30 +178,30 @@ declare module google {
                 'versionName': string;
             }
 
-            interface ExternallyHostedApkUsesPermission {
+            export interface ExternallyHostedApkUsesPermission {
                 'maxSdkVersion': number;
                 'name': string;
             }
 
-            interface Image {
+            export interface Image {
                 'id': string;
                 'sha1': string;
                 'url': string;
             }
 
-            interface ImagesDeleteAllResponse {
+            export interface ImagesDeleteAllResponse {
                 'deleted': Image[];
             }
 
-            interface ImagesListResponse {
+            export interface ImagesListResponse {
                 'images': Image[];
             }
 
-            interface ImagesUploadResponse {
+            export interface ImagesUploadResponse {
                 'image': Image;
             }
 
-            interface InAppProduct {
+            export interface InAppProduct {
                 'defaultLanguage': string;
                 'defaultPrice': Price;
                 'listings': {
@@ -219,57 +219,57 @@ declare module google {
                 'trialPeriod': string;
             }
 
-            interface InAppProductListing {
+            export interface InAppProductListing {
                 'description': string;
                 'title': string;
             }
 
-            interface InappproductsBatchRequest {
+            export interface InappproductsBatchRequest {
                 'entrys': InappproductsBatchRequestEntry[];
             }
 
-            interface InappproductsBatchRequestEntry {
+            export interface InappproductsBatchRequestEntry {
                 'batchId': number;
                 'inappproductsinsertrequest': InappproductsInsertRequest;
                 'inappproductsupdaterequest': InappproductsUpdateRequest;
                 'methodName': string;
             }
 
-            interface InappproductsBatchResponse {
+            export interface InappproductsBatchResponse {
                 'entrys': InappproductsBatchResponseEntry[];
                 'kind': string;
             }
 
-            interface InappproductsBatchResponseEntry {
+            export interface InappproductsBatchResponseEntry {
                 'batchId': number;
                 'inappproductsinsertresponse': InappproductsInsertResponse;
                 'inappproductsupdateresponse': InappproductsUpdateResponse;
             }
 
-            interface InappproductsInsertRequest {
+            export interface InappproductsInsertRequest {
                 'inappproduct': InAppProduct;
             }
 
-            interface InappproductsInsertResponse {
+            export interface InappproductsInsertResponse {
                 'inappproduct': InAppProduct;
             }
 
-            interface InappproductsListResponse {
+            export interface InappproductsListResponse {
                 'inappproduct': InAppProduct[];
                 'kind': string;
                 'pageInfo': PageInfo;
                 'tokenPagination': TokenPagination;
             }
 
-            interface InappproductsUpdateRequest {
+            export interface InappproductsUpdateRequest {
                 'inappproduct': InAppProduct;
             }
 
-            interface InappproductsUpdateResponse {
+            export interface InappproductsUpdateResponse {
                 'inappproduct': InAppProduct;
             }
 
-            interface Listing {
+            export interface Listing {
                 'fullDescription': string;
                 'language': string;
                 'shortDescription': string;
@@ -277,28 +277,28 @@ declare module google {
                 'video': string;
             }
 
-            interface ListingsListResponse {
+            export interface ListingsListResponse {
                 'kind': string;
                 'listings': Listing[];
             }
 
-            interface MonthDay {
+            export interface MonthDay {
                 'day': number;
                 'month': number;
             }
 
-            interface PageInfo {
+            export interface PageInfo {
                 'resultPerPage': number;
                 'startIndex': number;
                 'totalResults': number;
             }
 
-            interface Price {
+            export interface Price {
                 'currency': string;
                 'priceMicros': string;
             }
 
-            interface ProductPurchase {
+            export interface ProductPurchase {
                 'consumptionState': number;
                 'developerPayload': string;
                 'kind': string;
@@ -306,54 +306,54 @@ declare module google {
                 'purchaseTimeMillis': string;
             }
 
-            interface Prorate {
+            export interface Prorate {
                 'defaultPrice': Price;
                 'start': MonthDay;
             }
 
-            interface Season {
+            export interface Season {
                 'end': MonthDay;
                 'prorations': Prorate[];
                 'start': MonthDay;
             }
 
-            interface SubscriptionDeferralInfo {
+            export interface SubscriptionDeferralInfo {
                 'desiredExpiryTimeMillis': string;
                 'expectedExpiryTimeMillis': string;
             }
 
-            interface SubscriptionPurchase {
+            export interface SubscriptionPurchase {
                 'autoRenewing': boolean;
                 'expiryTimeMillis': string;
                 'kind': string;
                 'startTimeMillis': string;
             }
 
-            interface SubscriptionPurchasesDeferRequest {
+            export interface SubscriptionPurchasesDeferRequest {
                 'deferralInfo': SubscriptionDeferralInfo;
             }
 
-            interface SubscriptionPurchasesDeferResponse {
+            export interface SubscriptionPurchasesDeferResponse {
                 'newExpiryTimeMillis': string;
             }
 
-            interface Testers {
+            export interface Testers {
                 'googleGroups': string[];
                 'googlePlusCommunities': string[];
             }
 
-            interface TokenPagination {
+            export interface TokenPagination {
                 'nextPageToken': string;
                 'previousPageToken': string;
             }
 
-            interface Track {
+            export interface Track {
                 'track': string;
                 'userFraction': number;
                 'versionCodes': number[];
             }
 
-            interface TracksListResponse {
+            export interface TracksListResponse {
                 'kind': string;
                 'tracks': Track[];
             }

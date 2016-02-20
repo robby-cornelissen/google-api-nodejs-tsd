@@ -30,7 +30,7 @@ declare module google {
 
             }
 
-            interface LogUserEventRequest {
+            export interface LogUserEventRequest {
                 'requestMetadata': RequestMetadata;
                 'eventAction': string;
                 'eventCategory': string;
@@ -40,7 +40,7 @@ declare module google {
                 'lead': Lead;
             }
 
-            interface RequestMetadata {
+            export interface RequestMetadata {
                 'userOverrides': UserOverrides;
                 'locale': string;
                 'partnersSessionId': string;
@@ -48,22 +48,22 @@ declare module google {
                 'trafficSource': TrafficSource;
             }
 
-            interface UserOverrides {
+            export interface UserOverrides {
                 'ipAddress': string;
                 'userId': string;
             }
 
-            interface TrafficSource {
+            export interface TrafficSource {
                 'trafficSourceId': string;
                 'trafficSubId': string;
             }
 
-            interface EventData {
+            export interface EventData {
                 'key': string;
                 'values': string[];
             }
 
-            interface Lead {
+            export interface Lead {
                 'id': string;
                 'type': string;
                 'email': string;
@@ -76,27 +76,27 @@ declare module google {
                 'minMonthlyBudget': Money;
             }
 
-            interface Money {
+            export interface Money {
                 'currencyCode': string;
                 'units': string;
                 'nanos': number;
             }
 
-            interface LogUserEventResponse {
+            export interface LogUserEventResponse {
                 'responseMetadata': ResponseMetadata;
             }
 
-            interface ResponseMetadata {
+            export interface ResponseMetadata {
                 'debugInfo': DebugInfo;
             }
 
-            interface DebugInfo {
+            export interface DebugInfo {
                 'serverInfo': string;
                 'serviceUrl': string;
                 'serverTraceInfo': string;
             }
 
-            interface LogMessageRequest {
+            export interface LogMessageRequest {
                 'requestMetadata': RequestMetadata;
                 'level': string;
                 'details': string;
@@ -105,21 +105,21 @@ declare module google {
                 };
             }
 
-            interface LogMessageResponse {
+            export interface LogMessageResponse {
                 'responseMetadata': ResponseMetadata;
             }
 
-            interface ListUserStatesResponse {
+            export interface ListUserStatesResponse {
                 'responseMetadata': ResponseMetadata;
                 'userStates': string[];
             }
 
-            interface GetCompanyResponse {
+            export interface GetCompanyResponse {
                 'responseMetadata': ResponseMetadata;
                 'company': Company;
             }
 
-            interface Company {
+            export interface Company {
                 'id': string;
                 'name': string;
                 'localizedInfos': LocalizedCompanyInfo[];
@@ -134,64 +134,64 @@ declare module google {
                 'services': string[];
             }
 
-            interface LocalizedCompanyInfo {
+            export interface LocalizedCompanyInfo {
                 'languageCode': string;
                 'displayName': string;
                 'overview': string;
                 'countryCodes': string[];
             }
 
-            interface Location {
+            export interface Location {
                 'address': string;
                 'latLng': LatLng;
             }
 
-            interface LatLng {
+            export interface LatLng {
                 'latitude': number;
                 'longitude': number;
             }
 
-            interface PublicProfile {
+            export interface PublicProfile {
                 'id': string;
                 'displayName': string;
                 'url': string;
                 'displayImageUrl': string;
             }
 
-            interface CertificationStatus {
+            export interface CertificationStatus {
                 'type': string;
                 'examStatuses': CertificationExamStatus[];
                 'isCertified': boolean;
             }
 
-            interface CertificationExamStatus {
+            export interface CertificationExamStatus {
                 'type': string;
                 'numberUsersPass': number;
             }
 
-            interface Rank {
+            export interface Rank {
                 'type': string;
                 'value': number;
             }
 
-            interface ListCompaniesResponse {
+            export interface ListCompaniesResponse {
                 'responseMetadata': ResponseMetadata;
                 'companies': Company[];
                 'nextPageToken': string;
             }
 
-            interface CreateLeadRequest {
+            export interface CreateLeadRequest {
                 'requestMetadata': RequestMetadata;
                 'lead': Lead;
                 'recaptchaChallenge': RecaptchaChallenge;
             }
 
-            interface RecaptchaChallenge {
+            export interface RecaptchaChallenge {
                 'id': string;
                 'response': string;
             }
 
-            interface CreateLeadResponse {
+            export interface CreateLeadResponse {
                 'responseMetadata': ResponseMetadata;
                 'lead': Lead;
                 'recaptchaStatus': string;

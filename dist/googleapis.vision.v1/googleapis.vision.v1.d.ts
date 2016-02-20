@@ -16,17 +16,17 @@ declare module google {
 
             }
 
-            interface ImageSource {
+            export interface ImageSource {
                 'gcsImageUri': string;
             }
 
-            interface AnnotateImageRequest {
+            export interface AnnotateImageRequest {
                 'image': Image;
                 'imageContext': ImageContext;
                 'features': Feature[];
             }
 
-            interface AnnotateImageResponse {
+            export interface AnnotateImageResponse {
                 'labelAnnotations': EntityAnnotation[];
                 'landmarkAnnotations': EntityAnnotation[];
                 'safeSearchAnnotation': SafeSearchAnnotation;
@@ -37,12 +37,12 @@ declare module google {
                 'error': Status;
             }
 
-            interface LatLongRect {
+            export interface LatLongRect {
                 'maxLatLng': LatLng;
                 'minLatLng': LatLng;
             }
 
-            interface Status {
+            export interface Status {
                 'code': number;
                 'details': {
                     [name: string]: any
@@ -50,7 +50,7 @@ declare module google {
                 'message': string;
             }
 
-            interface FaceAnnotation {
+            export interface FaceAnnotation {
                 'tiltAngle': number;
                 'underExposedLikelihood': string;
                 'fdBoundingPoly': BoundingPoly;
@@ -68,36 +68,36 @@ declare module google {
                 'sorrowLikelihood': string;
             }
 
-            interface Vertex {
+            export interface Vertex {
                 'y': number;
                 'x': number;
             }
 
-            interface ColorInfo {
+            export interface ColorInfo {
                 'pixelFraction': number;
                 'color': Color;
                 'score': number;
             }
 
-            interface BoundingPoly {
+            export interface BoundingPoly {
                 'vertices': Vertex[];
             }
 
-            interface Landmark {
+            export interface Landmark {
                 'position': Position;
                 'type': string;
             }
 
-            interface ImageContext {
+            export interface ImageContext {
                 'languageHints': string[];
                 'latLongRect': LatLongRect;
             }
 
-            interface BatchAnnotateImagesRequest {
+            export interface BatchAnnotateImagesRequest {
                 'requests': AnnotateImageRequest[];
             }
 
-            interface EntityAnnotation {
+            export interface EntityAnnotation {
                 'mid': string;
                 'description': string;
                 'topicality': number;
@@ -109,58 +109,58 @@ declare module google {
                 'confidence': number;
             }
 
-            interface Property {
+            export interface Property {
                 'value': string;
                 'name': string;
             }
 
-            interface Color {
+            export interface Color {
                 'green': number;
                 'blue': number;
                 'red': number;
                 'alpha': number;
             }
 
-            interface LocationInfo {
+            export interface LocationInfo {
                 'latLng': LatLng;
             }
 
-            interface SafeSearchAnnotation {
+            export interface SafeSearchAnnotation {
                 'medical': string;
                 'violence': string;
                 'spoof': string;
                 'adult': string;
             }
 
-            interface Image {
+            export interface Image {
                 'source': ImageSource;
                 'content': string;
             }
 
-            interface DominantColorsAnnotation {
+            export interface DominantColorsAnnotation {
                 'colors': ColorInfo[];
             }
 
-            interface Feature {
+            export interface Feature {
                 'maxResults': number;
                 'type': string;
             }
 
-            interface BatchAnnotateImagesResponse {
+            export interface BatchAnnotateImagesResponse {
                 'responses': AnnotateImageResponse[];
             }
 
-            interface ImageProperties {
+            export interface ImageProperties {
                 'dominantColors': DominantColorsAnnotation;
             }
 
-            interface Position {
+            export interface Position {
                 'y': number;
                 'z': number;
                 'x': number;
             }
 
-            interface LatLng {
+            export interface LatLng {
                 'longitude': number;
                 'latitude': number;
             }

@@ -30,7 +30,7 @@ declare module google {
 
             }
 
-            interface Operation {
+            export interface Operation {
                 'name': string;
                 'metadata': {
                     [name: string]: any
@@ -42,7 +42,7 @@ declare module google {
                 };
             }
 
-            interface Status {
+            export interface Status {
                 'code': number;
                 'message': string;
                 'details': {
@@ -50,16 +50,16 @@ declare module google {
                 }[];
             }
 
-            interface ListOperationsResponse {
+            export interface ListOperationsResponse {
                 'operations': Operation[];
                 'nextPageToken': string;
             }
 
-            interface CancelOperationRequest {}
+            export interface CancelOperationRequest {}
 
-            interface Empty {}
+            export interface Empty {}
 
-            interface Pipeline {
+            export interface Pipeline {
                 'projectId': string;
                 'name': string;
                 'description': string;
@@ -70,24 +70,24 @@ declare module google {
                 'pipelineId': string;
             }
 
-            interface PipelineParameter {
+            export interface PipelineParameter {
                 'name': string;
                 'description': string;
                 'defaultValue': string;
                 'localCopy': LocalCopy;
             }
 
-            interface LocalCopy {
+            export interface LocalCopy {
                 'path': string;
                 'disk': string;
             }
 
-            interface DockerExecutor {
+            export interface DockerExecutor {
                 'imageName': string;
                 'cmd': string;
             }
 
-            interface PipelineResources {
+            export interface PipelineResources {
                 'minimumCpuCores': number;
                 'preemptible': boolean;
                 'minimumRamGb': number;
@@ -95,7 +95,7 @@ declare module google {
                 'zones': string[];
             }
 
-            interface Disk {
+            export interface Disk {
                 'name': string;
                 'type': string;
                 'sizeGb': number;
@@ -105,13 +105,13 @@ declare module google {
                 'mountPoint': string;
             }
 
-            interface RunPipelineRequest {
+            export interface RunPipelineRequest {
                 'pipelineId': string;
                 'ephemeralPipeline': Pipeline;
                 'pipelineArgs': RunPipelineArgs;
             }
 
-            interface RunPipelineArgs {
+            export interface RunPipelineArgs {
                 'projectId': string;
                 'inputs': {
                     [name: string]: string
@@ -125,21 +125,21 @@ declare module google {
                 'logging': LoggingOptions;
             }
 
-            interface ServiceAccount {
+            export interface ServiceAccount {
                 'email': string;
                 'scopes': string[];
             }
 
-            interface LoggingOptions {
+            export interface LoggingOptions {
                 'gcsPath': string;
             }
 
-            interface ListPipelinesResponse {
+            export interface ListPipelinesResponse {
                 'pipelines': Pipeline[];
                 'nextPageToken': string;
             }
 
-            interface ControllerConfig {
+            export interface ControllerConfig {
                 'image': string;
                 'cmd': string;
                 'gcsLogPath': string;
@@ -158,11 +158,11 @@ declare module google {
                 };
             }
 
-            interface RepeatedString {
+            export interface RepeatedString {
                 'values': string[];
             }
 
-            interface UpdateStatusRequest {
+            export interface UpdateStatusRequest {
                 'operationId': string;
                 'timestampEvents': TimestampEvent[];
                 'errorCode': string;
@@ -170,20 +170,20 @@ declare module google {
                 'validationToken': string;
             }
 
-            interface TimestampEvent {
+            export interface TimestampEvent {
                 'description': string;
                 'timestamp': string;
             }
 
-            interface ImportReadGroupSetsResponse {
+            export interface ImportReadGroupSetsResponse {
                 'readGroupSetIds': string[];
             }
 
-            interface ImportVariantsResponse {
+            export interface ImportVariantsResponse {
                 'callSetIds': string[];
             }
 
-            interface OperationMetadata {
+            export interface OperationMetadata {
                 'projectId': string;
                 'createTime': string;
                 'request': {
@@ -192,7 +192,7 @@ declare module google {
                 'events': OperationEvent[];
             }
 
-            interface OperationEvent {
+            export interface OperationEvent {
                 'description': string;
             }
 

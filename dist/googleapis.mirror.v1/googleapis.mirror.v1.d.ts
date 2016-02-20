@@ -52,35 +52,35 @@ declare module google {
 
             }
 
-            interface Account {
+            export interface Account {
                 'authTokens': AuthToken[];
                 'features': string[];
                 'password': string;
                 'userData': UserData[];
             }
 
-            interface Attachment {
+            export interface Attachment {
                 'contentType': string;
                 'contentUrl': string;
                 'id': string;
                 'isProcessingContent': boolean;
             }
 
-            interface AttachmentsListResponse {
+            export interface AttachmentsListResponse {
                 'items': Attachment[];
                 'kind': string;
             }
 
-            interface AuthToken {
+            export interface AuthToken {
                 'authToken': string;
                 'type': string;
             }
 
-            interface Command {
+            export interface Command {
                 'type': string;
             }
 
-            interface Contact {
+            export interface Contact {
                 'acceptCommands': Command[];
                 'acceptTypes': string[];
                 'displayName': string;
@@ -95,12 +95,12 @@ declare module google {
                 'type': string;
             }
 
-            interface ContactsListResponse {
+            export interface ContactsListResponse {
                 'items': Contact[];
                 'kind': string;
             }
 
-            interface Location {
+            export interface Location {
                 'accuracy': number;
                 'address': string;
                 'displayName': string;
@@ -111,12 +111,12 @@ declare module google {
                 'timestamp': string;
             }
 
-            interface LocationsListResponse {
+            export interface LocationsListResponse {
                 'items': Location[];
                 'kind': string;
             }
 
-            interface MenuItem {
+            export interface MenuItem {
                 'action': string;
                 'contextual_command': string;
                 'id': string;
@@ -125,13 +125,13 @@ declare module google {
                 'values': MenuValue[];
             }
 
-            interface MenuValue {
+            export interface MenuValue {
                 'displayName': string;
                 'iconUrl': string;
                 'state': string;
             }
 
-            interface Notification {
+            export interface Notification {
                 'collection': string;
                 'itemId': string;
                 'operation': string;
@@ -140,18 +140,18 @@ declare module google {
                 'verifyToken': string;
             }
 
-            interface NotificationConfig {
+            export interface NotificationConfig {
                 'deliveryTime': string;
                 'level': string;
             }
 
-            interface Setting {
+            export interface Setting {
                 'id': string;
                 'kind': string;
                 'value': string;
             }
 
-            interface Subscription {
+            export interface Subscription {
                 'callbackUrl': string;
                 'collection': string;
                 'id': string;
@@ -163,12 +163,12 @@ declare module google {
                 'verifyToken': string;
             }
 
-            interface SubscriptionsListResponse {
+            export interface SubscriptionsListResponse {
                 'items': Subscription[];
                 'kind': string;
             }
 
-            interface TimelineItem {
+            export interface TimelineItem {
                 'attachments': Attachment[];
                 'bundleId': string;
                 'canonicalUrl': string;
@@ -197,18 +197,18 @@ declare module google {
                 'updated': string;
             }
 
-            interface TimelineListResponse {
+            export interface TimelineListResponse {
                 'items': TimelineItem[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface UserAction {
+            export interface UserAction {
                 'payload': string;
                 'type': string;
             }
 
-            interface UserData {
+            export interface UserData {
                 'key': string;
                 'value': string;
             }

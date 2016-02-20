@@ -34,7 +34,7 @@ declare module google {
 
             }
 
-            interface Application {
+            export interface Application {
                 'name': string;
                 'id': string;
                 'dispatchRules': UrlDispatchRule[];
@@ -43,13 +43,13 @@ declare module google {
                 'defaultBucket': string;
             }
 
-            interface UrlDispatchRule {
+            export interface UrlDispatchRule {
                 'domain': string;
                 'path': string;
                 'module': string;
             }
 
-            interface Version {
+            export interface Version {
                 'name': string;
                 'id': string;
                 'automaticScaling': AutomaticScaling;
@@ -82,7 +82,7 @@ declare module google {
                 'deployment': Deployment;
             }
 
-            interface AutomaticScaling {
+            export interface AutomaticScaling {
                 'coolDownPeriod': string;
                 'cpuUtilization': CpuUtilization;
                 'maxConcurrentRequests': number;
@@ -97,52 +97,52 @@ declare module google {
                 'networkUtilization': NetworkUtilization;
             }
 
-            interface CpuUtilization {
+            export interface CpuUtilization {
                 'aggregationWindowLength': string;
                 'targetUtilization': number;
             }
 
-            interface RequestUtilization {
+            export interface RequestUtilization {
                 'targetRequestCountPerSec': number;
                 'targetConcurrentRequests': number;
             }
 
-            interface DiskUtilization {
+            export interface DiskUtilization {
                 'targetWriteBytesPerSec': number;
                 'targetWriteOpsPerSec': number;
                 'targetReadBytesPerSec': number;
                 'targetReadOpsPerSec': number;
             }
 
-            interface NetworkUtilization {
+            export interface NetworkUtilization {
                 'targetSentBytesPerSec': number;
                 'targetSentPacketsPerSec': number;
                 'targetReceivedBytesPerSec': number;
                 'targetReceivedPacketsPerSec': number;
             }
 
-            interface BasicScaling {
+            export interface BasicScaling {
                 'idleTimeout': string;
                 'maxInstances': number;
             }
 
-            interface ManualScaling {
+            export interface ManualScaling {
                 'instances': number;
             }
 
-            interface Network {
+            export interface Network {
                 'forwardedPorts': string[];
                 'instanceTag': string;
                 'name': string;
             }
 
-            interface Resources {
+            export interface Resources {
                 'cpu': number;
                 'diskGb': number;
                 'memoryGb': number;
             }
 
-            interface UrlMap {
+            export interface UrlMap {
                 'urlRegex': string;
                 'staticFiles': StaticFilesHandler;
                 'staticDirectory': StaticDirectoryHandler;
@@ -154,7 +154,7 @@ declare module google {
                 'redirectHttpResponseCode': string;
             }
 
-            interface StaticFilesHandler {
+            export interface StaticFilesHandler {
                 'path': string;
                 'uploadPathRegex': string;
                 'httpHeaders': {
@@ -166,7 +166,7 @@ declare module google {
                 'applicationReadable': boolean;
             }
 
-            interface StaticDirectoryHandler {
+            export interface StaticDirectoryHandler {
                 'directory': string;
                 'httpHeaders': {
                     [name: string]: string
@@ -177,26 +177,26 @@ declare module google {
                 'applicationReadable': boolean;
             }
 
-            interface ScriptHandler {
+            export interface ScriptHandler {
                 'scriptPath': string;
             }
 
-            interface ApiEndpointHandler {
+            export interface ApiEndpointHandler {
                 'scriptPath': string;
             }
 
-            interface ErrorHandler {
+            export interface ErrorHandler {
                 'errorCode': string;
                 'staticFile': string;
                 'mimeType': string;
             }
 
-            interface Library {
+            export interface Library {
                 'name': string;
                 'version': string;
             }
 
-            interface ApiConfigHandler {
+            export interface ApiConfigHandler {
                 'authFailAction': string;
                 'login': string;
                 'script': string;
@@ -204,7 +204,7 @@ declare module google {
                 'url': string;
             }
 
-            interface HealthCheck {
+            export interface HealthCheck {
                 'disableHealthCheck': boolean;
                 'host': string;
                 'healthyThreshold': number;
@@ -214,7 +214,7 @@ declare module google {
                 'timeout': string;
             }
 
-            interface Deployment {
+            export interface Deployment {
                 'files': {
                     [name: string]: FileInfo
                 };
@@ -222,22 +222,22 @@ declare module google {
                 'sourceReferences': SourceReference[];
             }
 
-            interface FileInfo {
+            export interface FileInfo {
                 'sourceUrl': string;
                 'sha1Sum': string;
                 'mimeType': string;
             }
 
-            interface ContainerInfo {
+            export interface ContainerInfo {
                 'image': string;
             }
 
-            interface SourceReference {
+            export interface SourceReference {
                 'repository': string;
                 'revisionId': string;
             }
 
-            interface Operation {
+            export interface Operation {
                 'name': string;
                 'metadata': {
                     [name: string]: any
@@ -249,7 +249,7 @@ declare module google {
                 };
             }
 
-            interface Status {
+            export interface Status {
                 'code': number;
                 'message': string;
                 'details': {
@@ -257,35 +257,35 @@ declare module google {
                 }[];
             }
 
-            interface ListVersionsResponse {
+            export interface ListVersionsResponse {
                 'versions': Version[];
                 'nextPageToken': string;
             }
 
-            interface Module {
+            export interface Module {
                 'name': string;
                 'id': string;
                 'split': TrafficSplit;
             }
 
-            interface TrafficSplit {
+            export interface TrafficSplit {
                 'shardBy': string;
                 'allocations': {
                     [name: string]: number
                 };
             }
 
-            interface ListModulesResponse {
+            export interface ListModulesResponse {
                 'modules': Module[];
                 'nextPageToken': string;
             }
 
-            interface ListOperationsResponse {
+            export interface ListOperationsResponse {
                 'operations': Operation[];
                 'nextPageToken': string;
             }
 
-            interface OperationMetadata {
+            export interface OperationMetadata {
                 'operationType': string;
                 'insertTime': string;
                 'endTime': string;
@@ -294,7 +294,7 @@ declare module google {
                 'method': string;
             }
 
-            interface OperationMetadataV1Beta5 {
+            export interface OperationMetadataV1Beta5 {
                 'method': string;
                 'insertTime': string;
                 'endTime': string;

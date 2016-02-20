@@ -89,7 +89,7 @@ declare module google {
 
             }
 
-            interface Account {
+            export interface Account {
                 'adultContent': boolean;
                 'adwordsLinks': AccountAdwordsLink[];
                 'id': string;
@@ -101,17 +101,17 @@ declare module google {
                 'websiteUrl': string;
             }
 
-            interface AccountAdwordsLink {
+            export interface AccountAdwordsLink {
                 'adwordsId': string;
                 'status': string;
             }
 
-            interface AccountIdentifier {
+            export interface AccountIdentifier {
                 'aggregatorId': string;
                 'merchantId': string;
             }
 
-            interface AccountShipping {
+            export interface AccountShipping {
                 'accountId': string;
                 'carrierRates': AccountShippingCarrierRate[];
                 'kind': string;
@@ -120,7 +120,7 @@ declare module google {
                 'services': AccountShippingShippingService[];
             }
 
-            interface AccountShippingCarrierRate {
+            export interface AccountShippingCarrierRate {
                 'carrier': string;
                 'carrierService': string;
                 'modifierFlatRate': Price;
@@ -130,7 +130,7 @@ declare module google {
                 'shippingOrigin': string;
             }
 
-            interface AccountShippingCondition {
+            export interface AccountShippingCondition {
                 'deliveryLocationGroup': string;
                 'deliveryLocationId': string;
                 'deliveryPostalCode': string;
@@ -140,7 +140,7 @@ declare module google {
                 'weightMax': Weight;
             }
 
-            interface AccountShippingLocationGroup {
+            export interface AccountShippingLocationGroup {
                 'country': string;
                 'locationIds': string[];
                 'name': string;
@@ -148,23 +148,23 @@ declare module google {
                 'postalCodes': string[];
             }
 
-            interface AccountShippingPostalCodeRange {
+            export interface AccountShippingPostalCodeRange {
                 'end': string;
                 'start': string;
             }
 
-            interface AccountShippingRateTable {
+            export interface AccountShippingRateTable {
                 'content': AccountShippingRateTableCell[];
                 'name': string;
                 'saleCountry': string;
             }
 
-            interface AccountShippingRateTableCell {
+            export interface AccountShippingRateTableCell {
                 'condition': AccountShippingCondition;
                 'rate': Price;
             }
 
-            interface AccountShippingShippingService {
+            export interface AccountShippingShippingService {
                 'active': boolean;
                 'calculationMethod': AccountShippingShippingServiceCalculationMethod;
                 'costRuleTree': AccountShippingShippingServiceCostRule;
@@ -172,7 +172,7 @@ declare module google {
                 'saleCountry': string;
             }
 
-            interface AccountShippingShippingServiceCalculationMethod {
+            export interface AccountShippingShippingServiceCalculationMethod {
                 'carrierRate': string;
                 'excluded': boolean;
                 'flatRate': Price;
@@ -180,19 +180,19 @@ declare module google {
                 'rateTable': string;
             }
 
-            interface AccountShippingShippingServiceCostRule {
+            export interface AccountShippingShippingServiceCostRule {
                 'calculationMethod': AccountShippingShippingServiceCalculationMethod;
                 'children': AccountShippingShippingServiceCostRule[];
                 'condition': AccountShippingCondition;
             }
 
-            interface AccountStatus {
+            export interface AccountStatus {
                 'accountId': string;
                 'dataQualityIssues': AccountStatusDataQualityIssue[];
                 'kind': string;
             }
 
-            interface AccountStatusDataQualityIssue {
+            export interface AccountStatusDataQualityIssue {
                 'country': string;
                 'displayedValue': string;
                 'exampleItems': AccountStatusExampleItem[];
@@ -203,7 +203,7 @@ declare module google {
                 'submittedValue': string;
             }
 
-            interface AccountStatusExampleItem {
+            export interface AccountStatusExampleItem {
                 'itemId': string;
                 'link': string;
                 'submittedValue': string;
@@ -211,13 +211,13 @@ declare module google {
                 'valueOnLandingPage': string;
             }
 
-            interface AccountTax {
+            export interface AccountTax {
                 'accountId': string;
                 'kind': string;
                 'rules': AccountTaxTaxRule[];
             }
 
-            interface AccountTaxTaxRule {
+            export interface AccountTaxTaxRule {
                 'country': string;
                 'locationId': string;
                 'ratePercent': string;
@@ -225,21 +225,21 @@ declare module google {
                 'useGlobalRate': boolean;
             }
 
-            interface AccountUser {
+            export interface AccountUser {
                 'admin': boolean;
                 'emailAddress': string;
             }
 
-            interface AccountsAuthInfoResponse {
+            export interface AccountsAuthInfoResponse {
                 'accountIdentifiers': AccountIdentifier[];
                 'kind': string;
             }
 
-            interface AccountsCustomBatchRequest {
+            export interface AccountsCustomBatchRequest {
                 'entries': AccountsCustomBatchRequestEntry[];
             }
 
-            interface AccountsCustomBatchRequestEntry {
+            export interface AccountsCustomBatchRequestEntry {
                 'account': Account;
                 'accountId': string;
                 'batchId': number;
@@ -247,29 +247,29 @@ declare module google {
                 'method': string;
             }
 
-            interface AccountsCustomBatchResponse {
+            export interface AccountsCustomBatchResponse {
                 'entries': AccountsCustomBatchResponseEntry[];
                 'kind': string;
             }
 
-            interface AccountsCustomBatchResponseEntry {
+            export interface AccountsCustomBatchResponseEntry {
                 'account': Account;
                 'batchId': number;
                 'errors': Errors;
                 'kind': string;
             }
 
-            interface AccountsListResponse {
+            export interface AccountsListResponse {
                 'kind': string;
                 'nextPageToken': string;
                 'resources': Account[];
             }
 
-            interface AccountshippingCustomBatchRequest {
+            export interface AccountshippingCustomBatchRequest {
                 'entries': AccountshippingCustomBatchRequestEntry[];
             }
 
-            interface AccountshippingCustomBatchRequestEntry {
+            export interface AccountshippingCustomBatchRequestEntry {
                 'accountId': string;
                 'accountShipping': AccountShipping;
                 'batchId': number;
@@ -277,57 +277,57 @@ declare module google {
                 'method': string;
             }
 
-            interface AccountshippingCustomBatchResponse {
+            export interface AccountshippingCustomBatchResponse {
                 'entries': AccountshippingCustomBatchResponseEntry[];
                 'kind': string;
             }
 
-            interface AccountshippingCustomBatchResponseEntry {
+            export interface AccountshippingCustomBatchResponseEntry {
                 'accountShipping': AccountShipping;
                 'batchId': number;
                 'errors': Errors;
                 'kind': string;
             }
 
-            interface AccountshippingListResponse {
+            export interface AccountshippingListResponse {
                 'kind': string;
                 'nextPageToken': string;
                 'resources': AccountShipping[];
             }
 
-            interface AccountstatusesCustomBatchRequest {
+            export interface AccountstatusesCustomBatchRequest {
                 'entries': AccountstatusesCustomBatchRequestEntry[];
             }
 
-            interface AccountstatusesCustomBatchRequestEntry {
+            export interface AccountstatusesCustomBatchRequestEntry {
                 'accountId': string;
                 'batchId': number;
                 'merchantId': string;
                 'method': string;
             }
 
-            interface AccountstatusesCustomBatchResponse {
+            export interface AccountstatusesCustomBatchResponse {
                 'entries': AccountstatusesCustomBatchResponseEntry[];
                 'kind': string;
             }
 
-            interface AccountstatusesCustomBatchResponseEntry {
+            export interface AccountstatusesCustomBatchResponseEntry {
                 'accountStatus': AccountStatus;
                 'batchId': number;
                 'errors': Errors;
             }
 
-            interface AccountstatusesListResponse {
+            export interface AccountstatusesListResponse {
                 'kind': string;
                 'nextPageToken': string;
                 'resources': AccountStatus[];
             }
 
-            interface AccounttaxCustomBatchRequest {
+            export interface AccounttaxCustomBatchRequest {
                 'entries': AccounttaxCustomBatchRequestEntry[];
             }
 
-            interface AccounttaxCustomBatchRequestEntry {
+            export interface AccounttaxCustomBatchRequestEntry {
                 'accountId': string;
                 'accountTax': AccountTax;
                 'batchId': number;
@@ -335,25 +335,25 @@ declare module google {
                 'method': string;
             }
 
-            interface AccounttaxCustomBatchResponse {
+            export interface AccounttaxCustomBatchResponse {
                 'entries': AccounttaxCustomBatchResponseEntry[];
                 'kind': string;
             }
 
-            interface AccounttaxCustomBatchResponseEntry {
+            export interface AccounttaxCustomBatchResponseEntry {
                 'accountTax': AccountTax;
                 'batchId': number;
                 'errors': Errors;
                 'kind': string;
             }
 
-            interface AccounttaxListResponse {
+            export interface AccounttaxListResponse {
                 'kind': string;
                 'nextPageToken': string;
                 'resources': AccountTax[];
             }
 
-            interface Datafeed {
+            export interface Datafeed {
                 'attributeLanguage': string;
                 'contentLanguage': string;
                 'contentType': string;
@@ -367,7 +367,7 @@ declare module google {
                 'targetCountry': string;
             }
 
-            interface DatafeedFetchSchedule {
+            export interface DatafeedFetchSchedule {
                 'dayOfMonth': number;
                 'fetchUrl': string;
                 'hour': number;
@@ -377,13 +377,13 @@ declare module google {
                 'weekday': string;
             }
 
-            interface DatafeedFormat {
+            export interface DatafeedFormat {
                 'columnDelimiter': string;
                 'fileEncoding': string;
                 'quotingMode': string;
             }
 
-            interface DatafeedStatus {
+            export interface DatafeedStatus {
                 'datafeedId': string;
                 'errors': DatafeedStatusError[];
                 'itemsTotal': string;
@@ -394,24 +394,24 @@ declare module google {
                 'warnings': DatafeedStatusError[];
             }
 
-            interface DatafeedStatusError {
+            export interface DatafeedStatusError {
                 'code': string;
                 'count': string;
                 'examples': DatafeedStatusExample[];
                 'message': string;
             }
 
-            interface DatafeedStatusExample {
+            export interface DatafeedStatusExample {
                 'itemId': string;
                 'lineNumber': string;
                 'value': string;
             }
 
-            interface DatafeedsCustomBatchRequest {
+            export interface DatafeedsCustomBatchRequest {
                 'entries': DatafeedsCustomBatchRequestEntry[];
             }
 
-            interface DatafeedsCustomBatchRequestEntry {
+            export interface DatafeedsCustomBatchRequestEntry {
                 'batchId': number;
                 'datafeed': Datafeed;
                 'datafeedId': string;
@@ -419,69 +419,69 @@ declare module google {
                 'method': string;
             }
 
-            interface DatafeedsCustomBatchResponse {
+            export interface DatafeedsCustomBatchResponse {
                 'entries': DatafeedsCustomBatchResponseEntry[];
                 'kind': string;
             }
 
-            interface DatafeedsCustomBatchResponseEntry {
+            export interface DatafeedsCustomBatchResponseEntry {
                 'batchId': number;
                 'datafeed': Datafeed;
                 'errors': Errors;
             }
 
-            interface DatafeedsListResponse {
+            export interface DatafeedsListResponse {
                 'kind': string;
                 'nextPageToken': string;
                 'resources': Datafeed[];
             }
 
-            interface DatafeedstatusesCustomBatchRequest {
+            export interface DatafeedstatusesCustomBatchRequest {
                 'entries': DatafeedstatusesCustomBatchRequestEntry[];
             }
 
-            interface DatafeedstatusesCustomBatchRequestEntry {
+            export interface DatafeedstatusesCustomBatchRequestEntry {
                 'batchId': number;
                 'datafeedId': string;
                 'merchantId': string;
                 'method': string;
             }
 
-            interface DatafeedstatusesCustomBatchResponse {
+            export interface DatafeedstatusesCustomBatchResponse {
                 'entries': DatafeedstatusesCustomBatchResponseEntry[];
                 'kind': string;
             }
 
-            interface DatafeedstatusesCustomBatchResponseEntry {
+            export interface DatafeedstatusesCustomBatchResponseEntry {
                 'batchId': number;
                 'datafeedStatus': DatafeedStatus;
                 'errors': Errors;
             }
 
-            interface DatafeedstatusesListResponse {
+            export interface DatafeedstatusesListResponse {
                 'kind': string;
                 'nextPageToken': string;
                 'resources': DatafeedStatus[];
             }
 
-            interface Error {
+            export interface Error {
                 'domain': string;
                 'message': string;
                 'reason': string;
             }
 
-            interface Errors {
+            export interface Errors {
                 'code': number;
                 'errors': Error[];
                 'message': string;
             }
 
-            interface Installment {
+            export interface Installment {
                 'amount': Price;
                 'months': string;
             }
 
-            interface Inventory {
+            export interface Inventory {
                 'availability': string;
                 'installment': Installment;
                 'kind': string;
@@ -493,11 +493,11 @@ declare module google {
                 'sellOnGoogleQuantity': number;
             }
 
-            interface InventoryCustomBatchRequest {
+            export interface InventoryCustomBatchRequest {
                 'entries': InventoryCustomBatchRequestEntry[];
             }
 
-            interface InventoryCustomBatchRequestEntry {
+            export interface InventoryCustomBatchRequestEntry {
                 'batchId': number;
                 'inventory': Inventory;
                 'merchantId': string;
@@ -505,18 +505,18 @@ declare module google {
                 'storeCode': string;
             }
 
-            interface InventoryCustomBatchResponse {
+            export interface InventoryCustomBatchResponse {
                 'entries': InventoryCustomBatchResponseEntry[];
                 'kind': string;
             }
 
-            interface InventoryCustomBatchResponseEntry {
+            export interface InventoryCustomBatchResponseEntry {
                 'batchId': number;
                 'errors': Errors;
                 'kind': string;
             }
 
-            interface InventorySetRequest {
+            export interface InventorySetRequest {
                 'availability': string;
                 'installment': Installment;
                 'loyaltyPoints': LoyaltyPoints;
@@ -527,17 +527,17 @@ declare module google {
                 'sellOnGoogleQuantity': number;
             }
 
-            interface InventorySetResponse {
+            export interface InventorySetResponse {
                 'kind': string;
             }
 
-            interface LoyaltyPoints {
+            export interface LoyaltyPoints {
                 'name': string;
                 'pointsValue': string;
                 'ratio': number;
             }
 
-            interface Order {
+            export interface Order {
                 'acknowledged': boolean;
                 'customer': OrderCustomer;
                 'deliveryDetails': OrderDeliveryDetails;
@@ -559,7 +559,7 @@ declare module google {
                 'status': string;
             }
 
-            interface OrderAddress {
+            export interface OrderAddress {
                 'country': string;
                 'fullAddress': string[];
                 'isPostOfficeBox': boolean;
@@ -570,7 +570,7 @@ declare module google {
                 'streetAddress': string[];
             }
 
-            interface OrderCancellation {
+            export interface OrderCancellation {
                 'actor': string;
                 'creationDate': string;
                 'quantity': number;
@@ -578,18 +578,18 @@ declare module google {
                 'reasonText': string;
             }
 
-            interface OrderCustomer {
+            export interface OrderCustomer {
                 'email': string;
                 'explicitMarketingPreference': boolean;
                 'fullName': string;
             }
 
-            interface OrderDeliveryDetails {
+            export interface OrderDeliveryDetails {
                 'address': OrderAddress;
                 'phoneNumber': string;
             }
 
-            interface OrderLineItem {
+            export interface OrderLineItem {
                 'cancellations': OrderCancellation[];
                 'id': string;
                 'price': Price;
@@ -606,7 +606,7 @@ declare module google {
                 'tax': Price;
             }
 
-            interface OrderLineItemProduct {
+            export interface OrderLineItemProduct {
                 'brand': string;
                 'channel': string;
                 'condition': string;
@@ -624,31 +624,31 @@ declare module google {
                 'variantAttributes': OrderLineItemProductVariantAttribute[];
             }
 
-            interface OrderLineItemProductVariantAttribute {
+            export interface OrderLineItemProductVariantAttribute {
                 'dimension': string;
                 'value': string;
             }
 
-            interface OrderLineItemReturnInfo {
+            export interface OrderLineItemReturnInfo {
                 'daysToReturn': number;
                 'isReturnable': boolean;
                 'policyUrl': string;
             }
 
-            interface OrderLineItemShippingDetails {
+            export interface OrderLineItemShippingDetails {
                 'deliverByDate': string;
                 'method': OrderLineItemShippingDetailsMethod;
                 'shipByDate': string;
             }
 
-            interface OrderLineItemShippingDetailsMethod {
+            export interface OrderLineItemShippingDetailsMethod {
                 'carrier': string;
                 'maxDaysInTransit': number;
                 'methodName': string;
                 'minDaysInTransit': number;
             }
 
-            interface OrderPaymentMethod {
+            export interface OrderPaymentMethod {
                 'billingAddress': OrderAddress;
                 'expirationMonth': number;
                 'expirationYear': number;
@@ -657,7 +657,7 @@ declare module google {
                 'type': string;
             }
 
-            interface OrderPromotion {
+            export interface OrderPromotion {
                 'benefits': OrderPromotionBenefit[];
                 'effectiveDates': string;
                 'genericRedemptionCode': string;
@@ -667,7 +667,7 @@ declare module google {
                 'redemptionChannel': string;
             }
 
-            interface OrderPromotionBenefit {
+            export interface OrderPromotionBenefit {
                 'discount': Price;
                 'offerIds': string[];
                 'subType': string;
@@ -675,7 +675,7 @@ declare module google {
                 'type': string;
             }
 
-            interface OrderRefund {
+            export interface OrderRefund {
                 'actor': string;
                 'amount': Price;
                 'creationDate': string;
@@ -683,7 +683,7 @@ declare module google {
                 'reasonText': string;
             }
 
-            interface OrderReturn {
+            export interface OrderReturn {
                 'actor': string;
                 'creationDate': string;
                 'quantity': number;
@@ -691,7 +691,7 @@ declare module google {
                 'reasonText': string;
             }
 
-            interface OrderShipment {
+            export interface OrderShipment {
                 'carrier': string;
                 'creationDate': string;
                 'deliveryDate': string;
@@ -701,25 +701,25 @@ declare module google {
                 'trackingId': string;
             }
 
-            interface OrderShipmentLineItemShipment {
+            export interface OrderShipmentLineItemShipment {
                 'lineItemId': string;
                 'quantity': number;
             }
 
-            interface OrdersAcknowledgeRequest {
+            export interface OrdersAcknowledgeRequest {
                 'operationId': string;
             }
 
-            interface OrdersAcknowledgeResponse {
+            export interface OrdersAcknowledgeResponse {
                 'executionStatus': string;
                 'kind': string;
             }
 
-            interface OrdersAdvanceTestOrderResponse {
+            export interface OrdersAdvanceTestOrderResponse {
                 'kind': string;
             }
 
-            interface OrdersCancelLineItemRequest {
+            export interface OrdersCancelLineItemRequest {
                 'amount': Price;
                 'lineItemId': string;
                 'operationId': string;
@@ -728,37 +728,37 @@ declare module google {
                 'reasonText': string;
             }
 
-            interface OrdersCancelLineItemResponse {
+            export interface OrdersCancelLineItemResponse {
                 'executionStatus': string;
                 'kind': string;
             }
 
-            interface OrdersCancelRequest {
+            export interface OrdersCancelRequest {
                 'operationId': string;
                 'reason': string;
                 'reasonText': string;
             }
 
-            interface OrdersCancelResponse {
+            export interface OrdersCancelResponse {
                 'executionStatus': string;
                 'kind': string;
             }
 
-            interface OrdersCreateTestOrderRequest {
+            export interface OrdersCreateTestOrderRequest {
                 'templateName': string;
                 'testOrder': TestOrder;
             }
 
-            interface OrdersCreateTestOrderResponse {
+            export interface OrdersCreateTestOrderResponse {
                 'kind': string;
                 'orderId': string;
             }
 
-            interface OrdersCustomBatchRequest {
+            export interface OrdersCustomBatchRequest {
                 'entries': OrdersCustomBatchRequestEntry[];
             }
 
-            interface OrdersCustomBatchRequestEntry {
+            export interface OrdersCustomBatchRequestEntry {
                 'batchId': number;
                 'cancel': OrdersCustomBatchRequestEntryCancel;
                 'cancelLineItem': OrdersCustomBatchRequestEntryCancelLineItem;
@@ -773,12 +773,12 @@ declare module google {
                 'updateShipment': OrdersCustomBatchRequestEntryUpdateShipment;
             }
 
-            interface OrdersCustomBatchRequestEntryCancel {
+            export interface OrdersCustomBatchRequestEntryCancel {
                 'reason': string;
                 'reasonText': string;
             }
 
-            interface OrdersCustomBatchRequestEntryCancelLineItem {
+            export interface OrdersCustomBatchRequestEntryCancelLineItem {
                 'amount': Price;
                 'lineItemId': string;
                 'quantity': number;
@@ -786,39 +786,39 @@ declare module google {
                 'reasonText': string;
             }
 
-            interface OrdersCustomBatchRequestEntryRefund {
+            export interface OrdersCustomBatchRequestEntryRefund {
                 'amount': Price;
                 'reason': string;
                 'reasonText': string;
             }
 
-            interface OrdersCustomBatchRequestEntryReturnLineItem {
+            export interface OrdersCustomBatchRequestEntryReturnLineItem {
                 'lineItemId': string;
                 'quantity': number;
                 'reason': string;
                 'reasonText': string;
             }
 
-            interface OrdersCustomBatchRequestEntryShipLineItems {
+            export interface OrdersCustomBatchRequestEntryShipLineItems {
                 'carrier': string;
                 'lineItems': OrderShipmentLineItemShipment[];
                 'shipmentId': string;
                 'trackingId': string;
             }
 
-            interface OrdersCustomBatchRequestEntryUpdateShipment {
+            export interface OrdersCustomBatchRequestEntryUpdateShipment {
                 'carrier': string;
                 'shipmentId': string;
                 'status': string;
                 'trackingId': string;
             }
 
-            interface OrdersCustomBatchResponse {
+            export interface OrdersCustomBatchResponse {
                 'entries': OrdersCustomBatchResponseEntry[];
                 'kind': string;
             }
 
-            interface OrdersCustomBatchResponseEntry {
+            export interface OrdersCustomBatchResponseEntry {
                 'batchId': number;
                 'errors': Errors;
                 'executionStatus': string;
@@ -826,35 +826,35 @@ declare module google {
                 'order': Order;
             }
 
-            interface OrdersGetByMerchantOrderIdResponse {
+            export interface OrdersGetByMerchantOrderIdResponse {
                 'kind': string;
                 'order': Order;
             }
 
-            interface OrdersGetTestOrderTemplateResponse {
+            export interface OrdersGetTestOrderTemplateResponse {
                 'kind': string;
                 'template': TestOrder;
             }
 
-            interface OrdersListResponse {
+            export interface OrdersListResponse {
                 'kind': string;
                 'nextPageToken': string;
                 'resources': Order[];
             }
 
-            interface OrdersRefundRequest {
+            export interface OrdersRefundRequest {
                 'amount': Price;
                 'operationId': string;
                 'reason': string;
                 'reasonText': string;
             }
 
-            interface OrdersRefundResponse {
+            export interface OrdersRefundResponse {
                 'executionStatus': string;
                 'kind': string;
             }
 
-            interface OrdersReturnLineItemRequest {
+            export interface OrdersReturnLineItemRequest {
                 'lineItemId': string;
                 'operationId': string;
                 'quantity': number;
@@ -862,12 +862,12 @@ declare module google {
                 'reasonText': string;
             }
 
-            interface OrdersReturnLineItemResponse {
+            export interface OrdersReturnLineItemResponse {
                 'executionStatus': string;
                 'kind': string;
             }
 
-            interface OrdersShipLineItemsRequest {
+            export interface OrdersShipLineItemsRequest {
                 'carrier': string;
                 'lineItems': OrderShipmentLineItemShipment[];
                 'operationId': string;
@@ -875,22 +875,22 @@ declare module google {
                 'trackingId': string;
             }
 
-            interface OrdersShipLineItemsResponse {
+            export interface OrdersShipLineItemsResponse {
                 'executionStatus': string;
                 'kind': string;
             }
 
-            interface OrdersUpdateMerchantOrderIdRequest {
+            export interface OrdersUpdateMerchantOrderIdRequest {
                 'merchantOrderId': string;
                 'operationId': string;
             }
 
-            interface OrdersUpdateMerchantOrderIdResponse {
+            export interface OrdersUpdateMerchantOrderIdResponse {
                 'executionStatus': string;
                 'kind': string;
             }
 
-            interface OrdersUpdateShipmentRequest {
+            export interface OrdersUpdateShipmentRequest {
                 'carrier': string;
                 'operationId': string;
                 'shipmentId': string;
@@ -898,17 +898,17 @@ declare module google {
                 'trackingId': string;
             }
 
-            interface OrdersUpdateShipmentResponse {
+            export interface OrdersUpdateShipmentResponse {
                 'executionStatus': string;
                 'kind': string;
             }
 
-            interface Price {
+            export interface Price {
                 'currency': string;
                 'value': string;
             }
 
-            interface Product {
+            export interface Product {
                 'additionalImageLinks': string[];
                 'adult': boolean;
                 'adwordsGrouping': string;
@@ -982,30 +982,30 @@ declare module google {
                 'warnings': Error[];
             }
 
-            interface ProductAspect {
+            export interface ProductAspect {
                 'aspectName': string;
                 'destinationName': string;
                 'intention': string;
             }
 
-            interface ProductCustomAttribute {
+            export interface ProductCustomAttribute {
                 'name': string;
                 'type': string;
                 'unit': string;
                 'value': string;
             }
 
-            interface ProductCustomGroup {
+            export interface ProductCustomGroup {
                 'attributes': ProductCustomAttribute[];
                 'name': string;
             }
 
-            interface ProductDestination {
+            export interface ProductDestination {
                 'destinationName': string;
                 'intention': string;
             }
 
-            interface ProductShipping {
+            export interface ProductShipping {
                 'country': string;
                 'locationGroupName': string;
                 'locationId': string;
@@ -1015,17 +1015,17 @@ declare module google {
                 'service': string;
             }
 
-            interface ProductShippingDimension {
+            export interface ProductShippingDimension {
                 'unit': string;
                 'value': number;
             }
 
-            interface ProductShippingWeight {
+            export interface ProductShippingWeight {
                 'unit': string;
                 'value': number;
             }
 
-            interface ProductStatus {
+            export interface ProductStatus {
                 'creationDate': string;
                 'dataQualityIssues': ProductStatusDataQualityIssue[];
                 'destinationStatuses': ProductStatusDestinationStatus[];
@@ -1037,7 +1037,7 @@ declare module google {
                 'title': string;
             }
 
-            interface ProductStatusDataQualityIssue {
+            export interface ProductStatusDataQualityIssue {
                 'detail': string;
                 'fetchStatus': string;
                 'id': string;
@@ -1048,13 +1048,13 @@ declare module google {
                 'valueProvided': string;
             }
 
-            interface ProductStatusDestinationStatus {
+            export interface ProductStatusDestinationStatus {
                 'approvalStatus': string;
                 'destination': string;
                 'intention': string;
             }
 
-            interface ProductTax {
+            export interface ProductTax {
                 'country': string;
                 'locationId': string;
                 'postalCode': string;
@@ -1063,21 +1063,21 @@ declare module google {
                 'taxShip': boolean;
             }
 
-            interface ProductUnitPricingBaseMeasure {
+            export interface ProductUnitPricingBaseMeasure {
                 'unit': string;
                 'value': string;
             }
 
-            interface ProductUnitPricingMeasure {
+            export interface ProductUnitPricingMeasure {
                 'unit': string;
                 'value': number;
             }
 
-            interface ProductsCustomBatchRequest {
+            export interface ProductsCustomBatchRequest {
                 'entries': ProductsCustomBatchRequestEntry[];
             }
 
-            interface ProductsCustomBatchRequestEntry {
+            export interface ProductsCustomBatchRequestEntry {
                 'batchId': number;
                 'merchantId': string;
                 'method': string;
@@ -1085,54 +1085,54 @@ declare module google {
                 'productId': string;
             }
 
-            interface ProductsCustomBatchResponse {
+            export interface ProductsCustomBatchResponse {
                 'entries': ProductsCustomBatchResponseEntry[];
                 'kind': string;
             }
 
-            interface ProductsCustomBatchResponseEntry {
+            export interface ProductsCustomBatchResponseEntry {
                 'batchId': number;
                 'errors': Errors;
                 'kind': string;
                 'product': Product;
             }
 
-            interface ProductsListResponse {
+            export interface ProductsListResponse {
                 'kind': string;
                 'nextPageToken': string;
                 'resources': Product[];
             }
 
-            interface ProductstatusesCustomBatchRequest {
+            export interface ProductstatusesCustomBatchRequest {
                 'entries': ProductstatusesCustomBatchRequestEntry[];
             }
 
-            interface ProductstatusesCustomBatchRequestEntry {
+            export interface ProductstatusesCustomBatchRequestEntry {
                 'batchId': number;
                 'merchantId': string;
                 'method': string;
                 'productId': string;
             }
 
-            interface ProductstatusesCustomBatchResponse {
+            export interface ProductstatusesCustomBatchResponse {
                 'entries': ProductstatusesCustomBatchResponseEntry[];
                 'kind': string;
             }
 
-            interface ProductstatusesCustomBatchResponseEntry {
+            export interface ProductstatusesCustomBatchResponseEntry {
                 'batchId': number;
                 'errors': Errors;
                 'kind': string;
                 'productStatus': ProductStatus;
             }
 
-            interface ProductstatusesListResponse {
+            export interface ProductstatusesListResponse {
                 'kind': string;
                 'nextPageToken': string;
                 'resources': ProductStatus[];
             }
 
-            interface TestOrder {
+            export interface TestOrder {
                 'customer': TestOrderCustomer;
                 'kind': string;
                 'lineItems': TestOrderLineItem[];
@@ -1144,13 +1144,13 @@ declare module google {
                 'shippingOption': string;
             }
 
-            interface TestOrderCustomer {
+            export interface TestOrderCustomer {
                 'email': string;
                 'explicitMarketingPreference': boolean;
                 'fullName': string;
             }
 
-            interface TestOrderLineItem {
+            export interface TestOrderLineItem {
                 'product': TestOrderLineItemProduct;
                 'quantityOrdered': number;
                 'returnInfo': OrderLineItemReturnInfo;
@@ -1158,7 +1158,7 @@ declare module google {
                 'unitTax': Price;
             }
 
-            interface TestOrderLineItemProduct {
+            export interface TestOrderLineItemProduct {
                 'brand': string;
                 'channel': string;
                 'condition': string;
@@ -1174,7 +1174,7 @@ declare module google {
                 'variantAttributes': OrderLineItemProductVariantAttribute[];
             }
 
-            interface TestOrderPaymentMethod {
+            export interface TestOrderPaymentMethod {
                 'expirationMonth': number;
                 'expirationYear': number;
                 'lastFourDigits': string;
@@ -1182,7 +1182,7 @@ declare module google {
                 'type': string;
             }
 
-            interface Weight {
+            export interface Weight {
                 'unit': string;
                 'value': string;
             }

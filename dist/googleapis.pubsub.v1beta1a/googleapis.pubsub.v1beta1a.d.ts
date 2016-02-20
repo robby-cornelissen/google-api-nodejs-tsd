@@ -32,100 +32,100 @@ declare module google {
 
             }
 
-            interface Topic {
+            export interface Topic {
                 'name': string;
             }
 
-            interface PublishRequest {
+            export interface PublishRequest {
                 'topic': string;
                 'message': PubsubMessage;
             }
 
-            interface PubsubMessage {
+            export interface PubsubMessage {
                 'data': string;
                 'label': Label[];
                 'messageId': string;
                 'publishTime': string;
             }
 
-            interface Label {
+            export interface Label {
                 'key': string;
                 'strValue': string;
                 'numValue': string;
             }
 
-            interface Empty {}
+            export interface Empty {}
 
-            interface PublishBatchRequest {
+            export interface PublishBatchRequest {
                 'topic': string;
                 'messages': PubsubMessage[];
             }
 
-            interface PublishBatchResponse {
+            export interface PublishBatchResponse {
                 'messageIds': string[];
             }
 
-            interface ListTopicsResponse {
+            export interface ListTopicsResponse {
                 'topic': Topic[];
                 'nextPageToken': string;
             }
 
-            interface Subscription {
+            export interface Subscription {
                 'name': string;
                 'topic': string;
                 'pushConfig': PushConfig;
                 'ackDeadlineSeconds': number;
             }
 
-            interface PushConfig {
+            export interface PushConfig {
                 'pushEndpoint': string;
             }
 
-            interface ListSubscriptionsResponse {
+            export interface ListSubscriptionsResponse {
                 'subscription': Subscription[];
                 'nextPageToken': string;
             }
 
-            interface ModifyPushConfigRequest {
+            export interface ModifyPushConfigRequest {
                 'subscription': string;
                 'pushConfig': PushConfig;
             }
 
-            interface PullRequest {
+            export interface PullRequest {
                 'subscription': string;
                 'returnImmediately': boolean;
             }
 
-            interface PullResponse {
+            export interface PullResponse {
                 'ackId': string;
                 'pubsubEvent': PubsubEvent;
             }
 
-            interface PubsubEvent {
+            export interface PubsubEvent {
                 'subscription': string;
                 'message': PubsubMessage;
                 'truncated': boolean;
                 'deleted': boolean;
             }
 
-            interface PullBatchRequest {
+            export interface PullBatchRequest {
                 'subscription': string;
                 'returnImmediately': boolean;
                 'maxEvents': number;
             }
 
-            interface PullBatchResponse {
+            export interface PullBatchResponse {
                 'pullResponses': PullResponse[];
             }
 
-            interface ModifyAckDeadlineRequest {
+            export interface ModifyAckDeadlineRequest {
                 'subscription': string;
                 'ackId': string;
                 'ackIds': string[];
                 'ackDeadlineSeconds': number;
             }
 
-            interface AcknowledgeRequest {
+            export interface AcknowledgeRequest {
                 'subscription': string;
                 'ackId': string[];
             }

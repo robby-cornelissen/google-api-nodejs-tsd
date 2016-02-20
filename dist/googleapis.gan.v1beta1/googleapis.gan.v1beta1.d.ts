@@ -35,7 +35,7 @@ declare module google {
 
             }
 
-            interface Advertiser {
+            export interface Advertiser {
                 'allowPublisherCreatedLinks': boolean;
                 'category': string;
                 'commissionDuration': number;
@@ -59,13 +59,13 @@ declare module google {
                 'status': string;
             }
 
-            interface Advertisers {
+            export interface Advertisers {
                 'items': Advertiser[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface CcOffer {
+            export interface CcOffer {
                 'additionalCardBenefits': string[];
                 'additionalCardHolderFee': string;
                 'ageMinimum': number;
@@ -146,12 +146,12 @@ declare module google {
                 'variableRatesUpdateFrequency': string;
             }
 
-            interface CcOffers {
+            export interface CcOffers {
                 'items': CcOffer[];
                 'kind': string;
             }
 
-            interface Event {
+            export interface Event {
                 'advertiserId': string;
                 'advertiserName': string;
                 'chargeId': string;
@@ -182,13 +182,13 @@ declare module google {
                 'type': string;
             }
 
-            interface Events {
+            export interface Events {
                 'items': Event[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Link {
+            export interface Link {
                 'advertiserId': string;
                 'authorship': string;
                 'availability': string;
@@ -221,18 +221,18 @@ declare module google {
                 'startDate': string;
             }
 
-            interface Links {
+            export interface Links {
                 'items': Link[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Money {
+            export interface Money {
                 'amount': number;
                 'currencyCode': string;
             }
 
-            interface Publisher {
+            export interface Publisher {
                 'classification': string;
                 'epcNinetyDayAverage': Money;
                 'epcSevenDayAverage': Money;
@@ -246,13 +246,13 @@ declare module google {
                 'status': string;
             }
 
-            interface Publishers {
+            export interface Publishers {
                 'items': Publisher[];
                 'kind': string;
                 'nextPageToken': string;
             }
 
-            interface Report {
+            export interface Report {
                 'column_names': string[];
                 'end_date': string;
                 'kind': string;
