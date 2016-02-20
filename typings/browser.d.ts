@@ -2,4 +2,3 @@
 /// <reference path="browser/ambient/mkdirp/mkdirp.d.ts" />
 /// <reference path="browser/ambient/node/node.d.ts" />
 /// <reference path="browser/ambient/request/request.d.ts" />
-/// <reference path="browser/ambient/swig/swig.d.ts" />

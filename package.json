@@ -9,7 +9,6 @@
     "mkdirp": "~0.5.1",
     "typescript": "~1.7.5",
     "google-auth-library": "~0.9.7",
-    "googleapis": "~2.1.7",
-    "swig": "~1.4.2"
+    "googleapis": "~2.1.7"
   }
 }
