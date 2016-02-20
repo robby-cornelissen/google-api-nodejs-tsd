@@ -54,7 +54,7 @@ export class Generator {
             let basePath = path.join(this.exportPath, baseName, baseName + '.d.ts');
 
             let renderBase = this.render(this.baseTemplate, {}, basePath);
-            let renderApis = data['items'].filter(item => item.name === 'discovery').map((item) => this.get(item['discoveryRestUrl']).then(api => {
+            let renderApis = data['items'].map((item) => this.get(item['discoveryRestUrl']).then(api => {
                 let apiName = MODULE + '.' + api['name'] + '.' + api['version'];
                 let apiPath = path.join(this.exportPath, apiName, apiName + '.d.ts');
 

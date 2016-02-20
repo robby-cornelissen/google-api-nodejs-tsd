@@ -1,0 +1,182 @@
+/// <reference path="../googleapis/googleapis.d.ts" />
+declare module google {
+    export interface GoogleApis {
+        doubleclicksearch(version: string): any;
+        doubleclicksearch(version: 'v2'): doubleclicksearch.v2.Doubleclicksearch;
+    }
+
+    namespace doubleclicksearch {
+        namespace v2 {
+            export interface Doubleclicksearch {
+                new(options: any): Doubleclicksearch;
+
+                'conversion': {
+                    'get': (parameters: {'adGroupId'?: string, 'adId'?: string, 'advertiserId': string, 'agencyId': string, 'campaignId'?: string, 'criterionId'?: string, 'endDate': number, 'engineAccountId': string, 'rowCount': number, 'startDate': number, 'startRow': number}, callback: (error: any, body: ConversionList, response: any) => void) => Request;
+                    'insert': (parameters: any, callback: (error: any, body: ConversionList, response: any) => void) => Request;
+                    'patch': (parameters: {'advertiserId': string, 'agencyId': string, 'endDate': number, 'engineAccountId': string, 'rowCount': number, 'startDate': number, 'startRow': number}, callback: (error: any, body: ConversionList, response: any) => void) => Request;
+                    'update': (parameters: any, callback: (error: any, body: ConversionList, response: any) => void) => Request;
+                    'updateAvailability': (parameters: any, callback: (error: any, body: UpdateAvailabilityResponse, response: any) => void) => Request;
+                };
+                'reports': {
+                    'generate': (parameters: any, callback: (error: any, body: Report, response: any) => void) => Request;
+                    'get': (parameters: {'reportId': string}, callback: (error: any, body: Report, response: any) => void) => Request;
+                    'getFile': (parameters: {'reportFragment': number, 'reportId': string}, callback: (error: any, body: any, response: any) => void) => Request;
+                    'request': (parameters: any, callback: (error: any, body: Report, response: any) => void) => Request;
+                };
+                'savedColumns': {
+                    'list': (parameters: {'advertiserId': string, 'agencyId': string}, callback: (error: any, body: SavedColumnList, response: any) => void) => Request;
+                };
+
+            }
+
+            interface Availability {
+                'advertiserId': string;
+                'agencyId': string;
+                'availabilityTimestamp': string;
+                'segmentationId': string;
+                'segmentationName': string;
+                'segmentationType': string;
+            }
+
+            interface Conversion {
+                'adGroupId': string;
+                'adId': string;
+                'advertiserId': string;
+                'agencyId': string;
+                'attributionModel': string;
+                'campaignId': string;
+                'channel': string;
+                'clickId': string;
+                'conversionId': string;
+                'conversionModifiedTimestamp': string;
+                'conversionTimestamp': string;
+                'countMillis': string;
+                'criterionId': string;
+                'currencyCode': string;
+                'customDimension': CustomDimension[];
+                'customMetric': CustomMetric[];
+                'deviceType': string;
+                'dsConversionId': string;
+                'engineAccountId': string;
+                'floodlightOrderId': string;
+                'inventoryAccountId': string;
+                'productCountry': string;
+                'productGroupId': string;
+                'productId': string;
+                'productLanguage': string;
+                'quantityMillis': string;
+                'revenueMicros': string;
+                'segmentationId': string;
+                'segmentationName': string;
+                'segmentationType': string;
+                'state': string;
+                'storeId': string;
+                'type': string;
+            }
+
+            interface ConversionList {
+                'conversion': Conversion[];
+                'kind': string;
+            }
+
+            interface CustomDimension {
+                'name': string;
+                'value': string;
+            }
+
+            interface CustomMetric {
+                'name': string;
+                'value': number;
+            }
+
+            interface Report {
+                'files': {
+                    'byteCount': string;
+                    'url': string;
+                }[];
+                'id': string;
+                'isReportReady': boolean;
+                'kind': string;
+                'request': ReportRequest;
+                'rowCount': number;
+                'rows': ReportRow[];
+                'statisticsCurrencyCode': string;
+                'statisticsTimeZone': string;
+            }
+
+            interface ReportApiColumnSpec {
+                'columnName': string;
+                'customDimensionName': string;
+                'customMetricName': string;
+                'endDate': string;
+                'groupByColumn': boolean;
+                'headerText': string;
+                'platformSource': string;
+                'productReportPerspective': string;
+                'savedColumnName': string;
+                'startDate': string;
+            }
+
+            interface ReportRequest {
+                'columns': ReportApiColumnSpec[];
+                'downloadFormat': string;
+                'filters': {
+                    'column': ReportApiColumnSpec;
+                    'operator': string;
+                    'values': any[];
+                }[];
+                'includeDeletedEntities': boolean;
+                'includeRemovedEntities': boolean;
+                'maxRowsPerFile': number;
+                'orderBy': {
+                    'column': ReportApiColumnSpec;
+                    'sortOrder': string;
+                }[];
+                'reportScope': {
+                    'adGroupId': string;
+                    'adId': string;
+                    'advertiserId': string;
+                    'agencyId': string;
+                    'campaignId': string;
+                    'engineAccountId': string;
+                    'keywordId': string;
+                };
+                'reportType': string;
+                'rowCount': number;
+                'startRow': number;
+                'statisticsCurrency': string;
+                'timeRange': {
+                    'changedAttributesSinceTimestamp': string;
+                    'changedMetricsSinceTimestamp': string;
+                    'endDate': string;
+                    'startDate': string;
+                };
+                'verifySingleTimeZone': boolean;
+            }
+
+            interface ReportRow {
+                [name: string]: any
+            }
+
+            interface SavedColumn {
+                'kind': string;
+                'savedColumnName': string;
+                'type': string;
+            }
+
+            interface SavedColumnList {
+                'items': SavedColumn[];
+                'kind': string;
+            }
+
+            interface UpdateAvailabilityRequest {
+                'availabilities': Availability[];
+            }
+
+            interface UpdateAvailabilityResponse {
+                'availabilities': Availability[];
+            }
+
+        }
+    }
+}

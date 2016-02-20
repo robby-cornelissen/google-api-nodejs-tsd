@@ -1,0 +1,277 @@
+/// <reference path="../googleapis/googleapis.d.ts" />
+declare module google {
+    export interface GoogleApis {
+        blogger(version: string): any;
+        blogger(version: 'v3'): blogger.v3.Blogger;
+    }
+
+    namespace blogger {
+        namespace v3 {
+            export interface Blogger {
+                new(options: any): Blogger;
+
+                'blogUserInfos': {
+                    'get': (parameters: {'blogId': string, 'maxPosts'?: number, 'userId': string}, callback: (error: any, body: BlogUserInfo, response: any) => void) => Request;
+                };
+                'blogs': {
+                    'get': (parameters: {'blogId': string, 'maxPosts'?: number, 'view'?: string}, callback: (error: any, body: Blog, response: any) => void) => Request;
+                    'getByUrl': (parameters: {'url': string, 'view'?: string}, callback: (error: any, body: Blog, response: any) => void) => Request;
+                    'listByUser': (parameters: {'fetchUserInfo'?: boolean, 'role'?: string, 'status'?: string, 'userId': string, 'view'?: string}, callback: (error: any, body: BlogList, response: any) => void) => Request;
+                };
+                'comments': {
+                    'approve': (parameters: {'blogId': string, 'commentId': string, 'postId': string}, callback: (error: any, body: Comment, response: any) => void) => Request;
+                    'delete': (parameters: {'blogId': string, 'commentId': string, 'postId': string}, callback: (error: any, body: any, response: any) => void) => Request;
+                    'get': (parameters: {'blogId': string, 'commentId': string, 'postId': string, 'view'?: string}, callback: (error: any, body: Comment, response: any) => void) => Request;
+                    'list': (parameters: {'blogId': string, 'endDate'?: string, 'fetchBodies'?: boolean, 'maxResults'?: number, 'pageToken'?: string, 'postId': string, 'startDate'?: string, 'status'?: string, 'view'?: string}, callback: (error: any, body: CommentList, response: any) => void) => Request;
+                    'listByBlog': (parameters: {'blogId': string, 'endDate'?: string, 'fetchBodies'?: boolean, 'maxResults'?: number, 'pageToken'?: string, 'startDate'?: string, 'status'?: string}, callback: (error: any, body: CommentList, response: any) => void) => Request;
+                    'markAsSpam': (parameters: {'blogId': string, 'commentId': string, 'postId': string}, callback: (error: any, body: Comment, response: any) => void) => Request;
+                    'removeContent': (parameters: {'blogId': string, 'commentId': string, 'postId': string}, callback: (error: any, body: Comment, response: any) => void) => Request;
+                };
+                'pageViews': {
+                    'get': (parameters: {'blogId': string, 'range'?: string}, callback: (error: any, body: Pageviews, response: any) => void) => Request;
+                };
+                'pages': {
+                    'delete': (parameters: {'blogId': string, 'pageId': string}, callback: (error: any, body: any, response: any) => void) => Request;
+                    'get': (parameters: {'blogId': string, 'pageId': string, 'view'?: string}, callback: (error: any, body: Page, response: any) => void) => Request;
+                    'insert': (parameters: {'blogId': string, 'isDraft'?: boolean}, callback: (error: any, body: Page, response: any) => void) => Request;
+                    'list': (parameters: {'blogId': string, 'fetchBodies'?: boolean, 'maxResults'?: number, 'pageToken'?: string, 'status'?: string, 'view'?: string}, callback: (error: any, body: PageList, response: any) => void) => Request;
+                    'patch': (parameters: {'blogId': string, 'pageId': string, 'publish'?: boolean, 'revert'?: boolean}, callback: (error: any, body: Page, response: any) => void) => Request;
+                    'publish': (parameters: {'blogId': string, 'pageId': string}, callback: (error: any, body: Page, response: any) => void) => Request;
+                    'revert': (parameters: {'blogId': string, 'pageId': string}, callback: (error: any, body: Page, response: any) => void) => Request;
+                    'update': (parameters: {'blogId': string, 'pageId': string, 'publish'?: boolean, 'revert'?: boolean}, callback: (error: any, body: Page, response: any) => void) => Request;
+                };
+                'postUserInfos': {
+                    'get': (parameters: {'blogId': string, 'maxComments'?: number, 'postId': string, 'userId': string}, callback: (error: any, body: PostUserInfo, response: any) => void) => Request;
+                    'list': (parameters: {'blogId': string, 'endDate'?: string, 'fetchBodies'?: boolean, 'labels'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'startDate'?: string, 'status'?: string, 'userId': string, 'view'?: string}, callback: (error: any, body: PostUserInfosList, response: any) => void) => Request;
+                };
+                'posts': {
+                    'delete': (parameters: {'blogId': string, 'postId': string}, callback: (error: any, body: any, response: any) => void) => Request;
+                    'get': (parameters: {'blogId': string, 'fetchBody'?: boolean, 'fetchImages'?: boolean, 'maxComments'?: number, 'postId': string, 'view'?: string}, callback: (error: any, body: Post, response: any) => void) => Request;
+                    'getByPath': (parameters: {'blogId': string, 'maxComments'?: number, 'path': string, 'view'?: string}, callback: (error: any, body: Post, response: any) => void) => Request;
+                    'insert': (parameters: {'blogId': string, 'fetchBody'?: boolean, 'fetchImages'?: boolean, 'isDraft'?: boolean}, callback: (error: any, body: Post, response: any) => void) => Request;
+                    'list': (parameters: {'blogId': string, 'endDate'?: string, 'fetchBodies'?: boolean, 'fetchImages'?: boolean, 'labels'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'startDate'?: string, 'status'?: string, 'view'?: string}, callback: (error: any, body: PostList, response: any) => void) => Request;
+                    'patch': (parameters: {'blogId': string, 'fetchBody'?: boolean, 'fetchImages'?: boolean, 'maxComments'?: number, 'postId': string, 'publish'?: boolean, 'revert'?: boolean}, callback: (error: any, body: Post, response: any) => void) => Request;
+                    'publish': (parameters: {'blogId': string, 'postId': string, 'publishDate'?: string}, callback: (error: any, body: Post, response: any) => void) => Request;
+                    'revert': (parameters: {'blogId': string, 'postId': string}, callback: (error: any, body: Post, response: any) => void) => Request;
+                    'search': (parameters: {'blogId': string, 'fetchBodies'?: boolean, 'orderBy'?: string, 'q': string}, callback: (error: any, body: PostList, response: any) => void) => Request;
+                    'update': (parameters: {'blogId': string, 'fetchBody'?: boolean, 'fetchImages'?: boolean, 'maxComments'?: number, 'postId': string, 'publish'?: boolean, 'revert'?: boolean}, callback: (error: any, body: Post, response: any) => void) => Request;
+                };
+                'users': {
+                    'get': (parameters: {'userId': string}, callback: (error: any, body: User, response: any) => void) => Request;
+                };
+
+            }
+
+            interface Blog {
+                'customMetaData': string;
+                'description': string;
+                'id': string;
+                'kind': string;
+                'locale': {
+                    'country': string;
+                    'language': string;
+                    'variant': string;
+                };
+                'name': string;
+                'pages': {
+                    'selfLink': string;
+                    'totalItems': number;
+                };
+                'posts': {
+                    'items': Post[];
+                    'selfLink': string;
+                    'totalItems': number;
+                };
+                'published': string;
+                'selfLink': string;
+                'status': string;
+                'updated': string;
+                'url': string;
+            }
+
+            interface BlogList {
+                'blogUserInfos': BlogUserInfo[];
+                'items': Blog[];
+                'kind': string;
+            }
+
+            interface BlogPerUserInfo {
+                'blogId': string;
+                'hasAdminAccess': boolean;
+                'kind': string;
+                'photosAlbumKey': string;
+                'role': string;
+                'userId': string;
+            }
+
+            interface BlogUserInfo {
+                'blog': Blog;
+                'blog_user_info': BlogPerUserInfo;
+                'kind': string;
+            }
+
+            interface Comment {
+                'author': {
+                    'displayName': string;
+                    'id': string;
+                    'image': {
+                        'url': string;
+                    };
+                    'url': string;
+                };
+                'blog': {
+                    'id': string;
+                };
+                'content': string;
+                'id': string;
+                'inReplyTo': {
+                    'id': string;
+                };
+                'kind': string;
+                'post': {
+                    'id': string;
+                };
+                'published': string;
+                'selfLink': string;
+                'status': string;
+                'updated': string;
+            }
+
+            interface CommentList {
+                'etag': string;
+                'items': Comment[];
+                'kind': string;
+                'nextPageToken': string;
+                'prevPageToken': string;
+            }
+
+            interface Page {
+                'author': {
+                    'displayName': string;
+                    'id': string;
+                    'image': {
+                        'url': string;
+                    };
+                    'url': string;
+                };
+                'blog': {
+                    'id': string;
+                };
+                'content': string;
+                'etag': string;
+                'id': string;
+                'kind': string;
+                'published': string;
+                'selfLink': string;
+                'status': string;
+                'title': string;
+                'updated': string;
+                'url': string;
+            }
+
+            interface PageList {
+                'etag': string;
+                'items': Page[];
+                'kind': string;
+                'nextPageToken': string;
+            }
+
+            interface Pageviews {
+                'blogId': string;
+                'counts': {
+                    'count': string;
+                    'timeRange': string;
+                }[];
+                'kind': string;
+            }
+
+            interface Post {
+                'author': {
+                    'displayName': string;
+                    'id': string;
+                    'image': {
+                        'url': string;
+                    };
+                    'url': string;
+                };
+                'blog': {
+                    'id': string;
+                };
+                'content': string;
+                'customMetaData': string;
+                'etag': string;
+                'id': string;
+                'images': {
+                    'url': string;
+                }[];
+                'kind': string;
+                'labels': string[];
+                'location': {
+                    'lat': number;
+                    'lng': number;
+                    'name': string;
+                    'span': string;
+                };
+                'published': string;
+                'readerComments': string;
+                'replies': {
+                    'items': Comment[];
+                    'selfLink': string;
+                    'totalItems': string;
+                };
+                'selfLink': string;
+                'status': string;
+                'title': string;
+                'titleLink': string;
+                'updated': string;
+                'url': string;
+            }
+
+            interface PostList {
+                'etag': string;
+                'items': Post[];
+                'kind': string;
+                'nextPageToken': string;
+            }
+
+            interface PostPerUserInfo {
+                'blogId': string;
+                'hasEditAccess': boolean;
+                'kind': string;
+                'postId': string;
+                'userId': string;
+            }
+
+            interface PostUserInfo {
+                'kind': string;
+                'post': Post;
+                'post_user_info': PostPerUserInfo;
+            }
+
+            interface PostUserInfosList {
+                'items': PostUserInfo[];
+                'kind': string;
+                'nextPageToken': string;
+            }
+
+            interface User {
+                'about': string;
+                'blogs': {
+                    'selfLink': string;
+                };
+                'created': string;
+                'displayName': string;
+                'id': string;
+                'kind': string;
+                'locale': {
+                    'country': string;
+                    'language': string;
+                    'variant': string;
+                };
+                'selfLink': string;
+                'url': string;
+            }
+
+        }
+    }
+}

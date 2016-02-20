@@ -1,9 +1,9 @@
 {%- macro method_(name, method) -%}
-{{ name }}: (parameters: {{ parameters_(method) }}, callback: {{ callback_(method) }}) => Request;
+{{ name | mname }}: (parameters: {{ parameters_(method) }}, callback: {{ callback_(method) }}) => Request;
 {%- endmacro -%}
 
 {%- macro resource_(name, resource) -%}
-{{ name }}: {
+{{ name | mname }}: {
     {%- if resource.methods -%}
         {{ br }}
         {%- for name, method in resource.methods -%}
@@ -23,7 +23,7 @@
 {%- if method.parameters -%}
 {
     {%- for name, parameter in method.parameters -%}
-        {{ name }}{%- if not parameter.required -%}?{%- endif -%}: {{ schemaType_(parameter) }}
+        {{ name | mname }}{%- if not parameter.required -%}?{%- endif -%}: {{ schemaType_(parameter) }}
         {%- if not loop.last -%}, {% endif -%}
     {%- endfor -%}
 }
@@ -47,7 +47,7 @@ interface {{ name }} {{ schemaObject_(schema) }}
 {%- endmacro -%}
 
 {%- macro schemaProperty_(name, property) -%}
-{{ name }}: {{ schemaType_(property) }};
+{{ name | mname }}: {{ schemaType_(property) }};
 {%- endmacro -%}
 
 {%- macro schemaType_(definition) -%}
@@ -73,18 +73,30 @@ any
 {%- endmacro -%}
 
 {%- macro schemaObject_(definition) -%}
-{%- if definition.properties -%}
+{%- if definition.properties or definition.additionalProperties -%}
+    {%- if definition.properties -%}
+        {{ schemaObjectProperties_(definition.properties) }}
+    {%- endif -%}
+    {%- if definition.properties and definition.additionalProperties %} & {% endif -%}
+    {%- if definition.additionalProperties -%}
+        {{ schemaObjectAdditionalProperties_(definition.additionalProperties) }}
+    {%- endif -%}
+{%- else -%}
+    {}
+{%- endif -%}
+{%- endmacro -%}
+
+{%- macro schemaObjectProperties_(properties) -%}
 {
-    {%- for name, property in definition.properties -%}
+    {%- for name, property in properties -%}
         {%- if loop.first -%}{{ br }}{%- endif -%}
         {{ schemaProperty_(name, property) | indent(4, true) }}
     {%- endfor -%}
 }
-{%- endif -%}
-{%- if definition.properties and definition.additionalProperties %} & {% endif -%}
-{%- if definition.additionalProperties -%}
+{%- endmacro -%}
+
+{%- macro schemaObjectAdditionalProperties_(additionalProperties) -%}
 {
-    [name: string]: {{ schemaType_(definition.additionalProperties) }}
+    [name: string]: {{ schemaType_(additionalProperties) }}
 }
-{%- endif -%}
 {%- endmacro -%}

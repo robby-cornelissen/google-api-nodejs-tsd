@@ -27,6 +27,10 @@ export class NunjucksRenderer extends Renderer {
         for (let name in globals) {
             this.env.addGlobal(name, globals[name]);
         }
+
+        this.env.addFilter('mname', (input) => {
+            return "'" + input + "'";
+        });
     }
 
     render(template: string, data: any): Promise<string> {
