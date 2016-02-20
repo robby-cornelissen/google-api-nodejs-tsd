@@ -288,7 +288,7 @@ declare module google {
                 [name: string]: JsonValue
             }
 
-            
+            type JsonValue = any;
 
             interface ProjectList {
                 'etag': string;

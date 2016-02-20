@@ -26,7 +26,11 @@ declare module google {
                 'detections': DetectionsResource[];
             }
 
-            
+            type DetectionsResource = {
+                'confidence': number;
+                'isReliable': boolean;
+                'language': string;
+            }[];
 
             interface LanguagesListResponse {
                 'languages': LanguagesResource[];
