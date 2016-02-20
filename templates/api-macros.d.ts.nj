@@ -1,5 +1,5 @@
 {%- macro method_(name, method) -%}
-{{ name }}: (params: any, callback: Callback) => Request;
+{{ name }}: (params: any, callback: {{ callback_(method) }}) => Request;
 {%- endmacro -%}
 
 {%- macro resource_(name, resource) -%}
@@ -19,6 +19,14 @@
 };
 {%- endmacro -%}
 
+{%- macro callback_(method) -%}
+{%- if method.response -%}
+(e: any, body: {{ schemaType_(method.response) }}, response: any) => void
+{%- else -%}
+(e: any, body: any, response: any) => void
+{%- endif -%}
+{%- endmacro -%}
+
 {%- macro schema_(name, schema) -%}
 {%- if schema.type == 'object' -%}
 interface {{ name }} {{ schemaObject_(schema) }}
@@ -29,37 +37,41 @@ interface {{ name }} {{ schemaObject_(schema) }}
 {{ name }}: {{ schemaType_(property) }};
 {%- endmacro -%}
 
-{%- macro schemaType_(description) -%}
-{%- if description.type == 'null' -%}
+{%- macro schemaType_(definition) -%}
+{%- if definition.type == 'null' -%}
 void
-{%- elif description.type == 'string' -%}
+{%- elif definition.type == 'string' -%}
 string
-{%- elif description.type == 'boolean' -%}
+{%- elif definition.type == 'boolean' -%}
 boolean
-{%- elif description.type == 'number' -%}
+{%- elif definition.type == 'number' -%}
 number
-{%- elif description.type == 'integer' -%}
+{%- elif definition.type == 'integer' -%}
 number
-{%- elif description.type == 'object' -%}
-{{ schemaObject_(description) }}
-{%- elif description.type == 'array' -%}
-{%- if description.items -%}{{ schemaType_(description.items) }}{%- else -%}any{%- endif -%}[]
-{%- elif element.$ref -%}
-{{ element.$ref }}
+{%- elif definition.type == 'object' -%}
+{{ schemaObject_(definition) }}
+{%- elif definition.type == 'array' -%}
+{%- if definition.items -%}{{ schemaType_(definition.items) }}{%- else -%}any{%- endif -%}[]
+{%- elif definition.$ref -%}
+{{ definition.$ref }}
 {%- else -%}
 any
 {%- endif -%}
 {%- endmacro -%}
 
-{%- macro schemaObject_(description) -%}
+{%- macro schemaObject_(definition) -%}
+{%- if definition.properties -%}
 {
-    {%- if description.properties -%}
-        {{ br }}
-        {%- for name, property in description.properties -%}
-            {{ schemaProperty_(name, property) | indent(4, true) }}
-        {%- endfor -%}
-    {%- endif -%}
+    {%- for name, property in definition.properties -%}
+        {%- if loop.first -%}{{ br }}{%- endif -%}
+        {{ schemaProperty_(name, property) | indent(4, true) }}
+    {%- endfor -%}
 }
-{%- if description.additionalProperties -%}
+{%- endif -%}
+{%- if definition.properties and definition.additionalProperties %} & {% endif -%}
+{%- if definition.additionalProperties -%}
+{
+    [name: string]: {{ schemaType_(definition.additionalProperties) }}
+}
 {%- endif -%}
 {%- endmacro -%}

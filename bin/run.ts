@@ -9,5 +9,5 @@ generator.generate().then(() => console.log('Done')).catch((e) => console.error(
 //
 //let r = google.discovery('v1').apis.list({}, (e, d) => {
 //    console.log(e);
-//    console.log(d);
+//    console.log(d.discoveryVersion);
 //});
