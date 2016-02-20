@@ -21,14 +21,7 @@
 
 {%- macro schema_(name, schema) -%}
 {%- if schema.type == 'object' -%}
-interface {{ name }} {
-    {%- if schema.properties -%}
-        {{ br }}
-        {%- for name, property in schema.properties -%}
-            {{ schemaProperty_(name, property) | indent(4, true) }}
-        {%- endfor -%}
-    {%- endif -%}
-}
+interface {{ name }} {{ schemaObject_(schema) }}
 {%- endif -%}
 {%- endmacro -%}
 
@@ -59,5 +52,12 @@ any
 {%- endmacro -%}
 
 {%- macro schemaObject_(description) -%}
-{}
+{
+    {%- if description.properties -%}
+        {{ br }}
+        {%- for name, property in description.properties -%}
+            {{ schemaProperty_(name, property) | indent(4, true) }}
+        {%- endfor -%}
+    {%- endif -%}
+}
 {%- endmacro -%}
