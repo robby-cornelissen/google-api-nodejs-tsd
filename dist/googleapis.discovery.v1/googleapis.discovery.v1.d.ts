@@ -1,7 +1,6 @@
 /// <reference path="../googleapis/googleapis.d.ts" />
 declare module google {
     export interface GoogleApis {
-        discovery(options: any): any;
         discovery(version: string): any;
         discovery(version: 'v1'): discovery.v1.Discovery;
     }
@@ -59,6 +58,7 @@ declare module google {
                 'pattern': string;
                 'properties': {
                     [name: string]: JsonSchema
+                
                 };
                 'readOnly': boolean;
                 'repeated': boolean;
@@ -78,8 +78,9 @@ declare module google {
                     'oauth2': {
                         'scopes': {
                             [name: string]: {
-                            'description': string;
-                        }
+                                'description': string;
+                            }
+                        
                         };
                     };
                 };
@@ -102,6 +103,7 @@ declare module google {
                 'labels': string[];
                 'methods': {
                     [name: string]: RestMethod
+                
                 };
                 'name': string;
                 'ownerDomain': string;
@@ -109,15 +111,18 @@ declare module google {
                 'packagePath': string;
                 'parameters': {
                     [name: string]: JsonSchema
+                
                 };
                 'protocol': string;
                 'resources': {
                     [name: string]: RestResource
+                
                 };
                 'revision': string;
                 'rootUrl': string;
                 'schemas': {
                     [name: string]: JsonSchema
+                
                 };
                 'servicePath': string;
                 'title': string;
@@ -147,6 +152,7 @@ declare module google {
                 'parameterOrder': string[];
                 'parameters': {
                     [name: string]: JsonSchema
+                
                 };
                 'path': string;
                 'request': {
@@ -166,9 +172,11 @@ declare module google {
             export interface RestResource {
                 'methods': {
                     [name: string]: RestMethod
+                
                 };
                 'resources': {
                     [name: string]: RestResource
+                
                 };
             }
 

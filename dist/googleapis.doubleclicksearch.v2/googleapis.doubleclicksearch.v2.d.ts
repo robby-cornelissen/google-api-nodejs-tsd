@@ -156,6 +156,7 @@ declare module google {
 
             export interface ReportRow {
                 [name: string]: any
+            
             }
 
             export interface SavedColumn {

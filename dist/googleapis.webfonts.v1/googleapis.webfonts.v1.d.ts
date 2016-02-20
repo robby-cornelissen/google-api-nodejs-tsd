@@ -21,6 +21,7 @@ declare module google {
                 'family': string;
                 'files': {
                     [name: string]: string
+                
                 };
                 'kind': string;
                 'lastModified': string;

@@ -108,6 +108,7 @@ declare module google {
 
             export interface IdentitytoolkitRelyingpartyGetPublicKeysResponse {
                 [name: string]: string
+            
             }
 
             export interface IdentitytoolkitRelyingpartyResetPasswordRequest {

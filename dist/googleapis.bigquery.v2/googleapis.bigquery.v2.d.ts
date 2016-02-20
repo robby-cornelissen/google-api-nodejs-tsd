@@ -211,6 +211,7 @@ declare module google {
                 'query': string;
                 'tableDefinitions': {
                     [name: string]: ExternalDataConfiguration
+                
                 };
                 'useLegacySql': boolean;
                 'useQueryCache': boolean;
@@ -286,6 +287,7 @@ declare module google {
 
             export interface JsonObject {
                 [name: string]: JsonValue
+            
             }
 
             export type JsonValue = any;

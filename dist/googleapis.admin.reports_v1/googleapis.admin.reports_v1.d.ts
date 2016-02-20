@@ -71,6 +71,7 @@ declare module google {
                 'kind': string;
                 'params': {
                     [name: string]: string
+                
                 };
                 'payload': boolean;
                 'resourceId': string;
@@ -95,6 +96,7 @@ declare module google {
                     'intValue': string;
                     'msgValue': {
                         [name: string]: any
+                    
                     }[];
                     'name': string;
                     'stringValue': string;

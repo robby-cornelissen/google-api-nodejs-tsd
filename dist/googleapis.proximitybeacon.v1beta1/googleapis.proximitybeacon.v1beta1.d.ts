@@ -49,6 +49,7 @@ declare module google {
                 'description': string;
                 'properties': {
                     [name: string]: string
+                
                 };
             }
 

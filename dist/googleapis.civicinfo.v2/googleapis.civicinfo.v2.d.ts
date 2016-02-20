@@ -169,6 +169,7 @@ declare module google {
             export interface RepresentativeInfoData {
                 'divisions': {
                     [name: string]: GeographicDivision
+                
                 };
                 'offices': Office[];
                 'officials': Official[];
@@ -177,6 +178,7 @@ declare module google {
             export interface RepresentativeInfoResponse {
                 'divisions': {
                     [name: string]: GeographicDivision
+                
                 };
                 'kind': string;
                 'normalizedInput': SimpleAddressType;

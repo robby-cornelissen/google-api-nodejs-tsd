@@ -305,6 +305,7 @@ declare module google {
                 'id': string;
                 'items': {
                     [name: string]: AddressesScopedList
+                
                 };
                 'kind': string;
                 'nextPageToken': string;
@@ -368,6 +369,7 @@ declare module google {
                 'id': string;
                 'items': {
                     [name: string]: AutoscalersScopedList
+                
                 };
                 'kind': string;
                 'nextPageToken': string;
@@ -490,6 +492,7 @@ declare module google {
                 'id': string;
                 'items': {
                     [name: string]: DisksScopedList
+                
                 };
                 'kind': string;
                 'nextPageToken': string;
@@ -526,6 +529,7 @@ declare module google {
                 'id': string;
                 'items': {
                     [name: string]: DiskTypesScopedList
+                
                 };
                 'kind': string;
                 'nextPageToken': string;
@@ -607,6 +611,7 @@ declare module google {
                 'id': string;
                 'items': {
                     [name: string]: ForwardingRulesScopedList
+                
                 };
                 'kind': string;
                 'nextPageToken': string;
@@ -753,6 +758,7 @@ declare module google {
                 'id': string;
                 'items': {
                     [name: string]: InstancesScopedList
+                
                 };
                 'kind': string;
                 'nextPageToken': string;
@@ -778,6 +784,7 @@ declare module google {
                 'id': string;
                 'items': {
                     [name: string]: InstanceGroupsScopedList
+                
                 };
                 'kind': string;
                 'nextPageToken': string;
@@ -824,6 +831,7 @@ declare module google {
                 'id': string;
                 'items': {
                     [name: string]: InstanceGroupManagersScopedList
+                
                 };
                 'kind': string;
                 'nextPageToken': string;
@@ -1011,6 +1019,7 @@ declare module google {
                 'id': string;
                 'items': {
                     [name: string]: MachineTypesScopedList
+                
                 };
                 'kind': string;
                 'nextPageToken': string;
@@ -1141,6 +1150,7 @@ declare module google {
                 'id': string;
                 'items': {
                     [name: string]: OperationsScopedList
+                
                 };
                 'kind': string;
                 'nextPageToken': string;
@@ -1334,6 +1344,7 @@ declare module google {
                 'id': string;
                 'items': {
                     [name: string]: SubnetworksScopedList
+                
                 };
                 'kind': string;
                 'nextPageToken': string;
@@ -1422,6 +1433,7 @@ declare module google {
                 'id': string;
                 'items': {
                     [name: string]: TargetInstancesScopedList
+                
                 };
                 'kind': string;
                 'nextPageToken': string;
@@ -1467,6 +1479,7 @@ declare module google {
                 'id': string;
                 'items': {
                     [name: string]: TargetPoolsScopedList
+                
                 };
                 'kind': string;
                 'nextPageToken': string;
@@ -1536,6 +1549,7 @@ declare module google {
                 'id': string;
                 'items': {
                     [name: string]: TargetVpnGatewaysScopedList
+                
                 };
                 'kind': string;
                 'nextPageToken': string;
@@ -1644,6 +1658,7 @@ declare module google {
                 'id': string;
                 'items': {
                     [name: string]: VpnTunnelsScopedList
+                
                 };
                 'kind': string;
                 'nextPageToken': string;

@@ -99,6 +99,6 @@ any
 
 {%- macro schemaObjectAdditionalProperties_(additionalProperties) -%}
 {
-    [name: string]: {{ schemaType_(additionalProperties) }}
+    [name: string]: {{ schemaType_(additionalProperties) | indent(4) }}
 }
 {%- endmacro -%}

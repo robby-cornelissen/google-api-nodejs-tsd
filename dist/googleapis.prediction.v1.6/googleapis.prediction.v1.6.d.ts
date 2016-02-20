@@ -59,17 +59,21 @@ declare module google {
                 };
                 'errors': {
                     [name: string]: string
+                
                 }[];
                 'id': string;
                 'kind': string;
                 'modelDescription': {
                     'confusionMatrix': {
                         [name: string]: {
-                        [name: string]: string
-                    }
+                            [name: string]: string
+                        
+                        }
+                    
                     };
                     'confusionMatrixRowTotals': {
                         [name: string]: string
+                    
                     };
                     'modelinfo': Insert2;
                 };
@@ -95,6 +99,7 @@ declare module google {
                 }[];
                 'utility': {
                     [name: string]: number
+                
                 }[];
             }
 
@@ -134,7 +139,7 @@ declare module google {
                     'label': string;
                     'score': string;
                 }[];
-                'outputValue': number;
+                'outputValue': string;
                 'selfLink': string;
             }
 

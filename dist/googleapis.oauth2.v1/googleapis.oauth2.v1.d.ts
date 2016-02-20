@@ -80,6 +80,7 @@ declare module google {
 
             export interface X509 {
                 [name: string]: string
+            
             }
 
         }

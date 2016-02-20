@@ -60,6 +60,7 @@ declare module google {
                 'key': Key;
                 'properties': {
                     [name: string]: Property
+                
                 };
             }
 

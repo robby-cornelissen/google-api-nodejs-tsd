@@ -83,6 +83,7 @@ declare module google {
                 'tags': string[];
                 'metadata': {
                     [name: string]: string
+                
                 };
             }
 
@@ -105,6 +106,7 @@ declare module google {
                 'imageVersion': string;
                 'properties': {
                     [name: string]: string
+                
                 };
             }
 
@@ -123,11 +125,13 @@ declare module google {
                 'name': string;
                 'metadata': {
                     [name: string]: any
+                
                 };
                 'done': boolean;
                 'error': Status;
                 'response': {
                     [name: string]: any
+                
                 };
             }
 
@@ -136,6 +140,7 @@ declare module google {
                 'message': string;
                 'details': {
                     [name: string]: any
+                
                 }[];
             }
 
@@ -187,6 +192,7 @@ declare module google {
                 'archiveUris': string[];
                 'properties': {
                     [name: string]: string
+                
                 };
                 'loggingConfiguration': LoggingConfiguration;
             }
@@ -194,6 +200,7 @@ declare module google {
             export interface LoggingConfiguration {
                 'driverLogLevels': {
                     [name: string]: string
+                
                 };
             }
 
@@ -206,6 +213,7 @@ declare module google {
                 'archiveUris': string[];
                 'properties': {
                     [name: string]: string
+                
                 };
                 'loggingConfiguration': LoggingConfiguration;
             }
@@ -219,6 +227,7 @@ declare module google {
                 'archiveUris': string[];
                 'properties': {
                     [name: string]: string
+                
                 };
                 'loggingConfiguration': LoggingConfiguration;
             }
@@ -229,9 +238,11 @@ declare module google {
                 'continueOnFailure': boolean;
                 'scriptVariables': {
                     [name: string]: string
+                
                 };
                 'properties': {
                     [name: string]: string
+                
                 };
                 'jarFileUris': string[];
             }
@@ -246,9 +257,11 @@ declare module google {
                 'continueOnFailure': boolean;
                 'scriptVariables': {
                     [name: string]: string
+                
                 };
                 'properties': {
                     [name: string]: string
+                
                 };
                 'jarFileUris': string[];
                 'loggingConfiguration': LoggingConfiguration;
@@ -259,9 +272,11 @@ declare module google {
                 'queryList': QueryList;
                 'scriptVariables': {
                     [name: string]: string
+                
                 };
                 'properties': {
                     [name: string]: string
+                
                 };
                 'jarFileUris': string[];
                 'loggingConfiguration': LoggingConfiguration;

@@ -138,6 +138,7 @@ declare module google {
                 'kind': string;
                 'params': {
                     [name: string]: string
+                
                 };
                 'payload': boolean;
                 'resourceId': string;
@@ -154,9 +155,11 @@ declare module google {
             export interface Colors {
                 'calendar': {
                     [name: string]: ColorDefinition
+                
                 };
                 'event': {
                     [name: string]: ColorDefinition
+                
                 };
                 'kind': string;
                 'updated': string;
@@ -187,9 +190,11 @@ declare module google {
                 'extendedProperties': {
                     'private': {
                         [name: string]: string
+                    
                     };
                     'shared': {
                         [name: string]: string
+                    
                     };
                 };
                 'gadget': {
@@ -199,6 +204,7 @@ declare module google {
                     'link': string;
                     'preferences': {
                         [name: string]: string
+                    
                     };
                     'title': string;
                     'type': string;
@@ -313,9 +319,11 @@ declare module google {
             export interface FreeBusyResponse {
                 'calendars': {
                     [name: string]: FreeBusyCalendar
+                
                 };
                 'groups': {
                     [name: string]: FreeBusyGroup
+                
                 };
                 'kind': string;
                 'timeMax': string;

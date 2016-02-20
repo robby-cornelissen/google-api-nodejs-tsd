@@ -40,6 +40,7 @@ declare module google {
                 'createTime': string;
                 'labels': {
                     [name: string]: string
+                
                 };
                 'parent': ResourceId;
             }

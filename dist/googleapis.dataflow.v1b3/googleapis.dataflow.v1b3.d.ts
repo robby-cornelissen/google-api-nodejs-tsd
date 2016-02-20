@@ -47,6 +47,7 @@ declare module google {
                 'replaceJobId': string;
                 'transformNameMapping': {
                     [name: string]: string
+                
                 };
                 'clientRequestId': string;
                 'replacedByJobId': string;
@@ -60,16 +61,20 @@ declare module google {
                 'workerPools': WorkerPool[];
                 'userAgent': {
                     [name: string]: any
+                
                 };
                 'version': {
                     [name: string]: any
+                
                 };
                 'dataset': string;
                 'sdkPipelineOptions': {
                     [name: string]: any
+                
                 };
                 'internalExperiments': {
                     [name: string]: any
+                
                 };
             }
 
@@ -89,10 +94,12 @@ declare module google {
                 'dataDisks': Disk[];
                 'metadata': {
                     [name: string]: string
+                
                 };
                 'autoscalingSettings': AutoscalingSettings;
                 'poolArgs': {
                     [name: string]: any
+                
                 };
                 'network': string;
                 'workerHarnessContainerImage': string;
@@ -150,12 +157,14 @@ declare module google {
                 'name': string;
                 'properties': {
                     [name: string]: any
+                
                 };
             }
 
             export interface JobExecutionInfo {
                 'stages': {
                     [name: string]: JobExecutionStageInfo
+                
                 };
             }
 
@@ -202,6 +211,7 @@ declare module google {
                 'name': string;
                 'context': {
                     [name: string]: string
+                
                 };
             }
 
@@ -231,6 +241,7 @@ declare module google {
                 'message': string;
                 'details': {
                     [name: string]: any
+                
                 }[];
             }
 
@@ -273,12 +284,15 @@ declare module google {
             export interface Source {
                 'spec': {
                     [name: string]: any
+                
                 };
                 'codec': {
                     [name: string]: any
+                
                 };
                 'baseSpecs': {
                     [name: string]: any
+                
                 }[];
                 'metadata': SourceMetadata;
                 'doesNotNeedSplitting': boolean;
@@ -333,6 +347,7 @@ declare module google {
                 'reportStatusInterval': string;
                 'harnessData': {
                     [name: string]: any
+                
                 };
                 'nextReportIndex': string;
                 'suggestedStopPosition': Position;
@@ -407,9 +422,11 @@ declare module google {
             export interface Sink {
                 'spec': {
                     [name: string]: any
+                
                 };
                 'codec': {
                     [name: string]: any
+                
                 };
             }
 
@@ -418,6 +435,7 @@ declare module google {
                 'sideInputs': SideInputInfo[];
                 'userFn': {
                     [name: string]: any
+                
                 };
                 'numOutputs': number;
                 'multiOutputInfos': MultiOutputInfo[];
@@ -427,6 +445,7 @@ declare module google {
                 'sources': Source[];
                 'kind': {
                     [name: string]: any
+                
                 };
                 'tag': string;
             }
@@ -439,9 +458,11 @@ declare module google {
                 'input': InstructionInput;
                 'inputElementCodec': {
                     [name: string]: any
+                
                 };
                 'valueCombiningFn': {
                     [name: string]: any
+                
                 };
                 'sideInputs': SideInputInfo[];
             }
@@ -455,6 +476,7 @@ declare module google {
                 'systemName': string;
                 'codec': {
                     [name: string]: any
+                
                 };
             }
 
@@ -462,6 +484,7 @@ declare module google {
                 'inputs': SideInputInfo[];
                 'userFn': {
                     [name: string]: any
+                
                 };
                 'outputInfos': SeqMapTaskOutputInfo[];
                 'name': string;
@@ -491,6 +514,7 @@ declare module google {
                 'dataDiskAssignments': DataDiskAssignment[];
                 'userStageToComputationNameMap': {
                     [name: string]: string
+                
                 };
                 'forwardingKeyBits': number;
             }
@@ -599,6 +623,7 @@ declare module google {
             export interface WorkerMessage {
                 'labels': {
                     [name: string]: string
+                
                 };
                 'time': string;
                 'workerHealthReport': WorkerHealthReport;
@@ -611,6 +636,7 @@ declare module google {
                 'reportInterval': string;
                 'pods': {
                     [name: string]: any
+                
                 }[];
             }
 
@@ -618,6 +644,7 @@ declare module google {
                 'code': string;
                 'parameters': {
                     [name: string]: any
+                
                 };
             }
 

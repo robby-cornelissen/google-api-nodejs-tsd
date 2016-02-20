@@ -21,34 +21,35 @@ declare module google {
                     'locale': string;
                     'ruleResults': {
                         [name: string]: {
-                        'localizedRuleName': string;
-                        'ruleImpact': number;
-                        'urlBlocks': {
-                            'header': {
-                                'args': {
-                                    'type': string;
-                                    'value': string;
-                                }[];
-                                'format': string;
-                            };
-                            'urls': {
-                                'details': {
-                                    'args': {
-                                        'type': string;
-                                        'value': string;
-                                    }[];
-                                    'format': string;
-                                }[];
-                                'result': {
+                            'localizedRuleName': string;
+                            'ruleImpact': number;
+                            'urlBlocks': {
+                                'header': {
                                     'args': {
                                         'type': string;
                                         'value': string;
                                     }[];
                                     'format': string;
                                 };
+                                'urls': {
+                                    'details': {
+                                        'args': {
+                                            'type': string;
+                                            'value': string;
+                                        }[];
+                                        'format': string;
+                                    }[];
+                                    'result': {
+                                        'args': {
+                                            'type': string;
+                                            'value': string;
+                                        }[];
+                                        'format': string;
+                                    };
+                                }[];
                             }[];
-                        }[];
-                    }
+                        }
+                    
                     };
                 };
                 'id': string;

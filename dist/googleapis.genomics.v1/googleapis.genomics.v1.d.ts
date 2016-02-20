@@ -126,11 +126,13 @@ declare module google {
                 'name': string;
                 'metadata': {
                     [name: string]: any
+                
                 };
                 'done': boolean;
                 'error': Status;
                 'response': {
                     [name: string]: any
+                
                 };
             }
 
@@ -139,6 +141,7 @@ declare module google {
                 'message': string;
                 'details': {
                     [name: string]: any
+                
                 }[];
             }
 
@@ -183,6 +186,7 @@ declare module google {
                 'readGroups': ReadGroup[];
                 'info': {
                     [name: string]: any[]
+                
                 };
             }
 
@@ -198,6 +202,7 @@ declare module google {
                 'referenceSetId': string;
                 'info': {
                     [name: string]: any[]
+                
                 };
             }
 
@@ -267,6 +272,7 @@ declare module google {
                 'nextMatePosition': Position;
                 'info': {
                     [name: string]: any[]
+                
                 };
             }
 
@@ -382,6 +388,7 @@ declare module google {
                 'description': string;
                 'info': {
                     [name: string]: any[]
+                
                 };
             }
 
@@ -435,6 +442,7 @@ declare module google {
                 'filter': string[];
                 'info': {
                     [name: string]: any[]
+                
                 };
                 'calls': VariantCall[];
             }
@@ -447,6 +455,7 @@ declare module google {
                 'genotypeLikelihood': number[];
                 'info': {
                     [name: string]: any[]
+                
                 };
             }
 
@@ -470,6 +479,7 @@ declare module google {
                 'created': string;
                 'info': {
                     [name: string]: any[]
+                
                 };
             }
 
@@ -499,6 +509,7 @@ declare module google {
                 'createTime': string;
                 'request': {
                     [name: string]: any
+                
                 };
                 'events': OperationEvent[];
             }

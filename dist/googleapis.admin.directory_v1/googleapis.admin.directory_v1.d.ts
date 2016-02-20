@@ -210,6 +210,7 @@ declare module google {
                 'kind': string;
                 'params': {
                     [name: string]: string
+                
                 };
                 'payload': boolean;
                 'resourceId': string;
@@ -546,6 +547,7 @@ declare module google {
                 'creationTime': string;
                 'customSchemas': {
                     [name: string]: UserCustomProperties
+                
                 };
                 'customerId': string;
                 'deletionTime': string;
@@ -601,6 +603,7 @@ declare module google {
 
             export interface UserCustomProperties {
                 [name: string]: any
+            
             }
 
             export interface UserEmail {

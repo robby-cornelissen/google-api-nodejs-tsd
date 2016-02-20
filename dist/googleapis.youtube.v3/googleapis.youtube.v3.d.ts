@@ -296,6 +296,7 @@ declare module google {
                 'kind': string;
                 'localizations': {
                     [name: string]: ChannelLocalization
+                
                 };
                 'snippet': ChannelSnippet;
                 'statistics': ChannelStatistics;
@@ -379,6 +380,7 @@ declare module google {
                 'kind': string;
                 'localizations': {
                     [name: string]: ChannelSectionLocalization
+                
                 };
                 'snippet': ChannelSectionSnippet;
                 'targeting': ChannelSectionTargeting;
@@ -1010,6 +1012,7 @@ declare module google {
                 'kind': string;
                 'localizations': {
                     [name: string]: PlaylistLocalization
+                
                 };
                 'player': PlaylistPlayer;
                 'snippet': PlaylistSnippet;
@@ -1259,6 +1262,7 @@ declare module google {
                 'liveStreamingDetails': VideoLiveStreamingDetails;
                 'localizations': {
                     [name: string]: VideoLocalization
+                
                 };
                 'monetizationDetails': VideoMonetizationDetails;
                 'player': VideoPlayer;

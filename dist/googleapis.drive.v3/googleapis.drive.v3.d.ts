@@ -67,14 +67,17 @@ declare module google {
                 'appInstalled': boolean;
                 'exportFormats': {
                     [name: string]: string[]
+                
                 };
                 'folderColorPalette': string[];
                 'importFormats': {
                     [name: string]: string[]
+                
                 };
                 'kind': string;
                 'maxImportSizes': {
                     [name: string]: string
+                
                 };
                 'maxUploadSize': string;
                 'storageQuota': {
@@ -108,6 +111,7 @@ declare module google {
                 'kind': string;
                 'params': {
                     [name: string]: string
+                
                 };
                 'payload': boolean;
                 'resourceId': string;
@@ -143,6 +147,7 @@ declare module google {
             export interface File {
                 'appProperties': {
                     [name: string]: string
+                
                 };
                 'capabilities': {
                     'canComment': boolean;
@@ -208,6 +213,7 @@ declare module google {
                 'permissions': Permission[];
                 'properties': {
                     [name: string]: string
+                
                 };
                 'quotaBytesUsed': string;
                 'shared': boolean;

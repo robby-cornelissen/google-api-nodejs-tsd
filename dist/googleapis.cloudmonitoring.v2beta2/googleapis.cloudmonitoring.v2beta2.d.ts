@@ -121,6 +121,7 @@ declare module google {
             export interface TimeseriesDescriptor {
                 'labels': {
                     [name: string]: string
+                
                 };
                 'metric': string;
                 'project': string;
@@ -139,6 +140,7 @@ declare module google {
             export interface WriteTimeseriesRequest {
                 'commonLabels': {
                     [name: string]: string
+                
                 };
                 'timeseries': TimeseriesPoint[];
             }

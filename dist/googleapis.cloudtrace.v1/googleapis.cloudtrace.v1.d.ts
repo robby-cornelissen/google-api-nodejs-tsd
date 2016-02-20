@@ -41,6 +41,7 @@ declare module google {
                 'parentSpanId': string;
                 'labels': {
                     [name: string]: string
+                
                 };
             }
 

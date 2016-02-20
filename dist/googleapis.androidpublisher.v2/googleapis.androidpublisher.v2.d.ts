@@ -206,10 +206,12 @@ declare module google {
                 'defaultPrice': Price;
                 'listings': {
                     [name: string]: InAppProductListing
+                
                 };
                 'packageName': string;
                 'prices': {
                     [name: string]: Price
+                
                 };
                 'purchaseType': string;
                 'season': Season;

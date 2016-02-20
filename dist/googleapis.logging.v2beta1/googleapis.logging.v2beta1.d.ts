@@ -46,6 +46,7 @@ declare module google {
                 'resource': MonitoredResource;
                 'labels': {
                     [name: string]: string
+                
                 };
                 'entries': LogEntry[];
             }
@@ -54,6 +55,7 @@ declare module google {
                 'type': string;
                 'labels': {
                     [name: string]: string
+                
                 };
             }
 
@@ -62,10 +64,12 @@ declare module google {
                 'resource': MonitoredResource;
                 'protoPayload': {
                     [name: string]: any
+                
                 };
                 'textPayload': string;
                 'jsonPayload': {
                     [name: string]: any
+                
                 };
                 'timestamp': string;
                 'severity': string;
@@ -73,6 +77,7 @@ declare module google {
                 'httpRequest': HttpRequest;
                 'labels': {
                     [name: string]: string
+                
                 };
                 'operation': LogEntryOperation;
             }

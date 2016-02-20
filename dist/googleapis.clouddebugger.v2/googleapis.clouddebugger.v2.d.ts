@@ -52,6 +52,7 @@ declare module google {
                 'extSourceContexts': ExtendedSourceContext[];
                 'labels': {
                     [name: string]: string
+                
                 };
             }
 
@@ -122,6 +123,7 @@ declare module google {
                 'context': SourceContext;
                 'labels': {
                     [name: string]: string
+                
                 };
             }
 

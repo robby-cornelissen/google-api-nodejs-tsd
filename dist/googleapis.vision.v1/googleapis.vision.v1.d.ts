@@ -46,6 +46,7 @@ declare module google {
                 'code': number;
                 'details': {
                     [name: string]: any
+                
                 }[];
                 'message': string;
             }

@@ -108,6 +108,7 @@ declare module google {
                 'id': string;
                 'info': {
                     [name: string]: string[]
+                
                 };
                 'name': string;
                 'position': RangePosition;
@@ -121,6 +122,7 @@ declare module google {
                 'id': string;
                 'info': {
                     [name: string]: string[]
+                
                 };
                 'name': string;
                 'referenceSetId': string;
@@ -153,6 +155,7 @@ declare module google {
                 'genotypeLikelihood': number[];
                 'info': {
                     [name: string]: string[]
+                
                 };
                 'phaseset': string;
             }
@@ -162,6 +165,7 @@ declare module google {
                 'id': string;
                 'info': {
                     [name: string]: string[]
+                
                 };
                 'name': string;
                 'sampleId': string;
@@ -308,6 +312,7 @@ declare module google {
                 'id': string;
                 'info': {
                     [name: string]: string[]
+                
                 };
                 'key': string;
                 'number': string;
@@ -353,6 +358,7 @@ declare module google {
                 'id': string;
                 'info': {
                     [name: string]: string[]
+                
                 };
                 'nextMatePosition': Position;
                 'numberReads': number;
@@ -371,6 +377,7 @@ declare module google {
                 'id': string;
                 'info': {
                     [name: string]: string[]
+                
                 };
                 'name': string;
                 'predictedInsertSize': number;
@@ -400,6 +407,7 @@ declare module google {
                 'id': string;
                 'info': {
                     [name: string]: string[]
+                
                 };
                 'name': string;
                 'readGroups': ReadGroup[];
@@ -591,6 +599,7 @@ declare module google {
                 'id': string;
                 'info': {
                     [name: string]: string[]
+                
                 };
                 'names': string[];
                 'quality': number;

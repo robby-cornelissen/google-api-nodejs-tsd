@@ -36,6 +36,7 @@ declare module google {
             export interface ListResourceResponseItem {
                 'endpoints': {
                     [name: string]: number[]
+                
                 };
                 'resource': string;
             }

@@ -214,6 +214,7 @@ declare module google {
                 'kind': string;
                 'params': {
                     [name: string]: string
+                
                 };
                 'payload': boolean;
                 'resourceId': string;
@@ -303,6 +304,7 @@ declare module google {
                 'explicitlyTrashed': boolean;
                 'exportLinks': {
                     [name: string]: string
+                
                 };
                 'fileExtension': string;
                 'fileSize': string;
@@ -359,6 +361,7 @@ declare module google {
                 'modifiedDate': string;
                 'openWithLinks': {
                     [name: string]: string
+                
                 };
                 'originalFilename': string;
                 'ownedByMe': boolean;
@@ -472,6 +475,7 @@ declare module google {
                 'etag': string;
                 'exportLinks': {
                     [name: string]: string
+                
                 };
                 'fileSize': string;
                 'id': string;

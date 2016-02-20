@@ -102,6 +102,7 @@ declare module google {
                 'details': string;
                 'clientInfo': {
                     [name: string]: string
+                
                 };
             }
 

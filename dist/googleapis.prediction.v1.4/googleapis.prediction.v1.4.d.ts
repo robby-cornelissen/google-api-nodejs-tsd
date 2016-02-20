@@ -52,11 +52,14 @@ declare module google {
                     'classificationAccuracy': number;
                     'confusionMatrix': {
                         [name: string]: {
-                        [name: string]: number
-                    }
+                            [name: string]: number
+                        
+                        }
+                    
                     };
                     'confusionMatrixRowTotals': {
                         [name: string]: number
+                    
                     };
                     'meanSquaredError': number;
                     'modelType': string;
@@ -70,6 +73,7 @@ declare module google {
                 'trainingStatus': string;
                 'utility': {
                     [name: string]: number
+                
                 }[];
             }
 

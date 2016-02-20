@@ -29,6 +29,7 @@ declare module google {
                 'code': number;
                 'details': {
                     [name: string]: any
+                
                 }[];
                 'message': string;
             }
@@ -46,9 +47,11 @@ declare module google {
                 'done': boolean;
                 'response': {
                     [name: string]: any
+                
                 };
                 'metadata': {
                     [name: string]: any
+                
                 };
                 'name': string;
             }

@@ -65,6 +65,7 @@ declare module google {
                 'description': string;
                 'modules': {
                     [name: string]: ModuleStatus
+                
                 };
                 'name': string;
                 'overrides': ParamOverride[];
@@ -204,6 +205,7 @@ declare module google {
             export interface ReplicaPoolModule {
                 'envVariables': {
                     [name: string]: EnvVariable
+                
                 };
                 'healthChecks': string[];
                 'numReplicas': number;
@@ -250,10 +252,12 @@ declare module google {
             export interface Template {
                 'actions': {
                     [name: string]: Action
+                
                 };
                 'description': string;
                 'modules': {
                     [name: string]: Module
+                
                 };
                 'name': string;
             }

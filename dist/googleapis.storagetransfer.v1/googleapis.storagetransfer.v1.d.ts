@@ -129,11 +129,13 @@ declare module google {
                 'name': string;
                 'metadata': {
                     [name: string]: any
+                
                 };
                 'done': boolean;
                 'error': Status;
                 'response': {
                     [name: string]: any
+                
                 };
             }
 
@@ -142,6 +144,7 @@ declare module google {
                 'message': string;
                 'details': {
                     [name: string]: any
+                
                 }[];
             }
 

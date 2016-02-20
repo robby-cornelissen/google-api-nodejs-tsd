@@ -56,18 +56,19 @@ declare module google {
                     'locale': string;
                     'ruleResults': {
                         [name: string]: {
-                        'groups': string[];
-                        'localizedRuleName': string;
-                        'ruleImpact': number;
-                        'summary': PagespeedApiFormatStringV2;
-                        'urlBlocks': {
-                            'header': PagespeedApiFormatStringV2;
-                            'urls': {
-                                'details': PagespeedApiFormatStringV2[];
-                                'result': PagespeedApiFormatStringV2;
+                            'groups': string[];
+                            'localizedRuleName': string;
+                            'ruleImpact': number;
+                            'summary': PagespeedApiFormatStringV2;
+                            'urlBlocks': {
+                                'header': PagespeedApiFormatStringV2;
+                                'urls': {
+                                    'details': PagespeedApiFormatStringV2[];
+                                    'result': PagespeedApiFormatStringV2;
+                                }[];
                             }[];
-                        }[];
-                    }
+                        }
+                    
                     };
                 };
                 'id': string;
@@ -91,8 +92,9 @@ declare module google {
                 'responseCode': number;
                 'ruleGroups': {
                     [name: string]: {
-                    'score': number;
-                }
+                        'score': number;
+                    }
+                
                 };
                 'screenshot': PagespeedApiImageV2;
                 'title': string;

@@ -107,6 +107,7 @@ declare module google {
                 };
                 'metadata': {
                     [name: string]: string
+                
                 };
                 'name': string;
                 'owner': {

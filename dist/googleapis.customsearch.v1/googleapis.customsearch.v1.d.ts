@@ -110,8 +110,10 @@ declare module google {
                 'mime': string;
                 'pagemap': {
                     [name: string]: {
-                    [name: string]: any
-                }[]
+                        [name: string]: any
+                    
+                    }[]
+                
                 };
                 'snippet': string;
                 'title': string;
@@ -124,6 +126,7 @@ declare module google {
                 'promotions': Promotion[];
                 'queries': {
                     [name: string]: Query[]
+                
                 };
                 'searchInformation': {
                     'formattedSearchTime': string;

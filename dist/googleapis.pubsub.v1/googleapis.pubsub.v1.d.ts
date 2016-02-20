@@ -77,6 +77,7 @@ declare module google {
                 'data': string;
                 'attributes': {
                     [name: string]: string
+                
                 };
                 'messageId': string;
                 'publishTime': string;
@@ -109,6 +110,7 @@ declare module google {
                 'pushEndpoint': string;
                 'attributes': {
                     [name: string]: string
+                
                 };
             }
 

@@ -34,11 +34,13 @@ declare module google {
                 'name': string;
                 'metadata': {
                     [name: string]: any
+                
                 };
                 'done': boolean;
                 'error': Status;
                 'response': {
                     [name: string]: any
+                
                 };
             }
 
@@ -47,6 +49,7 @@ declare module google {
                 'message': string;
                 'details': {
                     [name: string]: any
+                
                 }[];
             }
 
@@ -115,9 +118,11 @@ declare module google {
                 'projectId': string;
                 'inputs': {
                     [name: string]: string
+                
                 };
                 'outputs': {
                     [name: string]: string
+                
                 };
                 'serviceAccount': ServiceAccount;
                 'clientId': string;
@@ -146,15 +151,19 @@ declare module google {
                 'machineType': string;
                 'vars': {
                     [name: string]: string
+                
                 };
                 'disks': {
                     [name: string]: string
+                
                 };
                 'gcsSources': {
                     [name: string]: RepeatedString
+                
                 };
                 'gcsSinks': {
                     [name: string]: RepeatedString
+                
                 };
             }
 
@@ -188,6 +197,7 @@ declare module google {
                 'createTime': string;
                 'request': {
                     [name: string]: any
+                
                 };
                 'events': OperationEvent[];
             }

@@ -218,6 +218,7 @@ declare module google {
             export interface Column {
                 'attributes': {
                     [name: string]: string
+                
                 };
                 'id': string;
                 'kind': string;
@@ -553,6 +554,7 @@ declare module google {
                 'totalResults': number;
                 'totalsForAllResults': {
                     [name: string]: string
+                
                 };
             }
 
@@ -662,6 +664,7 @@ declare module google {
                 'totalResults': number;
                 'totalsForAllResults': {
                     [name: string]: string
+                
                 };
             }
 
@@ -778,6 +781,7 @@ declare module google {
                 'totalResults': number;
                 'totalsForAllResults': {
                     [name: string]: string
+                
                 };
             }
 
