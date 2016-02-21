@@ -4,6 +4,8 @@ Typescript definitions for the [Google APIs Node.js Client](https://github.com/g
 
 ## Importing and using
 
+To use the type definitions for a given Google API, you need to reference both the base definition file (`googleapis/googleapis.d.ts`) and the API-specific definition file in your project.
+
 ```TypeScript
 'use strict';
 
@@ -44,6 +46,7 @@ discovery.apis.list({
 
 ## TODO
 
+* Generate `typings.json` files so that definitions can be installed using [typings](https://github.com/typings/typings).
 * Generate documentation to be added to the definition files.
 * Generate tests to go along with the definition files.
 * Add support for various JSON Schema constructs (e.g. `patternProperties`)
