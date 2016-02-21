@@ -2,6 +2,41 @@
 
 Typescript definitions for the [Google APIs Node.js Client](https://github.com/google/google-api-nodejs-client), generated based on the endpoint metadata made available through the [Google API Discovery Service](https://developers.google.com/discovery/).
 
+## Importing and using
+
+```TypeScript
+'use strict';
+
+import * as google from "googleapis";
+
+// simple
+google.discovery('v1').apis.list({
+    preferred: true
+}, (e, directoryList) => {
+    if(e) {
+        console.error(e);
+    } else {
+        console.log(directoryList.items.map(item => item.name + ' ' + item.version).join('\n'));
+    }
+});
+
+// typed
+import Discovery = google.discovery.v1.Discovery;
+import DirectoryList = google.discovery.v1.DirectoryList;
+
+let discovery: Discovery = google.discovery('v1');
+
+discovery.apis.list({
+    preferred: true
+}, (e, directoryList: DirectoryList) => {
+    if(e) {
+        console.error(e);
+    } else {
+        console.log(directoryList.items.map(item => item.name + ' ' + item.version).join('\n'));
+    }
+});
+```
+
 ## Caveats
 
 * The definitions, as well as the definition generator are largely untested.

@@ -37,5 +37,5 @@ node_modules
 *.iml
 
 # Javascript and Javascript
-*.js
-*.js.map
+lib/**/*.js
+lib/**/*.js.map

@@ -53,10 +53,14 @@ export class Generator {
             let baseName = MODULE;
             let basePath = path.join(this.exportPath, baseName, baseName + '.d.ts');
 
+            console.log('Generating definition for [%s]', baseName);
+
             let renderBase = this.render(this.baseTemplate, {}, basePath);
             let renderApis = data['items'].map((item) => this.get(item['discoveryRestUrl']).then(api => {
                 let apiName = MODULE + '.' + api['name'] + '.' + api['version'];
                 let apiPath = path.join(this.exportPath, apiName, apiName + '.d.ts');
+
+                console.log('Generating definition for [%s]', apiName);
 
                 return this.render(this.apiTemplate, api, apiPath);
             }));
