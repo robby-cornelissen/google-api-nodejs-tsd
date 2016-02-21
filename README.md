@@ -44,7 +44,6 @@ discovery.apis.list({
 
 ## TODO
 
-* Verify node and typings dependencies and create a build script.
 * Generate documentation to be added to the definition files.
 * Generate tests to go along with the definition files.
 * Add support for various JSON Schema constructs (e.g. `patternProperties`)
