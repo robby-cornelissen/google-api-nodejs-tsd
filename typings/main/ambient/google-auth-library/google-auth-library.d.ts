@@ -1,3 +1,5 @@
+// TODO complete this definition file and factor it out of this project
+
 declare module "google-auth-library" {
     import {Request} from "request";
 
