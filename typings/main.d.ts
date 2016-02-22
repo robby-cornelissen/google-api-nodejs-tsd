@@ -1,3 +1,4 @@
+/// <reference path="main/ambient/express/express.d.ts" />
 /// <reference path="main/ambient/form-data/form-data.d.ts" />
 /// <reference path="main/ambient/google-auth-library/google-auth-library.d.ts" />
 /// <reference path="main/ambient/mkdirp/mkdirp.d.ts" />

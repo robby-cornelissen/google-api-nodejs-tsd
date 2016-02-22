@@ -1,6 +1,7 @@
 'use strict';
 
 import * as nunjucks from "nunjucks";
+import {Environment} from "nunjucks";
 
 type Globals = { [key: string]: string; };
 
@@ -15,7 +16,7 @@ export abstract class Renderer {
 }
 
 export class NunjucksRenderer extends Renderer {
-    private env;
+    private env: Environment;
 
     constructor(path: string, globals: Globals) {
         super(globals);
@@ -28,7 +29,7 @@ export class NunjucksRenderer extends Renderer {
             this.env.addGlobal(name, globals[name]);
         }
 
-        this.env.addFilter('mname', (input) => {
+        this.env.addFilter('mname', (input: string) => {
             return "'" + input + "'";
         });
     }

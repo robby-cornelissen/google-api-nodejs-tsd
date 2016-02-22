@@ -26,7 +26,7 @@ declare module "google-auth-library" {
         export interface IAMAuth {
             new(selector: any, token: any): IAMAuth;
 
-            getRequestMetadata(unusedUri: string, metadataFn: (err: Error, headers: any) => void);
+            getRequestMetadata(unusedUri: string, metadataFn: (err: Error, headers: any) => void): void;
 
             createScopedRequired(): boolean;
         }
@@ -45,33 +45,37 @@ declare module "google-auth-library" {
 
             new (clientId: string, clientSecret: string, redirectUri: string, opts?: any): OAuth2Client;
 
-            generateAuthUrl(opts?: any);
+            generateAuthUrl(opts?: any): string;
 
-            getToken(code: string, callback?: (err: Error, token: any, response: any) => void);
+            getToken(code: string, callback?: (err: Error, token: any, response: any) => void): void;
 
-            refreshAccessToken(callback: (err: Error, token: any, response: any) => void);
+            refreshAccessToken(callback: (err: Error, token: any, response: any) => void): void;
 
-            getAccessToken(callback: (err: Error, token: any, response: any) => void);
+            getAccessToken(callback: (err: Error, token: any, response: any) => void): any;
 
-            getRequestMetadata(unusedUri: string, metadataFn: (err: Error, headers: any, response: any) => void);
+            // TODO pull request to google-auth-library to have uniform return types for getRequestMetadata() methods
+            getRequestMetadata(unusedUri: string, metadataFn: (err: Error, headers: any, response: any) => void): any;
 
-            revokeToken(token: string, callback?: Function);
+            revokeToken(token: string, callback?: Function): void;
 
-            revokeCredentials(callback?: Function);
+            revokeCredentials(callback?: Function): void;
 
-            request(opts: any, callback: Function);
+            request(opts: any, callback: Function): Request;
 
-            verifyIdToken(idToken: string, audience: string, callback: Function);
+            // TODO callback is function that takes error and GoogleLogin object
+            verifyIdToken(idToken: string, audience: string, callback: Function): void;
 
-            getFederatedSignonCerts(callback: Function);
+            // TODO callback can be further specified
+            getFederatedSignonCerts(callback: Function): void;
 
-            verifySignedJwtWithCerts(jwt: string, certs: any[], requiredAudience: string, issuers?: any[], maxExpiry?: string);
+            // TODO parameters can be further specified
+            verifySignedJwtWithCerts(jwt: string, certs: any[], requiredAudience: string, issuers?: any[], maxExpiry?: string): LoginTicket;
 
             decodeBase64(b64String: string): string;
         }
 
         export interface Compute extends OAuth2Client {
-            new();
+            new(): Compute;
 
             createScopedRequired(): boolean;
         }
@@ -90,7 +94,7 @@ declare module "google-auth-library" {
 
             createScopedRequired: boolean;
 
-            authorize(callback?: (err: Error, result: any) => void);
+            authorize(callback?: (err: Error, result: any) => void): void;
 
             fromJSON(json: any, callback?: Function): void;
 
@@ -105,7 +109,7 @@ declare module "google-auth-library" {
 
             createScopedRequired: boolean;
 
-            getRequestMetadata(authUri: string, metadataFn: (err: Error, headers: any) => void);
+            getRequestMetadata(authUri: string, metadataFn: (err: Error, headers: any) => void): any;
 
             fromJSON(json: any, callback?: Function): void;
 

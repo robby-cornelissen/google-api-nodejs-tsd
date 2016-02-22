@@ -56,7 +56,7 @@ export class Generator {
             console.log('Generating definition for [%s]', baseName);
 
             let renderBase = this.render(this.baseTemplate, {}, basePath);
-            let renderApis = data['items'].map((item) => this.get(item['discoveryRestUrl']).then(api => {
+            let renderApis = data['items'].map((item: any) => this.get(item['discoveryRestUrl']).then(api => {
                 let apiName = MODULE + '.' + api['name'] + '.' + api['version'];
                 let apiPath = path.join(this.exportPath, apiName, apiName + '.d.ts');
 
@@ -97,7 +97,7 @@ export class Generator {
         });
     }
 
-    render(template, data, exportPath): Promise<void> {
+    render(template: string, data: any, exportPath: string): Promise<void> {
         return this.renderer.render(template, data).then(result => new Promise<void>((resolve, reject) => {
             mkdirp(path.dirname(exportPath), function(e) {
                 if (e) {

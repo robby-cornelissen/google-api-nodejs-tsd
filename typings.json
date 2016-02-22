@@ -1,5 +1,6 @@
 {
   "ambientDependencies": {
+    "express": "github:DefinitelyTyped/DefinitelyTyped/express/express.d.ts#dd638012d63e069f2c99d06ef4dcc9616a943ee4",
     "form-data": "github:DefinitelyTyped/DefinitelyTyped/form-data/form-data.d.ts#bb1b99052bf1d697f0368fbff56898bc1f5a525c",
     "mkdirp": "github:DefinitelyTyped/DefinitelyTyped/mkdirp/mkdirp.d.ts#2d6c5ce48d8817f043c0bda966b7c76a44491bd3",
     "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#263705d313346e093d95cb62cef6fed848e46978",
