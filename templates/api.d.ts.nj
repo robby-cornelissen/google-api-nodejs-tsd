@@ -1,4 +1,9 @@
 {%- import './api-macros.d.ts.nj' as macros -%}
+// Type definitions for Google APIs Node.js Client
+// Project: https://github.com/google/google-api-nodejs-client
+// Definitions by: Robby Cornelissen <https://github.com/procrastinatos/>
+// Definitions: https://github.com/procrastinatos/google-api-node-tsd
+
 /// <reference path="../{{ module }}/{{ module }}.d.ts" />
 declare module google {
     export interface GoogleApis {

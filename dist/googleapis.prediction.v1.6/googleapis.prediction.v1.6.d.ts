@@ -1,3 +1,8 @@
+// Type definitions for Google APIs Node.js Client
+// Project: https://github.com/google/google-api-nodejs-client
+// Definitions by: Robby Cornelissen <https://github.com/procrastinatos/>
+// Definitions: https://github.com/procrastinatos/google-api-node-tsd
+
 /// <reference path="../googleapis/googleapis.d.ts" />
 declare module google {
     export interface GoogleApis {
@@ -139,7 +144,7 @@ declare module google {
                     'label': string;
                     'score': string;
                 }[];
-                'outputValue': string;
+                'outputValue': number;
                 'selfLink': string;
             }
 
