@@ -1,4 +1,3 @@
-import {Request} from "request";
 'use strict';
 
 import * as fs from 'fs';
@@ -6,6 +5,7 @@ import * as path from 'path';
 import * as mkdirp from 'mkdirp';
 import * as req from 'request';
 import {format} from 'util';
+import {Request} from "request";
 import {Renderer, NunjucksRenderer} from "./renderer";
 
 const MODULE: string = 'googleapis';
