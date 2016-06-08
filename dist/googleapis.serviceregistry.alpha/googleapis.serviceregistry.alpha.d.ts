@@ -44,6 +44,7 @@ declare module google {
             }
 
             export interface EndpointEndpointVisibility {
+                'internalDnsName': string;
                 'networks': string[];
             }
 

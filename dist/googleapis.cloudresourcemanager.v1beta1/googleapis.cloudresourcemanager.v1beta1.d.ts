@@ -22,6 +22,7 @@ declare module google {
                     'update': (parameters: {'projectId': string}, callback: (error: any, body: Project, response: any) => void) => Request;
                     'delete': (parameters: {'projectId': string}, callback: (error: any, body: Empty, response: any) => void) => Request;
                     'undelete': (parameters: {'projectId': string}, callback: (error: any, body: Empty, response: any) => void) => Request;
+                    'getAncestry': (parameters: {'projectId': string}, callback: (error: any, body: GetAncestryResponse, response: any) => void) => Request;
                     'getIamPolicy': (parameters: {'resource': string}, callback: (error: any, body: Policy, response: any) => void) => Request;
                     'setIamPolicy': (parameters: {'resource': string}, callback: (error: any, body: Policy, response: any) => void) => Request;
                     'testIamPermissions': (parameters: {'resource': string}, callback: (error: any, body: TestIamPermissionsResponse, response: any) => void) => Request;
@@ -61,6 +62,18 @@ declare module google {
             }
 
             export interface Empty {}
+
+            export interface UndeleteProjectRequest {}
+
+            export interface GetAncestryRequest {}
+
+            export interface GetAncestryResponse {
+                'ancestor': Ancestor[];
+            }
+
+            export interface Ancestor {
+                'resourceId': ResourceId;
+            }
 
             export interface GetIamPolicyRequest {}
 

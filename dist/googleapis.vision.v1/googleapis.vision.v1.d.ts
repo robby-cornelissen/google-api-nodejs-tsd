@@ -66,8 +66,8 @@ declare module google {
                 'surpriseLikelihood': string;
                 'angerLikelihood': string;
                 'headwearLikelihood': string;
-                'boundingPoly': BoundingPoly;
                 'panAngle': number;
+                'boundingPoly': BoundingPoly;
                 'landmarks': Landmark[];
                 'blurredLikelihood': string;
                 'rollAngle': number;
@@ -95,8 +95,8 @@ declare module google {
             }
 
             export interface ImageContext {
-                'languageHints': string[];
                 'latLongRect': LatLongRect;
+                'languageHints': string[];
             }
 
             export interface BatchAnnotateImagesRequest {
@@ -133,8 +133,8 @@ declare module google {
 
             export interface SafeSearchAnnotation {
                 'medical': string;
-                'violence': string;
                 'spoof': string;
+                'violence': string;
                 'adult': string;
             }
 
@@ -148,8 +148,8 @@ declare module google {
             }
 
             export interface Feature {
-                'maxResults': number;
                 'type': string;
+                'maxResults': number;
             }
 
             export interface BatchAnnotateImagesResponse {
@@ -160,15 +160,15 @@ declare module google {
                 'dominantColors': DominantColorsAnnotation;
             }
 
-            export interface Position {
-                'y': number;
-                'z': number;
-                'x': number;
+            export interface LatLng {
+                'latitude': number;
+                'longitude': number;
             }
 
-            export interface LatLng {
-                'longitude': number;
-                'latitude': number;
+            export interface Position {
+                'y': number;
+                'x': number;
+                'z': number;
             }
 
         }

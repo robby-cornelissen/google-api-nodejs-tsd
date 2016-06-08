@@ -52,6 +52,7 @@ declare module google {
                     'get': (parameters: {'disk': string, 'project': string, 'zone': string}, callback: (error: any, body: Disk, response: any) => void) => Request;
                     'insert': (parameters: {'project': string, 'sourceImage'?: string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'pageToken'?: string, 'project': string, 'zone': string}, callback: (error: any, body: DiskList, response: any) => void) => Request;
+                    'resize': (parameters: {'disk': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                 };
                 'firewalls': {
                     'delete': (parameters: {'firewall': string, 'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
@@ -108,6 +109,7 @@ declare module google {
                     'delete': (parameters: {'image': string, 'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'deprecate': (parameters: {'image': string, 'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'get': (parameters: {'image': string, 'project': string}, callback: (error: any, body: Image, response: any) => void) => Request;
+                    'getFromFamily': (parameters: {'family': string, 'project': string}, callback: (error: any, body: Image, response: any) => void) => Request;
                     'insert': (parameters: {'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'pageToken'?: string, 'project': string}, callback: (error: any, body: ImageList, response: any) => void) => Request;
                 };
@@ -160,6 +162,7 @@ declare module google {
                     'setScheduling': (parameters: {'instance': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'setTags': (parameters: {'instance': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'start': (parameters: {'instance': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'startWithEncryptionKey': (parameters: {'instance': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'stop': (parameters: {'instance': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                 };
                 'licenses': {
@@ -191,6 +194,16 @@ declare module google {
                 'regions': {
                     'get': (parameters: {'project': string, 'region': string}, callback: (error: any, body: Region, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'pageToken'?: string, 'project': string}, callback: (error: any, body: RegionList, response: any) => void) => Request;
+                };
+                'routers': {
+                    'aggregatedList': (parameters: {'filter'?: string, 'maxResults'?: number, 'pageToken'?: string, 'project': string}, callback: (error: any, body: RouterAggregatedList, response: any) => void) => Request;
+                    'delete': (parameters: {'project': string, 'region': string, 'router': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'get': (parameters: {'project': string, 'region': string, 'router': string}, callback: (error: any, body: Router, response: any) => void) => Request;
+                    'getRouterStatus': (parameters: {'project': string, 'region': string, 'router': string}, callback: (error: any, body: RouterStatusResponse, response: any) => void) => Request;
+                    'insert': (parameters: {'project': string, 'region': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'pageToken'?: string, 'project': string, 'region': string}, callback: (error: any, body: RouterList, response: any) => void) => Request;
+                    'patch': (parameters: {'project': string, 'region': string, 'router': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'update': (parameters: {'project': string, 'region': string, 'router': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                 };
                 'routes': {
                     'delete': (parameters: {'project': string, 'route': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
@@ -341,6 +354,7 @@ declare module google {
                 'autoDelete': boolean;
                 'boot': boolean;
                 'deviceName': string;
+                'diskEncryptionKey': CustomerEncryptionKey;
                 'index': number;
                 'initializeParams': AttachedDiskInitializeParams;
                 'interface': string;
@@ -356,6 +370,7 @@ declare module google {
                 'diskSizeGb': string;
                 'diskType': string;
                 'sourceImage': string;
+                'sourceImageEncryptionKey': CustomerEncryptionKey;
             }
 
             export interface Autoscaler {
@@ -446,6 +461,7 @@ declare module google {
                 'port': number;
                 'portName': string;
                 'protocol': string;
+                'region': string;
                 'selfLink': string;
                 'timeoutSec': number;
             }
@@ -463,6 +479,16 @@ declare module google {
                 'selfLink': string;
             }
 
+            export interface CustomerEncryptionKey {
+                'rawKey': string;
+                'sha256': string;
+            }
+
+            export interface CustomerEncryptionKeyProtectedDisk {
+                'diskEncryptionKey': CustomerEncryptionKey;
+                'source': string;
+            }
+
             export interface DeprecationStatus {
                 'deleted': string;
                 'deprecated': string;
@@ -474,6 +500,7 @@ declare module google {
             export interface Disk {
                 'creationTimestamp': string;
                 'description': string;
+                'diskEncryptionKey': CustomerEncryptionKey;
                 'id': string;
                 'kind': string;
                 'lastAttachTimestamp': string;
@@ -484,8 +511,10 @@ declare module google {
                 'selfLink': string;
                 'sizeGb': string;
                 'sourceImage': string;
+                'sourceImageEncryptionKey': CustomerEncryptionKey;
                 'sourceImageId': string;
                 'sourceSnapshot': string;
+                'sourceSnapshotEncryptionKey': CustomerEncryptionKey;
                 'sourceSnapshotId': string;
                 'status': string;
                 'type': string;
@@ -559,6 +588,10 @@ declare module google {
                     }[];
                     'message': string;
                 };
+            }
+
+            export interface DisksResizeRequest {
+                'sizeGb': string;
             }
 
             export interface DisksScopedList {
@@ -714,7 +747,9 @@ declare module google {
                 'deprecated': DeprecationStatus;
                 'description': string;
                 'diskSizeGb': string;
+                'family': string;
                 'id': string;
+                'imageEncryptionKey': CustomerEncryptionKey;
                 'kind': string;
                 'licenses': string[];
                 'name': string;
@@ -725,6 +760,7 @@ declare module google {
                 };
                 'selfLink': string;
                 'sourceDisk': string;
+                'sourceDiskEncryptionKey': CustomerEncryptionKey;
                 'sourceDiskId': string;
                 'sourceType': string;
                 'status': string;
@@ -994,6 +1030,10 @@ declare module google {
                 'machineType': string;
             }
 
+            export interface InstancesStartWithEncryptionKeyRequest {
+                'disks': CustomerEncryptionKeyProtectedDisk[];
+            }
+
             export interface License {
                 'chargesUseFee': boolean;
                 'kind': string;
@@ -1008,6 +1048,7 @@ declare module google {
                 'guestCpus': number;
                 'id': string;
                 'imageSpaceGb': number;
+                'isSharedCpu': boolean;
                 'kind': string;
                 'maximumPersistentDisks': number;
                 'maximumPersistentDisksSizeGb': string;
@@ -1197,6 +1238,7 @@ declare module google {
             export interface Project {
                 'commonInstanceMetadata': Metadata;
                 'creationTimestamp': string;
+                'defaultServiceAccount': string;
                 'description': string;
                 'enabledFeatures': string[];
                 'id': string;
@@ -1272,6 +1314,94 @@ declare module google {
                 'selfLink': string;
             }
 
+            export interface Router {
+                'bgp': RouterBgp;
+                'bgpPeers': RouterBgpPeer[];
+                'creationTimestamp': string;
+                'description': string;
+                'id': string;
+                'interfaces': RouterInterface[];
+                'kind': string;
+                'name': string;
+                'network': string;
+                'region': string;
+                'selfLink': string;
+            }
+
+            export interface RouterAggregatedList {
+                'id': string;
+                'items': {
+                    [name: string]: RoutersScopedList
+                
+                };
+                'kind': string;
+                'nextPageToken': string;
+                'selfLink': string;
+            }
+
+            export interface RouterBgp {
+                'asn': number;
+            }
+
+            export interface RouterBgpPeer {
+                'advertisedRoutePriority': number;
+                'interfaceName': string;
+                'ipAddress': string;
+                'name': string;
+                'peerAsn': number;
+                'peerIpAddress': string;
+            }
+
+            export interface RouterInterface {
+                'ipRange': string;
+                'linkedVpnTunnel': string;
+                'name': string;
+            }
+
+            export interface RouterList {
+                'id': string;
+                'items': Router[];
+                'kind': string;
+                'nextPageToken': string;
+                'selfLink': string;
+            }
+
+            export interface RouterStatus {
+                'bestRoutes': Route[];
+                'bgpPeerStatus': RouterStatusBgpPeerStatus[];
+                'network': string;
+            }
+
+            export interface RouterStatusBgpPeerStatus {
+                'advertisedRoutes': Route[];
+                'ipAddress': string;
+                'linkedVpnTunnel': string;
+                'name': string;
+                'numLearnedRoutes': number;
+                'peerIpAddress': string;
+                'state': string;
+                'status': string;
+                'uptime': string;
+                'uptimeSeconds': string;
+            }
+
+            export interface RouterStatusResponse {
+                'kind': string;
+                'result': RouterStatus;
+            }
+
+            export interface RoutersScopedList {
+                'routers': Router[];
+                'warning': {
+                    'code': string;
+                    'data': {
+                        'key': string;
+                        'value': string;
+                    }[];
+                    'message': string;
+                };
+            }
+
             export interface Scheduling {
                 'automaticRestart': boolean;
                 'onHostMaintenance': string;
@@ -1298,7 +1428,9 @@ declare module google {
                 'licenses': string[];
                 'name': string;
                 'selfLink': string;
+                'snapshotEncryptionKey': CustomerEncryptionKey;
                 'sourceDisk': string;
+                'sourceDiskEncryptionKey': CustomerEncryptionKey;
                 'sourceDiskId': string;
                 'status': string;
                 'storageBytes': string;
@@ -1652,6 +1784,8 @@ declare module google {
                 'name': string;
                 'peerIp': string;
                 'region': string;
+                'remoteTrafficSelector': string[];
+                'router': string;
                 'selfLink': string;
                 'sharedSecret': string;
                 'sharedSecretHash': string;
@@ -1696,12 +1830,6 @@ declare module google {
                 'description': string;
                 'id': string;
                 'kind': string;
-                'maintenanceWindows': {
-                    'beginTime': string;
-                    'description': string;
-                    'endTime': string;
-                    'name': string;
-                }[];
                 'name': string;
                 'region': string;
                 'selfLink': string;

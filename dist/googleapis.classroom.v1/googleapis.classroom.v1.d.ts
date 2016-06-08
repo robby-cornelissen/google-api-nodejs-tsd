@@ -40,6 +40,21 @@ declare module google {
                         'delete': (parameters: {'courseId': string, 'userId': string}, callback: (error: any, body: Empty, response: any) => void) => Request;
                         'list': (parameters: {'courseId': string, 'pageSize'?: number, 'pageToken'?: string}, callback: (error: any, body: ListStudentsResponse, response: any) => void) => Request;
                     };
+                    'courseWork': {
+                        'create': (parameters: {'courseId': string}, callback: (error: any, body: CourseWork, response: any) => void) => Request;
+                        'get': (parameters: {'courseId': string, 'id': string}, callback: (error: any, body: CourseWork, response: any) => void) => Request;
+                        'list': (parameters: {'courseId': string, 'courseWorkStates'?: string, 'orderBy'?: string, 'pageSize'?: number, 'pageToken'?: string}, callback: (error: any, body: ListCourseWorkResponse, response: any) => void) => Request;
+                    
+                        'studentSubmissions': {
+                            'get': (parameters: {'courseId': string, 'courseWorkId': string, 'id': string}, callback: (error: any, body: StudentSubmission, response: any) => void) => Request;
+                            'patch': (parameters: {'courseId': string, 'courseWorkId': string, 'id': string, 'updateMask'?: string}, callback: (error: any, body: StudentSubmission, response: any) => void) => Request;
+                            'list': (parameters: {'courseId': string, 'courseWorkId': string, 'userId'?: string, 'states'?: string, 'late'?: string, 'pageSize'?: number, 'pageToken'?: string}, callback: (error: any, body: ListStudentSubmissionsResponse, response: any) => void) => Request;
+                            'turnIn': (parameters: {'courseId': string, 'courseWorkId': string, 'id': string}, callback: (error: any, body: Empty, response: any) => void) => Request;
+                            'reclaim': (parameters: {'courseId': string, 'courseWorkId': string, 'id': string}, callback: (error: any, body: Empty, response: any) => void) => Request;
+                            'return': (parameters: {'courseId': string, 'courseWorkId': string, 'id': string}, callback: (error: any, body: Empty, response: any) => void) => Request;
+                            'modifyAttachments': (parameters: {'courseId': string, 'courseWorkId': string, 'id': string}, callback: (error: any, body: StudentSubmission, response: any) => void) => Request;
+                        };
+                    };
                 };
                 'invitations': {
                     'create': (parameters: any, callback: (error: any, body: Invitation, response: any) => void) => Request;
@@ -67,6 +82,55 @@ declare module google {
                 'enrollmentCode': string;
                 'courseState': string;
                 'alternateLink': string;
+                'teacherGroupEmail': string;
+                'courseGroupEmail': string;
+                'teacherFolder': DriveFolder;
+                'courseMaterialSets': CourseMaterialSet[];
+            }
+
+            export interface DriveFolder {
+                'id': string;
+                'title': string;
+                'alternateLink': string;
+            }
+
+            export interface CourseMaterialSet {
+                'title': string;
+                'materials': CourseMaterial[];
+            }
+
+            export interface CourseMaterial {
+                'driveFile': DriveFile;
+                'youTubeVideo': YouTubeVideo;
+                'link': Link;
+                'form': Form;
+            }
+
+            export interface DriveFile {
+                'id': string;
+                'title': string;
+                'alternateLink': string;
+                'thumbnailUrl': string;
+            }
+
+            export interface YouTubeVideo {
+                'id': string;
+                'title': string;
+                'alternateLink': string;
+                'thumbnailUrl': string;
+            }
+
+            export interface Link {
+                'url': string;
+                'title': string;
+                'thumbnailUrl': string;
+            }
+
+            export interface Form {
+                'formUrl': string;
+                'responseUrl': string;
+                'title': string;
+                'thumbnailUrl': string;
             }
 
             export interface Empty {}
@@ -130,11 +194,123 @@ declare module google {
                 'courseId': string;
                 'userId': string;
                 'profile': UserProfile;
+                'studentWorkFolder': DriveFolder;
             }
 
             export interface ListStudentsResponse {
                 'students': Student[];
                 'nextPageToken': string;
+            }
+
+            export interface CourseWork {
+                'courseId': string;
+                'id': string;
+                'title': string;
+                'description': string;
+                'materials': Material[];
+                'state': string;
+                'alternateLink': string;
+                'creationTime': string;
+                'updateTime': string;
+                'dueDate': Date;
+                'dueTime': TimeOfDay;
+                'maxPoints': number;
+                'workType': string;
+                'associatedWithDeveloper': boolean;
+                'submissionModificationMode': string;
+                'assignment': Assignment;
+                'multipleChoiceQuestion': MultipleChoiceQuestion;
+            }
+
+            export interface Material {
+                'driveFile': SharedDriveFile;
+                'youtubeVideo': YouTubeVideo;
+                'link': Link;
+                'form': Form;
+            }
+
+            export interface SharedDriveFile {
+                'driveFile': DriveFile;
+                'shareMode': string;
+            }
+
+            export interface Date {
+                'year': number;
+                'month': number;
+                'day': number;
+            }
+
+            export interface TimeOfDay {
+                'hours': number;
+                'minutes': number;
+                'seconds': number;
+                'nanos': number;
+            }
+
+            export interface Assignment {
+                'studentWorkFolder': DriveFolder;
+            }
+
+            export interface MultipleChoiceQuestion {
+                'choices': string[];
+            }
+
+            export interface ListCourseWorkResponse {
+                'courseWork': CourseWork[];
+                'nextPageToken': string;
+            }
+
+            export interface StudentSubmission {
+                'courseId': string;
+                'courseWorkId': string;
+                'id': string;
+                'userId': string;
+                'creationTime': string;
+                'updateTime': string;
+                'state': string;
+                'late': boolean;
+                'draftGrade': number;
+                'assignedGrade': number;
+                'alternateLink': string;
+                'courseWorkType': string;
+                'associatedWithDeveloper': boolean;
+                'assignmentSubmission': AssignmentSubmission;
+                'shortAnswerSubmission': ShortAnswerSubmission;
+                'multipleChoiceSubmission': MultipleChoiceSubmission;
+            }
+
+            export interface AssignmentSubmission {
+                'attachments': Attachment[];
+            }
+
+            export interface Attachment {
+                'driveFile': DriveFile;
+                'youTubeVideo': YouTubeVideo;
+                'link': Link;
+                'form': Form;
+            }
+
+            export interface ShortAnswerSubmission {
+                'answer': string;
+            }
+
+            export interface MultipleChoiceSubmission {
+                'answer': string;
+            }
+
+            export interface ListStudentSubmissionsResponse {
+                'studentSubmissions': StudentSubmission[];
+                'nextPageToken': string;
+            }
+
+            export interface TurnInStudentSubmissionRequest {}
+
+            export interface ReclaimStudentSubmissionRequest {}
+
+            export interface ReturnStudentSubmissionRequest {}
+
+            export interface ModifyAttachmentsRequest {
+                'addAttachments': Attachment[];
             }
 
         }

@@ -84,7 +84,9 @@ declare module google {
             }
 
             export interface User {
+                'isDeleted': boolean;
                 'name': string;
+                'permissionId': string;
                 'photo': Photo;
             }
 

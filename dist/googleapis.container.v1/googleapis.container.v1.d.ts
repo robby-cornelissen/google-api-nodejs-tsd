@@ -25,6 +25,13 @@ declare module google {
                             'create': (parameters: {'projectId': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                             'update': (parameters: {'projectId': string, 'zone': string, 'clusterId': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                             'delete': (parameters: {'projectId': string, 'zone': string, 'clusterId': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                        
+                            'nodePools': {
+                                'list': (parameters: {'projectId': string, 'zone': string, 'clusterId': string}, callback: (error: any, body: ListNodePoolsResponse, response: any) => void) => Request;
+                                'get': (parameters: {'projectId': string, 'zone': string, 'clusterId': string, 'nodePoolId': string}, callback: (error: any, body: NodePool, response: any) => void) => Request;
+                                'create': (parameters: {'projectId': string, 'zone': string, 'clusterId': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                                'delete': (parameters: {'projectId': string, 'zone': string, 'clusterId': string, 'nodePoolId': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                            };
                         };
                         'operations': {
                             'list': (parameters: {'projectId': string, 'zone': string}, callback: (error: any, body: ListOperationsResponse, response: any) => void) => Request;
@@ -37,6 +44,7 @@ declare module google {
 
             export interface ListClustersResponse {
                 'clusters': Cluster[];
+                'missingZones': string[];
             }
 
             export interface Cluster {
@@ -49,6 +57,10 @@ declare module google {
                 'monitoringService': string;
                 'network': string;
                 'clusterIpv4Cidr': string;
+                'addonsConfig': AddonsConfig;
+                'subnetwork': string;
+                'nodePools': NodePool[];
+                'locations': string[];
                 'selfLink': string;
                 'zone': string;
                 'endpoint': string;
@@ -61,12 +73,17 @@ declare module google {
                 'nodeIpv4CidrSize': number;
                 'servicesIpv4Cidr': string;
                 'instanceGroupUrls': string[];
+                'currentNodeCount': number;
             }
 
             export interface NodeConfig {
                 'machineType': string;
                 'diskSizeGb': number;
                 'oauthScopes': string[];
+                'metadata': {
+                    [name: string]: string
+                
+                };
             }
 
             export interface MasterAuth {
@@ -75,6 +92,30 @@ declare module google {
                 'clusterCaCertificate': string;
                 'clientCertificate': string;
                 'clientKey': string;
+            }
+
+            export interface AddonsConfig {
+                'httpLoadBalancing': HttpLoadBalancing;
+                'horizontalPodAutoscaling': HorizontalPodAutoscaling;
+            }
+
+            export interface HttpLoadBalancing {
+                'disabled': boolean;
+            }
+
+            export interface HorizontalPodAutoscaling {
+                'disabled': boolean;
+            }
+
+            export interface NodePool {
+                'name': string;
+                'config': NodeConfig;
+                'initialNodeCount': number;
+                'selfLink': string;
+                'version': string;
+                'instanceGroupUrls': string[];
+                'status': string;
+                'statusMessage': string;
             }
 
             export interface CreateClusterRequest {
@@ -86,6 +127,7 @@ declare module google {
                 'zone': string;
                 'operationType': string;
                 'status': string;
+                'detail': string;
                 'statusMessage': string;
                 'selfLink': string;
                 'targetLink': string;
@@ -97,15 +139,30 @@ declare module google {
 
             export interface ClusterUpdate {
                 'desiredNodeVersion': string;
+                'desiredMonitoringService': string;
+                'desiredAddonsConfig': AddonsConfig;
+                'desiredNodePoolId': string;
+                'desiredMasterVersion': string;
             }
 
             export interface ListOperationsResponse {
                 'operations': Operation[];
+                'missingZones': string[];
             }
 
             export interface ServerConfig {
                 'defaultClusterVersion': string;
                 'validNodeVersions': string[];
+                'defaultImageFamily': string;
+                'validImageFamilies': string[];
+            }
+
+            export interface ListNodePoolsResponse {
+                'nodePools': NodePool[];
+            }
+
+            export interface CreateNodePoolRequest {
+                'nodePool': NodePool;
             }
 
         }

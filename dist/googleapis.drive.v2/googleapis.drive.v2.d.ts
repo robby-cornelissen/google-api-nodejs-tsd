@@ -72,8 +72,8 @@ declare module google {
                     'getIdForEmail': (parameters: {'email': string}, callback: (error: any, body: PermissionId, response: any) => void) => Request;
                     'insert': (parameters: {'emailMessage'?: string, 'fileId': string, 'sendNotificationEmails'?: boolean}, callback: (error: any, body: Permission, response: any) => void) => Request;
                     'list': (parameters: {'fileId': string}, callback: (error: any, body: PermissionList, response: any) => void) => Request;
-                    'patch': (parameters: {'fileId': string, 'permissionId': string, 'transferOwnership'?: boolean}, callback: (error: any, body: Permission, response: any) => void) => Request;
-                    'update': (parameters: {'fileId': string, 'permissionId': string, 'transferOwnership'?: boolean}, callback: (error: any, body: Permission, response: any) => void) => Request;
+                    'patch': (parameters: {'fileId': string, 'permissionId': string, 'removeExpiration'?: boolean, 'transferOwnership'?: boolean}, callback: (error: any, body: Permission, response: any) => void) => Request;
+                    'update': (parameters: {'fileId': string, 'permissionId': string, 'removeExpiration'?: boolean, 'transferOwnership'?: boolean}, callback: (error: any, body: Permission, response: any) => void) => Request;
                 };
                 'properties': {
                     'delete': (parameters: {'fileId': string, 'propertyKey': string, 'visibility'?: string}, callback: (error: any, body: any, response: any) => void) => Request;
@@ -348,6 +348,7 @@ declare module google {
                 'indexableText': {
                     'text': string;
                 };
+                'isAppAuthorized': boolean;
                 'kind': string;
                 'labels': {
                     'hidden': boolean;
@@ -436,6 +437,7 @@ declare module google {
                 'domain': string;
                 'emailAddress': string;
                 'etag': string;
+                'expirationDate': string;
                 'id': string;
                 'kind': string;
                 'name': string;

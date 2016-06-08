@@ -23,9 +23,6 @@ declare module google {
                         'get': (parameters: {'projectId': string, 'clusterName': string}, callback: (error: any, body: Cluster, response: any) => void) => Request;
                         'list': (parameters: {'projectId': string, 'pageSize'?: number, 'pageToken'?: string}, callback: (error: any, body: ListClustersResponse, response: any) => void) => Request;
                         'diagnose': (parameters: {'projectId': string, 'clusterName': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
-                        'setIamPolicy': (parameters: {'resource': string}, callback: (error: any, body: Policy, response: any) => void) => Request;
-                        'getIamPolicy': (parameters: {'resource': string}, callback: (error: any, body: Policy, response: any) => void) => Request;
-                        'testIamPermissions': (parameters: {'resource': string}, callback: (error: any, body: TestIamPermissionsResponse, response: any) => void) => Request;
                     };
                     'jobs': {
                         'submit': (parameters: {'projectId': string}, callback: (error: any, body: Job, response: any) => void) => Request;
@@ -33,9 +30,6 @@ declare module google {
                         'list': (parameters: {'projectId': string, 'pageSize'?: number, 'pageToken'?: string, 'clusterName'?: string, 'jobStateMatcher'?: string}, callback: (error: any, body: ListJobsResponse, response: any) => void) => Request;
                         'cancel': (parameters: {'projectId': string, 'jobId': string}, callback: (error: any, body: Job, response: any) => void) => Request;
                         'delete': (parameters: {'projectId': string, 'jobId': string}, callback: (error: any, body: Empty, response: any) => void) => Request;
-                        'setIamPolicy': (parameters: {'resource': string}, callback: (error: any, body: Policy, response: any) => void) => Request;
-                        'getIamPolicy': (parameters: {'resource': string}, callback: (error: any, body: Policy, response: any) => void) => Request;
-                        'testIamPermissions': (parameters: {'resource': string}, callback: (error: any, body: TestIamPermissionsResponse, response: any) => void) => Request;
                     };
                 };
                 'operations': {
@@ -307,29 +301,6 @@ declare module google {
             }
 
             export interface CancelOperationRequest {}
-
-            export interface SetIamPolicyRequest {
-                'policy': Policy;
-            }
-
-            export interface Policy {
-                'version': number;
-                'bindings': Binding[];
-                'etag': string;
-            }
-
-            export interface Binding {
-                'role': string;
-                'members': string[];
-            }
-
-            export interface TestIamPermissionsRequest {
-                'permissions': string[];
-            }
-
-            export interface TestIamPermissionsResponse {
-                'permissions': string[];
-            }
 
             export interface DiagnoseClusterResults {
                 'outputUri': string;

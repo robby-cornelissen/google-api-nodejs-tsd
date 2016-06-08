@@ -170,7 +170,7 @@ declare module google {
             }
 
             export interface Aliases {
-                'aliases': Alias[];
+                'aliases': any[];
                 'etag': string;
                 'kind': string;
             }

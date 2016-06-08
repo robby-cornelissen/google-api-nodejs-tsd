@@ -21,6 +21,7 @@ declare module google {
                     'get': (parameters: {'address': string, 'project': string, 'region': string}, callback: (error: any, body: Address, response: any) => void) => Request;
                     'insert': (parameters: {'project': string, 'region': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string, 'region': string}, callback: (error: any, body: AddressList, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'region': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'autoscalers': {
                     'aggregatedList': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: AutoscalerAggregatedList, response: any) => void) => Request;
@@ -29,6 +30,7 @@ declare module google {
                     'insert': (parameters: {'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string, 'zone': string}, callback: (error: any, body: AutoscalerList, response: any) => void) => Request;
                     'patch': (parameters: {'autoscaler': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string, 'zone': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                     'update': (parameters: {'autoscaler'?: string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                 };
                 'backendServices': {
@@ -38,6 +40,7 @@ declare module google {
                     'insert': (parameters: {'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: BackendServiceList, response: any) => void) => Request;
                     'patch': (parameters: {'backendService': string, 'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                     'update': (parameters: {'backendService': string, 'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                 };
                 'diskTypes': {
@@ -53,6 +56,8 @@ declare module google {
                     'insert': (parameters: {'project': string, 'sourceImage'?: string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string, 'zone': string}, callback: (error: any, body: DiskList, response: any) => void) => Request;
                     'resize': (parameters: {'disk': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'setLabels': (parameters: {'project': string, 'resource': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string, 'zone': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'firewalls': {
                     'delete': (parameters: {'firewall': string, 'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
@@ -60,6 +65,7 @@ declare module google {
                     'insert': (parameters: {'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: FirewallList, response: any) => void) => Request;
                     'patch': (parameters: {'firewall': string, 'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                     'update': (parameters: {'firewall': string, 'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                 };
                 'forwardingRules': {
@@ -69,12 +75,14 @@ declare module google {
                     'insert': (parameters: {'project': string, 'region': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string, 'region': string}, callback: (error: any, body: ForwardingRuleList, response: any) => void) => Request;
                     'setTarget': (parameters: {'forwardingRule': string, 'project': string, 'region': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'region': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'globalAddresses': {
                     'delete': (parameters: {'address': string, 'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'get': (parameters: {'address': string, 'project': string}, callback: (error: any, body: Address, response: any) => void) => Request;
                     'insert': (parameters: {'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: AddressList, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'globalForwardingRules': {
                     'delete': (parameters: {'forwardingRule': string, 'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
@@ -82,6 +90,7 @@ declare module google {
                     'insert': (parameters: {'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: ForwardingRuleList, response: any) => void) => Request;
                     'setTarget': (parameters: {'forwardingRule': string, 'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'globalOperations': {
                     'aggregatedList': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: OperationAggregatedList, response: any) => void) => Request;
@@ -95,6 +104,7 @@ declare module google {
                     'insert': (parameters: {'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: HttpHealthCheckList, response: any) => void) => Request;
                     'patch': (parameters: {'httpHealthCheck': string, 'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                     'update': (parameters: {'httpHealthCheck': string, 'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                 };
                 'httpsHealthChecks': {
@@ -103,6 +113,7 @@ declare module google {
                     'insert': (parameters: {'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: HttpsHealthCheckList, response: any) => void) => Request;
                     'patch': (parameters: {'httpsHealthCheck': string, 'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                     'update': (parameters: {'httpsHealthCheck': string, 'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                 };
                 'images': {
@@ -112,6 +123,8 @@ declare module google {
                     'getFromFamily': (parameters: {'family': string, 'project': string}, callback: (error: any, body: Image, response: any) => void) => Request;
                     'insert': (parameters: {'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: ImageList, response: any) => void) => Request;
+                    'setLabels': (parameters: {'project': string, 'resource': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'instanceGroupManagers': {
                     'abandonInstances': (parameters: {'instanceGroupManager': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
@@ -124,9 +137,11 @@ declare module google {
                     'listManagedInstances': (parameters: {'instanceGroupManager': string, 'project': string, 'zone': string}, callback: (error: any, body: InstanceGroupManagersListManagedInstancesResponse, response: any) => void) => Request;
                     'recreateInstances': (parameters: {'instanceGroupManager': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'resize': (parameters: {'instanceGroupManager': string, 'project': string, 'size': number, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'resizeAdvanced': (parameters: {'instanceGroupManager': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'setAutoHealingPolicies': (parameters: {'instanceGroupManager': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'setInstanceTemplate': (parameters: {'instanceGroupManager': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'setTargetPools': (parameters: {'instanceGroupManager': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string, 'zone': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'instanceGroups': {
                     'addInstances': (parameters: {'instanceGroup': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
@@ -138,12 +153,14 @@ declare module google {
                     'listInstances': (parameters: {'filter'?: string, 'instanceGroup': string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string, 'zone': string}, callback: (error: any, body: InstanceGroupsListInstances, response: any) => void) => Request;
                     'removeInstances': (parameters: {'instanceGroup': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'setNamedPorts': (parameters: {'instanceGroup': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string, 'zone': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'instanceTemplates': {
                     'delete': (parameters: {'instanceTemplate': string, 'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'get': (parameters: {'instanceTemplate': string, 'project': string}, callback: (error: any, body: InstanceTemplate, response: any) => void) => Request;
                     'insert': (parameters: {'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: InstanceTemplateList, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'instances': {
                     'addAccessConfig': (parameters: {'instance': string, 'networkInterface': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
@@ -153,7 +170,7 @@ declare module google {
                     'deleteAccessConfig': (parameters: {'accessConfig': string, 'instance': string, 'networkInterface': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'detachDisk': (parameters: {'deviceName': string, 'instance': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'get': (parameters: {'instance': string, 'project': string, 'zone': string}, callback: (error: any, body: Instance, response: any) => void) => Request;
-                    'getSerialPortOutput': (parameters: {'instance': string, 'port'?: number, 'project': string, 'zone': string}, callback: (error: any, body: SerialPortOutput, response: any) => void) => Request;
+                    'getSerialPortOutput': (parameters: {'instance': string, 'port'?: number, 'project': string, 'start'?: string, 'zone': string}, callback: (error: any, body: SerialPortOutput, response: any) => void) => Request;
                     'insert': (parameters: {'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string, 'zone': string}, callback: (error: any, body: InstanceList, response: any) => void) => Request;
                     'reset': (parameters: {'instance': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
@@ -164,7 +181,9 @@ declare module google {
                     'setScheduling': (parameters: {'instance': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'setTags': (parameters: {'instance': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'start': (parameters: {'instance': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'startWithEncryptionKey': (parameters: {'instance': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'stop': (parameters: {'instance': string, 'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string, 'zone': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'licenses': {
                     'get': (parameters: {'license': string, 'project': string}, callback: (error: any, body: License, response: any) => void) => Request;
@@ -179,9 +198,12 @@ declare module google {
                     'get': (parameters: {'network': string, 'project': string}, callback: (error: any, body: Network, response: any) => void) => Request;
                     'insert': (parameters: {'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: NetworkList, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'projects': {
                     'get': (parameters: {'project': string}, callback: (error: any, body: Project, response: any) => void) => Request;
+                    'moveDisk': (parameters: {'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'moveInstance': (parameters: {'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'setCommonInstanceMetadata': (parameters: {'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'setUsageExportBucket': (parameters: {'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                 };
@@ -202,6 +224,7 @@ declare module google {
                     'insert': (parameters: {'project': string, 'region': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string, 'region': string}, callback: (error: any, body: RouterList, response: any) => void) => Request;
                     'patch': (parameters: {'project': string, 'region': string, 'router': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'region': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                     'update': (parameters: {'project': string, 'region': string, 'router': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                 };
                 'routes': {
@@ -209,17 +232,21 @@ declare module google {
                     'get': (parameters: {'project': string, 'route': string}, callback: (error: any, body: Route, response: any) => void) => Request;
                     'insert': (parameters: {'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: RouteList, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'snapshots': {
                     'delete': (parameters: {'project': string, 'snapshot': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'get': (parameters: {'project': string, 'snapshot': string}, callback: (error: any, body: Snapshot, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: SnapshotList, response: any) => void) => Request;
+                    'setLabels': (parameters: {'project': string, 'resource': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'sslCertificates': {
                     'delete': (parameters: {'project': string, 'sslCertificate': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'get': (parameters: {'project': string, 'sslCertificate': string}, callback: (error: any, body: SslCertificate, response: any) => void) => Request;
                     'insert': (parameters: {'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: SslCertificateList, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'subnetworks': {
                     'aggregatedList': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: SubnetworkAggregatedList, response: any) => void) => Request;
@@ -227,6 +254,7 @@ declare module google {
                     'get': (parameters: {'project': string, 'region': string, 'subnetwork': string}, callback: (error: any, body: Subnetwork, response: any) => void) => Request;
                     'insert': (parameters: {'project': string, 'region': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string, 'region': string}, callback: (error: any, body: SubnetworkList, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'region': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'targetHttpProxies': {
                     'delete': (parameters: {'project': string, 'targetHttpProxy': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
@@ -234,6 +262,7 @@ declare module google {
                     'insert': (parameters: {'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: TargetHttpProxyList, response: any) => void) => Request;
                     'setUrlMap': (parameters: {'project': string, 'targetHttpProxy': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'targetHttpsProxies': {
                     'delete': (parameters: {'project': string, 'targetHttpsProxy': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
@@ -242,6 +271,7 @@ declare module google {
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: TargetHttpsProxyList, response: any) => void) => Request;
                     'setSslCertificates': (parameters: {'project': string, 'targetHttpsProxy': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'setUrlMap': (parameters: {'project': string, 'targetHttpsProxy': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'targetInstances': {
                     'aggregatedList': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: TargetInstanceAggregatedList, response: any) => void) => Request;
@@ -249,6 +279,7 @@ declare module google {
                     'get': (parameters: {'project': string, 'targetInstance': string, 'zone': string}, callback: (error: any, body: TargetInstance, response: any) => void) => Request;
                     'insert': (parameters: {'project': string, 'zone': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string, 'zone': string}, callback: (error: any, body: TargetInstanceList, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string, 'zone': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'targetPools': {
                     'addHealthCheck': (parameters: {'project': string, 'region': string, 'targetPool': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
@@ -262,6 +293,7 @@ declare module google {
                     'removeHealthCheck': (parameters: {'project': string, 'region': string, 'targetPool': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'removeInstance': (parameters: {'project': string, 'region': string, 'targetPool': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'setBackup': (parameters: {'failoverRatio'?: number, 'project': string, 'region': string, 'targetPool': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'region': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'targetVpnGateways': {
                     'aggregatedList': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: TargetVpnGatewayAggregatedList, response: any) => void) => Request;
@@ -269,13 +301,16 @@ declare module google {
                     'get': (parameters: {'project': string, 'region': string, 'targetVpnGateway': string}, callback: (error: any, body: TargetVpnGateway, response: any) => void) => Request;
                     'insert': (parameters: {'project': string, 'region': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string, 'region': string}, callback: (error: any, body: TargetVpnGatewayList, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'region': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'urlMaps': {
                     'delete': (parameters: {'project': string, 'urlMap': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'get': (parameters: {'project': string, 'urlMap': string}, callback: (error: any, body: UrlMap, response: any) => void) => Request;
                     'insert': (parameters: {'project': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'invalidateCache': (parameters: {'project': string, 'urlMap': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string}, callback: (error: any, body: UrlMapList, response: any) => void) => Request;
                     'patch': (parameters: {'project': string, 'urlMap': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                     'update': (parameters: {'project': string, 'urlMap': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'validate': (parameters: {'project': string, 'urlMap': string}, callback: (error: any, body: UrlMapsValidateResponse, response: any) => void) => Request;
                 };
@@ -285,6 +320,7 @@ declare module google {
                     'get': (parameters: {'project': string, 'region': string, 'vpnTunnel': string}, callback: (error: any, body: VpnTunnel, response: any) => void) => Request;
                     'insert': (parameters: {'project': string, 'region': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'orderBy'?: string, 'pageToken'?: string, 'project': string, 'region': string}, callback: (error: any, body: VpnTunnelList, response: any) => void) => Request;
+                    'testIamPermissions': (parameters: {'project': string, 'region': string, 'resource': string}, callback: (error: any, body: TestPermissionsResponse, response: any) => void) => Request;
                 };
                 'zoneOperations': {
                     'delete': (parameters: {'operation': string, 'project': string, 'zone': string}, callback: (error: any, body: any, response: any) => void) => Request;
@@ -450,9 +486,11 @@ declare module google {
             }
 
             export interface BackendService {
+                'affinityCookieTtlSec': number;
                 'backends': Backend[];
                 'creationTimestamp': string;
                 'description': string;
+                'enableCDN': boolean;
                 'fingerprint': string;
                 'healthChecks': string[];
                 'id': string;
@@ -461,7 +499,9 @@ declare module google {
                 'port': number;
                 'portName': string;
                 'protocol': string;
+                'region': string;
                 'selfLink': string;
+                'sessionAffinity': string;
                 'timeoutSec': number;
             }
 
@@ -478,10 +518,19 @@ declare module google {
                 'selfLink': string;
             }
 
+            export interface CacheInvalidationRule {
+                'path': string;
+            }
+
             export interface CustomerEncryptionKey {
                 'rawKey': string;
                 'rsaEncryptedKey': string;
                 'sha256': string;
+            }
+
+            export interface CustomerEncryptionKeyProtectedDisk {
+                'diskEncryptionKey': CustomerEncryptionKey;
+                'source': string;
             }
 
             export interface DeprecationStatus {
@@ -498,6 +547,11 @@ declare module google {
                 'diskEncryptionKey': CustomerEncryptionKey;
                 'id': string;
                 'kind': string;
+                'labelFingerprint': string;
+                'labels': {
+                    [name: string]: string
+                
+                };
                 'lastAttachTimestamp': string;
                 'lastDetachTimestamp': string;
                 'licenses': string[];
@@ -535,6 +589,11 @@ declare module google {
                 'kind': string;
                 'nextPageToken': string;
                 'selfLink': string;
+            }
+
+            export interface DiskMoveRequest {
+                'destinationZone': string;
+                'targetDisk': string;
             }
 
             export interface DiskType {
@@ -667,6 +726,14 @@ declare module google {
                 };
             }
 
+            export interface GlobalSetLabelsRequest {
+                'labelFingerprint': string;
+                'labels': {
+                    [name: string]: string
+                
+                };
+            }
+
             export interface HealthCheckReference {
                 'healthCheck': string;
             }
@@ -742,6 +809,11 @@ declare module google {
                 'id': string;
                 'imageEncryptionKey': CustomerEncryptionKey;
                 'kind': string;
+                'labelFingerprint': string;
+                'labels': {
+                    [name: string]: string
+                
+                };
                 'licenses': string[];
                 'name': string;
                 'rawDisk': {
@@ -858,6 +930,7 @@ declare module google {
             export interface InstanceGroupManagerActionsSummary {
                 'abandoning': number;
                 'creating': number;
+                'creatingWithoutRetries': number;
                 'deleting': number;
                 'none': number;
                 'recreating': number;
@@ -903,6 +976,11 @@ declare module google {
 
             export interface InstanceGroupManagersRecreateInstancesRequest {
                 'instances': string[];
+            }
+
+            export interface InstanceGroupManagersResizeAdvancedRequest {
+                'noCreationRetries': boolean;
+                'targetSize': number;
             }
 
             export interface InstanceGroupManagersScopedList {
@@ -975,6 +1053,11 @@ declare module google {
                 'selfLink': string;
             }
 
+            export interface InstanceMoveRequest {
+                'destinationZone': string;
+                'targetInstance': string;
+            }
+
             export interface InstanceProperties {
                 'canIpForward': boolean;
                 'description': string;
@@ -1039,6 +1122,10 @@ declare module google {
                 'machineType': string;
             }
 
+            export interface InstancesStartWithEncryptionKeyRequest {
+                'disks': CustomerEncryptionKeyProtectedDisk[];
+            }
+
             export interface License {
                 'chargesUseFee': boolean;
                 'kind': string;
@@ -1052,6 +1139,7 @@ declare module google {
                 'description': string;
                 'guestCpus': number;
                 'id': string;
+                'isSharedCpu': boolean;
                 'kind': string;
                 'maximumPersistentDisks': number;
                 'maximumPersistentDisksSizeGb': string;
@@ -1238,6 +1326,7 @@ declare module google {
             export interface Project {
                 'commonInstanceMetadata': Metadata;
                 'creationTimestamp': string;
+                'defaultServiceAccount': string;
                 'description': string;
                 'enabledFeatures': string[];
                 'id': string;
@@ -1381,6 +1470,7 @@ declare module google {
                 'state': string;
                 'status': string;
                 'uptime': string;
+                'uptimeSeconds': string;
             }
 
             export interface RouterStatusResponse {
@@ -1409,7 +1499,9 @@ declare module google {
             export interface SerialPortOutput {
                 'contents': string;
                 'kind': string;
+                'next': string;
                 'selfLink': string;
+                'start': string;
             }
 
             export interface ServiceAccount {
@@ -1423,6 +1515,11 @@ declare module google {
                 'diskSizeGb': string;
                 'id': string;
                 'kind': string;
+                'labelFingerprint': string;
+                'labels': {
+                    [name: string]: string
+                
+                };
                 'licenses': string[];
                 'name': string;
                 'selfLink': string;
@@ -1718,6 +1815,14 @@ declare module google {
                 'path': string;
             }
 
+            export interface TestPermissionsRequest {
+                'permissions': string[];
+            }
+
+            export interface TestPermissionsResponse {
+                'permissions': string[];
+            }
+
             export interface UrlMap {
                 'creationTimestamp': string;
                 'defaultService': string;
@@ -1782,6 +1887,7 @@ declare module google {
                 'name': string;
                 'peerIp': string;
                 'region': string;
+                'remoteTrafficSelector': string[];
                 'router': string;
                 'selfLink': string;
                 'sharedSecret': string;
@@ -1827,12 +1933,6 @@ declare module google {
                 'description': string;
                 'id': string;
                 'kind': string;
-                'maintenanceWindows': {
-                    'beginTime': string;
-                    'description': string;
-                    'endTime': string;
-                    'name': string;
-                }[];
                 'name': string;
                 'region': string;
                 'selfLink': string;
@@ -1845,6 +1945,14 @@ declare module google {
                 'kind': string;
                 'nextPageToken': string;
                 'selfLink': string;
+            }
+
+            export interface ZoneSetLabelsRequest {
+                'labelFingerprint': string;
+                'labels': {
+                    [name: string]: string
+                
+                };
             }
 
         }

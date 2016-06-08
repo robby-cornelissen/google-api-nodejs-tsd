@@ -106,6 +106,7 @@ declare module google {
             export interface Operation {
                 'clientOperationId': string;
                 'creationTimestamp': string;
+                'description': string;
                 'endTime': string;
                 'error': {
                     'errors': {

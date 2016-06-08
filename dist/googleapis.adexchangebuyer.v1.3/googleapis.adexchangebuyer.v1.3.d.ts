@@ -167,6 +167,8 @@ declare module google {
             export interface DirectDeal {
                 'accountId': number;
                 'advertiser': string;
+                'allowsAlcohol': boolean;
+                'buyerAccountId': string;
                 'currencyCode': string;
                 'dealTier': string;
                 'endTime': string;

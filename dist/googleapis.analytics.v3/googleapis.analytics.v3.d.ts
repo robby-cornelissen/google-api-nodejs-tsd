@@ -162,6 +162,7 @@ declare module google {
                     'effective': string[];
                 };
                 'selfLink': string;
+                'starred': boolean;
                 'updated': string;
             }
 
@@ -187,6 +188,7 @@ declare module google {
                 'id': string;
                 'kind': string;
                 'name': string;
+                'starred': boolean;
                 'webProperties': WebPropertySummary[];
             }
 
@@ -700,6 +702,7 @@ declare module google {
                 'selfLink': string;
                 'siteSearchCategoryParameters': string;
                 'siteSearchQueryParameters': string;
+                'starred': boolean;
                 'stripSiteSearchCategoryParameters': boolean;
                 'stripSiteSearchQueryParameters': boolean;
                 'timezone': string;
@@ -743,6 +746,7 @@ declare module google {
                 'id': string;
                 'kind': string;
                 'name': string;
+                'starred': boolean;
                 'type': string;
             }
 
@@ -892,6 +896,7 @@ declare module google {
                 'level': string;
                 'name': string;
                 'profiles': ProfileSummary[];
+                'starred': boolean;
                 'websiteUrl': string;
             }
 
@@ -929,6 +934,7 @@ declare module google {
                 };
                 'profileCount': number;
                 'selfLink': string;
+                'starred': boolean;
                 'updated': string;
                 'websiteUrl': string;
             }

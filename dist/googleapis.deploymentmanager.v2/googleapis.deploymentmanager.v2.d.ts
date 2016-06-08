@@ -56,6 +56,7 @@ declare module google {
                 'manifest': string;
                 'name': string;
                 'operation': Operation;
+                'selfLink': string;
                 'target': TargetConfiguration;
                 'update': DeploymentUpdate;
             }

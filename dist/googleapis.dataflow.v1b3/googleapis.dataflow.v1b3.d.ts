@@ -22,7 +22,7 @@ declare module google {
                         'create': (parameters: {'projectId': string, 'view'?: string, 'replaceJobId'?: string}, callback: (error: any, body: Job, response: any) => void) => Request;
                         'get': (parameters: {'projectId': string, 'jobId': string, 'view'?: string}, callback: (error: any, body: Job, response: any) => void) => Request;
                         'update': (parameters: {'projectId': string, 'jobId': string}, callback: (error: any, body: Job, response: any) => void) => Request;
-                        'list': (parameters: {'projectId': string, 'view'?: string, 'pageSize'?: number, 'pageToken'?: string}, callback: (error: any, body: ListJobsResponse, response: any) => void) => Request;
+                        'list': (parameters: {'projectId': string, 'filter'?: string, 'view'?: string, 'pageSize'?: number, 'pageToken'?: string}, callback: (error: any, body: ListJobsResponse, response: any) => void) => Request;
                         'getMetrics': (parameters: {'projectId': string, 'jobId': string, 'startTime'?: string}, callback: (error: any, body: JobMetrics, response: any) => void) => Request;
                     
                         'messages': {
@@ -107,7 +107,9 @@ declare module google {
                 
                 };
                 'network': string;
+                'subnetwork': string;
                 'workerHarnessContainerImage': string;
+                'numThreadsPerWorker': number;
             }
 
             export interface Package {
@@ -522,6 +524,7 @@ declare module google {
                 
                 };
                 'forwardingKeyBits': number;
+                'persistentStateVersion': number;
             }
 
             export interface ComputationTopology {

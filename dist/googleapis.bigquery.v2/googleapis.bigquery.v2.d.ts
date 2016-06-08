@@ -49,13 +49,35 @@ declare module google {
 
             }
 
+            export interface BigtableColumn {
+                'encoding': string;
+                'fieldName': string;
+                'onlyReadLatest': boolean;
+                'qualifierEncoded': string;
+                'qualifierString': string;
+                'type': string;
+            }
+
+            export interface BigtableColumnFamily {
+                'columns': BigtableColumn[];
+                'encoding': string;
+                'familyId': string;
+                'onlyReadLatest': boolean;
+                'type': string;
+            }
+
+            export interface BigtableOptions {
+                'columnFamilies': BigtableColumnFamily[];
+                'ignoreUnspecifiedColumnFamilies': boolean;
+            }
+
             export interface CsvOptions {
                 'allowJaggedRows': boolean;
                 'allowQuotedNewlines': boolean;
                 'encoding': string;
                 'fieldDelimiter': string;
                 'quote': string;
-                'skipLeadingRows': number;
+                'skipLeadingRows': string;
             }
 
             export interface Dataset {
@@ -126,8 +148,11 @@ declare module google {
             }
 
             export interface ExternalDataConfiguration {
+                'autodetect': boolean;
+                'bigtableOptions': BigtableOptions;
                 'compression': string;
                 'csvOptions': CsvOptions;
+                'googleSheetsOptions': GoogleSheetsOptions;
                 'ignoreUnknownValues': boolean;
                 'maxBadRecords': number;
                 'schema': TableSchema;
@@ -147,6 +172,10 @@ declare module google {
                 'schema': TableSchema;
                 'totalBytesProcessed': string;
                 'totalRows': string;
+            }
+
+            export interface GoogleSheetsOptions {
+                'skipLeadingRows': string;
             }
 
             export interface Job {
@@ -187,6 +216,7 @@ declare module google {
             export interface JobConfigurationLoad {
                 'allowJaggedRows': boolean;
                 'allowQuotedNewlines': boolean;
+                'autodetect': boolean;
                 'createDisposition': string;
                 'destinationTable': TableReference;
                 'encoding': string;
@@ -269,6 +299,7 @@ declare module google {
                 'cacheHit': boolean;
                 'queryPlan': ExplainQueryStage[];
                 'referencedTables': TableReference[];
+                'schema': TableSchema;
                 'totalBytesBilled': string;
                 'totalBytesProcessed': string;
             }
@@ -358,11 +389,13 @@ declare module google {
                 'lastModifiedTime': string;
                 'location': string;
                 'numBytes': string;
+                'numLongTermBytes': string;
                 'numRows': string;
                 'schema': TableSchema;
                 'selfLink': string;
                 'streamingBuffer': Streamingbuffer;
                 'tableReference': TableReference;
+                'timePartitioning': TimePartitioning;
                 'type': string;
                 'view': ViewDefinition;
             }
@@ -434,6 +467,11 @@ declare module google {
                 'fields': TableFieldSchema[];
             }
 
+            export interface TimePartitioning {
+                'expirationMs': string;
+                'type': string;
+            }
+
             export interface UserDefinedFunctionResource {
                 'inlineCode': string;
                 'resourceUri': string;
@@ -441,6 +479,7 @@ declare module google {
 
             export interface ViewDefinition {
                 'query': string;
+                'useLegacySql': boolean;
                 'userDefinedFunctionResources': UserDefinedFunctionResource[];
             }
 

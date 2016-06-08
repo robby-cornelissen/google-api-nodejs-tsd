@@ -15,6 +15,21 @@ declare module google {
             export interface Genomics {
                 new(options: any): Genomics;
 
+                'annotationsets': {
+                    'create': (parameters: any, callback: (error: any, body: AnnotationSet, response: any) => void) => Request;
+                    'get': (parameters: {'annotationSetId': string}, callback: (error: any, body: AnnotationSet, response: any) => void) => Request;
+                    'update': (parameters: {'annotationSetId': string, 'updateMask'?: string}, callback: (error: any, body: AnnotationSet, response: any) => void) => Request;
+                    'delete': (parameters: {'annotationSetId': string}, callback: (error: any, body: Empty, response: any) => void) => Request;
+                    'search': (parameters: any, callback: (error: any, body: SearchAnnotationSetsResponse, response: any) => void) => Request;
+                };
+                'annotations': {
+                    'create': (parameters: any, callback: (error: any, body: Annotation, response: any) => void) => Request;
+                    'batchCreate': (parameters: any, callback: (error: any, body: BatchCreateAnnotationsResponse, response: any) => void) => Request;
+                    'get': (parameters: {'annotationId': string}, callback: (error: any, body: Annotation, response: any) => void) => Request;
+                    'update': (parameters: {'annotationId': string, 'updateMask'?: string}, callback: (error: any, body: Annotation, response: any) => void) => Request;
+                    'delete': (parameters: {'annotationId': string}, callback: (error: any, body: Empty, response: any) => void) => Request;
+                    'search': (parameters: any, callback: (error: any, body: SearchAnnotationsResponse, response: any) => void) => Request;
+                };
                 'datasets': {
                     'list': (parameters: {'projectId'?: string, 'pageSize'?: number, 'pageToken'?: string}, callback: (error: any, body: ListDatasetsResponse, response: any) => void) => Request;
                     'create': (parameters: any, callback: (error: any, body: Dataset, response: any) => void) => Request;
@@ -66,6 +81,7 @@ declare module google {
                     'patch': (parameters: {'variantId': string, 'updateMask'?: string}, callback: (error: any, body: Variant, response: any) => void) => Request;
                     'delete': (parameters: {'variantId': string}, callback: (error: any, body: Empty, response: any) => void) => Request;
                     'get': (parameters: {'variantId': string}, callback: (error: any, body: Variant, response: any) => void) => Request;
+                    'merge': (parameters: any, callback: (error: any, body: Empty, response: any) => void) => Request;
                     'stream': (parameters: any, callback: (error: any, body: StreamVariantsResponse, response: any) => void) => Request;
                 };
                 'variantsets': {
@@ -86,6 +102,129 @@ declare module google {
 
             }
 
+            export interface AnnotationSet {
+                'id': string;
+                'datasetId': string;
+                'referenceSetId': string;
+                'name': string;
+                'sourceUri': string;
+                'type': string;
+                'info': {
+                    [name: string]: any[]
+                
+                };
+            }
+
+            export interface Empty {}
+
+            export interface SearchAnnotationSetsRequest {
+                'datasetIds': string[];
+                'referenceSetId': string;
+                'name': string;
+                'types': string[];
+                'pageToken': string;
+                'pageSize': number;
+            }
+
+            export interface SearchAnnotationSetsResponse {
+                'annotationSets': AnnotationSet[];
+                'nextPageToken': string;
+            }
+
+            export interface Annotation {
+                'id': string;
+                'annotationSetId': string;
+                'name': string;
+                'referenceId': string;
+                'referenceName': string;
+                'start': string;
+                'end': string;
+                'reverseStrand': boolean;
+                'type': string;
+                'variant': VariantAnnotation;
+                'transcript': Transcript;
+                'info': {
+                    [name: string]: any[]
+                
+                };
+            }
+
+            export interface VariantAnnotation {
+                'type': string;
+                'effect': string;
+                'alternateBases': string;
+                'geneId': string;
+                'transcriptIds': string[];
+                'conditions': ClinicalCondition[];
+                'clinicalSignificance': string;
+            }
+
+            export interface ClinicalCondition {
+                'names': string[];
+                'externalIds': ExternalId[];
+                'conceptId': string;
+                'omimId': string;
+            }
+
+            export interface ExternalId {
+                'sourceName': string;
+                'id': string;
+            }
+
+            export interface Transcript {
+                'geneId': string;
+                'exons': Exon[];
+                'codingSequence': CodingSequence;
+            }
+
+            export interface Exon {
+                'start': string;
+                'end': string;
+                'frame': number;
+            }
+
+            export interface CodingSequence {
+                'start': string;
+                'end': string;
+            }
+
+            export interface BatchCreateAnnotationsRequest {
+                'annotations': Annotation[];
+            }
+
+            export interface BatchCreateAnnotationsResponse {
+                'entries': Entry[];
+            }
+
+            export interface Entry {
+                'status': Status;
+                'annotation': Annotation;
+            }
+
+            export interface Status {
+                'code': number;
+                'message': string;
+                'details': {
+                    [name: string]: any
+                
+                }[];
+            }
+
+            export interface SearchAnnotationsRequest {
+                'annotationSetIds': string[];
+                'referenceId': string;
+                'referenceName': string;
+                'start': string;
+                'end': string;
+                'pageToken': string;
+                'pageSize': number;
+            }
+
+            export interface SearchAnnotationsResponse {
+                'annotations': Annotation[];
+                'nextPageToken': string;
+            }
+
             export interface ListDatasetsResponse {
                 'datasets': Dataset[];
                 'nextPageToken': string;
@@ -97,8 +236,6 @@ declare module google {
                 'name': string;
                 'createTime': string;
             }
-
-            export interface Empty {}
 
             export interface UndeleteDatasetRequest {}
 
@@ -139,15 +276,6 @@ declare module google {
                     [name: string]: any
                 
                 };
-            }
-
-            export interface Status {
-                'code': number;
-                'message': string;
-                'details': {
-                    [name: string]: any
-                
-                }[];
             }
 
             export interface ListOperationsResponse {
@@ -305,6 +433,8 @@ declare module google {
                 'referenceName': string;
                 'start': string;
                 'end': string;
+                'shard': number;
+                'totalShards': number;
             }
 
             export interface StreamReadsResponse {
@@ -369,6 +499,10 @@ declare module google {
                 'sourceUris': string[];
                 'format': string;
                 'normalizeReferenceNames': boolean;
+                'infoMergeConfig': {
+                    [name: string]: string
+                
+                };
             }
 
             export interface VariantSet {
@@ -377,6 +511,8 @@ declare module google {
                 'referenceSetId': string;
                 'referenceBounds': ReferenceBound[];
                 'metadata': VariantSetMetadata[];
+                'name': string;
+                'description': string;
             }
 
             export interface ReferenceBound {
@@ -464,6 +600,15 @@ declare module google {
                 };
             }
 
+            export interface MergeVariantsRequest {
+                'variantSetId': string;
+                'variants': Variant[];
+                'infoMergeConfig': {
+                    [name: string]: string
+                
+                };
+            }
+
             export interface SearchCallSetsRequest {
                 'variantSetIds': string[];
                 'name': string;
@@ -512,15 +657,31 @@ declare module google {
             export interface OperationMetadata {
                 'projectId': string;
                 'createTime': string;
+                'endTime': string;
                 'request': {
                     [name: string]: any
                 
                 };
                 'events': OperationEvent[];
+                'runtimeMetadata': {
+                    [name: string]: any
+                
+                };
             }
 
             export interface OperationEvent {
                 'description': string;
+            }
+
+            export interface RuntimeMetadata {
+                'gce': GCE;
+            }
+
+            export interface GCE {
+                'instanceName': string;
+                'zone': string;
+                'machineType': string;
+                'diskNames': string[];
             }
 
         }

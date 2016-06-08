@@ -24,7 +24,7 @@ declare module google {
                         'create': (parameters: {'userId': string}, callback: (error: any, body: Draft, response: any) => void) => Request;
                         'delete': (parameters: {'id': string, 'userId': string}, callback: (error: any, body: any, response: any) => void) => Request;
                         'get': (parameters: {'format'?: string, 'id': string, 'userId': string}, callback: (error: any, body: Draft, response: any) => void) => Request;
-                        'list': (parameters: {'maxResults'?: number, 'pageToken'?: string, 'userId': string}, callback: (error: any, body: ListDraftsResponse, response: any) => void) => Request;
+                        'list': (parameters: {'includeSpamTrash'?: boolean, 'maxResults'?: number, 'pageToken'?: string, 'userId': string}, callback: (error: any, body: ListDraftsResponse, response: any) => void) => Request;
                         'send': (parameters: {'userId': string}, callback: (error: any, body: Message, response: any) => void) => Request;
                         'update': (parameters: {'id': string, 'userId': string}, callback: (error: any, body: Draft, response: any) => void) => Request;
                     };
@@ -40,6 +40,7 @@ declare module google {
                         'update': (parameters: {'id': string, 'userId': string}, callback: (error: any, body: Label, response: any) => void) => Request;
                     };
                     'messages': {
+                        'batchDelete': (parameters: {'userId': string}, callback: (error: any, body: any, response: any) => void) => Request;
                         'delete': (parameters: {'id': string, 'userId': string}, callback: (error: any, body: any, response: any) => void) => Request;
                         'get': (parameters: {'format'?: string, 'id': string, 'metadataHeaders'?: string, 'userId': string}, callback: (error: any, body: Message, response: any) => void) => Request;
                         'import': (parameters: {'deleted'?: boolean, 'internalDateSource'?: string, 'neverMarkSpam'?: boolean, 'processForCalendar'?: boolean, 'userId': string}, callback: (error: any, body: Message, response: any) => void) => Request;
@@ -64,6 +65,10 @@ declare module google {
                     };
                 };
 
+            }
+
+            export interface BatchDeleteMessagesRequest {
+                'ids': string[];
             }
 
             export interface Draft {

@@ -16,26 +16,30 @@ declare module google {
                 new(options: any): Proximitybeacon;
 
                 'beacons': {
-                    'register': (parameters: any, callback: (error: any, body: Beacon, response: any) => void) => Request;
-                    'decommission': (parameters: {'beaconName': string}, callback: (error: any, body: Empty, response: any) => void) => Request;
-                    'get': (parameters: {'beaconName': string}, callback: (error: any, body: Beacon, response: any) => void) => Request;
-                    'list': (parameters: {'q'?: string, 'pageToken'?: string, 'pageSize'?: number}, callback: (error: any, body: ListBeaconsResponse, response: any) => void) => Request;
-                    'update': (parameters: {'beaconName': string}, callback: (error: any, body: Beacon, response: any) => void) => Request;
-                    'activate': (parameters: {'beaconName': string}, callback: (error: any, body: Empty, response: any) => void) => Request;
-                    'deactivate': (parameters: {'beaconName': string}, callback: (error: any, body: Empty, response: any) => void) => Request;
+                    'register': (parameters: {'projectId'?: string}, callback: (error: any, body: Beacon, response: any) => void) => Request;
+                    'decommission': (parameters: {'beaconName': string, 'projectId'?: string}, callback: (error: any, body: Empty, response: any) => void) => Request;
+                    'get': (parameters: {'beaconName': string, 'projectId'?: string}, callback: (error: any, body: Beacon, response: any) => void) => Request;
+                    'list': (parameters: {'q'?: string, 'pageToken'?: string, 'pageSize'?: number, 'projectId'?: string}, callback: (error: any, body: ListBeaconsResponse, response: any) => void) => Request;
+                    'update': (parameters: {'beaconName': string, 'projectId'?: string}, callback: (error: any, body: Beacon, response: any) => void) => Request;
+                    'activate': (parameters: {'beaconName': string, 'projectId'?: string}, callback: (error: any, body: Empty, response: any) => void) => Request;
+                    'deactivate': (parameters: {'beaconName': string, 'projectId'?: string}, callback: (error: any, body: Empty, response: any) => void) => Request;
                 
                     'attachments': {
-                        'create': (parameters: {'beaconName': string}, callback: (error: any, body: BeaconAttachment, response: any) => void) => Request;
-                        'list': (parameters: {'beaconName': string, 'namespacedType'?: string}, callback: (error: any, body: ListBeaconAttachmentsResponse, response: any) => void) => Request;
-                        'delete': (parameters: {'attachmentName': string}, callback: (error: any, body: Empty, response: any) => void) => Request;
-                        'batchDelete': (parameters: {'beaconName': string, 'namespacedType'?: string}, callback: (error: any, body: DeleteAttachmentsResponse, response: any) => void) => Request;
+                        'create': (parameters: {'beaconName': string, 'projectId'?: string}, callback: (error: any, body: BeaconAttachment, response: any) => void) => Request;
+                        'list': (parameters: {'beaconName': string, 'namespacedType'?: string, 'projectId'?: string}, callback: (error: any, body: ListBeaconAttachmentsResponse, response: any) => void) => Request;
+                        'delete': (parameters: {'attachmentName': string, 'projectId'?: string}, callback: (error: any, body: Empty, response: any) => void) => Request;
+                        'batchDelete': (parameters: {'beaconName': string, 'namespacedType'?: string, 'projectId'?: string}, callback: (error: any, body: DeleteAttachmentsResponse, response: any) => void) => Request;
                     };
                     'diagnostics': {
-                        'list': (parameters: {'beaconName': string, 'pageSize'?: number, 'pageToken'?: string, 'alertFilter'?: string}, callback: (error: any, body: ListDiagnosticsResponse, response: any) => void) => Request;
+                        'list': (parameters: {'beaconName': string, 'pageSize'?: number, 'pageToken'?: string, 'alertFilter'?: string, 'projectId'?: string}, callback: (error: any, body: ListDiagnosticsResponse, response: any) => void) => Request;
                     };
                 };
                 'namespaces': {
-                    'list': (parameters: any, callback: (error: any, body: ListNamespacesResponse, response: any) => void) => Request;
+                    'list': (parameters: {'projectId'?: string}, callback: (error: any, body: ListNamespacesResponse, response: any) => void) => Request;
+                    'update': (parameters: {'namespaceName': string, 'projectId'?: string}, callback: (error: any, body: Namespace, response: any) => void) => Request;
+                };
+                'v1beta1': {
+                    'getEidparams': (parameters: any, callback: (error: any, body: EphemeralIdRegistrationParams, response: any) => void) => Request;
                 };
                 'beaconinfo': {
                     'getforobserved': (parameters: any, callback: (error: any, body: GetInfoForObservedBeaconsResponse, response: any) => void) => Request;
@@ -56,6 +60,8 @@ declare module google {
                     [name: string]: string
                 
                 };
+                'ephemeralIdRegistration': EphemeralIdRegistration;
+                'provisioningKey': string;
             }
 
             export interface AdvertisedId {
@@ -70,6 +76,15 @@ declare module google {
 
             export interface IndoorLevel {
                 'name': string;
+            }
+
+            export interface EphemeralIdRegistration {
+                'beaconEcdhPublicKey': string;
+                'serviceEcdhPublicKey': string;
+                'beaconIdentityKey': string;
+                'rotationPeriodExponent': number;
+                'initialClockValue': string;
+                'initialEid': string;
             }
 
             export interface Empty {}
@@ -101,6 +116,12 @@ declare module google {
             export interface Namespace {
                 'namespaceName': string;
                 'servingVisibility': string;
+            }
+
+            export interface EphemeralIdRegistrationParams {
+                'serviceEcdhPublicKey': string;
+                'minRotationPeriodExponent': number;
+                'maxRotationPeriodExponent': number;
             }
 
             export interface ListDiagnosticsResponse {
@@ -138,7 +159,6 @@ declare module google {
             export interface BeaconInfo {
                 'advertisedId': AdvertisedId;
                 'beaconName': string;
-                'description': string;
                 'attachments': AttachmentInfo[];
             }
 

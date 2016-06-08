@@ -106,7 +106,7 @@ declare module google {
                         'list': (parameters: {'association'?: string, 'locale'?: string, 'maxAllowedMaturityRating'?: string, 'source'?: string, 'volumeId': string}, callback: (error: any, body: Volumes, response: any) => void) => Request;
                     };
                     'mybooks': {
-                        'list': (parameters: {'acquireMethod'?: string, 'locale'?: string, 'maxResults'?: number, 'processingState'?: string, 'source'?: string, 'startIndex'?: number}, callback: (error: any, body: Volumes, response: any) => void) => Request;
+                        'list': (parameters: {'acquireMethod'?: string, 'country'?: string, 'locale'?: string, 'maxResults'?: number, 'processingState'?: string, 'source'?: string, 'startIndex'?: number}, callback: (error: any, body: Volumes, response: any) => void) => Request;
                     };
                     'recommended': {
                         'list': (parameters: {'locale'?: string, 'maxAllowedMaturityRating'?: string, 'source'?: string}, callback: (error: any, body: Volumes, response: any) => void) => Request;
@@ -423,11 +423,15 @@ declare module google {
 
             export interface Notification {
                 'body': string;
+                'crmExperimentIds': string[];
+                'doc_id': string;
+                'doc_type': string;
                 'dont_show_notification': boolean;
                 'iconUrl': string;
                 'kind': string;
                 'notification_type': string;
                 'pcampaign_id': string;
+                'reason': string;
                 'show_notification_settings_action': boolean;
                 'targetUrl': string;
                 'title': string;
@@ -596,9 +600,15 @@ declare module google {
                         'updated': string;
                     };
                     'entitlementType': number;
+                    'familySharing': {
+                        'familyRole': string;
+                        'isSharingAllowed': boolean;
+                        'isSharingDisabledByFop': boolean;
+                    };
                     'isFamilySharedFromUser': boolean;
                     'isFamilySharedToUser': boolean;
                     'isFamilySharingAllowed': boolean;
+                    'isFamilySharingDisabledByFop': boolean;
                     'isInMyBooks': boolean;
                     'isPreordered': boolean;
                     'isPurchased': boolean;

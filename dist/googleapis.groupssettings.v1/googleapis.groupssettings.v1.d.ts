@@ -28,10 +28,12 @@ declare module google {
                 'allowGoogleCommunication': string;
                 'allowWebPosting': string;
                 'archiveOnly': string;
+                'customFooterText': string;
                 'customReplyTo': string;
                 'defaultMessageDenyNotificationText': string;
                 'description': string;
                 'email': string;
+                'includeCustomFooter': string;
                 'includeInGlobalAddressList': string;
                 'isArchived': string;
                 'kind': string;
@@ -45,6 +47,7 @@ declare module google {
                 'sendMessageDenyNotification': string;
                 'showInGroupDirectory': string;
                 'spamModerationLevel': string;
+                'whoCanAdd': string;
                 'whoCanContactOwner': string;
                 'whoCanInvite': string;
                 'whoCanJoin': string;

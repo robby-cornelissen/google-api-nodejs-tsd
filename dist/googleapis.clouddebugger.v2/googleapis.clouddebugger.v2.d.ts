@@ -27,13 +27,13 @@ declare module google {
                 };
                 'debugger': {
                     'debuggees': {
-                        'list': (parameters: {'project'?: string, 'includeInactive'?: boolean}, callback: (error: any, body: ListDebuggeesResponse, response: any) => void) => Request;
+                        'list': (parameters: {'project'?: string, 'includeInactive'?: boolean, 'clientVersion'?: string}, callback: (error: any, body: ListDebuggeesResponse, response: any) => void) => Request;
                     
                         'breakpoints': {
-                            'set': (parameters: {'debuggeeId': string}, callback: (error: any, body: SetBreakpointResponse, response: any) => void) => Request;
-                            'get': (parameters: {'debuggeeId': string, 'breakpointId': string}, callback: (error: any, body: GetBreakpointResponse, response: any) => void) => Request;
-                            'delete': (parameters: {'debuggeeId': string, 'breakpointId': string}, callback: (error: any, body: Empty, response: any) => void) => Request;
-                            'list': (parameters: {'debuggeeId': string, 'includeAllUsers'?: boolean, 'includeInactive'?: boolean, 'action.value'?: string, 'stripResults'?: boolean, 'waitToken'?: string}, callback: (error: any, body: ListBreakpointsResponse, response: any) => void) => Request;
+                            'set': (parameters: {'debuggeeId': string, 'clientVersion'?: string}, callback: (error: any, body: SetBreakpointResponse, response: any) => void) => Request;
+                            'get': (parameters: {'debuggeeId': string, 'breakpointId': string, 'clientVersion'?: string}, callback: (error: any, body: GetBreakpointResponse, response: any) => void) => Request;
+                            'delete': (parameters: {'debuggeeId': string, 'breakpointId': string, 'clientVersion'?: string}, callback: (error: any, body: Empty, response: any) => void) => Request;
+                            'list': (parameters: {'debuggeeId': string, 'includeAllUsers'?: boolean, 'includeInactive'?: boolean, 'action.value'?: string, 'stripResults'?: boolean, 'waitToken'?: string, 'clientVersion'?: string}, callback: (error: any, body: ListBreakpointsResponse, response: any) => void) => Request;
                         };
                     };
                 };
@@ -158,6 +158,10 @@ declare module google {
                 'stackFrames': StackFrame[];
                 'evaluatedExpressions': Variable[];
                 'variableTable': Variable[];
+                'labels': {
+                    [name: string]: string
+                
+                };
             }
 
             export interface SourceLocation {

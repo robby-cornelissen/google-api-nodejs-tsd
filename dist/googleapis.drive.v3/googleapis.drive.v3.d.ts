@@ -50,7 +50,7 @@ declare module google {
                     'delete': (parameters: {'fileId': string, 'permissionId': string}, callback: (error: any, body: any, response: any) => void) => Request;
                     'get': (parameters: {'fileId': string, 'permissionId': string}, callback: (error: any, body: Permission, response: any) => void) => Request;
                     'list': (parameters: {'fileId': string}, callback: (error: any, body: PermissionList, response: any) => void) => Request;
-                    'update': (parameters: {'fileId': string, 'permissionId': string, 'transferOwnership'?: boolean}, callback: (error: any, body: Permission, response: any) => void) => Request;
+                    'update': (parameters: {'fileId': string, 'permissionId': string, 'removeExpiration'?: boolean, 'transferOwnership'?: boolean}, callback: (error: any, body: Permission, response: any) => void) => Request;
                 };
                 'replies': {
                     'create': (parameters: {'commentId': string, 'fileId': string}, callback: (error: any, body: Reply, response: any) => void) => Request;
@@ -204,6 +204,7 @@ declare module google {
                     'whiteBalance': string;
                     'width': number;
                 };
+                'isAppAuthorized': boolean;
                 'kind': string;
                 'lastModifyingUser': User;
                 'md5Checksum': string;
@@ -260,6 +261,7 @@ declare module google {
                 'displayName': string;
                 'domain': string;
                 'emailAddress': string;
+                'expirationTime': string;
                 'id': string;
                 'kind': string;
                 'photoLink': string;
