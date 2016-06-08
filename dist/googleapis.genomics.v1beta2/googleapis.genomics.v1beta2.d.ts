@@ -633,8 +633,10 @@ declare module google {
 
             export interface VariantSet {
                 'datasetId': string;
+                'description': string;
                 'id': string;
                 'metadata': Metadata[];
+                'name': string;
                 'referenceBounds': ReferenceBound[];
                 'referenceSetId': string;
             }

@@ -26,11 +26,8 @@ declare module google {
                     'get': (parameters: {'pipelineId': string}, callback: (error: any, body: Pipeline, response: any) => void) => Request;
                     'list': (parameters: {'projectId'?: string, 'namePrefix'?: string, 'pageSize'?: number, 'pageToken'?: string}, callback: (error: any, body: ListPipelinesResponse, response: any) => void) => Request;
                     'delete': (parameters: {'pipelineId': string}, callback: (error: any, body: Empty, response: any) => void) => Request;
-                    'update_status': (parameters: any, callback: (error: any, body: Empty, response: any) => void) => Request;
-                
-                    'controller_config': {
-                        'get': (parameters: {'operationId': string, 'validationToken'?: string}, callback: (error: any, body: ControllerConfig, response: any) => void) => Request;
-                    };
+                    'getControllerConfig': (parameters: {'operationId'?: string, 'validationToken'?: string}, callback: (error: any, body: ControllerConfig, response: any) => void) => Request;
+                    'setOperationStatus': (parameters: any, callback: (error: any, body: Empty, response: any) => void) => Request;
                 };
 
             }
@@ -101,6 +98,7 @@ declare module google {
                 'minimumRamGb': number;
                 'disks': Disk[];
                 'zones': string[];
+                'bootDiskSizeGb': number;
             }
 
             export interface Disk {
@@ -176,7 +174,7 @@ declare module google {
                 'values': string[];
             }
 
-            export interface UpdateStatusRequest {
+            export interface SetOperationStatusRequest {
                 'operationId': string;
                 'timestampEvents': TimestampEvent[];
                 'errorCode': string;
@@ -200,15 +198,31 @@ declare module google {
             export interface OperationMetadata {
                 'projectId': string;
                 'createTime': string;
+                'endTime': string;
                 'request': {
                     [name: string]: any
                 
                 };
                 'events': OperationEvent[];
+                'runtimeMetadata': {
+                    [name: string]: any
+                
+                };
             }
 
             export interface OperationEvent {
                 'description': string;
+            }
+
+            export interface RuntimeMetadata {
+                'gce': GCE;
+            }
+
+            export interface GCE {
+                'instanceName': string;
+                'zone': string;
+                'machineType': string;
+                'diskNames': string[];
             }
 
         }

@@ -49,6 +49,11 @@ declare module google {
 
             }
 
+            export interface AuditConfig {
+                'exemptedMembers': string[];
+                'service': string;
+            }
+
             export interface AuthorizedKeysView {
                 'keys': string[];
                 'sudoer': boolean;
@@ -135,6 +140,7 @@ declare module google {
             export interface Operation {
                 'clientOperationId': string;
                 'creationTimestamp': string;
+                'description': string;
                 'endTime': string;
                 'error': {
                     'errors': {
@@ -179,8 +185,10 @@ declare module google {
             }
 
             export interface Policy {
+                'auditConfigs': AuditConfig[];
                 'bindings': Binding[];
                 'etag': string;
+                'iamOwned': boolean;
                 'rules': Rule[];
                 'version': number;
             }

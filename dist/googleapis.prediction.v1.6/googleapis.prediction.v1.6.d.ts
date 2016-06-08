@@ -144,7 +144,7 @@ declare module google {
                     'label': string;
                     'score': string;
                 }[];
-                'outputValue': number;
+                'outputValue': string;
                 'selfLink': string;
             }
 

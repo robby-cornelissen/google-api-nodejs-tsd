@@ -134,6 +134,7 @@ declare module google {
             }
 
             export interface DatabaseInstance {
+                'backendType': string;
                 'currentDiskSize': string;
                 'databaseVersion': string;
                 'etag': string;
@@ -158,6 +159,7 @@ declare module google {
                 'serviceAccountEmailAddress': string;
                 'settings': Settings;
                 'state': string;
+                'suspensionReason': string[];
             }
 
             export interface DatabasesListResponse {
@@ -343,6 +345,7 @@ declare module google {
                 'pricingPlan': string;
                 'replicationType': string;
                 'settingsVersion': string;
+                'storageAutoResize': boolean;
                 'tier': string;
             }
 
@@ -374,6 +377,7 @@ declare module google {
             export interface SslCertsInsertResponse {
                 'clientCert': SslCertDetail;
                 'kind': string;
+                'operation': Operation;
                 'serverCaCert': SslCert;
             }
 

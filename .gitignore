@@ -39,3 +39,5 @@ node_modules
 # Javascript and Javascript
 lib/**/*.js
 lib/**/*.js.map
+bin/**/*.js
+bin/**/*.js.map

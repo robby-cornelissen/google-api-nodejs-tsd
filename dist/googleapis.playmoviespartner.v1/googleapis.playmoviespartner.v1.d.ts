@@ -17,18 +17,26 @@ declare module google {
 
                 'accounts': {
                     'avails': {
-                        'list': (parameters: {'accountId': string, 'pageSize'?: number, 'pageToken'?: string, 'pphNames'?: string, 'studioNames'?: string, 'title'?: string, 'territories'?: string, 'altId'?: string, 'videoIds'?: string}, callback: (error: any, body: ListAvailsResponse, response: any) => void) => Request;
+                        'get': (parameters: {'accountId': string, 'availId': string}, callback: (error: any, body: Avail, response: any) => void) => Request;
+                        'list': (parameters: {'accountId': string, 'pageSize'?: number, 'pageToken'?: string, 'pphNames'?: string, 'studioNames'?: string, 'title'?: string, 'territories'?: string, 'altId'?: string, 'videoIds'?: string, 'altIds'?: string}, callback: (error: any, body: ListAvailsResponse, response: any) => void) => Request;
                     };
                     'orders': {
                         'get': (parameters: {'accountId': string, 'orderId': string}, callback: (error: any, body: Order, response: any) => void) => Request;
-                        'list': (parameters: {'accountId': string, 'pageSize'?: number, 'pageToken'?: string, 'pphNames'?: string, 'studioNames'?: string, 'name'?: string, 'status'?: string, 'customId'?: string}, callback: (error: any, body: ListOrdersResponse, response: any) => void) => Request;
+                        'list': (parameters: {'accountId': string, 'pageSize'?: number, 'pageToken'?: string, 'pphNames'?: string, 'studioNames'?: string, 'name'?: string, 'status'?: string, 'customId'?: string, 'videoIds'?: string}, callback: (error: any, body: ListOrdersResponse, response: any) => void) => Request;
                     };
                     'experienceLocales': {
                         'get': (parameters: {'accountId': string, 'elId': string}, callback: (error: any, body: ExperienceLocale, response: any) => void) => Request;
                         'list': (parameters: {'accountId': string, 'pageSize'?: number, 'pageToken'?: string, 'pphNames'?: string, 'studioNames'?: string, 'titleLevelEidr'?: string, 'editLevelEidr'?: string, 'status'?: string, 'customId'?: string, 'altCutId'?: string}, callback: (error: any, body: ListExperienceLocalesResponse, response: any) => void) => Request;
                     };
+                    'components': {
+                        'list': (parameters: {'accountId': string, 'pageSize'?: number, 'pageToken'?: string, 'pphNames'?: string, 'studioNames'?: string, 'titleLevelEidr'?: string, 'editLevelEidr'?: string, 'status'?: string, 'customId'?: string, 'inventoryId'?: string, 'presentationId'?: string, 'playableSequenceId'?: string, 'elId'?: string, 'altCutId'?: string, 'filename'?: string}, callback: (error: any, body: ListComponentsResponse, response: any) => void) => Request;
+                    
+                        'type': {
+                            'get': (parameters: {'accountId': string, 'componentId': string, 'type': string}, callback: (error: any, body: Component, response: any) => void) => Request;
+                        };
+                    };
                     'storeInfos': {
-                        'list': (parameters: {'accountId': string, 'pageSize'?: number, 'pageToken'?: string, 'pphNames'?: string, 'studioNames'?: string, 'videoId'?: string, 'countries'?: string, 'name'?: string, 'videoIds'?: string}, callback: (error: any, body: ListStoreInfosResponse, response: any) => void) => Request;
+                        'list': (parameters: {'accountId': string, 'pageSize'?: number, 'pageToken'?: string, 'pphNames'?: string, 'studioNames'?: string, 'videoId'?: string, 'countries'?: string, 'name'?: string, 'videoIds'?: string, 'mids'?: string, 'seasonIds'?: string}, callback: (error: any, body: ListStoreInfosResponse, response: any) => void) => Request;
                     
                         'country': {
                             'get': (parameters: {'accountId': string, 'videoId': string, 'country': string}, callback: (error: any, body: StoreInfo, response: any) => void) => Request;
@@ -38,12 +46,8 @@ declare module google {
 
             }
 
-            export interface ListAvailsResponse {
-                'avails': Avail[];
-                'nextPageToken': string;
-            }
-
             export interface Avail {
+                'availId': string;
                 'displayName': string;
                 'storeLanguage': string;
                 'territory': string;
@@ -78,6 +82,12 @@ declare module google {
                 'pphNames': string[];
             }
 
+            export interface ListAvailsResponse {
+                'avails': Avail[];
+                'nextPageToken': string;
+                'totalSize': number;
+            }
+
             export interface Order {
                 'orderId': string;
                 'customId': string;
@@ -107,6 +117,7 @@ declare module google {
             export interface ListOrdersResponse {
                 'orders': Order[];
                 'nextPageToken': string;
+                'totalSize': number;
             }
 
             export interface ExperienceLocale {
@@ -138,6 +149,38 @@ declare module google {
             export interface ListExperienceLocalesResponse {
                 'experienceLocales': ExperienceLocale[];
                 'nextPageToken': string;
+                'totalSize': number;
+            }
+
+            export interface Component {
+                'componentId': string;
+                'type': string;
+                'elIds': string[];
+                'language': string;
+                'titleLevelEidrs': string[];
+                'editLevelEidrs': string[];
+                'altCutIds': string[];
+                'customIds': string[];
+                'componentDetailType': string;
+                'playableUnitType': string;
+                'status': string;
+                'statusDetail': string;
+                'rejectionNote': string;
+                'approvedTime': string;
+                'name': string;
+                'processingErrors': string[];
+                'priority': number;
+                'receivedTime': string;
+                'filename': string;
+                'studioName': string;
+                'pphName': string;
+                'normalizedPriority': string;
+            }
+
+            export interface ListComponentsResponse {
+                'components': Component[];
+                'nextPageToken': string;
+                'totalSize': number;
             }
 
             export interface StoreInfo {
@@ -171,6 +214,7 @@ declare module google {
             export interface ListStoreInfosResponse {
                 'storeInfos': StoreInfo[];
                 'nextPageToken': string;
+                'totalSize': number;
             }
 
         }

@@ -16,87 +16,87 @@ declare module google {
                 new(options: any): Games;
 
                 'achievementDefinitions': {
-                    'list': (parameters: {'language'?: string, 'maxResults'?: number, 'pageToken'?: string}, callback: (error: any, body: AchievementDefinitionsListResponse, response: any) => void) => Request;
+                    'list': (parameters: {'consistencyToken'?: string, 'language'?: string, 'maxResults'?: number, 'pageToken'?: string}, callback: (error: any, body: AchievementDefinitionsListResponse, response: any) => void) => Request;
                 };
                 'achievements': {
-                    'increment': (parameters: {'achievementId': string, 'requestId'?: string, 'stepsToIncrement': number}, callback: (error: any, body: AchievementIncrementResponse, response: any) => void) => Request;
-                    'list': (parameters: {'language'?: string, 'maxResults'?: number, 'pageToken'?: string, 'playerId': string, 'state'?: string}, callback: (error: any, body: PlayerAchievementListResponse, response: any) => void) => Request;
-                    'reveal': (parameters: {'achievementId': string}, callback: (error: any, body: AchievementRevealResponse, response: any) => void) => Request;
-                    'setStepsAtLeast': (parameters: {'achievementId': string, 'steps': number}, callback: (error: any, body: AchievementSetStepsAtLeastResponse, response: any) => void) => Request;
-                    'unlock': (parameters: {'achievementId': string}, callback: (error: any, body: AchievementUnlockResponse, response: any) => void) => Request;
-                    'updateMultiple': (parameters: any, callback: (error: any, body: AchievementUpdateMultipleResponse, response: any) => void) => Request;
+                    'increment': (parameters: {'achievementId': string, 'consistencyToken'?: string, 'requestId'?: string, 'stepsToIncrement': number}, callback: (error: any, body: AchievementIncrementResponse, response: any) => void) => Request;
+                    'list': (parameters: {'consistencyToken'?: string, 'language'?: string, 'maxResults'?: number, 'pageToken'?: string, 'playerId': string, 'state'?: string}, callback: (error: any, body: PlayerAchievementListResponse, response: any) => void) => Request;
+                    'reveal': (parameters: {'achievementId': string, 'consistencyToken'?: string}, callback: (error: any, body: AchievementRevealResponse, response: any) => void) => Request;
+                    'setStepsAtLeast': (parameters: {'achievementId': string, 'consistencyToken'?: string, 'steps': number}, callback: (error: any, body: AchievementSetStepsAtLeastResponse, response: any) => void) => Request;
+                    'unlock': (parameters: {'achievementId': string, 'consistencyToken'?: string}, callback: (error: any, body: AchievementUnlockResponse, response: any) => void) => Request;
+                    'updateMultiple': (parameters: {'consistencyToken'?: string}, callback: (error: any, body: AchievementUpdateMultipleResponse, response: any) => void) => Request;
                 };
                 'applications': {
-                    'get': (parameters: {'applicationId': string, 'language'?: string, 'platformType'?: string}, callback: (error: any, body: Application, response: any) => void) => Request;
-                    'played': (parameters: any, callback: (error: any, body: any, response: any) => void) => Request;
-                    'verify': (parameters: {'applicationId': string}, callback: (error: any, body: ApplicationVerifyResponse, response: any) => void) => Request;
+                    'get': (parameters: {'applicationId': string, 'consistencyToken'?: string, 'language'?: string, 'platformType'?: string}, callback: (error: any, body: Application, response: any) => void) => Request;
+                    'played': (parameters: {'consistencyToken'?: string}, callback: (error: any, body: any, response: any) => void) => Request;
+                    'verify': (parameters: {'applicationId': string, 'consistencyToken'?: string}, callback: (error: any, body: ApplicationVerifyResponse, response: any) => void) => Request;
                 };
                 'events': {
-                    'listByPlayer': (parameters: {'language'?: string, 'maxResults'?: number, 'pageToken'?: string}, callback: (error: any, body: PlayerEventListResponse, response: any) => void) => Request;
-                    'listDefinitions': (parameters: {'language'?: string, 'maxResults'?: number, 'pageToken'?: string}, callback: (error: any, body: EventDefinitionListResponse, response: any) => void) => Request;
-                    'record': (parameters: {'language'?: string}, callback: (error: any, body: EventUpdateResponse, response: any) => void) => Request;
+                    'listByPlayer': (parameters: {'consistencyToken'?: string, 'language'?: string, 'maxResults'?: number, 'pageToken'?: string}, callback: (error: any, body: PlayerEventListResponse, response: any) => void) => Request;
+                    'listDefinitions': (parameters: {'consistencyToken'?: string, 'language'?: string, 'maxResults'?: number, 'pageToken'?: string}, callback: (error: any, body: EventDefinitionListResponse, response: any) => void) => Request;
+                    'record': (parameters: {'consistencyToken'?: string, 'language'?: string}, callback: (error: any, body: EventUpdateResponse, response: any) => void) => Request;
                 };
                 'leaderboards': {
-                    'get': (parameters: {'language'?: string, 'leaderboardId': string}, callback: (error: any, body: Leaderboard, response: any) => void) => Request;
-                    'list': (parameters: {'language'?: string, 'maxResults'?: number, 'pageToken'?: string}, callback: (error: any, body: LeaderboardListResponse, response: any) => void) => Request;
+                    'get': (parameters: {'consistencyToken'?: string, 'language'?: string, 'leaderboardId': string}, callback: (error: any, body: Leaderboard, response: any) => void) => Request;
+                    'list': (parameters: {'consistencyToken'?: string, 'language'?: string, 'maxResults'?: number, 'pageToken'?: string}, callback: (error: any, body: LeaderboardListResponse, response: any) => void) => Request;
                 };
                 'metagame': {
-                    'getMetagameConfig': (parameters: any, callback: (error: any, body: MetagameConfig, response: any) => void) => Request;
-                    'listCategoriesByPlayer': (parameters: {'collection': string, 'language'?: string, 'maxResults'?: number, 'pageToken'?: string, 'playerId': string}, callback: (error: any, body: CategoryListResponse, response: any) => void) => Request;
+                    'getMetagameConfig': (parameters: {'consistencyToken'?: string}, callback: (error: any, body: MetagameConfig, response: any) => void) => Request;
+                    'listCategoriesByPlayer': (parameters: {'collection': string, 'consistencyToken'?: string, 'language'?: string, 'maxResults'?: number, 'pageToken'?: string, 'playerId': string}, callback: (error: any, body: CategoryListResponse, response: any) => void) => Request;
                 };
                 'players': {
-                    'get': (parameters: {'language'?: string, 'playerId': string}, callback: (error: any, body: Player, response: any) => void) => Request;
-                    'list': (parameters: {'collection': string, 'language'?: string, 'maxResults'?: number, 'pageToken'?: string}, callback: (error: any, body: PlayerListResponse, response: any) => void) => Request;
+                    'get': (parameters: {'consistencyToken'?: string, 'language'?: string, 'playerId': string}, callback: (error: any, body: Player, response: any) => void) => Request;
+                    'list': (parameters: {'collection': string, 'consistencyToken'?: string, 'language'?: string, 'maxResults'?: number, 'pageToken'?: string}, callback: (error: any, body: PlayerListResponse, response: any) => void) => Request;
                 };
                 'pushtokens': {
-                    'remove': (parameters: any, callback: (error: any, body: any, response: any) => void) => Request;
-                    'update': (parameters: any, callback: (error: any, body: any, response: any) => void) => Request;
+                    'remove': (parameters: {'consistencyToken'?: string}, callback: (error: any, body: any, response: any) => void) => Request;
+                    'update': (parameters: {'consistencyToken'?: string}, callback: (error: any, body: any, response: any) => void) => Request;
                 };
                 'questMilestones': {
-                    'claim': (parameters: {'milestoneId': string, 'questId': string, 'requestId': string}, callback: (error: any, body: any, response: any) => void) => Request;
+                    'claim': (parameters: {'consistencyToken'?: string, 'milestoneId': string, 'questId': string, 'requestId': string}, callback: (error: any, body: any, response: any) => void) => Request;
                 };
                 'quests': {
-                    'accept': (parameters: {'language'?: string, 'questId': string}, callback: (error: any, body: Quest, response: any) => void) => Request;
-                    'list': (parameters: {'language'?: string, 'maxResults'?: number, 'pageToken'?: string, 'playerId': string}, callback: (error: any, body: QuestListResponse, response: any) => void) => Request;
+                    'accept': (parameters: {'consistencyToken'?: string, 'language'?: string, 'questId': string}, callback: (error: any, body: Quest, response: any) => void) => Request;
+                    'list': (parameters: {'consistencyToken'?: string, 'language'?: string, 'maxResults'?: number, 'pageToken'?: string, 'playerId': string}, callback: (error: any, body: QuestListResponse, response: any) => void) => Request;
                 };
                 'revisions': {
-                    'check': (parameters: {'clientRevision': string}, callback: (error: any, body: RevisionCheckResponse, response: any) => void) => Request;
+                    'check': (parameters: {'clientRevision': string, 'consistencyToken'?: string}, callback: (error: any, body: RevisionCheckResponse, response: any) => void) => Request;
                 };
                 'rooms': {
-                    'create': (parameters: {'language'?: string}, callback: (error: any, body: Room, response: any) => void) => Request;
-                    'decline': (parameters: {'language'?: string, 'roomId': string}, callback: (error: any, body: Room, response: any) => void) => Request;
-                    'dismiss': (parameters: {'roomId': string}, callback: (error: any, body: any, response: any) => void) => Request;
-                    'get': (parameters: {'language'?: string, 'roomId': string}, callback: (error: any, body: Room, response: any) => void) => Request;
-                    'join': (parameters: {'language'?: string, 'roomId': string}, callback: (error: any, body: Room, response: any) => void) => Request;
-                    'leave': (parameters: {'language'?: string, 'roomId': string}, callback: (error: any, body: Room, response: any) => void) => Request;
-                    'list': (parameters: {'language'?: string, 'maxResults'?: number, 'pageToken'?: string}, callback: (error: any, body: RoomList, response: any) => void) => Request;
-                    'reportStatus': (parameters: {'language'?: string, 'roomId': string}, callback: (error: any, body: RoomStatus, response: any) => void) => Request;
+                    'create': (parameters: {'consistencyToken'?: string, 'language'?: string}, callback: (error: any, body: Room, response: any) => void) => Request;
+                    'decline': (parameters: {'consistencyToken'?: string, 'language'?: string, 'roomId': string}, callback: (error: any, body: Room, response: any) => void) => Request;
+                    'dismiss': (parameters: {'consistencyToken'?: string, 'roomId': string}, callback: (error: any, body: any, response: any) => void) => Request;
+                    'get': (parameters: {'consistencyToken'?: string, 'language'?: string, 'roomId': string}, callback: (error: any, body: Room, response: any) => void) => Request;
+                    'join': (parameters: {'consistencyToken'?: string, 'language'?: string, 'roomId': string}, callback: (error: any, body: Room, response: any) => void) => Request;
+                    'leave': (parameters: {'consistencyToken'?: string, 'language'?: string, 'roomId': string}, callback: (error: any, body: Room, response: any) => void) => Request;
+                    'list': (parameters: {'consistencyToken'?: string, 'language'?: string, 'maxResults'?: number, 'pageToken'?: string}, callback: (error: any, body: RoomList, response: any) => void) => Request;
+                    'reportStatus': (parameters: {'consistencyToken'?: string, 'language'?: string, 'roomId': string}, callback: (error: any, body: RoomStatus, response: any) => void) => Request;
                 };
                 'scores': {
-                    'get': (parameters: {'includeRankType'?: string, 'language'?: string, 'leaderboardId': string, 'maxResults'?: number, 'pageToken'?: string, 'playerId': string, 'timeSpan': string}, callback: (error: any, body: PlayerLeaderboardScoreListResponse, response: any) => void) => Request;
-                    'list': (parameters: {'collection': string, 'language'?: string, 'leaderboardId': string, 'maxResults'?: number, 'pageToken'?: string, 'timeSpan': string}, callback: (error: any, body: LeaderboardScores, response: any) => void) => Request;
-                    'listWindow': (parameters: {'collection': string, 'language'?: string, 'leaderboardId': string, 'maxResults'?: number, 'pageToken'?: string, 'resultsAbove'?: number, 'returnTopIfAbsent'?: boolean, 'timeSpan': string}, callback: (error: any, body: LeaderboardScores, response: any) => void) => Request;
-                    'submit': (parameters: {'language'?: string, 'leaderboardId': string, 'score': string, 'scoreTag'?: string}, callback: (error: any, body: PlayerScoreResponse, response: any) => void) => Request;
-                    'submitMultiple': (parameters: {'language'?: string}, callback: (error: any, body: PlayerScoreListResponse, response: any) => void) => Request;
+                    'get': (parameters: {'consistencyToken'?: string, 'includeRankType'?: string, 'language'?: string, 'leaderboardId': string, 'maxResults'?: number, 'pageToken'?: string, 'playerId': string, 'timeSpan': string}, callback: (error: any, body: PlayerLeaderboardScoreListResponse, response: any) => void) => Request;
+                    'list': (parameters: {'collection': string, 'consistencyToken'?: string, 'language'?: string, 'leaderboardId': string, 'maxResults'?: number, 'pageToken'?: string, 'timeSpan': string}, callback: (error: any, body: LeaderboardScores, response: any) => void) => Request;
+                    'listWindow': (parameters: {'collection': string, 'consistencyToken'?: string, 'language'?: string, 'leaderboardId': string, 'maxResults'?: number, 'pageToken'?: string, 'resultsAbove'?: number, 'returnTopIfAbsent'?: boolean, 'timeSpan': string}, callback: (error: any, body: LeaderboardScores, response: any) => void) => Request;
+                    'submit': (parameters: {'consistencyToken'?: string, 'language'?: string, 'leaderboardId': string, 'score': string, 'scoreTag'?: string}, callback: (error: any, body: PlayerScoreResponse, response: any) => void) => Request;
+                    'submitMultiple': (parameters: {'consistencyToken'?: string, 'language'?: string}, callback: (error: any, body: PlayerScoreListResponse, response: any) => void) => Request;
                 };
                 'snapshots': {
-                    'get': (parameters: {'language'?: string, 'snapshotId': string}, callback: (error: any, body: Snapshot, response: any) => void) => Request;
-                    'list': (parameters: {'language'?: string, 'maxResults'?: number, 'pageToken'?: string, 'playerId': string}, callback: (error: any, body: SnapshotListResponse, response: any) => void) => Request;
+                    'get': (parameters: {'consistencyToken'?: string, 'language'?: string, 'snapshotId': string}, callback: (error: any, body: Snapshot, response: any) => void) => Request;
+                    'list': (parameters: {'consistencyToken'?: string, 'language'?: string, 'maxResults'?: number, 'pageToken'?: string, 'playerId': string}, callback: (error: any, body: SnapshotListResponse, response: any) => void) => Request;
                 };
                 'turnBasedMatches': {
-                    'cancel': (parameters: {'matchId': string}, callback: (error: any, body: any, response: any) => void) => Request;
-                    'create': (parameters: {'language'?: string}, callback: (error: any, body: TurnBasedMatch, response: any) => void) => Request;
-                    'decline': (parameters: {'language'?: string, 'matchId': string}, callback: (error: any, body: TurnBasedMatch, response: any) => void) => Request;
-                    'dismiss': (parameters: {'matchId': string}, callback: (error: any, body: any, response: any) => void) => Request;
-                    'finish': (parameters: {'language'?: string, 'matchId': string}, callback: (error: any, body: TurnBasedMatch, response: any) => void) => Request;
-                    'get': (parameters: {'includeMatchData'?: boolean, 'language'?: string, 'matchId': string}, callback: (error: any, body: TurnBasedMatch, response: any) => void) => Request;
-                    'join': (parameters: {'language'?: string, 'matchId': string}, callback: (error: any, body: TurnBasedMatch, response: any) => void) => Request;
-                    'leave': (parameters: {'language'?: string, 'matchId': string}, callback: (error: any, body: TurnBasedMatch, response: any) => void) => Request;
-                    'leaveTurn': (parameters: {'language'?: string, 'matchId': string, 'matchVersion': number, 'pendingParticipantId'?: string}, callback: (error: any, body: TurnBasedMatch, response: any) => void) => Request;
-                    'list': (parameters: {'includeMatchData'?: boolean, 'language'?: string, 'maxCompletedMatches'?: number, 'maxResults'?: number, 'pageToken'?: string}, callback: (error: any, body: TurnBasedMatchList, response: any) => void) => Request;
-                    'rematch': (parameters: {'language'?: string, 'matchId': string, 'requestId'?: string}, callback: (error: any, body: TurnBasedMatchRematch, response: any) => void) => Request;
-                    'sync': (parameters: {'includeMatchData'?: boolean, 'language'?: string, 'maxCompletedMatches'?: number, 'maxResults'?: number, 'pageToken'?: string}, callback: (error: any, body: TurnBasedMatchSync, response: any) => void) => Request;
-                    'takeTurn': (parameters: {'language'?: string, 'matchId': string}, callback: (error: any, body: TurnBasedMatch, response: any) => void) => Request;
+                    'cancel': (parameters: {'consistencyToken'?: string, 'matchId': string}, callback: (error: any, body: any, response: any) => void) => Request;
+                    'create': (parameters: {'consistencyToken'?: string, 'language'?: string}, callback: (error: any, body: TurnBasedMatch, response: any) => void) => Request;
+                    'decline': (parameters: {'consistencyToken'?: string, 'language'?: string, 'matchId': string}, callback: (error: any, body: TurnBasedMatch, response: any) => void) => Request;
+                    'dismiss': (parameters: {'consistencyToken'?: string, 'matchId': string}, callback: (error: any, body: any, response: any) => void) => Request;
+                    'finish': (parameters: {'consistencyToken'?: string, 'language'?: string, 'matchId': string}, callback: (error: any, body: TurnBasedMatch, response: any) => void) => Request;
+                    'get': (parameters: {'consistencyToken'?: string, 'includeMatchData'?: boolean, 'language'?: string, 'matchId': string}, callback: (error: any, body: TurnBasedMatch, response: any) => void) => Request;
+                    'join': (parameters: {'consistencyToken'?: string, 'language'?: string, 'matchId': string}, callback: (error: any, body: TurnBasedMatch, response: any) => void) => Request;
+                    'leave': (parameters: {'consistencyToken'?: string, 'language'?: string, 'matchId': string}, callback: (error: any, body: TurnBasedMatch, response: any) => void) => Request;
+                    'leaveTurn': (parameters: {'consistencyToken'?: string, 'language'?: string, 'matchId': string, 'matchVersion': number, 'pendingParticipantId'?: string}, callback: (error: any, body: TurnBasedMatch, response: any) => void) => Request;
+                    'list': (parameters: {'consistencyToken'?: string, 'includeMatchData'?: boolean, 'language'?: string, 'maxCompletedMatches'?: number, 'maxResults'?: number, 'pageToken'?: string}, callback: (error: any, body: TurnBasedMatchList, response: any) => void) => Request;
+                    'rematch': (parameters: {'consistencyToken'?: string, 'language'?: string, 'matchId': string, 'requestId'?: string}, callback: (error: any, body: TurnBasedMatchRematch, response: any) => void) => Request;
+                    'sync': (parameters: {'consistencyToken'?: string, 'includeMatchData'?: boolean, 'language'?: string, 'maxCompletedMatches'?: number, 'maxResults'?: number, 'pageToken'?: string}, callback: (error: any, body: TurnBasedMatchSync, response: any) => void) => Request;
+                    'takeTurn': (parameters: {'consistencyToken'?: string, 'language'?: string, 'matchId': string}, callback: (error: any, body: TurnBasedMatch, response: any) => void) => Request;
                 };
 
             }
@@ -209,6 +209,7 @@ declare module google {
             }
 
             export interface ApplicationVerifyResponse {
+                'alternate_player_id': string;
                 'kind': string;
                 'player_id': string;
             }
@@ -451,6 +452,7 @@ declare module google {
                 };
                 'originalPlayerId': string;
                 'playerId': string;
+                'profileSettings': ProfileSettings;
                 'title': string;
             }
 
@@ -549,6 +551,11 @@ declare module google {
             export interface PlayerScoreSubmissionList {
                 'kind': string;
                 'scores': ScoreSubmission[];
+            }
+
+            export interface ProfileSettings {
+                'kind': string;
+                'profileVisible': boolean;
             }
 
             export interface PushToken {

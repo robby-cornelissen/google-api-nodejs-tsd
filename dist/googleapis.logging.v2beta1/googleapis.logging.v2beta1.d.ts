@@ -54,6 +54,7 @@ declare module google {
                 
                 };
                 'entries': LogEntry[];
+                'partialSuccess': boolean;
             }
 
             export interface MonitoredResource {
@@ -96,8 +97,10 @@ declare module google {
                 'userAgent': string;
                 'remoteIp': string;
                 'referer': string;
+                'cacheLookup': boolean;
                 'cacheHit': boolean;
-                'validatedWithOriginServer': boolean;
+                'cacheValidatedWithOriginServer': boolean;
+                'cacheFillBytes': string;
             }
 
             export interface LogEntryOperation {
@@ -115,11 +118,25 @@ declare module google {
                 'orderBy': string;
                 'pageSize': number;
                 'pageToken': string;
+                'partialSuccess': boolean;
             }
 
             export interface ListLogEntriesResponse {
                 'entries': LogEntry[];
                 'nextPageToken': string;
+                'projectIdErrors': {
+                    [name: string]: Status
+                
+                };
+            }
+
+            export interface Status {
+                'code': number;
+                'message': string;
+                'details': {
+                    [name: string]: any
+                
+                }[];
             }
 
             export interface ListMonitoredResourceDescriptorsResponse {
@@ -128,6 +145,7 @@ declare module google {
             }
 
             export interface MonitoredResourceDescriptor {
+                'name': string;
                 'type': string;
                 'displayName': string;
                 'description': string;
@@ -190,6 +208,7 @@ declare module google {
                 'pendingTime': string;
                 'instanceIndex': number;
                 'finished': boolean;
+                'first': boolean;
                 'instanceId': string;
                 'line': LogLine[];
                 'appEngineRelease': string;

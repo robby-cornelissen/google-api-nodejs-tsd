@@ -19,16 +19,16 @@ declare module google {
                     'download': (parameters: {'resourceName': string}, callback: (error: any, body: Media, response: any) => void) => Request;
                 };
                 'reportTypes': {
-                    'list': (parameters: {'onBehalfOfContentOwner'?: string, 'pageSize'?: number, 'pageToken'?: string}, callback: (error: any, body: ListReportTypesResponse, response: any) => void) => Request;
+                    'list': (parameters: {'onBehalfOfContentOwner'?: string, 'pageSize'?: number, 'pageToken'?: string, 'includeSystemManaged'?: boolean}, callback: (error: any, body: ListReportTypesResponse, response: any) => void) => Request;
                 };
                 'jobs': {
                     'create': (parameters: {'onBehalfOfContentOwner'?: string}, callback: (error: any, body: Job, response: any) => void) => Request;
-                    'list': (parameters: {'onBehalfOfContentOwner'?: string, 'pageSize'?: number, 'pageToken'?: string}, callback: (error: any, body: ListJobsResponse, response: any) => void) => Request;
+                    'list': (parameters: {'onBehalfOfContentOwner'?: string, 'pageSize'?: number, 'pageToken'?: string, 'includeSystemManaged'?: boolean}, callback: (error: any, body: ListJobsResponse, response: any) => void) => Request;
                     'get': (parameters: {'jobId': string, 'onBehalfOfContentOwner'?: string}, callback: (error: any, body: Job, response: any) => void) => Request;
                     'delete': (parameters: {'jobId': string, 'onBehalfOfContentOwner'?: string}, callback: (error: any, body: Empty, response: any) => void) => Request;
                 
                     'reports': {
-                        'list': (parameters: {'jobId': string, 'onBehalfOfContentOwner'?: string, 'pageSize'?: number, 'pageToken'?: string, 'createdAfter'?: string}, callback: (error: any, body: ListReportsResponse, response: any) => void) => Request;
+                        'list': (parameters: {'jobId': string, 'onBehalfOfContentOwner'?: string, 'pageSize'?: number, 'pageToken'?: string, 'createdAfter'?: string, 'startTimeAtOrAfter'?: string, 'startTimeBefore'?: string}, callback: (error: any, body: ListReportsResponse, response: any) => void) => Request;
                         'get': (parameters: {'jobId': string, 'reportId': string, 'onBehalfOfContentOwner'?: string}, callback: (error: any, body: Report, response: any) => void) => Request;
                     };
                 };
@@ -47,6 +47,8 @@ declare module google {
             export interface ReportType {
                 'id': string;
                 'name': string;
+                'deprecateTime': string;
+                'systemManaged': boolean;
             }
 
             export interface Job {
@@ -54,6 +56,8 @@ declare module google {
                 'reportTypeId': string;
                 'name': string;
                 'createTime': string;
+                'expireTime': string;
+                'systemManaged': boolean;
             }
 
             export interface ListJobsResponse {
@@ -71,6 +75,7 @@ declare module google {
             export interface Report {
                 'id': string;
                 'jobId': string;
+                'jobExpireTime': string;
                 'startTime': string;
                 'endTime': string;
                 'createTime': string;

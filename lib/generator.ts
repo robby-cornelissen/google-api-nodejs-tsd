@@ -1,12 +1,13 @@
 'use strict';
 
-import * as fs from 'fs';
-import * as path from 'path';
-import * as mkdirp from 'mkdirp';
-import * as req from 'request';
-import {format} from 'util';
-import {Request} from "request";
-import {Renderer, NunjucksRenderer} from "./renderer";
+import fs = require('fs');
+import path = require('path');
+import mkdirp = require('mkdirp');
+import req = require('request');
+
+import { Request } from 'request';
+import { format } from 'util';
+import { Renderer, NunjucksRenderer } from './renderer';
 
 const MODULE: string = 'googleapis';
 const PACKAGE: any = require(path.join(MODULE, 'package.json'));

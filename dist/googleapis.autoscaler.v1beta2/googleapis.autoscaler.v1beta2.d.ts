@@ -29,7 +29,7 @@ declare module google {
                     'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'pageToken'?: string, 'project': string, 'zone': string}, callback: (error: any, body: OperationList, response: any) => void) => Request;
                 };
                 'zones': {
-                    'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'pageToken'?: string, 'project': string}, callback: (error: any, body: ZoneList, response: any) => void) => Request;
+                    'list': (parameters: {'filter'?: string, 'maxResults'?: number, 'pageToken'?: string, 'project'?: string}, callback: (error: any, body: ZoneList, response: any) => void) => Request;
                 };
 
             }
@@ -85,6 +85,7 @@ declare module google {
             export interface Operation {
                 'clientOperationId': string;
                 'creationTimestamp': string;
+                'description': string;
                 'endTime': string;
                 'error': {
                     'errors': {
@@ -134,12 +135,6 @@ declare module google {
                 'description': string;
                 'id': string;
                 'kind': string;
-                'maintenanceWindows': {
-                    'beginTime': string;
-                    'description': string;
-                    'endTime': string;
-                    'name': string;
-                }[];
                 'name': string;
                 'region': string;
                 'selfLink': string;

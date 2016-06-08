@@ -114,7 +114,7 @@ declare module google {
                 'subscriptions': {
                     'delete': (parameters: {'id': string}, callback: (error: any, body: any, response: any) => void) => Request;
                     'insert': (parameters: {'part': string}, callback: (error: any, body: Subscription, response: any) => void) => Request;
-                    'list': (parameters: {'channelId'?: string, 'forChannelId'?: string, 'id'?: string, 'maxResults'?: number, 'mine'?: boolean, 'mySubscribers'?: boolean, 'onBehalfOfContentOwner'?: string, 'onBehalfOfContentOwnerChannel'?: string, 'order'?: string, 'pageToken'?: string, 'part': string}, callback: (error: any, body: SubscriptionListResponse, response: any) => void) => Request;
+                    'list': (parameters: {'channelId'?: string, 'forChannelId'?: string, 'id'?: string, 'maxResults'?: number, 'mine'?: boolean, 'myRecentSubscribers'?: boolean, 'mySubscribers'?: boolean, 'onBehalfOfContentOwner'?: string, 'onBehalfOfContentOwnerChannel'?: string, 'order'?: string, 'pageToken'?: string, 'part': string}, callback: (error: any, body: SubscriptionListResponse, response: any) => void) => Request;
                 };
                 'thumbnails': {
                     'set': (parameters: {'onBehalfOfContentOwner'?: string, 'videoId': string}, callback: (error: any, body: ThumbnailSetResponse, response: any) => void) => Request;
@@ -285,8 +285,10 @@ declare module google {
 
             export interface CdnSettings {
                 'format': string;
+                'frameRate': string;
                 'ingestionInfo': IngestionInfo;
                 'ingestionType': string;
+                'resolution': string;
             }
 
             export interface Channel {
@@ -443,6 +445,7 @@ declare module google {
 
             export interface ChannelSnippet {
                 'country': string;
+                'customUrl': string;
                 'defaultLanguage': string;
                 'description': string;
                 'localized': ChannelLocalization;
@@ -779,6 +782,7 @@ declare module google {
 
             export interface LiveBroadcastContentDetails {
                 'boundStreamId': string;
+                'boundStreamLastUpdateTimeMs': string;
                 'closedCaptionsType': string;
                 'enableClosedCaptions': boolean;
                 'enableContentEncryption': boolean;
@@ -786,6 +790,7 @@ declare module google {
                 'enableEmbed': boolean;
                 'enableLowLatency': boolean;
                 'monitorStream': MonitorStreamInfo;
+                'projection': string;
                 'recordFromStart': boolean;
                 'startWithSlate': boolean;
             }
@@ -883,6 +888,10 @@ declare module google {
                 'profileImageUrl': string;
             }
 
+            export interface LiveChatMessageDeletedDetails {
+                'deletedMessageId': string;
+            }
+
             export interface LiveChatMessageListResponse {
                 'etag': string;
                 'eventId': string;
@@ -896,15 +905,26 @@ declare module google {
                 'visitorId': string;
             }
 
+            export interface LiveChatMessageRetractedDetails {
+                'retractedMessageId': string;
+            }
+
             export interface LiveChatMessageSnippet {
                 'authorChannelId': string;
                 'displayMessage': string;
                 'fanFundingEventDetails': LiveChatFanFundingEventDetails;
                 'hasDisplayContent': boolean;
                 'liveChatId': string;
+                'messageDeletedDetails': LiveChatMessageDeletedDetails;
+                'messageRetractedDetails': LiveChatMessageRetractedDetails;
+                'pollClosedDetails': LiveChatPollClosedDetails;
+                'pollEditedDetails': LiveChatPollEditedDetails;
+                'pollOpenedDetails': LiveChatPollOpenedDetails;
+                'pollVotedDetails': LiveChatPollVotedDetails;
                 'publishedAt': string;
                 'textMessageDetails': LiveChatTextMessageDetails;
                 'type': string;
+                'userBannedDetails': LiveChatUserBannedMessageDetails;
             }
 
             export interface LiveChatModerator {
@@ -931,8 +951,40 @@ declare module google {
                 'moderatorDetails': ChannelProfileDetails;
             }
 
+            export interface LiveChatPollClosedDetails {
+                'pollId': string;
+            }
+
+            export interface LiveChatPollEditedDetails {
+                'id': string;
+                'items': LiveChatPollItem[];
+                'prompt': string;
+            }
+
+            export interface LiveChatPollItem {
+                'description': string;
+                'itemId': string;
+            }
+
+            export interface LiveChatPollOpenedDetails {
+                'id': string;
+                'items': LiveChatPollItem[];
+                'prompt': string;
+            }
+
+            export interface LiveChatPollVotedDetails {
+                'itemId': string;
+                'pollId': string;
+            }
+
             export interface LiveChatTextMessageDetails {
                 'messageText': string;
+            }
+
+            export interface LiveChatUserBannedMessageDetails {
+                'banDurationSeconds': string;
+                'banType': string;
+                'bannedUserDetails': ChannelProfileDetails;
             }
 
             export interface LiveStream {
@@ -1353,6 +1405,7 @@ declare module google {
                 'dimension': string;
                 'duration': string;
                 'licensedContent': boolean;
+                'projection': string;
                 'regionRestriction': VideoContentDetailsRegionRestriction;
             }
 

@@ -50,6 +50,7 @@ declare module google {
             }
 
             export interface ChangePlanRequest {
+                'dealCode': string;
                 'kind': string;
                 'planName': string;
                 'purchaseOrderId': string;
@@ -84,6 +85,7 @@ declare module google {
                 'creationTime': string;
                 'customerDomain': string;
                 'customerId': string;
+                'dealCode': string;
                 'kind': string;
                 'plan': {
                     'commitmentInterval': {

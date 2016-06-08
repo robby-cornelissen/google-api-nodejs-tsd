@@ -127,6 +127,7 @@ declare module google {
                 };
                 'originalPlayerId': string;
                 'playerId': string;
+                'profileSettings': ProfileSettings;
                 'title': string;
             }
 
@@ -139,6 +140,11 @@ declare module google {
                 'definitionId': string;
                 'kind': string;
                 'resetScoreTimeSpans': string[];
+            }
+
+            export interface ProfileSettings {
+                'kind': string;
+                'profileVisible': boolean;
             }
 
             export interface QuestsResetMultipleForAllRequest {

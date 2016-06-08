@@ -33,6 +33,11 @@ declare module google {
                             'delete': (parameters: {'appsId': string, 'servicesId': string, 'versionsId': string}, callback: (error: any, body: Operation, response: any) => void) => Request;
                             'get': (parameters: {'appsId': string, 'servicesId': string, 'versionsId': string, 'view'?: string}, callback: (error: any, body: Version, response: any) => void) => Request;
                             'list': (parameters: {'appsId': string, 'servicesId': string, 'view'?: string, 'pageSize'?: number, 'pageToken'?: string}, callback: (error: any, body: ListVersionsResponse, response: any) => void) => Request;
+                            'patch': (parameters: {'appsId': string, 'servicesId': string, 'versionsId': string, 'mask'?: string}, callback: (error: any, body: Operation, response: any) => void) => Request;
+                        
+                            'instances': {
+                                'list': (parameters: {'appsId': string, 'servicesId': string, 'versionsId': string, 'pageSize'?: number, 'pageToken'?: string}, callback: (error: any, body: ListInstancesResponse, response: any) => void) => Request;
+                            };
                         };
                     };
                 };
@@ -71,8 +76,11 @@ declare module google {
                 'name': string;
                 'id': string;
                 'dispatchRules': UrlDispatchRule[];
+                'authDomain': string;
                 'location': string;
                 'codeBucket': string;
+                'defaultCookieExpiration': string;
+                'defaultHostname': string;
                 'defaultBucket': string;
             }
 
@@ -285,6 +293,29 @@ declare module google {
             export interface ListServicesResponse {
                 'services': Service[];
                 'nextPageToken': string;
+            }
+
+            export interface ListInstancesResponse {
+                'instances': Instance[];
+                'nextPageToken': string;
+            }
+
+            export interface Instance {
+                'name': string;
+                'id': string;
+                'appEngineRelease': string;
+                'availability': string;
+                'vmName': string;
+                'vmZoneName': string;
+                'vmId': string;
+                'startTimestamp': string;
+                'requests': number;
+                'errors': number;
+                'qps': number;
+                'averageLatency': number;
+                'memoryUsage': string;
+                'vmStatus': string;
+                'vmUnlocked': boolean;
             }
 
             export interface OperationMetadata {

@@ -21,11 +21,12 @@ declare module google {
                     'downloadAccount': (parameters: any, callback: (error: any, body: DownloadAccountResponse, response: any) => void) => Request;
                     'getAccountInfo': (parameters: any, callback: (error: any, body: GetAccountInfoResponse, response: any) => void) => Request;
                     'getOobConfirmationCode': (parameters: any, callback: (error: any, body: GetOobConfirmationCodeResponse, response: any) => void) => Request;
-                    'getProjectConfig': (parameters: any, callback: (error: any, body: IdentitytoolkitRelyingpartyGetProjectConfigResponse, response: any) => void) => Request;
+                    'getProjectConfig': (parameters: {'delegatedProjectNumber'?: string, 'projectNumber'?: string}, callback: (error: any, body: IdentitytoolkitRelyingpartyGetProjectConfigResponse, response: any) => void) => Request;
                     'getPublicKeys': (parameters: any, callback: (error: any, body: IdentitytoolkitRelyingpartyGetPublicKeysResponse, response: any) => void) => Request;
                     'getRecaptchaParam': (parameters: any, callback: (error: any, body: GetRecaptchaParamResponse, response: any) => void) => Request;
                     'resetPassword': (parameters: any, callback: (error: any, body: ResetPasswordResponse, response: any) => void) => Request;
                     'setAccountInfo': (parameters: any, callback: (error: any, body: SetAccountInfoResponse, response: any) => void) => Request;
+                    'setProjectConfig': (parameters: any, callback: (error: any, body: IdentitytoolkitRelyingpartySetProjectConfigResponse, response: any) => void) => Request;
                     'signOutUser': (parameters: any, callback: (error: any, body: IdentitytoolkitRelyingpartySignOutUserResponse, response: any) => void) => Request;
                     'signupNewUser': (parameters: any, callback: (error: any, body: SignupNewUserResponse, response: any) => void) => Request;
                     'uploadAccount': (parameters: any, callback: (error: any, body: UploadAccountResponse, response: any) => void) => Request;
@@ -55,6 +56,15 @@ declare module google {
                 'kind': string;
                 'nextPageToken': string;
                 'users': UserInfo[];
+            }
+
+            export interface EmailTemplate {
+                'body': string;
+                'format': string;
+                'from': string;
+                'fromDisplayName': string;
+                'replyTo': string;
+                'subject': string;
             }
 
             export interface GetAccountInfoResponse {
@@ -89,6 +99,7 @@ declare module google {
 
             export interface IdentitytoolkitRelyingpartyDeleteAccountRequest {
                 'delegatedProjectNumber': string;
+                'idToken': string;
                 'localId': string;
             }
 
@@ -99,6 +110,7 @@ declare module google {
             }
 
             export interface IdentitytoolkitRelyingpartyGetAccountInfoRequest {
+                'delegatedProjectNumber': string;
                 'email': string[];
                 'idToken': string;
                 'localId': string[];
@@ -107,8 +119,15 @@ declare module google {
             export interface IdentitytoolkitRelyingpartyGetProjectConfigResponse {
                 'allowPasswordUser': boolean;
                 'apiKey': string;
+                'authorizedDomains': string[];
+                'changeEmailTemplate': EmailTemplate;
+                'enableAnonymousUser': boolean;
                 'idpConfig': IdpConfig[];
+                'legacyResetPasswordTemplate': EmailTemplate;
                 'projectId': string;
+                'resetPasswordTemplate': EmailTemplate;
+                'useEmailSending': boolean;
+                'verifyEmailTemplate': EmailTemplate;
             }
 
             export interface IdentitytoolkitRelyingpartyGetPublicKeysResponse {
@@ -126,20 +145,43 @@ declare module google {
             export interface IdentitytoolkitRelyingpartySetAccountInfoRequest {
                 'captchaChallenge': string;
                 'captchaResponse': string;
+                'createdAt': string;
                 'delegatedProjectNumber': string;
+                'deleteAttribute': string[];
+                'deleteProvider': string[];
                 'disableUser': boolean;
                 'displayName': string;
                 'email': string;
                 'emailVerified': boolean;
                 'idToken': string;
                 'instanceId': string;
+                'lastLoginAt': string;
                 'localId': string;
                 'oobCode': string;
                 'password': string;
                 'photoUrl': string;
                 'provider': string[];
+                'returnSecureToken': boolean;
                 'upgradeToFederatedLogin': boolean;
                 'validSince': string;
+            }
+
+            export interface IdentitytoolkitRelyingpartySetProjectConfigRequest {
+                'allowPasswordUser': boolean;
+                'apiKey': string;
+                'authorizedDomains': string[];
+                'changeEmailTemplate': EmailTemplate;
+                'delegatedProjectNumber': string;
+                'enableAnonymousUser': boolean;
+                'idpConfig': IdpConfig[];
+                'legacyResetPasswordTemplate': EmailTemplate;
+                'resetPasswordTemplate': EmailTemplate;
+                'useEmailSending': boolean;
+                'verifyEmailTemplate': EmailTemplate;
+            }
+
+            export interface IdentitytoolkitRelyingpartySetProjectConfigResponse {
+                'projectId': string;
             }
 
             export interface IdentitytoolkitRelyingpartySignOutUserRequest {
@@ -179,11 +221,14 @@ declare module google {
                 'postBody': string;
                 'requestUri': string;
                 'returnRefreshToken': boolean;
+                'returnSecureToken': boolean;
                 'sessionId': string;
             }
 
             export interface IdentitytoolkitRelyingpartyVerifyCustomTokenRequest {
+                'delegatedProjectNumber': string;
                 'instanceId': string;
+                'returnSecureToken': boolean;
                 'token': string;
             }
 
@@ -196,6 +241,7 @@ declare module google {
                 'instanceId': string;
                 'password': string;
                 'pendingIdToken': string;
+                'returnSecureToken': boolean;
             }
 
             export interface IdpConfig {
@@ -203,6 +249,8 @@ declare module google {
                 'enabled': boolean;
                 'experimentPercent': number;
                 'provider': string;
+                'secret': string;
+                'whitelistedAudiences': string[];
             }
 
             export interface Relyingparty {
@@ -224,22 +272,30 @@ declare module google {
             export interface SetAccountInfoResponse {
                 'displayName': string;
                 'email': string;
+                'expiresIn': string;
                 'idToken': string;
                 'kind': string;
+                'localId': string;
                 'newEmail': string;
+                'passwordHash': string;
                 'photoUrl': string;
                 'providerUserInfo': {
                     'displayName': string;
+                    'federatedId': string;
                     'photoUrl': string;
                     'providerId': string;
                 }[];
+                'refreshToken': string;
             }
 
             export interface SignupNewUserResponse {
                 'displayName': string;
                 'email': string;
+                'expiresIn': string;
                 'idToken': string;
                 'kind': string;
+                'localId': string;
+                'refreshToken': string;
             }
 
             export interface UploadAccountResponse {
@@ -251,10 +307,12 @@ declare module google {
             }
 
             export interface UserInfo {
+                'createdAt': string;
                 'disabled': boolean;
                 'displayName': string;
                 'email': string;
                 'emailVerified': boolean;
+                'lastLoginAt': string;
                 'localId': string;
                 'passwordHash': string;
                 'passwordUpdatedAt': number;
@@ -265,6 +323,7 @@ declare module google {
                     'federatedId': string;
                     'photoUrl': string;
                     'providerId': string;
+                    'rawId': string;
                 }[];
                 'salt': string;
                 'validSince': string;
@@ -281,6 +340,7 @@ declare module google {
                 'email': string;
                 'emailRecycled': boolean;
                 'emailVerified': boolean;
+                'expiresIn': string;
                 'federatedId': string;
                 'firstName': string;
                 'fullName': string;
@@ -296,23 +356,29 @@ declare module google {
                 'oauthAccessToken': string;
                 'oauthAuthorizationCode': string;
                 'oauthExpireIn': number;
+                'oauthIdToken': string;
                 'oauthRequestToken': string;
                 'oauthScope': string;
+                'oauthTokenSecret': string;
                 'originalEmail': string;
                 'photoUrl': string;
                 'providerId': string;
+                'refreshToken': string;
                 'timeZone': string;
                 'verifiedProvider': string[];
             }
 
             export interface VerifyCustomTokenResponse {
+                'expiresIn': string;
                 'idToken': string;
                 'kind': string;
+                'refreshToken': string;
             }
 
             export interface VerifyPasswordResponse {
                 'displayName': string;
                 'email': string;
+                'expiresIn': string;
                 'idToken': string;
                 'kind': string;
                 'localId': string;
@@ -320,6 +386,7 @@ declare module google {
                 'oauthAuthorizationCode': string;
                 'oauthExpireIn': number;
                 'photoUrl': string;
+                'refreshToken': string;
                 'registered': boolean;
             }
 

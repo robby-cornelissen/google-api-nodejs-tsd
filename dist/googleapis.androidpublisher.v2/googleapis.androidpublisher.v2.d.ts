@@ -96,6 +96,11 @@ declare module google {
                         'revoke': (parameters: {'packageName': string, 'subscriptionId': string, 'token': string}, callback: (error: any, body: any, response: any) => void) => Request;
                     };
                 };
+                'reviews': {
+                    'get': (parameters: {'packageName': string, 'reviewId': string}, callback: (error: any, body: Review, response: any) => void) => Request;
+                    'list': (parameters: {'maxResults'?: number, 'packageName': string, 'startIndex'?: number, 'token'?: string}, callback: (error: any, body: ReviewsListResponse, response: any) => void) => Request;
+                    'reply': (parameters: {'packageName': string, 'reviewId': string}, callback: (error: any, body: ReviewsReplyResponse, response: any) => void) => Request;
+                };
 
             }
 
@@ -141,6 +146,16 @@ declare module google {
             export interface AppEdit {
                 'expiryTimeSeconds': string;
                 'id': string;
+            }
+
+            export interface Comment {
+                'developerComment': DeveloperComment;
+                'userComment': UserComment;
+            }
+
+            export interface DeveloperComment {
+                'lastModified': Timestamp;
+                'text': string;
             }
 
             export interface Entitlement {
@@ -318,6 +333,31 @@ declare module google {
                 'start': MonthDay;
             }
 
+            export interface Review {
+                'authorName': string;
+                'comments': Comment[];
+                'reviewId': string;
+            }
+
+            export interface ReviewReplyResult {
+                'lastEdited': Timestamp;
+                'replyText': string;
+            }
+
+            export interface ReviewsListResponse {
+                'pageInfo': PageInfo;
+                'reviews': Review[];
+                'tokenPagination': TokenPagination;
+            }
+
+            export interface ReviewsReplyRequest {
+                'replyText': string;
+            }
+
+            export interface ReviewsReplyResponse {
+                'result': ReviewReplyResult;
+            }
+
             export interface Season {
                 'end': MonthDay;
                 'prorations': Prorate[];
@@ -331,8 +371,14 @@ declare module google {
 
             export interface SubscriptionPurchase {
                 'autoRenewing': boolean;
+                'cancelReason': number;
+                'countryCode': string;
+                'developerPayload': string;
                 'expiryTimeMillis': string;
                 'kind': string;
+                'paymentState': number;
+                'priceAmountMicros': string;
+                'priceCurrencyCode': string;
                 'startTimeMillis': string;
             }
 
@@ -349,6 +395,11 @@ declare module google {
                 'googlePlusCommunities': string[];
             }
 
+            export interface Timestamp {
+                'nanos': number;
+                'seconds': string;
+            }
+
             export interface TokenPagination {
                 'nextPageToken': string;
                 'previousPageToken': string;
@@ -363,6 +414,17 @@ declare module google {
             export interface TracksListResponse {
                 'kind': string;
                 'tracks': Track[];
+            }
+
+            export interface UserComment {
+                'androidOsVersion': number;
+                'appVersionCode': number;
+                'appVersionName': string;
+                'device': string;
+                'lastModified': Timestamp;
+                'reviewerLanguage': string;
+                'starRating': number;
+                'text': string;
             }
 
         }

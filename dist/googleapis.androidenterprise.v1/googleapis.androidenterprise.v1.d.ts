@@ -78,6 +78,7 @@ declare module google {
                     'get': (parameters: {'enterpriseId': string, 'language'?: string, 'productId': string}, callback: (error: any, body: Product, response: any) => void) => Request;
                     'getAppRestrictionsSchema': (parameters: {'enterpriseId': string, 'language'?: string, 'productId': string}, callback: (error: any, body: AppRestrictionsSchema, response: any) => void) => Request;
                     'getPermissions': (parameters: {'enterpriseId': string, 'productId': string}, callback: (error: any, body: ProductPermissions, response: any) => void) => Request;
+                    'list': (parameters: {'approved'?: boolean, 'enterpriseId': string, 'language'?: string, 'maxResults'?: number, 'query'?: string, 'token'?: string}, callback: (error: any, body: ProductsListResponse, response: any) => void) => Request;
                     'updatePermissions': (parameters: {'enterpriseId': string, 'productId': string}, callback: (error: any, body: ProductPermissions, response: any) => void) => Request;
                 };
                 'storelayoutclusters': {
@@ -243,6 +244,12 @@ declare module google {
                 'text': string;
             }
 
+            export interface PageInfo {
+                'resultPerPage': number;
+                'startIndex': number;
+                'totalResults': number;
+            }
+
             export interface Permission {
                 'description': string;
                 'kind': string;
@@ -260,6 +267,7 @@ declare module google {
                 'productId': string;
                 'productPricing': string;
                 'requiresContainerApp': boolean;
+                'smallIconUrl': string;
                 'title': string;
                 'workDetailsUrl': string;
             }
@@ -286,6 +294,13 @@ declare module google {
 
             export interface ProductsGenerateApprovalUrlResponse {
                 'url': string;
+            }
+
+            export interface ProductsListResponse {
+                'kind': string;
+                'pageInfo': PageInfo;
+                'product': Product[];
+                'tokenPagination': TokenPagination;
             }
 
             export interface StoreCluster {
@@ -316,6 +331,11 @@ declare module google {
                 'kind': string;
                 'link': string[];
                 'name': LocalizedText[];
+            }
+
+            export interface TokenPagination {
+                'nextPageToken': string;
+                'previousPageToken': string;
             }
 
             export interface User {

@@ -376,6 +376,7 @@ declare module google {
                 'dayOfMonth': number;
                 'fetchUrl': string;
                 'hour': number;
+                'minuteOfHour': number;
                 'password': string;
                 'timeZone': string;
                 'username': string;
@@ -915,6 +916,7 @@ declare module google {
 
             export interface Product {
                 'additionalImageLinks': string[];
+                'additionalProductTypes': string[];
                 'adult': boolean;
                 'adwordsGrouping': string;
                 'adwordsLabels': string[];

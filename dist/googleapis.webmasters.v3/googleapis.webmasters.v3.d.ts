@@ -68,6 +68,7 @@ declare module google {
                 'rowLimit': number;
                 'searchType': string;
                 'startDate': string;
+                'startRow': number;
             }
 
             export interface SearchAnalyticsQueryResponse {

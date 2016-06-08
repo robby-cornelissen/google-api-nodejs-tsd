@@ -15,10 +15,6 @@ declare module google {
             export interface Dataproc {
                 new(options: any): Dataproc;
 
-                'media': {
-                    'upload': (parameters: {'resourceName': string}, callback: (error: any, body: Media, response: any) => void) => Request;
-                    'download': (parameters: {'resourceName': string}, callback: (error: any, body: Media, response: any) => void) => Request;
-                };
                 'projects': {
                     'regions': {
                         'clusters': {
@@ -45,10 +41,6 @@ declare module google {
                     };
                 };
 
-            }
-
-            export interface Media {
-                'resourceName': string;
             }
 
             export interface Cluster {
