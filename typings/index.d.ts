@@ -4,3 +4,7 @@
 /// <reference path="globals/node/index.d.ts" />
 /// <reference path="globals/nunjucks/index.d.ts" />
 /// <reference path="globals/request/index.d.ts" />
+/// <reference path="modules/form-data/index.d.ts" />
+/// <reference path="modules/mkdirp/index.d.ts" />
+/// <reference path="modules/nunjucks/index.d.ts" />
+/// <reference path="modules/request/index.d.ts" />

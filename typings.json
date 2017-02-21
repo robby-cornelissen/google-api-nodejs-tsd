@@ -1,9 +1,11 @@
 {
   "globalDependencies": {
-    "form-data": "registry:dt/form-data#0.0.0+20160316155526",
-    "mkdirp": "registry:dt/mkdirp#0.3.0+20160317120654",
-    "node": "registry:dt/node#6.0.0+20160608055420",
-    "nunjucks": "registry:dt/nunjucks#0.0.0+20160602153016",
-    "request": "registry:dt/request#0.0.0+20160524135346"
+    "node": "registry:dt/node#7.0.0+20170204020307"
+  },
+  "dependencies": {
+    "form-data": "registry:dt/form-data#0.0.0+20161115134730",
+    "mkdirp": "registry:dt/mkdirp#0.3.0+20160428043022",
+    "nunjucks": "registry:dt/nunjucks#0.0.0+20160803221903",
+    "request": "registry:dt/request#0.0.0+20170215005641"
   }
 }
