@@ -4,8 +4,8 @@
 // Definitions by: Robby Cornelissen <https://github.com/procrastinatos/>
 // Definitions: https://github.com/procrastinatos/google-api-node-tsd
 
-/// <reference path="../{{ module }}/{{ module }}.d.ts" />
-declare module google {
+/// <reference path="../{{ module }}/index.d.ts" />
+declare namespace google {
     export interface GoogleApis {
         {{ name }}(version: string): any;
         {{ name }}(version: '{{ version }}'): {{ name }}.{{ version | replace('\.', '_') }}.{{ name | capitalize }};
@@ -26,7 +26,7 @@ declare module google {
                 {%- if resources -%}
                     {{ br }}
                     {%- for name, resource in resources -%}
-                        {{ macros.resource_(name, resource) | indent(16, true) }}
+                        {{ macros.resource_(name, resource) | indent(16, true) | trimemptylines }}
                     {%- endfor -%}
                 {%- endif %}
             }
@@ -34,7 +34,7 @@ declare module google {
             {%- if schemas -%}
                 {{ br }}{{ br }}
                 {%- for name, schema in schemas -%}
-                    {{ macros.schema_(name, schema) | indent(12, true) }}
+                    {{ macros.schema_(name, schema) | indent(12, true) | trimemptylines }}
                     {%- if not loop.last -%}{{ br }}{%- endif -%}
                 {%- endfor -%}
             {%- endif %}

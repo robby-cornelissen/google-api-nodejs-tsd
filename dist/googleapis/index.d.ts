@@ -1,0 +1,28 @@
+// Type definitions for Google APIs Node.js Client
+// Project: https://github.com/google/google-api-nodejs-client
+// Definitions by: Robby Cornelissen <https://github.com/procrastinatos/>
+// Definitions: https://github.com/procrastinatos/google-api-node-tsd
+
+/// <reference path="../google-auth-library/index.d.ts" />
+
+declare namespace google {
+    export interface GoogleApis {
+        new(options?: any): GoogleApis;
+
+        options(options?: any): void;
+
+        auth: GoogleAuth.GoogleAuth;
+    }
+
+    interface Request {}
+
+    interface Callback {
+        (error: any, body: any, response: any): void;
+    }
+}
+
+declare module 'googleapis' {
+    const google: google.GoogleApis;
+
+    export = google;
+}

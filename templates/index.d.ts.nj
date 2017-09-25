@@ -1,0 +1,3 @@
+{%- for api in apiList -%}
+/// <reference path="{{ api.relPath }}" />{{ br }}
+{%- endfor -%}

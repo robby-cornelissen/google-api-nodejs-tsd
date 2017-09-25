@@ -21,7 +21,7 @@
 
 {%- macro parameters_(method) -%}
 {%- if method.parameters -%}
-{
+{ [key: string]: any;{{' '}}
     {%- for name, parameter in method.parameters -%}
         {{ name | mname }}{%- if not parameter.required -%}?{%- endif -%}: {{ schemaType_(parameter) }}
         {%- if not loop.last -%}, {% endif -%}
@@ -99,6 +99,6 @@ any
 
 {%- macro schemaObjectAdditionalProperties_(additionalProperties) -%}
 {
-    [name: string]: {{ schemaType_(additionalProperties) | indent(4) }}
+    [name: string]: {{ schemaType_(additionalProperties) | indent(4) }};
 }
 {%- endmacro -%}
