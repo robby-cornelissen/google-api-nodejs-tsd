@@ -1,9 +1,7 @@
-'use strict';
-
-import {Generator} from "../lib/generator";
+import { Generator } from '../lib/generator';
 
 new Generator().generate().then(() => {
-    console.log('Done')
+    console.log('Done');
 }).catch((e) => {
-    console.error(e)
+    console.error(e);
 });

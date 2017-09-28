@@ -3,11 +3,15 @@
 // Definitions by: Robby Cornelissen <https://github.com/procrastinatos/>
 // Definitions: https://github.com/procrastinatos/google-api-node-tsd
 
-declare module google {
+/// <reference path="../google-auth-library/index.d.ts" />
+
+declare namespace google {
     export interface GoogleApis {
         new(options?: any): GoogleApis;
 
         options(options?: any): void;
+
+        auth: GoogleAuth.GoogleAuth;
     }
 
     interface Request {}
@@ -17,8 +21,8 @@ declare module google {
     }
 }
 
-declare module "{{module}}" {
-    var google: google.GoogleApis;
+declare module '{{module}}' {
+    const google: google.GoogleApis;
 
     export = google;
 }

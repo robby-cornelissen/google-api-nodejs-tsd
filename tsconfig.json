@@ -3,11 +3,16 @@
     "module": "commonjs",
     "target": "es6",
     "sourceMap": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "alwaysStrict": true
   },
+  "include": [
+    "src/**/*.ts",
+    "bin/**/*.ts"
+  ],
   "exclude": [
     "node_modules",
-    "typings/browser",
-    "typings/browser.d.ts"
+    "typings",
+    "dist"
   ]
 }

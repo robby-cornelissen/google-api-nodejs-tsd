@@ -3,20 +3,29 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/run.js"
+    "start": "npm run lint && npm run clean && npm run build && npm run start:dist",
+    "start:dist": "npm run clean:dist && npm run build:dist && npm run lint:dist",
+    "clean": "rimraf lib/**/*.js lib/**/*.js.map bin/**/*.js bin/**/*.js.map",
+    "clean:dist": "rimraf dist",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "lint:dist": "tslint -c tslint-dist.json 'dist/**/*.d.ts'",
+    "build": "tsc",
+    "build:dist": "copyfiles -u 1 typings/**/* dist && node ./bin/run.js"
   },
-  "dependencies": {
-    "google-auth-library": "^0.9.7",
-    "googleapis": "~2.1.7",
-    "mkdirp": "^0.5.1",
-    "nunjucks": "^2.3.0",
-    "request": "^2.69.0",
-    "typescript": "^1.7.5"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "del": "^2.2.0",
-    "gulp": "^3.9.1",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-typescript": "^2.11.0"
+    "@types/form-data": "^2.2.0",
+    "@types/mkdirp": "^0.5.1",
+    "@types/node": "^8.0.30",
+    "@types/nunjucks": "0.0.33",
+    "@types/request": "^2.0.3",
+    "@types/rimraf": "^2.0.2",
+    "copyfiles": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "nunjucks": "^3.0.1",
+    "request": "^2.83.0",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.3"
   }
 }

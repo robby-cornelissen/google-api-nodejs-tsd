@@ -1,7 +1,5 @@
-'use strict';
-
-import * as nunjucks from "nunjucks";
-import {Environment} from "nunjucks";
+import * as nunjucks from 'nunjucks';
+import { Environment } from 'nunjucks';
 
 type Globals = { [key: string]: string; };
 
@@ -25,12 +23,17 @@ export class NunjucksRenderer extends Renderer {
             autoescape: false
         });
 
-        for (let name in globals) {
+        for (const name in globals) {
             this.env.addGlobal(name, globals[name]);
         }
 
         this.env.addFilter('mname', (input: string) => {
             return "'" + input + "'";
+        });
+        this.env.addFilter('trimemptylines', (input: string) => {
+            return input.split('\n').map(function(line) {
+                return (line.trim() === '') ? '' : line;
+            }).join('\n');
         });
     }
 

@@ -4,10 +4,24 @@ Typescript definitions for the [Google APIs Node.js Client](https://github.com/g
 
 ## Importing and using
 
-To use the type definitions for a given Google API, you need to reference both the base definition file (`googleapis/googleapis.d.ts`) and the API-specific definition file in your project.
+To use the type definitions you need to reference the definition file (`dist/index.d.ts`) in your project.
+Or you add the dist folder as typeRoot to your `tsconfig.json`:
+
+```
+{
+  "compilerOptions": {
+    ...
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/google-api-nodejs-tsd/dist"
+    ]
+  },
+  ...
+}
+```
+
 
 ```TypeScript
-'use strict';
 
 import * as google from "googleapis";
 
@@ -41,17 +55,16 @@ discovery.apis.list({
 
 ## Caveats
 
-* The definitions, as well as the definition generator are largely untested.
-* Certain call patterns allowed by the Google client are as of yet undefined in the definitions.
+*   The definitions, as well as the definition generator are largely untested.
+*   Certain call patterns allowed by the Google client are as of yet undefined in the definitions (untyped, but allowed by type definition).
 
 ## TODO
 
-* Generate `typings.json` files so that definitions can be installed using [typings](https://github.com/typings/typings).
-* Generate documentation to be added to the definition files.
-* Generate tests to go along with the definition files.
-* Add support for various JSON Schema constructs (e.g. `patternProperties`)
-* Factor out JSON Schema to Typescript definition conversion into a separate project.
-* Complete the definitions for the [Google Auth Node.js Library](https://github.com/google/google-auth-library-nodejs) and put them in a separate project.
-* Complete the definitions for [Nunjucks](https://mozilla.github.io/nunjucks/) and put them in a separate project.
-* Submit definitions to [DefinitelyTyped](http://definitelytyped.org/).
-* A whole lotta testing
+*   Generate documentation to be added to the definition files.
+*   Generate tests to go along with the definition files.
+*   Add support for various JSON Schema constructs (e.g. `patternProperties`)
+*   Factor out JSON Schema to Typescript definition conversion into a separate project.
+*   Complete the definitions for the [Google Auth Node.js Library](https://github.com/google/google-auth-library-nodejs) and put them in a separate project.
+*   Complete the definitions for [Nunjucks](https://mozilla.github.io/nunjucks/) and put them in a separate project.
+*   Submit definitions to [DefinitelyTyped](http://definitelytyped.org/).
+*   A whole lotta testing
